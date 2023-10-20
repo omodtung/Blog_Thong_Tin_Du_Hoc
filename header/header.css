@@ -1,0 +1,170 @@
+@font-face {
+       font-family: 'open sans';
+       src: url('./font/Open_Sans/static/OpenSans-Regular.ttf');
+}
+
+@font-face {
+       font-family: 'fontawesome';
+       src: url('http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css');
+}
+
+a {
+       text-decoration: none;
+       color: white;
+}
+
+li {
+       list-style: none;
+}
+
+* {
+       margin: 0;
+       padding: 0;
+}
+
+:root {
+       --corler: #FCB100;
+       --font-name: 'open sans';
+}
+
+/* hết phần dùng chung */
+/* header */
+header {
+       width: 100%;
+}
+
+.line {
+
+       border-top: 3px solid var(--corler);
+}
+
+.header-1 {
+       display: flex;
+       justify-content: space-evenly;
+       align-items: center;
+}
+
+.logo {
+       box-sizing: border-box;
+       margin-top: 5px;
+       margin-left: 30px;
+}
+
+.hotline {
+       width: 230px;
+       height: 65px;
+       display: flex;
+       align-items: center;
+       justify-content: space-evenly;
+       margin-left: 20px;
+}
+
+.vertical-lines {
+       height: 50px;
+       border-right: 1px solid;
+}
+
+.phone-number {
+       display: flex;
+       flex-direction: column;
+       padding-right: 10px;
+}
+
+.phone-number h3 {
+       font-family: var(--font-name);
+       font-size: 20px;
+}
+
+.sdt {
+       color: var(--corler);
+}
+
+.Email {
+       width: 230px;
+       height: 65px;
+       display: flex;
+       align-items: center;
+       justify-content: space-evenly;
+}
+
+.email-name h3 {
+       font-family: var(--font-name);
+       font-size: 20px;
+}
+
+.mail {
+       color: var(--corler);
+}
+
+.search form {
+       width: 365px;
+       height: 50px;
+       border: 1px solid gray;
+       border-radius: 5px;
+       display: flex;
+       align-items: center;
+       justify-content: space-evenly;
+}
+
+.search form input {
+       font-family: var(--font-name);
+       font-size: 15px;
+       color: grey;
+       border: hidden;
+}
+
+.search form input:focus {
+       outline: none;
+}
+
+.search button {
+       border: none;
+       background-color: white;
+       color: grey;
+       font-size: 20px;
+}
+
+.header-2 {
+       width: 100%;
+       background-color: #004E9A;
+       display: flex;
+       justify-content: center;
+}
+
+.header-2 ul {
+       box-sizing: border-box;
+       width: 1090px;
+       height: 65px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+}
+
+.header-2 ul li {
+
+       box-sizing: border-box;
+       display: block;
+       /* border: 2px solid white; */
+       height: 65px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 20px;
+}
+
+.header-2 h3 {
+       font-size: 15px;
+       font-family: var(--font-name);
+}
+
+.header-2 .home-icon {
+       font-size: 25px
+}
+
+.header-2 ul li:hover {
+       background-color: #1A60A4;
+}
+
+.image-study-abroad img {
+       width: 100%;
+}
