@@ -277,6 +277,64 @@ a:hover {
     color: #333;
 }
 
+/* ------------------------ */
+.content-desc >img
+{
+    margin-right: 20px;
+    width: 270px;
+    height: 180px;
+}
+
+div{
+    display: block;
+}
+
+.content-desc
+{
+    position: relative;
+}
+.content-desc >title
+{
+    
+    padding: 9px 20px;
+    background: rgba(0, 78, 154, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    overflow-x: hidden;
+    margin: 0px auto 0px auto;
+}
+
+
+ 
+.content-desc .title a {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    visibility: visible;
+    margin: 0 0 5px;
+
+    
+      
+}
 .row-date-view {
     color: #999;
     margin-bottom: 13px;
