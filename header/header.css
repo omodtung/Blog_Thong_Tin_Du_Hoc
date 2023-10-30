@@ -1,7 +1,14 @@
+/* phần dùng chung */
 @font-face {
        font-family: 'open sans';
        src: url('./font/Open_Sans/static/OpenSans-Regular.ttf');
 }
+
+@font-face {
+       font-family: 'open sans bold';
+       src: url('./font/Open_Sans/static/OpenSans-Bold.ttf');
+}
+
 
 @font-face {
        font-family: 'fontawesome';
@@ -31,6 +38,15 @@ li {
 /* header */
 header {
        width: 100%;
+       transition: 500ms;
+       position: relative;
+}
+
+.close_header {
+       transform: translateY(-65%);
+       position: sticky;
+       top: 0;
+       z-index: 1000;
 }
 
 .line {
@@ -42,21 +58,23 @@ header {
        display: flex;
        justify-content: space-evenly;
        align-items: center;
+       background-color: white;
 }
 
 .logo {
        box-sizing: border-box;
        margin-top: 5px;
-       margin-left: 30px;
+       margin-left: 200px;
 }
 
 .hotline {
+       box-sizing: border-box;
        width: 230px;
        height: 65px;
        display: flex;
        align-items: center;
        justify-content: space-evenly;
-       margin-left: 20px;
+       margin-left: 50px;
 }
 
 .vertical-lines {
@@ -72,11 +90,13 @@ header {
 
 .phone-number h3 {
        font-family: var(--font-name);
-       font-size: 20px;
+       font-size: 17px;
+       font-weight: lighter;
 }
 
 .sdt {
        color: var(--corler);
+       margin-top: 5px;
 }
 
 .Email {
@@ -89,21 +109,24 @@ header {
 
 .email-name h3 {
        font-family: var(--font-name);
-       font-size: 20px;
+       font-size: 17px;
+       font-weight: lighter;
 }
 
 .mail {
        color: var(--corler);
+       margin-top: 5px;
 }
 
 .search form {
-       width: 365px;
+       width: 300px;
        height: 50px;
        border: 1px solid gray;
        border-radius: 5px;
        display: flex;
        align-items: center;
        justify-content: space-evenly;
+       margin-right: 50px;
 }
 
 .search form input {
@@ -131,7 +154,7 @@ header {
        justify-content: center;
 }
 
-.header-2 ul {
+.header-2 > ul {
        box-sizing: border-box;
        width: 1090px;
        height: 65px;
@@ -140,7 +163,7 @@ header {
        justify-content: center;
 }
 
-.header-2 ul li {
+.header-2 > ul > li {
 
        box-sizing: border-box;
        display: block;
@@ -157,14 +180,55 @@ header {
        font-family: var(--font-name);
 }
 
-.header-2 .home-icon {
-       font-size: 25px
+.header-2 >ul>li:nth-child(1) {
+       font-size: 25px;
 }
-
-.header-2 ul li:hover {
+.header-2>ul>li:hover {
        background-color: #1A60A4;
 }
 
 .image-study-abroad img {
        width: 100%;
 }
+
+.header-2 ul li:nth-child(4) {
+       position: relative;
+}
+
+.header-2 ul li:nth-child(4) .sub-menu {
+       width: 260px;
+       background: #fff;
+       position: absolute;
+       top: 70px;
+       left: 0;
+       opacity: 0;
+       visibility: hidden;
+       transition: 1s;
+       border-radius: 5px;
+       border: 1px solid #eee;
+       z-index: 100;
+}
+
+.header-2 ul li:nth-child(4) .sub-menu a {
+       color: grey;
+       display: block;
+       padding: 5px 25px 4px 25px;
+       font-family: var(--font-name);
+}
+
+.header-2 ul li:nth-child(4) .sub-menu a:hover {
+       color: black;
+       background-color: #E1E1E1;
+}
+
+.header-2 ul li:nth-child(4) .sub-menu {
+       display: flex;
+       flex-direction: column;
+}
+
+.header-2 ul li:nth-child(4):hover .sub-menu {
+       visibility: visible;
+       opacity: 1;
+       display: block;
+}
+
