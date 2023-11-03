@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style2.css" />
+    <title>Document</title>
+
+
+</head>
+<body>
+<main>
+
+
+
+
+    <div class="images">
+        <div>
+            <img src="./img/banner.jpg" class="imageproduct">
+         </div> 
+        <div class="thumbnail-row">
+         <div>
+           <img class="thumbnail cursor" src="./img/banner.jpg" onclick="displayslide()" alt="">
+         </div>
+         <div>
+           <img class="thumbnail cursor" src="./img/img-facebook.png" onclick="displayslide()" alt="">
+         </div>
+         <div>
+           <img class="thumbnail cursor" src="./img/study-in-taiwin.jpg" onclick="displayslide()" alt="">
+         </div>
+         <div>
+           <img class="thumbnail cursor" src="./img/hoiThaoDuHoc.jpg" onclick="displayslide()" alt="">
+         </div>
+       </div> 
+
+       
+    </div>
+
+
+
+
+      </main>
+    <aside>
+        <div class="overlay"></div>
+        <div class="over-display">
+          <img src="./img/icon-close.svg" class="close-icon" onclick="displayslide()" id="close" alt="">
+            <div class="mySlides">
+                <img src="./img/banner.jpg" class="imageproduct2">
+             </div> 
+             <div class="mySlides">
+              <img src="./img/img-facebook.png" class="imageproduct2">
+             </div>  
+            <div class="mySlides">
+              <img src="./img/study-in-taiwin.jpg" class="imageproduct2">
+            </div> 
+            <div class="mySlides">
+              <img src="./img/hoiThaoDuHoc.jpg" class="imageproduct2">
+            </div>
+            <div class="prev-btn" onclick="plusSlides(-1)"><img src="./img/icon-previous.svg" class="prev" alt=""></div>
+            <div class="next-btn" onclick="plusSlides(1)"><img src="./img/icon-next.svg" class="next" alt=""></div>
+            <div class="row">
+             <div class="column">
+               <img class="demo cursor" src="./img/banner.jpg" onclick="currentSlide(1)" alt="">
+             </div>
+             <div class="column">
+               <img class="demo cursor" src="./img/img-facebook.png" onclick="currentSlide(2)" alt="">
+             </div>
+             <div class="column">
+               <img class="demo cursor" src="./img/study-in-taiwin.jpg" onclick="currentSlide(3)" alt="">
+             </div>
+             <div class="column">
+               <img class="demo cursor" src="./img/hoiThaoDuHoc.jpg" onclick="currentSlide(4)" alt="">
+             </div>
+           </div> 
+        </div>
+    </aside>
+
+    <script src="./script.js"></script>
+</body>
+</html>
