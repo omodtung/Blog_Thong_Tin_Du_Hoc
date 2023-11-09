@@ -51,7 +51,23 @@ main {
     display: flex;
 }
 
-
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 14px;
+    color:red;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 1 / 2 / 2 / 3; }
+    .div3 { grid-area: 2 / 1 / 3 / 2; }
+    .div4 { grid-area: 2 / 2 / 3 / 3; }
+    .div5 { grid-area: 3 / 1 / 4 / 2; }
+    .div6 { grid-area: 3 / 2 / 4 / 3; }
+    
+    
 aside {
     display: flex;
     justify-content: center;
@@ -138,3 +154,39 @@ aside {
 
 
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .grid-item {
+    background-color: #ccc;
+    padding: 10px;
+  }
+  
+  .grid-item-1 {
+    grid-column: 1 / 2;
+    grid-row: 1;
+  }
+  
+  .grid-item-2 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  
+  .grid-item-3 {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  
+  .grid-item-4 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .grid-item-5 {
+    grid-column: 2 / 4;
+    grid-row: 2;
+  }

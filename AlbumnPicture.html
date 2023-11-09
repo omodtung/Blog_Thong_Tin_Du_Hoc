@@ -146,6 +146,8 @@
               <h1>Thu Vien</h1>
               <div class="content-page-main">
                 <div class="row-content-main">
+
+                  <div id="thumbnail-row">
                   <div id=grid>
                     <div id="cover-grid-item-picture" class="grid-item grid-item-1" >
                       <img id="grid-item-picture"class="thumbnail cursor" src="./img/nhugnsailam.png" onclick="displayslide()" alt="">
@@ -169,6 +171,8 @@
                     <div class="grid-item grid-item-6">
                       <img id="grid-item-picture"class="thumbnail cursor" src="./img/nhugnsailam.png" onclick="displayslide()" alt="">
                     </div>
+                  </div>
+                  </div>
                   </div>
                   </div>
                 </div>
@@ -501,5 +505,63 @@
         </div>
       </footer>
     </main>
+
+
+    <aside>
+      <div class="overlay"></div>
+      <div class="over-display">
+        <img src="./img/icon-close.svg" class="close-icon" onclick="displayslide()" id="close" alt="">
+          <div class="mySlides">
+              <img src="./img/nhugnsailam.png" class="imageproduct2">
+           </div> 
+           <div class="mySlides">
+            <img src="./img/img-facebook.png" class="imageproduct2">
+           </div>  
+          <div class="mySlides">
+            <img src="./img/study-in-taiwin.jpg" class="imageproduct2">
+          </div> 
+          
+
+          <div class="mySlides">
+            <img src="./img/test.png" class="imageproduct2">
+          </div>
+          <div class="mySlides">
+            <img src="./img/test.png" class="imageproduct2">
+          </div>
+          <div class="mySlides">
+            <img src="./img/test.png" class="imageproduct2">
+          </div>
+         
+
+          <div class="prev-btn" onclick="plusSlides(-1)"><img src="./img/icon-previous.svg" class="prev" alt=""></div>
+          <div class="next-btn" onclick="plusSlides(1)"><img src="./img/icon-next.svg" class="next" alt=""></div>
+          <div class="row">
+           <div class="column">
+             <img class="demo cursor" src="./img/test.png" onclick="currentSlide(1)" alt="">
+           </div>
+           <div class="column">
+             <img class="demo cursor" src="./img/img-facebook.png" onclick="currentSlide(2)" alt="">
+           </div>
+           <div class="column">
+             <img class="demo cursor" src="./img/study-in-taiwin.jpg" onclick="currentSlide(3)" alt="">
+           </div>
+           
+         </div> 
+         <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="./img/nhugnsailam.png" onclick="currentSlide(4)" alt="">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="./img/nhugnsailam.png" onclick="currentSlide(5)" alt="">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="./img/nhugnsailam.png" onclick="currentSlide(6)" alt="">
+          </div>
+         
+        </div> 
+      </div>
+  </aside>
+
+  <script src="./script.js"></script>
   </body>
 </html>
