@@ -47,3 +47,19 @@ function displayslide() {
   let slide = document.querySelector('aside')
   slide.classList.toggle('toggleaside')
 }
+
+
+function displayMap(num)
+{
+  let button = document.querySelectorAll(".contact button");
+  let iframe = document.querySelectorAll(".map iframe");
+  for (let i= 0 ; i<button.length;i++)
+  {
+
+    if(i == num -1) continue;
+    iframe[i].classList.add("d-none");
+
+  }
+  iframe[num-1].classList.toggle("d-none");
+  
+}
