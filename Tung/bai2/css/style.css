@@ -1,0 +1,12 @@
+form {
+    margin-top: 50px;
+}
+
+form label {
+    text-align: right;
+}
+
+form .showErrol
+{margin-left: 500px;
+    color: blue;
+}
