@@ -15,7 +15,8 @@
         <div class="line"></div>
         <div class="header-1">
             <div class="logo">
-                <img src="./image/logo.png" alt="logo" width="112px" height="104px"></div>
+                <img src="./image/logo.png" alt="logo" width="112px" height="104px">
+            </div>
             <div class="hotline">
                 <img src="./image/call_header.png" alt="phone-icon">
                 <div class="phone-number">
@@ -40,11 +41,14 @@
                     </button>
                 </form>
             </div>
+            <div class="login">
+                <img width="50px" src="./image/login.png" alt="">
+            </div>
         </div>
         <div class="header-2">
             <ul>
                 <li>
-                    <a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    <a href="../Home/index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
                 </li>
                 <li>
                     <a href="#">
@@ -61,11 +65,11 @@
                     <a href="#">
                         <h3>QUỐC GIA DU HỌC</h3>
                     </a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Du học Hàn Quốc</a></li>
-                            <li><a href="#">Du học Nhật Bản</a></li>
-                            <li><a href="#">Du học Đài Loan</a></li>
-                        </ul>
+                    <ul class="sub-menu">
+                        <li><a href="#">Du học Hàn Quốc</a></li>
+                        <li><a href="#">Du học Nhật Bản</a></li>
+                        <li><a href="#">Du học Đài Loan</a></li>
+                    </ul>
 
                 </li>
                 <li>
@@ -91,12 +95,65 @@
                         <h3>LIÊN HỆ</h3>
                     </a>
                 </li>
+                <li class ="admin-setting">
+                    <a href="#">
+                        <h3>ADMIN</h3>
+                    </a>
+                </li>
+                <li class ="user-setting">
+                    <a href="../UserPage/index.html">
+                        <h3>USER</h3>
+                    </a>
+                </li>
             </ul>
         </div>
-        
-        
+
+
     </header>
     <!-- header end -->
+
+    <!-- form login and register -->
+    <div class="form-login">
+        <img class="back-to-login" width="20px" src="./image/arrow.png" alt="">
+        <img class="close-form" width="20px" src="./image/close.png" alt="">
+        <h3>Đăng Nhập</h3>
+        <form onsubmit="return handleSubmit()">
+            <div class="login-userName">
+                <input type="text" placeholder="Họ tên">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Họ tên không được để trống</span>
+                </div>
+            </div>
+            <div class="login-id">
+                <input type="text" placeholder="Tên đăng nhập">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Tên đăng nhập không được để trống</span>
+                </div>
+            </div>
+            <div class="login-password">
+                <input type="text" placeholder="Mật khẩu">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Mật khẩu không được để trống</span>
+                </div>
+            </div>
+            <div class="login-repeatpass">
+                <input type="text" placeholder="Nhập lại mật khẩu">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Mật khẩu lặp lại không đúng</span>
+                </div>
+            </div>
+            <button type="submit">ĐĂNG KÝ</button>
+            <div class="register" onclick="register(event)">
+                <span>Bạn chưa có tài khoản ?</span>
+                <a href="#">Đăng ký</a>
+            </div>
+        </form>
+    </div>
+    
 
     <!-- section body start -->
     <section id="body" class="main-content-body">
@@ -190,15 +247,14 @@
                 </li>
             </ul>
         </div>
-        <div class="admissions-information">
+        <div class="admissions-information posts-1">
             <div class="admissions-news">
                 <h2>THÔNG TIN TUYỂN SINH</h2>
                 <div class="line"></div>
                 <div class="container-news">
                     <div class="container-left">
-
-                        <div class="image-news">
-                            <img width="370px" src="./image/457-1593405900-1661-1593422718-326x220.png" alt="">
+                        <!-- <div class="image-news">
+                            <img src="./image/457-1593405900-1661-1593422718-326x220.png" alt="">
                         </div>
                         <div class="name-news">
                             <a href="#">
@@ -219,11 +275,11 @@
                         </p>
                         <div class="button-watch-more">
                             <a href="#">Xem chi tiết <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="container-right">
                         <ul>
-                            <li class="content">
+                            <!-- <li class="content">
                                 <div class="image-news">
                                     <img src="./image/a1-5783-1593596508-140x93.jpg" alt="">
                                 </div>
@@ -293,7 +349,7 @@
                                     Đại hội thảo online, đại diện University of Melbourne & Trinity College sẽ giải đáp
                                     các thắc mắc về học...
                                 </p>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -345,13 +401,12 @@
             <a href="#">Xem thêm</a>
             <div class="line"></div>
         </div>
-        <div class="admissions-information">
+        <div class="admissions-information posts-2">
             <div class="admissions-news">
                 <div class="container-news">
                     <div class="container-left">
-
-                        <div class="image-news">
-                            <img width="370px" src="./image/457-1593405900-1661-1593422718-326x220.png" alt="">
+                        <!-- <div class="image-news">
+                            <img src="./image/457-1593405900-1661-1593422718-326x220.png" alt="">
                         </div>
                         <div class="name-news">
                             <a href="#">
@@ -372,11 +427,11 @@
                         </p>
                         <div class="button-watch-more">
                             <a href="#">Xem chi tiết <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="container-right">
                         <ul>
-                            <li class="content">
+                            <!-- <li class="content">
                                 <div class="image-news">
                                     <img src="./image/a1-5783-1593596508-140x93.jpg" alt="">
                                 </div>
@@ -446,7 +501,7 @@
                                     Trường ĐH Adelaide cấp học bổng đến 50% học phí cho chương trình cử nhân và thạc sĩ
                                     tín chỉ....
                                 </p>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -527,6 +582,9 @@
         </div>
     </footer>
     <script src="./Js/index.js"></script>
+    <!-- <script src="../storage/datapost.js"></script> -->
+    <!-- <script src="../storage/dataComent.js"></script> -->
+    <!-- <script src="../storage/dataUser.js"></script> -->
 </body>
 
 </html>

@@ -1,4 +1,5 @@
 /* phần dùng chung */
+
 @font-face {
        font-family: 'open sans';
        src: url('./font/Open_Sans/static/OpenSans-Regular.ttf');
@@ -32,6 +33,7 @@ li {
 :root {
        --corler: #FCB100;
        --font-name: 'open sans';
+       --font-name-bold: 'open sans bold';
 }
 
 /* hết phần dùng chung */
@@ -234,13 +236,105 @@ header {
        display: block;
 }
 
+.header-2 .admin-setting{
+       display: none;
+}
+.header-2 .user-setting{
+       display: none;
+}
 
 
+/* form login */
+.form-login {
+       border: 1px solid white;
+       background-color: white;
+       position: fixed;
+       z-index: 5000;
+       left: 35%;
+       top: 20%;
+       width: 500px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       display: none;
+}
+.form-login .close-form{
+       position: absolute;
+       right: 5px;
+       top: 2px;
+}
+.form-login .back-to-login{
+       position: absolute;
+       left: 5px;
+       top: 2px;
+}
+.form-login h3{
+       font-family: var(--font-name-bold);
+       font-size: 30px;
+       text-align: center;
+       margin-top: 30px;
+       margin-bottom: 30px;
+       color: #ea7c69;
+}
+.form-login form input{
+       width: 300px;
+       height: 40px;
+       border-radius: 10px;
+       font-family: var(--font-name);
+       text-align: center;
+       margin-bottom: 5px;
+}
+.form-login form .warning {
+       margin-bottom: 10px;
+       visibility: hidden;
+}
+
+.form-login form .warning img{
+       width: 15px;
+}
+.form-login form button {
+       margin-top: 20px;
+       background-color: #ea7c69;
+       width: 100%;
+       height: 40px;
+       border-radius: 50px;
+       display: flex;
+       justify-content: space-evenly;
+       align-items: center;
+       color: white;
+       border-color: #ea7c69;
+       font-family: var(--font-name-bold);
+       margin-bottom: 20px;
+}
+.form-login form .warning span{
+       font-family: var(--font-name-bold);
+       color: red;
+}
+.form-login form .register{
+       text-align: right;
+       margin-bottom: 10px;
+}
+.form-login form .register a{
+       color: #ea7c69;
+       font-family: var(--font-name-bold);
+}
+.form-login form .register span{
+       font-family: var(--font-name)
+}
+
+
+.disable{
+       opacity: 0.5; /* Độ mờ có thể điều chỉnh */
+       pointer-events: none;
+}
 
 
 
 /* hết header */
 /* section body */
+
+
+
 section {
        overflow: hidden;
        position: relative;
@@ -471,15 +565,18 @@ section {
        font-weight: bold;
        transition: 1s;
 }
+.container-left .image-news img {
+       width: 380px;
+}
+.container-left p {
+       font-family: var(--font-name);
+}
 
 .container-left .name-news a h3:hover,
 .content .name-news a h3:hover {
        color: #1AA7E2;
 }
 
-.container-left p {
-       font-family: var(--font-name);
-}
 
 .calender-watch {
        margin: 10px;

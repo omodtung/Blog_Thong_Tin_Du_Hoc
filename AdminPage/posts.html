@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Admin</title>
+       <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> -->
+       <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+       <link rel="stylesheet" href="./css/posts.css">
+</head>
+
+<body>
+       <!-- start heading -->
+       <header>
+              <span>Admin Setting</span>
+       </header>
+       <!-- end -->
+       <!-- start body -->
+       <section class="main-content-body">
+              <div class="sidebar">
+                     <h3>MENU</h3>
+                     <ul>
+                            <li>
+                                   <a href="#">
+                                          <span class="icon"><i class="fa fa-file-text-o" aria-hidden="true"></i></span>
+                                          <span class="title">Quản lý bài đăng</span>
+                                   </a>
+
+                            </li>
+                            <li>
+                                   <a href="#">
+                                          <span class="icon"><i class="fa fa-comments" aria-hidden="true"></i></span>
+                                          <span class="title">Quản lý bình luận</span>
+                                   </a>
+
+                            </li>
+                            <li>
+                                   <a href="#">
+                                          <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                                          <span class="title">Quản lý người dùng</span>
+                                   </a>
+
+                            </li>
+                            <li>
+                                   <a href="#">
+                                          <span class="icon"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                                          <span class="title">Trở về trang chủ</span>
+                                   </a>
+
+                            </li>
+                     </ul>
+              </div>
+              <div class="post-management-page">
+                     <h3>Quản lý bài đăng</h3>
+                     <div class="total-posts">
+                            <table>
+                                   <tr>
+                                          <th>
+                                                 <span>Tên bài đăng</span>
+                                          </th>
+                                          <th>
+                                                 <span>Số lượng lượt xem</span>
+                                          </th>
+                                          <th>
+                                                 <span>Số lượng bình luận</span>
+                                          </th>
+                                          <th>
+                                                 <span>Số lượng lượt thích</span>
+                                          </th>
+                                          <th>
+                                                 <span>Số lượng lượt không thích</span>
+                                          </th>
+                                          <th>
+                                                 <span>Hành động</span>
+                                          </th>
+                                   </tr>
+                                   <tr>
+                                          <td class="name-post">
+                                                 <span class="value">ĐẠI HỌC ADELAIDE, AUSTRALIA CẤP HỌC BỔNG ĐẾN
+                                                        50%</span>
+                                          </td>
+                                          <td class="number-watch">
+                                                 <span class="value">0</span>
+                                          </td>
+                                          <td class="number-comment">
+                                                 <span class="value">0</span>
+                                          </td>
+                                          <td class="number-like">
+                                                 <span class="value">0</span>
+                                          </td>
+                                          <td class="number-dislike">
+                                                 <span class="value">0</span>
+                                          </td>
+                                          <td class="action-delete-post">
+                                                 <span><i class="fa fa-ban" aria-hidden="true"></i></span>
+                                          </td>
+                                   </tr>
+                            </table>
+                     </div>
+                     <h3>Đăng bài</h3>
+                     <div class="action-post">
+                            <table>
+                                   <tr>
+                                          <th>
+                                                 <span>Tên bài đăng</span>
+                                          </th>
+                                          <th>
+                                                 <span>Hành động</span>
+                                          </th>
+                                   </tr>
+                                   <tr>
+                                          <td class="name-post">
+                                                 <span class="value">ĐẠI HỌC ADELAIDE, AUSTRALIA CẤP HỌC BỔNG ĐẾN
+                                                        50%</span>
+                                          </td>
+                                          <td class="action-push-post">
+                                                 <span><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                                 <span><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                          </td>
+                                   </tr>
+                            </table>
+                     </div>
+
+                     <div class="watch-post">
+                            <h3>Demo</h3>
+                            <iframe src="./showPost.html" frameborder="0"></iframe>
+                     </div>
+              </div>
+       </section>
+       <script src="./js/posts.js"></script>
+</body>
+
+</html>
