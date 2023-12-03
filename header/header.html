@@ -55,20 +55,24 @@
                             </button>
                         </form>
                     </div>
+                    <!-- THEM ZO NE -->
+
+                    <label class="nav-btn" for="input-check">
+                        <i
+                            class="fa-solid fa-bars fa-2xl"
+                            style="cursor: pointer"
+                        ></i>
+                    </label>
                 </div>
             </div>
+
             <nav class="navigation">
                 <div class="content">
                     <ul>
                         <li>
-                            <a href="#!"
-                                ><img
-                                    src="./img/home.png"
-                                    alt="logo-home"
-                                    style="color: #fff"
-                                    width="20px"
-                                    height="20px"
-                            /></a>
+                            <a href="./index.html"
+                                ><i class="fa-solid fa-house"></i
+                            ></a>
                         </li>
                         <li>
                             <a href="#!">GIỚI THIỆU</a>
@@ -80,13 +84,19 @@
                             <a href="#!">QUỐC GIA DU HỌC </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="#!">Du học Hàn Quốc</a>
+                                    <a href="./du_hoc_han_quoc.html"
+                                        >Du học Hàn Quốc</a
+                                    >
                                 </li>
                                 <li>
-                                    <a href="#!">Du học Nhật Bản</a>
+                                    <a href="./du_hoc_nhat_ban.html"
+                                        >Du học Nhật Bản</a
+                                    >
                                 </li>
                                 <li>
-                                    <a href="#!">Du học Đài Loan</a>
+                                    <a href="./du_hoc_dai_loan.html"
+                                        >Du học Đài Loan</a
+                                    >
                                 </li>
                             </ul>
                         </li>
@@ -105,6 +115,78 @@
                     </ul>
                 </div>
             </nav>
+
+            <!-- INPUT -->
+            <input
+                type="checkbox"
+                name=""
+                hidden
+                class="nav_input"
+                id="input-check"
+            />
+            <!-- NAV MOBILE -->
+            <nav class="nav_mobile">
+                <label class="close-icon" for="input-check">
+                    <i class="fa-solid fa-square-xmark"></i>
+                </label>
+                <ul>
+                    <li>
+                        <a href="./index.html"
+                            ><i class="fa-solid fa-house"></i
+                        ></a>
+                    </li>
+                    <li>
+                        <a href="#!">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="#!">Dịch vụ</a>
+                    </li>
+                    <li>
+                        <a href="#!">Quốc gia du học</a>
+                        <input
+                            type="checkbox"
+                            hidden
+                            class="nav-input-submenu"
+                            id="input-submenu"
+                        />
+                        <label class="plus" for="input-submenu">+</label>
+                        <label class="minus" for="input-submenu">-</label>
+
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="./du_hoc_han_quoc.html"
+                                    >Du học Hàn Quốc</a
+                                >
+                            </li>
+                            <li>
+                                <a href="./du_hoc_nhat_ban.html"
+                                    >Du học Nhật Bản</a
+                                >
+                            </li>
+                            <li>
+                                <a href="./du_hoc_dai_loan.html"
+                                    >Du học Đài Loan</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!">Hội thảo du học</a>
+                    </li>
+                    <li>
+                        <a href="#!">Thư viện</a>
+                    </li>
+                    <li>
+                        <a href="#!">Tin tức, sự kiện</a>
+                    </li>
+                    <li>
+                        <a href="#!">Liên hệ</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Thêm cái overley zo -->
+            <label class="overley" for="input-check"></label>
+            <!-- SECTION -->
         </header>
     </body>
 </html>
