@@ -44,25 +44,31 @@ a:hover {
 }
 
 .head-footer .content i:first-child {
+    display: none;
     color: #333 !important;
     top: 65px;
     left: -26px;
     position: absolute;
 }
 .head-footer .content i:last-child {
+    display: none;
     color: #333 !important;
     right: -26px;
     top: 65px;
     position: absolute;
 }
 .center-footer {
-    background-image: url("../img/bg_footer.jpg");
+    background-image: url("./img/bg_footer.jpg");
     padding: 50px 0px 35px;
 }
 
 .center-footer .content {
     gap: 30px;
     display: flex;
+}
+
+.fanpage-h .fanpage img {
+    width: 100%;
 }
 
 .center-footer .content .contact {
@@ -163,4 +169,184 @@ a:hover {
     position: fixed;
     bottom: 70px;
     right: 58px;
+}
+
+@media only screen and (max-width: 46.1875em) {
+    .nav-btn {
+        display: block;
+    }
+
+    .nav_mobile {
+        width: 70%;
+    }
+    .content {
+        width: 98%;
+    }
+
+    .fa-bars {
+        display: block;
+        margin-left: 35px;
+    }
+
+    .header .content .logo {
+        margin-right: 10px;
+    }
+    .text_header {
+        display: none;
+    }
+
+    .text-item {
+        display: none;
+    }
+
+    .navigation .content > ul {
+        display: none;
+    }
+
+    .navigation .content > ul li a .fa-house {
+        font-size: 20px;
+    }
+
+    .center-footer .content {
+        width: 96%;
+        margin: 20px;
+        flex-direction: column;
+    }
+
+    .center-footer .content .contact {
+        width: 100%;
+    }
+
+    .center-footer .content .access {
+        width: 100%;
+    }
+
+    .center-footer .content .fanpage-h {
+        margin-left: 0;
+        width: 100%;
+    }
+    .fanpage-h .fanpage img {
+        width: 90%;
+    }
+
+    .head-footer .content i:first-child {
+        left: 5px;
+    }
+
+    .head-footer .content i:last-child {
+        right: 5px;
+    }
+
+    .head-footer {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    .img-wrap {
+        gap: 0;
+        overflow: hidden;
+    }
+
+    .img-wrap img {
+        width: 152px;
+    }
+
+    .end-footer .content {
+        display: block;
+    }
+
+    .end-footer .content p {
+        text-align: center;
+    }
+
+    .end-footer .content .online {
+        justify-content: center;
+    }
+}
+
+/* Tablet: width >= 740px  width < 1024px*/
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .nav-btn {
+        display: block;
+    }
+    .content {
+        width: 98%;
+    }
+
+    .fa-bars {
+        display: block;
+        margin-left: 35px;
+    }
+
+    .header .content {
+        justify-content: space-between;
+    }
+
+    .text_header {
+        display: none;
+    }
+
+    .text-item {
+        display: none;
+    }
+
+    .navigation .content > ul {
+        display: none;
+    }
+
+    .center-footer .content {
+        width: 96%;
+        margin: 20px;
+        flex-direction: column;
+    }
+
+    .center-footer .content .contact {
+        width: 100%;
+    }
+
+    .center-footer .content .access {
+        width: 100%;
+    }
+
+    .center-footer .content .fanpage-h {
+        margin-left: 0;
+        width: 100%;
+    }
+    .fanpage-h .fanpage img {
+        width: 50%;
+    }
+
+    .head-footer .content i:first-child {
+        left: 5px;
+    }
+
+    .head-footer .content i:last-child {
+        right: 5px;
+    }
+
+    .head-footer {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    .img-wrap {
+        gap: 0;
+        overflow: hidden;
+    }
+
+    .img-wrap img {
+        width: 152px;
+    }
+
+    .end-footer .content {
+        display: block;
+    }
+
+    .end-footer .content p {
+        text-align: center;
+    }
+
+    .end-footer .content .online {
+        justify-content: center;
+    }
 }
