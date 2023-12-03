@@ -27,7 +27,7 @@ function includeHTML() {
 }
 
 function increaseFontSize() {
-  var textElements = document.querySelectorAll(".main-content-text , .text");
+  var textElements = document.querySelectorAll(".main-content-text");
   textElements.forEach(function (element) {
       var currentSize = window.getComputedStyle(element, null).getPropertyValue('font-size');
       var newSize = (parseFloat(currentSize) + 1) + 'px';
@@ -36,7 +36,7 @@ function increaseFontSize() {
 }
 
 function decreaseFontSize() {
-  var textElements = document.querySelectorAll(".main-content-text, .text");
+  var textElements = document.querySelectorAll(".main-content-text");
   textElements.forEach(function (element) {
       var currentSize = window.getComputedStyle(element, null).getPropertyValue('font-size');
       var newSize = (parseFloat(currentSize) - 1) + 'px';
@@ -44,9 +44,42 @@ function decreaseFontSize() {
   });
 }
 
+let isHidden = true;
+function showMoreSchedule(){
+    const items = document.querySelectorAll('.row-calen');
+    const showMoreBtn = document.querySelector('.btn');
+
+    items.forEach((item, index) => {
+      if (isHidden || index < 5) {
+        item.style.display = 'flex';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    isHidden = !isHidden; // Đảo ngược trạng thái
+
+    if (isHidden) {
+      showMoreBtn.textContent = 'XEM THÊM';
+    } else {
+      showMoreBtn.textContent = 'THU GỌN';
+    }
+}
+
+
 const myModal = document.getElementById('myModal')
 const myInput = document.getElementById('myInput')
 
 myModal.addEventListener('shown.bs.modal', () => {
   myInput.focus()
 })
+
+// while(1 === 1){
+//   var x = document.documentElement.clientWidth;
+//   if (x < 600){
+//     document.getElementsByClassName("right-menu").style.display = "hidden";
+//   }
+//   else{
+//     document.getElementsByClassName("right-menu").removeAttribute("display");
+//   }
+// }
