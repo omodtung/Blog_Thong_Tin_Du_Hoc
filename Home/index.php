@@ -615,9 +615,9 @@ $pass = $user[4];
         </div>
     </footer>
     <script src="./Js/index.js"></script>
-    <!-- <script src="../storage/datapost.js"></script>
-    <script src="../storage/dataComent.js"></script>
-    <script src="../storage/dataUser.js"></script> -->
+     <!-- <script src="../storage/datapost.js"></script> -->
+    <!-- <script src="../storage/dataComent.js"></script> -->
+    <!-- <script src="../storage/dataUser.js"></script>  -->
 </body>
 
 </html>
