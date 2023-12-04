@@ -83,7 +83,7 @@ $allComplain = getAllComplain($conn);
 
                             </li>
                             <li>
-                                   <a href="#">
+                                   <a href="User.php">
                                           <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
                                           <span class="title">Quản lý người dùng</span>
                                    </a>

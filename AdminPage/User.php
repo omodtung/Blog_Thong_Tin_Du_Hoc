@@ -32,6 +32,8 @@ $allUser = getAllUser($conn);
 <html lang="en">
 
 <head>
+
+
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>Admin</title>
@@ -42,6 +44,18 @@ $allUser = getAllUser($conn);
        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> -->
        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
        <link rel="stylesheet" href="./css/posts.css">
+
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 </head>
 
 <body>
@@ -70,7 +84,7 @@ $allUser = getAllUser($conn);
 
                             </li>
                             <li>
-                                   <a href="#">
+                                   <a href="User.php">
                                           <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
                                           <span class="title">Quản lý người dùng</span>
                                    </a>
@@ -133,6 +147,8 @@ $allUser = getAllUser($conn);
                             </table>
                      </div> -->
                      <h3>Quan Ly User</h3>
+                     <!-- <p>Type something in the input field to search the table for first names, last names or emails:</p>   -->
+<input id="myInput" type="text" placeholder="Search..">
                      <!-- <div class="action-post">
                             <table>
                                    <tr>
@@ -182,7 +198,7 @@ $allUser = getAllUser($conn);
       <th scope="col">Action</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody   id="myTable" >
 
 <?php foreach($allUser as $user) {?>
 
