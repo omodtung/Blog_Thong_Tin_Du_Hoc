@@ -51,12 +51,14 @@ if (isset($_POST['uname']) &&
                         $id = $user['id'];
                         $_SESSION['id'] = $id;
 						// $_SESSION['admin_name']=array($user['fname'],$user['lname']);
-                        header("Location: ../adminTestUI.html");
+                        header("Location: ../../AdminPage/posts.html");
                         exit;
                     }else if ($role == 'User') {
                         $id = $user['id'];
                         $_SESSION['id'] = $id;
-                        header("Location:../userTest.php");
+                        // header("Location:../userTest.php");
+
+						header("Location:../../Home/index.php");
                         exit;
                     }
                     else
