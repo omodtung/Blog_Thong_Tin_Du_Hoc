@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liên hệ</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
@@ -46,7 +48,7 @@
         <div class="header-2">
             <ul>
                 <li>
-                    <a href="../Home/index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    <a href="../Home/index.php"><i class="fa fa-home" aria-hidden="true"></i></a>
                 </li>
                 <li>
                     <a href="#">
@@ -145,20 +147,34 @@
                 </div>
                 <div class="form">
                     <h2>GỬI THÔNG TIN LIÊN HỆ</h2>
-                    <form action="#">
-                        <input type="text" placeholder="Họ và tên">
-                        <input type="text" placeholder="Điện thoại">
-                        <input type="text" placeholder="Email của bạn">
-                        <textarea name="" id="" cols="30" rows="2" placeholder="Nội dung"></textarea>
+                    <form id ="contact-form" name="contact-form" action="../Tung/BE/mail.php" method="POST"  onsubmit="return validateForm()">
+                        <!-- <input type="text" placeholder="Họ và tên"> -->
+
+                        <input  placeholder="Họ và tên" type="text" id="name" name="name" class="form-control">
+                        <!-- <input type="text" placeholder="Điện thoại"> -->
+
+                        <input type="text" id="subject" name="subject" class="form-control" placeholder="Dien Thoai">
+                        <!-- <input type="text" placeholder="Email của bạn"> -->
+                        <input type="text" id="email" name="email" class="form-control" placeholder="Email của bạn">
+                        <!-- <textarea name="" id="" cols="30" rows="2" placeholder="Nội dung"></textarea> -->
+
+                        <textarea type="text" id="message" name="message" class="md-textarea" placeholder="Nội dung"></textarea>
                         <div class="button">
                             <button type="submit" class="submit">
-                                <a href="#">GỬI YÊU CẦU</a>
+                                <!-- <a href="#">GỬI YÊU CẦU</a> -->
+                                <a onclick="validateForm()">Send</a>
+                              
                             </button>
                             <button class="reload">
                                 <a href="#">NHẬP LẠI</a>
                             </button>
                         </div>
                     </form>
+
+                    <div class="status" id="status"></div>
+                                        <!-- <div class="center-on-small-only">
+                        <a class="btn btn-primary" onclick="validateForm()">Send</a>
+                    </div> <div class="status" id="status"></div> -->
                 </div>
             </div>
             <div class="map">
