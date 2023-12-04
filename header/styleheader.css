@@ -192,9 +192,44 @@ a:hover {
 
 /* HEADER */
 
-.nav-btn {
+.fa-bars {
     display: none;
 }
+
+.header .content {
+    width: 90%;
+}
+
+.log {
+    display: flex;
+    margin-left: 116px;
+}
+
+.log a:first-child {
+    margin-right: 15px;
+}
+
+.log a {
+    padding: 4px;
+    font-size: 18px;
+    color: #06236d;
+}
+
+.nav_mobile > ul > li:nth-child(1) > a {
+    position: relative;
+}
+
+.nav_mobile > ul > li:nth-child(1) > a > i {
+    position: absolute;
+    top: 8px;
+    right: 98px;
+}
+
+.fa-right-to-bracket {
+    font-size: 32px;
+    color: #06236d;
+}
+
 .overley {
     display: none;
     position: fixed;
@@ -244,7 +279,7 @@ a:hover {
     color: #545353;
 }
 
-.nav_mobile > ul > li:nth-child(4) {
+.nav_mobile > ul > li:nth-child(5) {
     position: relative;
 }
 
@@ -328,8 +363,8 @@ a:hover {
 /* Responsive */
 /* Mobile: width < 740px */
 @media only screen and (max-width: 46.1875em) {
-    .nav-btn {
-        display: block;
+    .log {
+        display: none;
     }
 
     .nav_mobile {
@@ -421,10 +456,9 @@ a:hover {
 }
 
 /* Tablet: width >= 740px  width < 1024px*/
-@media only screen and (min-width: 46.25em) and (max-width: 1025px) {
-    .nav-btn {
-        margin-right: 15px;
-        display: block;
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .log {
+        display: none;
     }
     .content {
         width: 98%;
