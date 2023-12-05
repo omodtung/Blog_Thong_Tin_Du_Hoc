@@ -532,6 +532,9 @@ html {
     border: 0px;
     background-color: #fbfbfb;
 }
+/* .btn:not(:disabled) {
+    cursor: pointer;
+} */
 .add a {
     color: #004e9a;
 }
@@ -930,4 +933,16 @@ min-height: 500px;
 .margin-bottom-5
 {
     margin-bottom: 5px;
+}
+
+
+
+section
+{
+    overflow:  hidden;
+    position:relative ;
+}
+
+.image-study-abroad img {
+    width: 100%;
 }
