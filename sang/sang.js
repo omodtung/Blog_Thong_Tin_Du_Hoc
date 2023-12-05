@@ -74,12 +74,3 @@ myModal.addEventListener('shown.bs.modal', () => {
   myInput.focus()
 })
 
-// while(1 === 1){
-//   var x = document.documentElement.clientWidth;
-//   if (x < 600){
-//     document.getElementsByClassName("right-menu").style.display = "hidden";
-//   }
-//   else{
-//     document.getElementsByClassName("right-menu").removeAttribute("display");
-//   }
-// }

@@ -203,9 +203,32 @@
                     </div>
                 </div>
             </div>
-            <div class="arrow-up">
+            <a class="arrow-up" href="#" id="scrollToTopBtn" title="Lên đầu trang">
                 <i class="fas fa-arrow-up hello" aria-hidden="true"></i>
-            </div>
+            </a>
         </footer>
+
+        <!-- Xử lý bấm nút mũi tên trượt lên đầu trang -->
+        <script>
+            $(document).ready(function() {
+              // Nút trượt lên đầu trang
+              var $scrollToTopBtn = $('#scrollToTopBtn');
+          
+              // Hiển thị nút khi cuộn xuống
+              $(window).scroll(function() {
+                if ($(this).scrollTop() > 100) {
+                  $scrollToTopBtn.fadeIn();
+                } else {
+                  $scrollToTopBtn.fadeOut();
+                }
+              });
+          
+              // Xử lý sự kiện khi click nút trượt lên đầu trang
+              $scrollToTopBtn.onclick(function() {
+                $('html, body').animate({ scrollTop: 0 }, 500);
+                return false;
+              });
+            });
+          </script>
     </body>
 </html>

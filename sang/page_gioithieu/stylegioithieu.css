@@ -491,10 +491,8 @@ body {
     .form, .right-menu{
         width: 70% !important;
     }
-  }
-  @media only screen and (min-width: 601px) and (max-width: 768px) {
-    .arrow-up i{
-        right: 25% !important;
+    .right-menu{
+        display: none;
     }
   }
   @media only screen and (min-width: 768px) and (max-width: 1024px) {

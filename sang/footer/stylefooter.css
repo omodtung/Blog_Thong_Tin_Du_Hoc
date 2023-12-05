@@ -167,6 +167,7 @@ a:hover {
     right: 58px;
 }
 
+/* Mobile */
 @media only screen and (max-width: 46.1875em) {
     .nav-btn {
         display: block;
