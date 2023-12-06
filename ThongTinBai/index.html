@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+       <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+       <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+       <!-- start header -->
+       <header id="header">
+              <div class="line"></div>
+              <div class="header-1">
+                     <div class="logo">
+                            <img src="./image/logo.png" alt="logo" width="112px" height="104px">
+                     </div>
+                     <div class="hotline">
+                            <img src="./image/call_header.png" alt="phone-icon">
+                            <div class="phone-number">
+                                   <h3>Hotline</h3>
+                                   <h3 class="sdt">0948.468.558</h3>
+                            </div>
+                     </div>
+                     <div class="vertical-lines"></div>
+                     <div class="Email">
+                            <img src="./image/mail_header.png" alt="mail-icon">
+                            <div class="email-name">
+                                   <h3>Email</h3>
+                                   <h3 class="mail">lienhe@crv.vn</h3>
+                            </div>
+
+                     </div>
+                     <div class="search">
+                            <form action="#">
+                                   <input type="text" placeholder="Enter key search">
+                                   <button>
+                                          <i class="fa fa-search" aria-hidden="true"></i>
+                                   </button>
+                            </form>
+                     </div>
+                     <div class="login">
+                            <img width="50px" src="./image/login.png" alt="">
+                     </div>
+              </div>
+              <div class="header-2">
+                     <ul>
+                            <li>
+                                   <a href="../Home/index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                   <a href="#">
+                                          <h3>GIỚI THIỆU</h3>
+                                   </a>
+                            </li>
+                            <li>
+                                   <a href="#">
+                                          <h3>DỊCH VỤ</h3>
+                                   </a>
+
+                            </li>
+                            <li>
+                                   <a href="#">
+                                          <h3>QUỐC GIA DU HỌC</h3>
+                                   </a>
+                                   <ul class="sub-menu">
+                                          <li><a href="#">Du học Hàn Quốc</a></li>
+                                          <li><a href="#">Du học Nhật Bản</a></li>
+                                          <li><a href="#">Du học Đài Loan</a></li>
+                                   </ul>
+
+                            </li>
+                            <li>
+                                   <a href="#">
+                                          <h3>HỘI THẢO DU HỌC</h3>
+                                   </a>
+
+                            </li>
+                            <li>
+                                   <a href="#">
+                                          <h3>THƯ VIỆN</h3>
+                                   </a>
+                            </li>
+                            <li>
+                                   <a href="#">
+                                          <h3>TIN TỨC THỜI SỰ</h3>
+                                   </a>
+
+                            </li>
+                            <li>
+                                   <a href="">
+                                          <h3>LIÊN HỆ</h3>
+                                   </a>
+                            </li>
+                            <li class="admin-setting">
+                                   <a href="#">
+                                          <h3>ADMIN</h3>
+                                   </a>
+                            </li>
+                            <li class="user-setting">
+                                   <a href="../UserPage/index.html">
+                                          <h3>USER</h3>
+                                   </a>
+                            </li>
+                     </ul>
+              </div>
+       </header>
+       <!-- end header -->
+
+
+       <!-- form login and register -->
+       <div class="form-login">
+              <img class="back-to-login" width="20px" src="./image/arrow.png" alt="">
+              <img class="close-form" width="20px" src="./image/close.png" alt="">
+              <h3>Đăng Nhập</h3>
+              <form onsubmit="return handleSubmit()">
+                     <div class="login-userName">
+                            <input type="text" placeholder="Họ tên">
+                            <div class="warning">
+                                   <img src="./image/exclamation.png" alt="">
+                                   <span>Họ tên không được để trống</span>
+                            </div>
+                     </div>
+                     <div class="login-id">
+                            <input type="text" placeholder="Tên đăng nhập">
+                            <div class="warning">
+                                   <img src="./image/exclamation.png" alt="">
+                                   <span>Tên đăng nhập không được để trống</span>
+                            </div>
+                     </div>
+                     <div class="login-password">
+                            <input type="text" placeholder="Mật khẩu">
+                            <div class="warning">
+                                   <img src="./image/exclamation.png" alt="">
+                                   <span>Mật khẩu không được để trống</span>
+                            </div>
+                     </div>
+                     <div class="login-repeatpass">
+                            <input type="text" placeholder="Nhập lại mật khẩu">
+                            <div class="warning">
+                                   <img src="./image/exclamation.png" alt="">
+                                   <span>Mật khẩu lặp lại không đúng</span>
+                            </div>
+                     </div>
+                     <button type="submit">ĐĂNG KÝ</button>
+                     <div class="register" onclick="register(event)">
+                            <span>Bạn chưa có tài khoản ?</span>
+                            <a href="#">Đăng ký</a>
+                     </div>
+              </form>
+       </div>
+
+
+
+
+
+       <section id="body" class="main-content-body">
+              <div class="image-study-abroad">
+                     <img src="./image/banner-du-học.png" alt="image-1">
+                     <img src="./image/banner-web-du-hoc-1900x630.jpg" alt="image-2">
+                     <img src="./image/banner.jpg" alt="image-3">
+              </div>
+              <div class="container-path">
+                     <ul>
+                            <li>
+                                   <a href="#">
+                                          <i class="fa fa-home" aria-hidden="true"></i>
+                                          <span class="home-icon">Home</span>
+                                          <i class="fa-solid fa-angle-right"></i>
+                                   </a>
+                            </li>
+                            <li>
+                                   <a href="#">
+                                          <span>Cẩm nang du học</span>
+                                          <i class="fa-solid fa-angle-right"></i>
+                                   </a>
+                            </li>
+                            <li>
+                                   <!-- <a href="#">
+                                          <span>Liên hệ</span>
+                                   </a> -->
+                            </li>
+                     </ul>
+              </div>
+              <div class="container-article">
+                     <div class="container-left">
+                            <h3 id="heading-title">[ TIÊU ĐỀ ]</h3>
+                            <div class="line"></div>
+                            <div class="date-watchs">
+                                   <span>06/07/2020 - 07:51 17 views</span>
+                                   <!-- <input type="file" id="fileInput"> -->
+                            </div>
+                            <div class="line" style="border: .5px solid silver;"></div>
+                            <div class="text">
+                                   <span>[ NỘI DUNG ]</span>
+                                   <!-- <span>
+                                          Trong khi vẫn kiên quyết đóng cửa biên giới với khách quốc tế, Chính phủ
+                                          Australia đang nỗ lực để nhanh chóng mở cửa lại với du học sinh từ tháng 7.
+                                   </span>
+                                   <br>
+                                   <br>
+                                   <span>
+                                          Để bắt đầu kỳ học mới, Chính phủ Austrlia lên kế hoạch đưa 350 du học sinh trở
+                                          lại thủ đô Canberra vào cuối tháng 7 để tiếp tục học tập. Chương trình này
+                                          mang tính chất thử nghiệm để lan rộng toàn quốc khi các đại học và chính quyền
+                                          bang phối hợp trả chi phí cách ly 2 tuần tại khách sạn cho du học sinh. Hai
+                                          đại học Australia sẽ phải lựa chọn 350 trong số hàng nghìn du học sinh. Các em
+                                          sẽ tự di chuyển đến Australia trước khi được cánh ly 2 tuần theo quy định của
+                                          chính phủ.
+                                   </span>
+                                   <br><br>
+                                   <span>
+                                          Chương trình thử nghiệm đang vấp phải sự phản đối của chính quyền liên bang,
+                                          khi Thủ tướng Scott Morrison kiến nghị các bang của Australia phải mở cửa lẫn
+                                          nhau để học sinh nội địa có thể đi học, trước khi sinh viên quốc tế trở lại.
+                                   </span>
+                                   <br><br>
+                                   <figure>
+                                          <img src="./image/2-1593659130-5746-1593659246-140x93.jpg" alt="">
+                                          <figcaption>
+                                                 <h4>Thủ tướng Scott Morrison phát biểu trong một hội nghị ở Canberra
+                                                        vào tháng 1. Ảnh: Bloomberg.</h4>
+                                          </figcaption>
+                                   </figure>
+                                   <br><br>
+                                   <span>
+                                          Australia muốn nhanh chóng đón du học sinh vì nền giáo dục phụ thuộc rất lớn
+                                          họ, nhóm chiến gần 1/4 toàn bộ học sinh cả nước. Tỷ lệ du học sinh tại
+                                          Australia cao thứ hai toàn cầu, chỉ sau Luxembourg, đóng góp hơn 40% lợi nhuận
+                                          của giáo dục đại học ở Australia. Trong đó hơn 37% du học sinh tới Australia
+                                          đều đến từ Trung Quốc.
+                                   </span>
+                                   <br><br>
+                                   <span>
+                                          Kế hoạch táo bạo này của Chính phủ Australia nhằm giúp nền giáo dục 38 tỷ AUD
+                                          (khoảng 450.000 tỷ đồng) phục hồi sau đại dịch, nhưng chưa chắc đảm bảo lâu
+                                          dài. Quan hệ Trung – Australia đang bị đóng băng sau khi Thủ tướng Australia
+                                          Scott Morrison dẫn đầu cuộc điều tra truy cứu nguồn gốc của Covid-19. Đáp trả,
+                                          Trung Quốc đã cảnh báo về khả năng bị phân biệt chủng tộc ở Australia nếu
+                                          người dân Trung Quốc đến học hay du lịch ở đây.
+                                   </span>
+                                   <br><br>
+                                   <span>
+                                          “Đây là tình huống rất nhạy cảm cho các đại học Australia khi phải cùng lúc
+                                          đối phó với hai vấn đề lớn gồm dịch bệnh và căng thẳng ngoại giao”, bà Angela
+                                          Lehmann, chuyên gia phân tích giáo dục ở Melbourne, Australia, chia sẻ.
+                                   </span>
+                                   <br><br>
+                                   <span>
+                                          Ảnh hưởng từ căng thẳng ngoại giao giữa Trung Quốc và Australia đến lượng du
+                                          học sinh có thể mất vài tháng để chỉ ra bằng số liệu cụ thể. Tuy nhiên, đây là
+                                          một điều khó tránh khỏi, khi đa số cư dân Trung Quốc sẽ cân nhắc quan hệ ngoại
+                                          giao giữa hai nước khi lựa chọn điểm đến du lịch và học tập, theo một nghiên
+                                          cứu của báo Global Times, Trung Quốc.
+                                   </span>
+                                   <br><br>
+                                   <figure>
+                                          <img src="./storage/post_1/image/2-1593659130-5746-1593659246-140x93.jpg" alt="">
+                                          <figcaption>
+                                                 <h4>Thủ tướng Scott Morrison phát biểu trong một hội nghị ở Canberra
+                                                        vào tháng 1. Ảnh: Bloomberg.</h4>
+                                          </figcaption>
+                                   </figure>
+                                   <br><br>
+                                   <span>
+                                          So với Anh, Mỹ và Pháp, Australia đã bị tụt lại trong sự cạnh tranh khốc liệt
+                                          của thị trường giáo dục toàn cầu những năm gần đây. Các quốc gia châu Âu, Mỹ
+                                          rất tích cực đưa chương trình giáo dục của họ đến giảng dạy ở trường phổ thông
+                                          quốc tế của đất nước khác, tạo nền tảng cho học sinh tiếp tục học lên đại học
+                                          của Mỹ, Anh và Canada.
+                                   </span>
+                                   <br><br>
+                                   <span>
+                                          Theo ông Phil Honeywood, Giám đốc Hiệp hội Giáo dục toàn cầu của Australia,
+                                          chỉ trong 6 năm, ở Trung Quốc, số trường phổ thông quốc tế giảng dạy chương
+                                          trình nước ngoài tăng từ 150 lên 500, tuy nhiên chỉ 39 trường dạy theo chương
+                                          trình của Australia.
+                                   </span>
+                                   <br><br>
+                                   <span>
+                                          Các đại học của Mỹ và Anh cũng tích cực xây dựng các cơ sở quốc tế. Cùng với
+                                          Pháp và Nga, các đại học này chiếm đến 2/3 trong số 294 cơ sở giáo dục liên
+                                          quốc gia trên toàn cầu, trong khi Australia chỉ có 19, theo như số liệu nghiên
+                                          cứu của Tổ chức Nghiên cứu Giáo dục xuyên biên giới.
+                                   </span>
+                                   <br><br>
+                                   <span>
+                                          Ông Honeywood chỉ ra thực tế, trước đây các đại học Australia phụ thuộc vào
+                                          tuyển sinh du học sinh nước ngoài đến Australia học tập mà quên đầu tư, cung
+                                          cấp chương trình cho các cơ sở ở nước ngoài.
+                                   </span>
+                                   <br><br>
+                                   <span>
+                                          Mặc dù có 6 trong số 100 trường đại học tốt nhất toàn cầu, theo đánh giá của
+                                          tổ chức Times Higher Education, giáo dục Australia thường không được đánh giá
+                                          cao như các trường Ivy League của Mỹ hay các đại học đứng đầu ở Anh.
+                                   </span>
+                                   <br><br>
+                                   <span>
+                                          Tuy vậy, Australia vẫn có những lợi thế nhất định so với các nền giáo dục khác
+                                          với 8.000 ca nhiễm bệnh và 104 người chết, so với ảnh hưởng nghiêm trọng ở Mỹ
+                                          hay Anh. Nếu tình hình dịch bệnh phát triển tích cực, Australia cũng có lợi
+                                          thế khi năm học chính thức bắt đầu vào tháng 2, thời điểm phù hợp hơn so với
+                                          tháng 8-9 của các trường đại học châu Âu và Mỹ.
+                                   </span>
+                                   <br><br>
+                                   <span>
+                                          Nếu có thể đưa ra một động thái rõ ràng, toàn diện về sự chăm lo cho du học
+                                          sinh quốc tế, Australia sẽ có lợi thế vô cùng lớn so với các nước khác, ông
+                                          Honeywood đánh giá.
+                                   </span>
+                                   <br><br>
+                                   <span class="author">
+                                          <span>Phan Nghĩa</span> (Theo Bloomberg) – Vnexpress
+                                   </span>
+
+                                   <div>Ve trang truoc</div> -->
+                                   <br>
+                                   <span class="author">
+                                          [TÁC GIẢ]
+                                   </span>
+                            </div>
+                            <div class="back-page">
+                                   <span><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+                                   <span>Về trang trước</span>
+                                   <span><i class="fa fa-print" aria-hidden="true"></i></span>
+                                   <span>In trang</span>
+                                   <div class="line"></div>
+                            </div>
+
+                            <div class="coment-container">
+                                   <div class="number-coment">
+                                          <span class="number">1000</span>
+                                          <span>bình luận</span>
+                                   </div>
+                                   <div class="write-coment">
+                                          <img width="50px" src="./image/profile.png" alt="">
+                                          <input type="text" placeholder="Viết bình luận">
+                                          <div>
+                                                 <button class="btn-coment is-active-btn"> bình luận</button>
+                                                 <button class="btn-cancel">hủy</button>
+                                          </div>
+
+                                   </div>
+                                   <div class="coment-content">
+                                          <ul>
+                                                 <!-- <li>
+                                                        <img src="./image/profile.png" alt="">
+                                                        <div>
+                                                               <div class="name-user">
+                                                                      <span>APU</span>
+                                                                      <span>12-10-2023</span>
+                                                               </div>
+                                                               <div>
+                                                                      <p class="coment">
+                                                                             Ai còn nghe điểm danh. Bài này đẩy lên
+                                                                             100TR là
+                                                                             hết hồn Ai còn nghe điểm danh. Bài này đẩy lên
+                                                                             100TR là
+                                                                             hết hồn Ai còn nghe điểm danh. Bài này đẩy lên
+                                                                             100TR là
+                                                                             hết hồn Ai còn nghe điểm danh. Bài này đẩy lên
+                                                                             100TR là
+                                                                             hết hồn Ai còn nghe điểm danh. Bài này đẩy lên
+                                                                             100TR là
+                                                                             hết hồn Ai còn nghe điểm danh. Bài này đẩy lên
+                                                                             100TR là
+                                                                             hết hồn Ai còn nghe điểm danh. Bài này đẩy lên
+                                                                             100TR là
+                                                                             hết hồn Ai còn nghe điểm danh. Bài này đẩy lên
+                                                                             100TR là
+                                                                             hết hồn Ai còn nghe điểm danh. Bài này đẩy lên
+                                                                             100TR là
+                                                                             hết hồn Ai còn nghe điểm danh. Bài này đẩy lên
+                                                                             100TR là
+                                                                             hết hồn Ai còn nghe điểm danh. Bài này đẩy lên
+                                                                             100TR là
+                                                                             hết hồn Ai còn nghe điểm danh. Bài này đẩy lên
+                                                                             100TR là
+                                                                             hết hồn
+                                                                      </p>
+                                                                      <div class="like-dislike">
+                                                                             <div class="like-button" id="likeButton">
+                                                                                    <span class="icon">&#x1F44D;</span>
+                                                                                    <span
+                                                                                           class="count count-like">0</span>
+                                                                             </div>
+                                                                             <div class="dislike-button"
+                                                                                    id="dislikeButton">
+                                                                                    <span class="icon">&#x1F44E;</span>
+                                                                                    <span
+                                                                                           class="count count-dislike">0</span>
+                                                                             </div>
+                                                                      </div>
+                                                               </div>
+
+
+                                                        </div>
+
+                                                 </li>
+                                                 <li>
+                                                        <img src="./image/profile.png" alt="">
+                                                        <div>
+                                                               <div class="name-user">
+                                                                      <span>APU</span>
+                                                                      <span>12-10-2023</span>
+                                                               </div>
+                                                               <div>
+                                                                      <p class="coment">
+                                                                             Ai còn nghe điểm danh. Bài này đẩy lên
+                                                                             100TR là
+                                                                             hết hồn
+                                                                      </p>
+                                                                      <div class="like-dislike">
+                                                                             <div class="like-button" id="likeButton">
+                                                                                    <span class="icon">&#x1F44D;</span>
+                                                                                    <span
+                                                                                           class="count count-like">0</span>
+                                                                             </div>
+                                                                             <div class="dislike-button"
+                                                                                    id="dislikeButton">
+                                                                                    <span class="icon">&#x1F44E;</span>
+                                                                                    <span
+                                                                                           class="count count-dislike">0</span>
+                                                                             </div>
+                                                                      </div>
+                                                               </div>
+
+
+                                                        </div>
+
+                                                 </li>
+                                                 <li>
+                                                        <img src="./image/profile.png" alt="">
+                                                        <div>
+                                                               <div class="name-user">
+                                                                      <span>APU</span>
+                                                                      <span>12-10-2023</span>
+                                                               </div>
+                                                               <div>
+                                                                      <p class="coment">
+                                                                             Ai còn nghe điểm danh. Bài này đẩy lên
+                                                                             100TR là
+                                                                             hết hồn
+                                                                      </p>
+                                                                      <div class="like-dislike">
+                                                                             <div class="like-button" id="likeButton">
+                                                                                    <span class="icon">&#x1F44D;</span>
+                                                                                    <span
+                                                                                           class="count count-like">0</span>
+                                                                             </div>
+                                                                             <div class="dislike-button"
+                                                                                    id="dislikeButton">
+                                                                                    <span class="icon">&#x1F44E;</span>
+                                                                                    <span
+                                                                                           class="count count-dislike">0</span>
+                                                                             </div>
+                                                                      </div>
+                                                               </div>
+
+
+                                                        </div>
+
+                                                 </li>
+                                                 <li>
+                                                        <img src="./image/profile.png" alt="">
+                                                        <div>
+                                                               <div class="name-user">
+                                                                      <span>APU</span>
+                                                                      <span>12-10-2023</span>
+                                                               </div>
+                                                               <div>
+                                                                      <p class="coment">
+                                                                             Ai còn nghe điểm danh. Bài này đẩy lên
+                                                                             100TR là
+                                                                             hết hồn
+                                                                      </p>
+                                                                      <div class="like-dislike">
+                                                                             <div class="like-button" id="likeButton">
+                                                                                    <span class="icon">&#x1F44D;</span>
+                                                                                    <span
+                                                                                           class="count count-like">0</span>
+                                                                             </div>
+                                                                             <div class="dislike-button"
+                                                                                    id="dislikeButton">
+                                                                                    <span class="icon">&#x1F44E;</span>
+                                                                                    <span
+                                                                                           class="count count-dislike">0</span>
+                                                                             </div>
+                                                                      </div>
+                                                               </div>
+
+
+                                                        </div>
+
+                                                 </li> -->
+                                          </ul>
+                                          <div class="watch-coment-more">
+                                                 <span>Xem thêm</span>
+                                                 <div class="line"></div>
+                                          </div>
+
+                                   </div>
+                            </div>
+                            <div class="news-in-the-same-category">
+                                   <h3>CÁC TIN TỨC CÙNG DANH MỤC</h3>
+                                   <div class="line"></div>
+                                   <ul>
+                                          <!-- <li class="content">
+                                                 <div class="image-news">
+                                                        <img src="./image/a1-5783-1593596508-140x93.jpg" alt="">
+                                                 </div>
+                                                 <div class="name-news">
+                                                        <a href="#">
+                                                               <h3>CÁCH VIẾT MỘT BÀI TỰ LUẬN ẤN TƯỢNG VÀO ĐẠI HỌC MỸ
+                                                               </h3>
+                                                        </a>
+                                                 </div>
+                                                 <div class="calender-watch">
+                                                        <span class="calender">
+                                                               <i class="fa fa-calendar"
+                                                                      aria-hidden="true"><span>06/07/2020</span></i>
+                                                        </span>
+                                                        <span class="watch">
+                                                               <i class="fa fa-eye" aria-hidden="true"></i>
+                                                               <span>3 lượt xem</span>
+                                                        </span>
+                                                 </div>
+                                                 <p>
+                                                        Một bài luận ấn tượng cần súc tích, đồng nhất, trung thực và thể
+                                                        hiện sự thông minh,
+                                                        cuốn hút...
+                                                 </p>
+                                                 <div class="line"></div>
+                                          </li>
+                                          <li class="content">
+                                                 <div class="image-news">
+                                                        <img src="./image/image002-2916-1593775180-140x93.jpg" alt="">
+                                                 </div>
+                                                 <div class="name-news">
+                                                        <a href="#">
+                                                               <h3>HỘI THẢO ONLINE CÙNG UNIVERSITY OF MELBOURNE-...</h3>
+                                                        </a>
+                                                 </div>
+                                                 <div class="calender-watch">
+                                                        <span class="calender">
+                                                               <i class="fa fa-calendar"
+                                                                      aria-hidden="true"><span>06/07/2020</span></i>
+                                                        </span>
+                                                        <span class="watch">
+                                                               <i class="fa fa-eye" aria-hidden="true"></i>
+                                                               <span>3 lượt xem</span>
+                                                        </span>
+                                                 </div>
+                                                 <p>
+                                                        Đại hội thảo online, đại diện University of Melbourne & Trinity
+                                                        College sẽ giải đáp
+                                                        các thắc mắc về học...
+                                                 </p>
+                                                 <div class="line"></div>
+                                          </li>
+                                          <li class="content">
+                                                 <div class="image-news">
+                                                        <img src="./image/2-1593659130-5746-1593659246-140x93.jpg"
+                                                               alt="">
+                                                 </div>
+                                                 <div class="name-news">
+                                                        <a href="#">
+                                                               <h3>VÌ SAO AUTRALIA MUỐN MỞ CỬA BIÊN GIỚI ĐÓN DU HỌC...
+                                                               </h3>
+                                                        </a>
+                                                 </div>
+                                                 <div class="calender-watch">
+                                                        <span class="calender">
+                                                               <i class="fa fa-calendar"
+                                                                      aria-hidden="true"><span>06/07/2020</span></i>
+                                                        </span>
+                                                        <span class="watch">
+                                                               <i class="fa fa-eye" aria-hidden="true"></i>
+                                                               <span>3 lượt xem</span>
+                                                        </span>
+                                                 </div>
+                                                 <p>
+                                                        Đại hội thảo online, đại diện University of Melbourne & Trinity
+                                                        College sẽ giải đáp
+                                                        các thắc mắc về học...
+                                                 </p>
+                                          </li>
+                                          <li class="content">
+                                                 <div class="image-news">
+                                                        <img src="./image/2-1593659130-5746-1593659246-140x93.jpg"
+                                                               alt="">
+                                                 </div>
+                                                 <div class="name-news">
+                                                        <a href="#">
+                                                               <h3>VÌ SAO AUTRALIA MUỐN MỞ CỬA BIÊN GIỚI ĐÓN DU HỌC...
+                                                               </h3>
+                                                        </a>
+                                                 </div>
+                                                 <div class="calender-watch">
+                                                        <span class="calender">
+                                                               <i class="fa fa-calendar"
+                                                                      aria-hidden="true"><span>06/07/2020</span></i>
+                                                        </span>
+                                                        <span class="watch">
+                                                               <i class="fa fa-eye" aria-hidden="true"></i>
+                                                               <span>3 lượt xem</span>
+                                                        </span>
+                                                 </div>
+                                                 <p>
+                                                        Đại hội thảo online, đại diện University of Melbourne & Trinity
+                                                        College sẽ giải đáp
+                                                        các thắc mắc về học...
+                                                 </p>
+                                          </li> -->
+                                   </ul>
+
+                            </div>
+                     </div>
+                     <!-- ----------------------------------------------------------------------------------------------------------------- -->
+                     <!-- Side Bar -->
+                     <div class="content-right">
+                            <div class="right-menu">
+                                   <div class="row">
+                                          <i class="fa-solid fa-caret-right" style="color: #5aaeff"></i>
+                                          <a href="#!">Du học Đài Loan</a>
+                                   </div>
+                                   <div class="row">
+                                          <i class="fa-solid fa-caret-right" style="color: #5aaeff"></i>
+                                          <a href="#!">Du học Hàn Quốc</a>
+                                   </div>
+                                   <div class="row">
+                                          <i class="fa-solid fa-caret-right" style="color: #5aaeff"></i>
+                                          <a href="#!">Du học Nhật Bản</a>
+                                   </div>
+                            </div>
+                            <div class="tips form">
+                                   <h2>CẨM NANG DU HỌC</h2>
+                                   <div class="desc">
+                                          <!-- <div class="row-blog">
+                                                 <a href="#!">
+                                                        <img src="./image/2-1593659130-5746-1593659246-140x93.jpg" alt="IMG-BLOG1" />
+                                                 </a>
+                                                 <a href="#!">
+                                                        Tầm quan trọng của hoạt động ngoại
+                                                        khóa trong hồ sơ du học
+                                                 </a>
+                                          </div>
+                                          <div class="row-blog">
+                                                 <a href="#!"><img src="./image/2-1593659130-5746-1593659246-140x93.jpg" alt="IMG-BLOG2" /></a>
+                                                 <a href="#!">Cách viết bài tự luận ấn tượng vào
+                                                        đại học Mỹ</a>
+                                          </div>
+                                          <div class="row-blog">
+                                                 <a href="#!"><img src="./image/2-1593659130-5746-1593659246-140x93.jpg" alt="IMG-BLOG3" /></a>
+                                                 <a href="#!">
+                                                        Vì sao Australia muốn mở cửa biên
+                                                        giới đón du học sinh?
+                                                 </a>
+                                          </div>
+                                          <div class="row-blog">
+                                                 <a href="#!"><img src="./image/2-1593659130-5746-1593659246-140x93.jpg" alt="IMG-BLOG4" /></a>
+                                                 <a href="#!">
+                                                        Đại học Adelaide, Australia cấp học
+                                                        bổng đến 50%
+                                                 </a>
+                                          </div>
+                                          <div class="row-blog">
+                                                 <a href="#!"><img src="./image/2-1593659130-5746-1593659246-140x93.jpg" alt="IMG-BLOG5" /></a>
+                                                 <a href="#!">
+                                                        Workshop Du Học: Canada và Úc - Lựa
+                                                        chọn nào có lợi hơn cho du học sinh
+                                                        Việt Nam
+                                                 </a>
+                                          </div> -->
+                                   </div>
+                            </div>
+                            <div class="calendar form">
+                                   <h2>LỊCH HỘI THẢO</h2>
+                                   <div class="desc">
+                                          <!-- <div class="row-calen">
+                                                 <div class="calen-box">
+                                                        <span class="day">06</span>
+                                                        <span class="mon-year">07/2020</span>
+                                                 </div>
+                                                 <a href="#!">Tầm quan trọng của hoạt động ngoại
+                                                        ngóa trong hồ sơ du học</a>
+                                          </div>
+                                          <div class="row-calen">
+                                                 <div class="calen-box">
+                                                        <span class="day">06</span>
+                                                        <span class="mon-year">07/2020</span>
+                                                 </div>
+                                                 <a href="#!">Hội thảo online cùng University of
+                                                        Melbourne – Trinity College</a>
+                                          </div>
+                                          <div class="row-calen">
+                                                 <div class="calen-box">
+                                                        <span class="day">06</span>
+                                                        <span class="mon-year">07/2020</span>
+                                                 </div>
+                                                 <a href="#!">Đại học Adelaide, Australia cấp học
+                                                        bổng đến 50%</a>
+                                          </div>
+                                          <div class="row-calen">
+                                                 <div class="calen-box">
+                                                        <span class="day">25</span>
+                                                        <span class="mon-year">06/2020</span>
+                                                 </div>
+                                                 <a href="#!">Workshop Du Học: Canada Và Úc – Lựa
+                                                        Chọn Nào Có Lợi Hơn Cho Du Học Sinh
+                                                        Việt Nam</a>
+                                          </div>
+                                          <div class="row-calen">
+                                                 <div class="calen-box">
+                                                        <span class="day">25</span>
+                                                        <span class="mon-year">06/2020</span>
+                                                 </div>
+                                                 <a href="#!">Hội Thảo Online: Săn Học Bổng Du
+                                                        Học Hà Lan Lên Đến 5000 EURO Cùng
+                                                        Với Trường Đại Học Fontys University
+                                                        Of Applied Sciences</a>
+                                          </div>
+                                          <div class="btn-add">
+                                                 <button class="btn">
+                                                        <a href="#!">XEM THÊM</a>
+                                                 </button>
+                                          </div> -->
+                                   </div>
+                            </div>
+                            <div class="sign-up form">
+                                   <h2>ĐĂNG KÍ TƯ VẤN</h2>
+                                   <div class="desc">
+                                          <form action="post">
+                                                 <p style="padding-bottom: 5px;">
+                                                        Vui lòng để lại thông tin để nhận
+                                                        được những ưu đãi tốt nhất từ chúng
+                                                        tôi
+                                                 </p>
+                                                 <div class="info-item">
+                                                        <input type="text" placeholder="Họ và tên" />
+                                                 </div>
+                                                 <div class="info-item">
+                                                        <input type="text" placeholder="Điện thoại" />
+                                                 </div>
+                                                 <div class="info-item">
+                                                        <input type="text" placeholder="Email của bạn" />
+                                                 </div>
+                                                 <div class="info-item">
+                                                        <textarea name="" id="" cols="40" rows="10"
+                                                               placeholder="Nội dung"></textarea>
+                                                 </div>
+                                          </form>
+                                          <div class="btn-post">
+                                                 <a href="#!" style="text-decoration:none;">GỬI YÊU CẦU</a>
+                                          </div>
+                                   </div>
+                            </div>
+                     </div>
+              </div>
+       </section>
+
+       <footer>
+              <div class="footer-1">
+                     <div class="partner-container">
+                            <img src="./image/doitac1.png" alt="">
+                            <img src="./image/doitac2.jpg" alt="">
+                            <img src="./image/doitac3.jpg" alt="">
+                            <img src="./image/doitac4.jpg" alt="">
+                            <img src="./image/doitac5.jpg" alt="">
+                            <img src="./image/doitac6.jpg" alt="">
+                     </div>
+              </div>
+              <div class="footer-2">
+                     <div class="company-information">
+                            <h3>CÔNG TY DU HỌC VIỆT NAM</h3>
+                            <div class="line"></div>
+                            <ul>
+                                   <li>
+                                          <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                                          <span class="text">Địa chỉ : N06, 82 Nguyễn Tuân, Thanh Xuân, HN</span>
+                                   </li>
+                                   <li>
+                                          <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                                          <span class="text">Hotline : 0973872184 - 0834570092</span>
+                                   </li>
+                                   <li>
+                                          <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                          <span class="text">Email: lienhe@crv.vn</span>
+                                   </li>
+                                   <li>
+                                          <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                                          <span class="text">Website: thietkewebsite.pro.vn</span>
+                                   </li>
+                            </ul>
+                     </div>
+                     <div class="access-quickly">
+                            <h3>TRUY CẬP NHANH</h3>
+                            <div class="line"></div>
+                            <ul>
+                                   <li><a href="#">Giới thiệu</a></li>
+                                   <li><a href="#">Dịch vụ</a></li>
+                                   <li>
+                                          <a href="#">Quốc gia du học</a>
+                                          <ul class="list-study-abroad-country">
+                                                 <li><a href="#">Du học Hàn Quốc</a></li>
+                                                 <li><a href="#">Du học Nhật Bản</a></li>
+                                                 <li><a href="#">Du học Đài Loan</a></li>
+                                          </ul>
+                                   </li>
+                                   <li><a href="#">Hội thảo du học</a></li>
+                                   <li><a href="#">Thư viện</a></li>
+                                   <li><a href="#">Tin tức, sự kiện</a></li>
+                                   <li><a href="#">Liên hệ</a></li>
+                            </ul>
+                     </div>
+                     <div class="fanpage">
+                            <h3>FANPAGE</h3>
+                            <div class="line"></div>
+                            <a href="https://www.facebook.com/"><img
+                                          src="./image/Ảnh chụp màn hình 2023-10-19 120620.png" alt=""></a>
+                     </div>
+                     <div class="button-to-top">
+                            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                     </div>
+                     <div class="people-create">
+                            <h3>Copyright @PhucApuTruong. All rights reserved.</h3>
+                     </div>
+              </div>
+       </footer>
+
+       <script src="index.js"></script>
+</body>
+
+</html>

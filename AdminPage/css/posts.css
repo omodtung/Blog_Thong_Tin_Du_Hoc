@@ -1,0 +1,207 @@
+/* phần dùng chung */
+
+@font-face {
+       font-family: 'open sans';
+       src: url('../font/Open_Sans/static/OpenSans-Regular.ttf');
+}
+
+@font-face {
+       font-family: 'open sans bold';
+       src: url('../font/Open_Sans/static/OpenSans-Bold.ttf');
+}
+
+
+@font-face {
+       font-family: 'fontawesome';
+       src: url('http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css');
+}
+
+a {
+       text-decoration: none;
+       color: white;
+}
+
+li {
+       list-style: none;
+}
+
+* {
+       margin: 0;
+       padding: 0;
+}
+
+:root {
+       --corler: #FCB100;
+       --font-name: 'open sans';
+       --font-name-bold: 'open sans bold';
+}
+
+/* hết phần dùng chung */
+
+/* header */
+header{
+       background-color: #3A4149;
+       padding: 20px;
+}
+header span{
+       font-family: var(--font-name-bold);
+       color: white;
+       font-size: 30px;
+}
+/* end header */
+.main-content-body{
+       display: flex;
+
+}
+
+/* sidebar */
+.sidebar{
+       width: 20%;
+       background-color: #2F353A;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+}
+.sidebar h3{
+       font-family: var(--font-name-bold);
+       color: white;
+       font-size: 24px;
+       margin-top: 10px;
+       margin-bottom: 10px;
+}
+.sidebar span {
+       font-family: var(--font-name-bold);
+       color: #73818f;
+}
+.sidebar ul {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+}
+.sidebar ul li{
+       box-sizing: border-box;
+       display: block;
+       /* border: 2px solid white; */
+       width: 100%;
+       /* height: 30px; */
+       
+       padding-left: 50px;
+       padding-top: 20px;
+       padding-bottom: 20px;
+}
+.sidebar ul li:hover {
+       background-color: #EA7C69;
+}
+.sidebar ul li:nth-child(1){
+       background-color: #EA7C69;
+}
+.sidebar ul li:nth-child(1) span{
+       color: white;
+}
+.sidebar ul li a .icon{
+       margin-right: 10px;
+}
+.sidebar ul li:nth-child(4){
+       margin-top: 20px;
+       border-top: 1px solid grey;
+}
+/* end sidebar*/
+
+/* page */
+
+.post-management-page{
+       background-color:#2F353A;
+       width: 80%;
+}
+.post-management-page h3{
+       font-family: var(--font-name-bold);
+       font-size: 30px;
+       text-align: center;
+       color: white;
+       margin-top: 30px;
+       margin-bottom: 10px;
+}
+.total-posts{
+       display: flex;
+       justify-content: center;
+}
+.total-posts table {
+       border: 1px solid silver;
+       margin-top: 20px;
+       width: 80%;
+}
+.total-posts table tr{
+       border: 1px solid silver;
+}
+
+.total-posts table th {
+       font-family: var(--font-name-bold);
+       color: #FCB100;
+       border: 1px solid silver;
+       padding: 5px;
+}
+.total-posts table td {
+       border: 1px solid silver;
+       padding: 5px;
+       text-align: center;
+}
+.total-posts table td span{
+       font-family: var(--font-name);
+       color: white;
+}
+
+.action-post{
+       display: flex;
+       justify-content: center;
+}
+.action-post table {
+       border: 1px solid silver;
+       margin-top: 20px;
+       width: 80%;
+}
+.action-post table tr{
+       border: 1px solid silver;
+}
+
+.action-post table th {
+       font-family: var(--font-name-bold);
+       color: #FCB100;
+       border: 1px solid silver;
+       padding: 5px;
+}
+.action-post table td {
+       border: 1px solid silver;
+       padding: 5px;
+       text-align: center;
+}
+.action-post table td span{
+       font-family: var(--font-name);
+       color: white;
+}
+.action-push-post span:nth-child(1){
+       margin-right: 30px;
+}
+
+/* show post */
+.watch-post {
+       margin-top: 40px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       margin-bottom: 100px;
+}
+.watch-post iframe{
+       background-color: white;
+       width: 80%;
+       height: 500px;
+       border: 5px solid #FCB100;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./reset.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="./font/stylesheet.css" />
+        <link rel="stylesheet" href="./styleheader.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <header id="head">
+            <div class="header">
+                <div class="content">
+                    <div class="logo">
+                        <img src="./img/logo.png" alt="logo" />
+                    </div>
+                    <div class="text_header">
+                        <div class="text-item">
+                            <img src="./img/call_header.png" alt="icon-call" />
+                            <div class="item">
+                                <span class="title">Hotline</span>
+                                <span class="info">0948.468.558</span>
+                            </div>
+                        </div>
+                        <div class="text-item">
+                            <img
+                                src="./img/mail_header.png"
+                                alt="icon-mail"
+                                width="36px"
+                                height="25px"
+                            />
+                            <div class="item">
+                                <span class="title">Email</span>
+                                <span class="info">lienhe@crv.vn</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-container">
+                        <form action="#!">
+                            <input
+                                type="text"
+                                placeholder="Enter key search"
+                                class="input-text"
+                            />
+                            <button type="submit">
+                                <img src="./img/search.png" alt="search" />
+                            </button>
+                        </form>
+                    </div>
+                    <div class="log">
+                        <a href="#!">Đăng nhập</a>
+
+                        <a href="#!">Đăng ký</a>
+                    </div>
+                    <!-- THEM ZO NE -->
+
+                    <label class="nav-btn" for="input-check">
+                        <i
+                            class="fa-solid fa-bars fa-2xl"
+                            style="cursor: pointer"
+                        ></i>
+                    </label>
+                </div>
+            </div>
+
+            <nav class="navigation">
+                <div class="content">
+                    <ul>
+                        <li>
+                            <a href="./index.html"
+                                ><i class="fa-solid fa-house"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="#!">GIỚI THIỆU</a>
+                        </li>
+                        <li>
+                            <a href="#!">DỊCH VỤ</a>
+                        </li>
+                        <li>
+                            <a href="#!">QUỐC GIA DU HỌC </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="./du_hoc_han_quoc.html"
+                                        >Du học Hàn Quốc</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="./du_hoc_nhat_ban.html"
+                                        >Du học Nhật Bản</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="./du_hoc_dai_loan.html"
+                                        >Du học Đài Loan</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#!">HỘI THẢO DU HỌC</a>
+                        </li>
+                        <li>
+                            <a href="#!">THƯ VIỆN</a>
+                        </li>
+                        <li>
+                            <a href="#!">TIN TỨC, SỰ KIỆN</a>
+                        </li>
+                        <li>
+                            <a href="#!">LIÊN HỆ</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- INPUT -->
+            <input
+                type="checkbox"
+                name=""
+                hidden
+                class="nav_input"
+                id="input-check"
+            />
+            <!-- NAV MOBILE -->
+            <nav class="nav_mobile">
+                <label class="close-icon" for="input-check">
+                    <i class="fa-solid fa-square-xmark"></i>
+                </label>
+
+                <ul>
+                    <li>
+                        <a href="#!"
+                            ><i class="fa-solid fa-right-to-bracket"></i>
+                            <span style="color: #06236d">Đăng nhập</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./index.html"
+                            ><i class="fa-solid fa-house"></i
+                        ></a>
+                    </li>
+                    <li>
+                        <a href="#!">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="#!">Dịch vụ</a>
+                    </li>
+                    <li>
+                        <a href="#!">Quốc gia du học</a>
+                        <input
+                            type="checkbox"
+                            hidden
+                            class="nav-input-submenu"
+                            id="input-submenu"
+                        />
+                        <label class="plus" for="input-submenu">+</label>
+                        <label class="minus" for="input-submenu">-</label>
+
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="./du_hoc_han_quoc.html"
+                                    >Du học Hàn Quốc</a
+                                >
+                            </li>
+                            <li>
+                                <a href="./du_hoc_nhat_ban.html"
+                                    >Du học Nhật Bản</a
+                                >
+                            </li>
+                            <li>
+                                <a href="./du_hoc_dai_loan.html"
+                                    >Du học Đài Loan</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!">Hội thảo du học</a>
+                    </li>
+                    <li>
+                        <a href="#!">Thư viện</a>
+                    </li>
+                    <li>
+                        <a href="#!">Tin tức, sự kiện</a>
+                    </li>
+                    <li>
+                        <a href="#!">Liên hệ</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Thêm cái overley zo -->
+            <label class="overley" for="input-check"></label>
+            <!-- SECTION -->
+        </header>
+    </body>
+    <script src="../sang.js"></script>
+    
+</html>
