@@ -93,10 +93,10 @@ header span{
 .sidebar ul li:hover {
        background-color: #EA7C69;
 }
-.sidebar ul li:nth-child(1){
+.sidebar ul li:nth-child(2){
        background-color: #EA7C69;
 }
-.sidebar ul li:nth-child(1) span{
+.sidebar ul li:nth-child(2) span{
        color: white;
 }
 .sidebar ul li a .icon{
@@ -108,12 +108,12 @@ header span{
 }
 /* end sidebar*/
 
-/* page */
-.post-management-page{
+.comments-management-page{
        background-color:#2F353A;
        width: 80%;
+       height: 800px;
 }
-.post-management-page > h3{
+.comments-management-page > h3{
        font-family: var(--font-name-bold);
        font-size: 30px;
        text-align: center;
@@ -121,137 +121,50 @@ header span{
        margin-top: 30px;
        margin-bottom: 10px;
 }
-.total-posts{
+.total-coments{
        display: flex;
        justify-content: center;
 }
-.total-posts table {
+.total-coments table {
        border: 1px solid silver;
        margin-top: 20px;
-       width: 80%;
+       width: 90%;
 }
-.total-posts table tr{
+.total-coments table tr{
        border: 1px solid silver;
 }
 
-.total-posts table th {
+.total-coments table th {
        font-family: var(--font-name-bold);
        color: #FCB100;
        border: 1px solid silver;
        padding: 5px;
 }
-.total-posts table td {
+.total-coments table td {
        border: 1px solid silver;
        padding: 5px;
        text-align: center;
 }
-.total-posts table td span{
+.total-coments table td span{
        font-family: var(--font-name);
        color: white;
 }
 
-.action-post{
-       display: flex;
-       justify-content: center;
+.action-filter-coments{
+       width: 50%;
+       margin: 30px auto;
 }
-.action-post table {
-       border: 1px solid silver;
-       margin-top: 20px;
-       width: 80%;
-}
-.action-post table tr{
-       border: 1px solid silver;
-}
-
-.action-post table th {
+.action-filter-coments .title{
        font-family: var(--font-name-bold);
-       color: #FCB100;
-       border: 1px solid silver;
-       padding: 5px;
-}
-.action-post table td {
-       border: 1px solid silver;
-       padding: 5px;
-       text-align: center;
-}
-.action-post table td span{
-       font-family: var(--font-name);
        color: white;
+       font-size: 18px;
 }
-.action-push-post span:nth-child(1){
-       margin-right: 30px;
-}
-
-/* show post */
-.watch-post {
-       margin-top: 40px;
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
-       margin-bottom: 100px;
-}
-.watch-post iframe{
-       background-color: white;
-       width: 80%;
-       height: 500px;
-       border: 5px solid #FCB100;
-}
-.watch-post{
-       border: 2px solid #FCB100;
-       background-color: white;
-       width: 80%;
-       margin: 0 auto;
-       height: 500px;
-       margin-bottom: 50px;
-       /* padding: 10px; */
-}
-.watch-post .container-left{
-       width: 100%;
-       height: 500px;
-       overflow: scroll;
-       
-}
-
-
-.container-left h3 {
+.action-filter-coments option{
        font-family: var(--font-name-bold);
-       font-size: 22px;
-       color: #004E9A;
-       margin-bottom: 20px;
 }
-
-.container-left .text span {
-       font-family: var(--font-name);
-       text-align: justify;
-       font-size: 15px;
+.action-filter-coments > div {
+       margin-bottom: 10px;
 }
-
-.container-left .text figure {
-       text-align: center;
+.action-delete-coment span:nth-child(1){
+       margin-right: 20px;
 }
-
-.container-left .text figure img {
-       width: 680px;
-       margin: 10px;
-}
-
-.container-left .text figure figcaption h4 {
-       font-family: var(--font-name);
-}
-
-.container-left .text .author {
-       font-size: 18px;
-}
-
-.container-left .text .author span {
-       font-weight: bold;
-       font-size: 18px;
-}
-
-
-
-
-
-
-
