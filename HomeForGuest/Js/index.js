@@ -425,7 +425,7 @@ function registerForm() {
 
 // show login
 function login() {
-       let startLogin = document.querySelector('.login');
+       let startLogin = document.querySelector('.header-1 .login');
        let form = document.querySelector('.form-login');
        startLogin.addEventListener('click', () => {
               form.style.display = 'flex';
@@ -589,8 +589,8 @@ function checkLogin(userId, passWord) {
                             check = 1;
                             setStateLogin(userId);
                             // kiểm tra xem có phải admin không
-                            let adminSetting = document.querySelector('.content .admin-setting');
-                            let userSetting = document.querySelector('.content .user-setting');
+                            let adminSetting = document.querySelector('.header-2 .admin-setting');
+                            let userSetting = document.querySelector('.header-2 .user-setting');
                             if (value.role == 'admin') {
                                    // hiện trang admin
                                    adminSetting.style.display = 'block';
@@ -641,8 +641,8 @@ function checkRegister(fullName, userId, passWord, repeatPass) {
                      window.localStorage.setItem('user', temp);
 
                      // kiểm tra xem có phải admin không
-                     let adminSetting = document.querySelector('.content .admin-setting');
-                     let userSetting = document.querySelector('.content .user-setting');
+                     let adminSetting = document.querySelector('.header-2 .admin-setting');
+                     let userSetting = document.querySelector('.header-2 .user-setting');
                      if (user.role == 'admin') {
                             // hiện trang admin
                             adminSetting.style.display = 'block';
@@ -693,7 +693,7 @@ function handleSubmit() {
 
 // ẩn biểu tượng đăng nhập khi thực hiện đăng nhập thành công
 function iconLogin() {
-       let icon = document.querySelector('.login');
+       let icon = document.querySelector('.header-1 .login');
 
        if (isLogin() != null) {
               icon.style.display = 'none';
@@ -730,8 +730,8 @@ function setUpLogin() {
        if (isLogin() != null) {
               let objUser = isLogin();
               //  kiểm tra xem có phải admin không
-              let adminSetting = document.querySelector('.content .admin-setting');
-              let userSetting = document.querySelector('.content .user-setting')
+              let adminSetting = document.querySelector('.header-2 .admin-setting');
+              let userSetting = document.querySelector('.header-2 .user-setting')
               if (objUser.role == 'admin') {
                      // hiện trang admin
                      adminSetting.style.display = 'block';
