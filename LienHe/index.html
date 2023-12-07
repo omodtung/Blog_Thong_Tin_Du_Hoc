@@ -42,14 +42,17 @@
                     </button>
                 </form>
             </div>
+            <div class="login">
+                <img width="50px" src="./image/login.png" alt="">
+            </div>
         </div>
         <div class="header-2">
             <ul>
                 <li>
-                    <a href="../Home/index.php"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    <a href="../HomeForGuest/index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../page_gioithieu/pagegioithieu.html">
                         <h3>GIỚI THIỆU</h3>
                     </a>
                 </li>
@@ -60,41 +63,130 @@
 
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../page-quocgiaduhoc/quocgiaduhoc.html">
                         <h3>QUỐC GIA DU HỌC</h3>
                     </a>
                     <ul class="sub-menu">
-                        <li><a href="#">Du học Hàn Quốc</a></li>
-                        <li><a href="#">Du học Nhật Bản</a></li>
-                        <li><a href="#">Du học Đài Loan</a></li>
+                        <li><a href="../page-quocgiaduhoc/du_hoc_han_quoc.html">Du học Hàn Quốc</a></li>
+                        <li><a href="../page-quocgiaduhoc/du_hoc_nhat_ban.html">Du học Nhật Bản</a></li>
+                        <li><a href="../page-quocgiaduhoc/du_hoc_dai_loan.html">Du học Đài Loan</a></li>
                     </ul>
 
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../Tung/HoiThaoDuHoc.html">
                         <h3>HỘI THẢO DU HỌC</h3>
                     </a>
 
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../Tung/ThuVien.html">
                         <h3>THƯ VIỆN</h3>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <h3>TIN TỨC THỜI SỰ</h3>
                     </a>
 
                 </li>
                 <li>
-                    <a href="">
+                    <a href="../page_event/pagesk.html">
+                        <h3>TIN TỨC SỰ KIỆN</h3>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="./index.html">
                         <h3>LIÊN HỆ</h3>
+                    </a>
+                </li>
+                <li class ="admin-setting">
+                    <a href="#">
+                        <h3>ADMIN</h3>
+                    </a>
+                </li>
+                <li class ="user-setting">
+                    <a href="../UserPage/index.html">
+                        <h3>USER</h3>
                     </a>
                 </li>
             </ul>
         </div>
     </header>
+    <div class="navigation_mobile">
+        <input
+            type="checkbox"
+            name=""
+            hidden
+            class="nav_input"
+            id="input-check"
+        />
+        <!-- NAV MOBILE -->
+        <nav class="nav_mobile">
+            <label class="close-icon" for="input-check">
+                <i class="fa-solid fa-square-xmark"></i>
+            </label>
+
+            <ul>
+                <li>
+                    <a href="#!"
+                        ><i class="fa-solid fa-right-to-bracket"></i>
+                        <span>Đăng nhập</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../HomeForGuest/index.html"
+                        ><i class="fa-solid fa-house"></i
+                    ></a>
+                </li>
+                <li>
+                    <a href="../page_gioithieu/pagegioithieu.html">Giới thiệu</a>
+                </li>
+                <li>
+                    <a href="#!">Dịch vụ</a>
+                </li>
+                <li>
+                    <a href="../page-quocgiaduhoc/quocgiaduhoc.html">Quốc gia du học</a>
+                    <input
+                        type="checkbox"
+                        hidden
+                        class="nav-input-submenu"
+                        id="input-submenu"
+                    />
+                    <label class="plus" for="input-submenu">+</label>
+                    <label class="minus" for="input-submenu">-</label>
+
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="../page-quocgiaduhoc/du_hoc_han_quoc.html"
+                                >Du học Hàn Quốc</a
+                            >
+                        </li>
+                        <li>
+                            <a href="../page-quocgiaduhoc/du_hoc_nhat_ban.html"
+                                >Du học Nhật Bản</a
+                            >
+                        </li>
+                        <li>
+                            <a href="../page-quocgiaduhoc/du_hoc_dai_loan.html"
+                                >Du học Đài Loan</a
+                            >
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../Tung/HoiThaoDuHoc.html">Hội thảo du học</a>
+                </li>
+                <li>
+                    <a href="../Tung/ThuVien.html">Thư viện</a>
+                </li>
+                <li>
+                    <a href="../page_event/pagesk.html">Tin tức, sự kiện</a>
+                </li>
+                <li>
+                    <a href="./index.html">Liên hệ</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Thêm cái overley zo -->
+        <label class="overley" for="input-check"></label>
+    </div>
     <!-- header end -->
     <!-- start section body  -->
     <section id="body" class="main-content-body">
@@ -106,14 +198,14 @@
         <div class="container-path">
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="../HomeForGuest/index.html">
                         <i class="fa fa-home" aria-hidden="true"></i>
                         <span class="home-icon">Home</span>
                         <i class="fa-solid fa-angle-right"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="./index.html">
                         <span>Liên hệ</span>
                     </a>
                 </li>

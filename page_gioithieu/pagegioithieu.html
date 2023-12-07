@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./font/stylesheet.css">
-    <link rel="stylesheet" href="../bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap.css">
     <link rel="stylesheet" href="./stylegioithieu.css">
     <link rel="stylesheet" href="../footer/stylefooter.css">
     <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
@@ -65,10 +65,8 @@
                         </button>
                     </form>
                 </div>
-                <div class="log">
-                    <a href="../Tung/DangNhap.php">Đăng nhập</a>
-
-                    <a href="../Tung/FormDangKy/index.php">Đăng ký</a>
+                <div class="login">
+                    <img width="50px" src="./img/login.png" alt="Login">
                 </div>
                 <!-- THEM ZO NE -->
 
@@ -90,7 +88,7 @@
                         ></a>
                     </li>
                     <li>
-                        <a href="../page_gioithieu/pagegioithieu.html" style="background-color: #1A60A4;">GIỚI THIỆU</a>
+                        <a href="./pagegioithieu.html">GIỚI THIỆU</a>
                     </li>
                     <li>
                         <a href="#!">DỊCH VỤ</a>
@@ -126,6 +124,16 @@
                     </li>
                     <li>
                         <a href="../LienHe/index.html">LIÊN HỆ</a>
+                    </li>
+                    <li class ="admin-setting">
+                        <a href="#">
+                            ADMIN
+                        </a>
+                    </li>
+                    <li class ="user-setting">
+                        <a href="../UserPage/index.html">
+                            USER
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -210,6 +218,47 @@
         </nav>
         <!-- Thêm cái overley zo -->
         <label class="overley" for="input-check"></label>
+    </div>
+    <!-- form login and register -->
+    <div class="form-login">
+        <img class="back-to-login" width="20px" src="./image/arrow.png" alt="">
+        <img class="close-form" width="20px" src="./image/close.png" alt="">
+        <h3>Đăng Nhập</h3>
+        <form onsubmit="return handleSubmit()">
+            <div class="login-userName">
+                <input type="text" placeholder="Họ tên">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Họ tên không được để trống</span>
+                </div>
+            </div>
+            <div class="login-id">
+                <input type="text" placeholder="Tên đăng nhập">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Tên đăng nhập không được để trống</span>
+                </div>
+            </div>
+            <div class="login-password">
+                <input type="text" placeholder="Mật khẩu">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Mật khẩu không được để trống</span>
+                </div>
+            </div>
+            <div class="login-repeatpass">
+                <input type="text" placeholder="Nhập lại mật khẩu">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Mật khẩu lặp lại không đúng</span>
+                </div>
+            </div>
+            <button type="submit">ĐĂNG KÝ</button>
+            <div class="register" onclick="register(event)">
+                <span>Bạn chưa có tài khoản ?</span>
+                <a href="#">Đăng ký</a>
+            </div>
+        </form>
     </div>
     <!-- ------------------------------------------------------------------------------------------------------- -->
     <!-- Section -->
@@ -564,7 +613,7 @@
     </section>
     <!-- Include Footer -->
     <div include-html="../footer/footer.html"></div>
-    <script src="../sang.js"></script>
+    <script src="./sang.js"></script>
     <script src="../page-quocgiaduhoc/a.js"></script>
     <script>
         includeHTML();
