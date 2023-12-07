@@ -1,3 +1,48 @@
+// logout
+function logOut(){
+       let user = window.localStorage.getItem('user');
+       let users = JSON.parse(user);
+
+       users.forEach((value)=>{
+              if(value.stateLogin == '1'){
+                     value.stateLogin = '0';
+              }
+       })
+
+       let temp = JSON.stringify(users);
+       window.localStorage.setItem('user',temp);
+       window.location.href = '../Home/index.html';
+}
+
+// ngan chankhi nguoi dung back lai trang sao khi logout
+// kiểm tra xem có người đăng nhập hay chưa
+function isLogin() {
+       let user = window.localStorage.getItem('user');
+       let users = JSON.parse(user);
+       let flag = 0;
+       let objUser = {};
+       users.forEach((value) => {
+              if (value.stateLogin == '1') {
+                     flag = 1;
+                     objUser = value;
+              }
+       });
+
+       if (flag == 1) {
+              return objUser;
+       }
+       else {
+              return null;
+       }
+}
+// Thêm sự kiện ngăn chặn người dung quay lại
+function backUserSetting(){
+       if(isLogin() == null){
+              window.alert('Bạn chưa đăng nhập, hãy đăng nhập trước !!');
+              window.location.href = '../Home/index.html';
+       }
+}
+backUserSetting();
 
 
 function setUpPost_toFilter() {

@@ -48,6 +48,13 @@ header span{
        color: white;
        font-size: 30px;
 }
+header img {
+       position: absolute;
+       right: 30px;
+       top: 20px;
+       width: 40px;
+       cursor: pointer;
+}
 /* end header */
 .main-content-body{
        display: flex;

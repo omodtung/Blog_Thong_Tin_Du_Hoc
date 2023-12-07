@@ -556,6 +556,7 @@ section {
 
 .container-left {
        margin-right: 30px;
+       width: 55%;
 }
 
 .container-left .name-news a h3 {
@@ -877,6 +878,7 @@ section {
        align-items: center;
        right: 50px;
        bottom: 50px;
+       cursor: pointer;
 }
 
 .people-create {

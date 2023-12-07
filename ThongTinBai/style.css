@@ -980,6 +980,9 @@ section {
        font-size: 13px;
        margin-left: 45%;
 }
+.watch-coment-more{
+       cursor: pointer;
+}
 
 
 
@@ -1096,6 +1099,7 @@ section {
        align-items: center;
        right: 50px;
        bottom: 50px;
+       cursor: pointer;
 }
 
 .people-create {
