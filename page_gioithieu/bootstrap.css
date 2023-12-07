@@ -282,7 +282,6 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem;
 }
 
 ol ol,
@@ -387,10 +386,10 @@ figure {
   margin: 0 0 1rem;
 }
 
-img,
+/* img,
 svg {
   vertical-align: middle;
-}
+} */
 
 table {
   caption-side: bottom;
@@ -714,7 +713,7 @@ progress {
   color: var(--bs-secondary-color);
 }
 
-.container,
+/* .container,
 .container-fluid,
 .container-xxl,
 .container-xl,
@@ -727,7 +726,7 @@ progress {
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
-}
+} */
 :root {
   --bs-breakpoint-xs: 0;
   --bs-breakpoint-sm: 576px;

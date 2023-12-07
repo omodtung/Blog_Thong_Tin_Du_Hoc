@@ -1,24 +1,14 @@
-body {
-    font-family: "Open Sans","sans-serif";
-    color: #333;
-    line-height: 1.4;
-    text-align: left;
-    margin: 0;
-}
-.page-transition {
-    transition: opacity 0.5s ease-in-out; /* Thay đổi opacity trong 0.5 giây */
-}
 /* Header */
 body {
     box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "sans-serif" !important;
     font-weight: 500;
     font-size: 15px;
     line-height: 1.4;
 }
 
 .content {
-    width: 67%;
+    width: 71%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -35,7 +25,7 @@ a:hover {
 /* common */
 body {
     box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "sans-serif";
     font-weight: 500;
     font-size: 15px;
     line-height: 1.4;
@@ -168,6 +158,7 @@ body {
 .navigation .content > ul > li > a {
     font-weight: bold;
     display: inline-block;
+    font-size: 14px;
     padding: 20px 19px;
     color: #fff;
     text-decoration: none;
@@ -461,7 +452,7 @@ body {
 /* Mobile: width < 740px */
 @media only screen and (max-width: 46.1875em) {
     .login{
-        display: none;
+        display: none !important;
     }
     .nav_mobile {
         width: 70%;
@@ -556,7 +547,7 @@ body {
 /* Tablet: width >= 740px  width < 1024px*/
 @media only screen and (min-width: 46.25em) and (max-width: 64em) {
     .login {
-        display: none;
+        display: none !important;
     }
     .content {
         width: 98%;
@@ -645,7 +636,6 @@ body {
 .nav-body{
     height: auto;
     width: 100%;
-    border: 1px white solid;
     box-shadow:0 0 15px 0 #ccc;
     padding: 10px 0px;
 }
@@ -702,10 +692,10 @@ body {
     content: "";
     width: 215px;
     height: 2px;
-    margin-top: 49px;
+    margin-top: 53px;
     background: #ffb300;
     position: absolute;
-    bottom: 1;
+    bottom: 2;
     left: 20;
     z-index: 2;
 }
@@ -785,6 +775,7 @@ body {
 .right-menu .row {
     display: flex;
     align-items: center;
+    padding-left: 10px;
 }
 .right-menu .row i {
     margin-left: 22px;
@@ -953,7 +944,6 @@ body {
 
 .btn {
     border: 0px;
-    background-color: #fbfbfb;
 }
 .add a {
     color: #004e9a;
@@ -1052,7 +1042,7 @@ body {
         width: 70% !important;
     }
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
     /* Responsive for tablet */
     h1{
         font-size: 20px!important;
@@ -1062,7 +1052,6 @@ body {
     }
     .container{
         width: 100%;
-        margin: 0 5px !important;
     }
     .content-right{
         margin-right: 3%;
@@ -1071,7 +1060,7 @@ body {
         margin-left: 0;
     }
     .right-menu .row a{
-        margin-left: 0;
+        margin-left: 1em;
     }
     h2{
         font-size: 16px!important;
@@ -1081,6 +1070,9 @@ body {
     }
     .desc img{
         width: 80%;
+    }
+    #solid::before{
+        margin-top: 49px;
     }
   }
 
