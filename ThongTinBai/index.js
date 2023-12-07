@@ -403,7 +403,7 @@ function post_articles_3(container, numberOfPost, footerContainer) {
        
                                                  // date post
        
-                                                 let dateString = post.datePost.split('/');
+                                                 let dateString = post.datePost.split('-');
                                                  let day = dateString[0];
                                                  let month = dateString[1];
                                                  let year = dateString[2];

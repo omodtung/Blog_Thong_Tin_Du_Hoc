@@ -406,6 +406,8 @@ header {
            opacity: 1;
        }
    }
+
+   
 /* form login */
 .form-login {
        border: 1px solid white;
@@ -610,6 +612,7 @@ section {
 .button-watch-more a {
        font-family: var(--font-name);
        transition: 1s;
+       color: white;
 }
 
 .button-watch-more :hover {
@@ -718,6 +721,7 @@ section {
 
 .container-left {
        margin-right: 30px;
+       width: 55%;
 }
 
 .container-left .name-news a h3 {
