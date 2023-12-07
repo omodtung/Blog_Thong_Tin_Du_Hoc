@@ -6,6 +6,13 @@ body {
     font-size: 15px;
     line-height: 1.4;
 }
+body {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.4;
+}
 
 .content {
     width: 67%;
@@ -21,12 +28,24 @@ a {
 a:hover {
     color: #25aae2 !important;
 }
+#head {
+    transition: 0.5s;
+}
 
-/* HEADER */
+.fa-bars {
+    display: none;
+}
 .close {
     transform: translateY(-65%);
     position: sticky;
-    top: 0;
+    top: 0px;
+    z-index: 1000;
+}
+
+.close_mobile {
+    transform: translateY(-65%);
+    position: sticky;
+    top: 50px;
     z-index: 1000;
 }
 
@@ -35,6 +54,7 @@ a:hover {
     padding-top: 5px;
     border-top: 3px solid #ffc12f;
 }
+
 .logo {
     margin-right: 180px;
 }
@@ -42,8 +62,6 @@ a:hover {
 .header .content {
     display: flex;
     align-items: center;
-
-    justify-content: space-between;
 }
 
 .search-container {
@@ -103,7 +121,7 @@ a:hover {
 .text-item .item .title {
     font-size: 15px;
     color: #333;
-    font-weight: 400;
+    font-weight: lighter;
     margin-bottom: 10px;
 }
 
@@ -125,7 +143,6 @@ a:hover {
 }
 
 /* NAVIGATION */
-
 .navigation {
     background-color: #004e9a;
 }
@@ -135,8 +152,9 @@ a:hover {
 }
 
 .navigation .content > ul > li > a {
+    font-weight: bold;
     display: inline-block;
-    padding: 20px 22px;
+    padding: 20px 19px;
     color: #fff;
     text-decoration: none;
 }
@@ -189,33 +207,13 @@ a:hover {
     color: #000 !important;
     background: #e1e1e1;
 }
-
-/* HEADER */
-
-.fa-bars {
-    display: none;
-}
-
 .header .content {
     width: 90%;
 }
 
-.log {
+.login {
     display: flex;
     margin-left: 116px;
-}
-
-.log a:first-child {
-    margin-right: 15px;
-}
-
-.log a {
-    display: inline-block;
-    padding: 5px 10px;
-    font-size: 18px;
-    color: white;
-    background-color: #004e9a;
-    border-radius: 10px;
 }
 
 .nav_mobile > ul > li:nth-child(1) > a {
@@ -362,10 +360,101 @@ a:hover {
         opacity: 1;
     }
 }
+
+.admin-setting{
+    display: none;
+}
+.user-setting{
+    display: none;
+}
+
+/* form login */
+.form-login {
+    border: 1px solid white;
+    background-color: white;
+    position: fixed;
+    z-index: 5000;
+    left: 35%;
+    top: 20%;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+.form-login .close-form{
+    position: absolute;
+    right: 5px;
+    top: 2px;
+}
+.form-login .back-to-login{
+    position: absolute;
+    left: 5px;
+    top: 2px;
+}
+.form-login h3{
+    font-family: var(--font-name-bold);
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #ea7c69;
+}
+.form-login form input{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    font-family: var(--font-name);
+    text-align: center;
+    margin-bottom: 5px;
+}
+.form-login form .warning {
+    margin-bottom: 10px;
+    visibility: hidden;
+}
+
+.form-login form .warning img{
+    width: 15px;
+}
+.form-login form button {
+    margin-top: 20px;
+    background-color: #ea7c69;
+    width: 100%;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    border-color: #ea7c69;
+    font-family: var(--font-name-bold);
+    margin-bottom: 20px;
+}
+.form-login form .warning span{
+    font-family: var(--font-name-bold);
+    color: red;
+}
+.form-login form .register{
+    text-align: right;
+    margin-bottom: 10px;
+}
+.form-login form .register a{
+    color: #ea7c69;
+    font-family: var(--font-name-bold);
+}
+.form-login form .register span{
+    font-family: var(--font-name)
+}
+
+
+.disable{
+    opacity: 0.5; /* Độ mờ có thể điều chỉnh */
+    pointer-events: none;
+}
 /* Responsive */
 /* Mobile: width < 740px */
 @media only screen and (max-width: 46.1875em) {
-    .log {
+    .login {
         display: none;
     }
 
@@ -460,8 +549,8 @@ a:hover {
 }
 
 /* Tablet: width >= 740px  width < 1024px*/
-@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
-    .log {
+@media only screen and (min-width: 46.25em) and (max-width: 64em) {
+    .login {
         display: none;
     }
     .content {

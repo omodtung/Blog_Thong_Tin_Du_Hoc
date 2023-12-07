@@ -24,7 +24,10 @@
                     </div>
                     <div class="text_header">
                         <div class="text-item">
-                            <img src="./img/call_header.png" alt="icon-call" />
+                            <img
+                                src="./img/call_header.png"
+                                alt="icon-call"
+                            />
                             <div class="item">
                                 <span class="title">Hotline</span>
                                 <span class="info">0948.468.558</span>
@@ -55,10 +58,8 @@
                             </button>
                         </form>
                     </div>
-                    <div class="log">
-                        <a href="#!">Đăng nhập</a>
-
-                        <a href="#!">Đăng ký</a>
+                    <div class="login">
+                        <img width="50px" src="./img/login.png" alt="Login">
                     </div>
                     <!-- THEM ZO NE -->
 
@@ -75,18 +76,18 @@
                 <div class="content">
                     <ul>
                         <li>
-                            <a href="./index.html"
+                            <a href="../HomeForGuest/index.html"
                                 ><i class="fa-solid fa-house"></i
                             ></a>
                         </li>
                         <li>
-                            <a href="#!">GIỚI THIỆU</a>
+                            <a href="../page_gioithieu/pagegioithieu.html">GIỚI THIỆU</a>
                         </li>
                         <li>
                             <a href="#!">DỊCH VỤ</a>
                         </li>
                         <li>
-                            <a href="#!">QUỐC GIA DU HỌC </a>
+                            <a href="./quocgiaduhoc.html">QUỐC GIA DU HỌC </a>
                             <ul class="sub-menu">
                                 <li>
                                     <a href="./du_hoc_han_quoc.html"
@@ -106,22 +107,34 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#!">HỘI THẢO DU HỌC</a>
+                            <a href="../Tung/HoiThaoDuHoc.html">HỘI THẢO DU HỌC</a>
                         </li>
                         <li>
-                            <a href="#!">THƯ VIỆN</a>
+                            <a href="../Tung/ThuVien.html">THƯ VIỆN</a>
                         </li>
                         <li>
-                            <a href="#!">TIN TỨC, SỰ KIỆN</a>
+                            <a href="../page_event/pagesk.html">TIN TỨC, SỰ KIỆN</a>
                         </li>
                         <li>
-                            <a href="#!">LIÊN HỆ</a>
+                            <a href="../LienHe/index.html">LIÊN HỆ</a>
+                        </li>
+                        <li class ="admin-setting">
+                            <a href="#">
+                                ADMIN
+                            </a>
+                        </li>
+                        <li class ="user-setting">
+                            <a href="../UserPage/index.html">
+                                USER
+                            </a>
                         </li>
                     </ul>
                 </div>
             </nav>
 
             <!-- INPUT -->
+        </header>
+        <div class="navigation_mobile">
             <input
                 type="checkbox"
                 name=""
@@ -139,22 +152,22 @@
                     <li>
                         <a href="#!"
                             ><i class="fa-solid fa-right-to-bracket"></i>
-                            <span style="color: #06236d">Đăng nhập</span>
+                            <span>Đăng nhập</span>
                         </a>
                     </li>
                     <li>
-                        <a href="./index.html"
+                        <a href="../HomeForGuest/index.html"
                             ><i class="fa-solid fa-house"></i
                         ></a>
                     </li>
                     <li>
-                        <a href="#!">Giới thiệu</a>
+                        <a href="../page_gioithieu/pagegioithieu.html">Giới thiệu</a>
                     </li>
                     <li>
                         <a href="#!">Dịch vụ</a>
                     </li>
                     <li>
-                        <a href="#!">Quốc gia du học</a>
+                        <a href="../page-quocgiaduhoc/quocgiaduhoc.html">Quốc gia du học</a>
                         <input
                             type="checkbox"
                             hidden
@@ -183,24 +196,64 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#!">Hội thảo du học</a>
+                        <a href="../Tung/HoiThaoDuHoc.html">Hội thảo du học</a>
                     </li>
                     <li>
-                        <a href="#!">Thư viện</a>
+                        <a href="../Tung/ThuVien.html">Thư viện</a>
                     </li>
                     <li>
-                        <a href="#!">Tin tức, sự kiện</a>
+                        <a href="../page_event/pagesk.html">Tin tức, sự kiện</a>
                     </li>
                     <li>
-                        <a href="#!">Liên hệ</a>
+                        <a href="../LienHe/index.html">Liên hệ</a>
                     </li>
                 </ul>
             </nav>
             <!-- Thêm cái overley zo -->
             <label class="overley" for="input-check"></label>
-            <!-- SECTION -->
-        </header>
+        </div>
+        <!-- form login and register -->
+    <div class="form-login">
+        <img class="back-to-login" width="20px" src="./image/arrow.png" alt="">
+        <img class="close-form" width="20px" src="./image/close.png" alt="">
+        <h3>Đăng Nhập</h3>
+        <form onsubmit="return handleSubmit()">
+            <div class="login-userName">
+                <input type="text" placeholder="Họ tên">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Họ tên không được để trống</span>
+                </div>
+            </div>
+            <div class="login-id">
+                <input type="text" placeholder="Tên đăng nhập">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Tên đăng nhập không được để trống</span>
+                </div>
+            </div>
+            <div class="login-password">
+                <input type="text" placeholder="Mật khẩu">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Mật khẩu không được để trống</span>
+                </div>
+            </div>
+            <div class="login-repeatpass">
+                <input type="text" placeholder="Nhập lại mật khẩu">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Mật khẩu lặp lại không đúng</span>
+                </div>
+            </div>
+            <button type="submit">ĐĂNG KÝ</button>
+            <div class="register" onclick="register(event)">
+                <span>Bạn chưa có tài khoản ?</span>
+                <a href="#">Đăng ký</a>
+            </div>
+        </form>
+    </div>
     </body>
-    <script src="../sang.js"></script>
-    
+    <script src="../page-quocgiaduhoc/a.js"></script>
+    <script src="../HomeForGuest/Js/index.js"></script>
 </html>
