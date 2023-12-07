@@ -5,6 +5,9 @@ body {
     text-align: left;
     margin: 0;
 }
+.page-transition {
+    transition: opacity 0.5s ease-in-out; /* Thay đổi opacity trong 0.5 giây */
+}
 /* Header */
 body {
     box-sizing: border-box;
@@ -29,11 +32,33 @@ a:hover {
     color: #25aae2 !important;
 }
 
-/* HEADER */
+/* common */
+body {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+#head {
+    transition: 0.5s;
+}
+
+.fa-bars {
+    display: none;
+}
 .close {
     transform: translateY(-65%);
     position: sticky;
-    top: 0;
+    top: 0px;
+    z-index: 1000;
+}
+
+.close_mobile {
+    transform: translateY(-65%);
+    position: sticky;
+    top: 50px;
     z-index: 1000;
 }
 
@@ -42,6 +67,7 @@ a:hover {
     padding-top: 5px;
     border-top: 3px solid #ffc12f;
 }
+
 .logo {
     margin-right: 180px;
 }
@@ -49,8 +75,6 @@ a:hover {
 .header .content {
     display: flex;
     align-items: center;
-
-    justify-content: space-between;
 }
 
 .search-container {
@@ -110,7 +134,7 @@ a:hover {
 .text-item .item .title {
     font-size: 15px;
     color: #333;
-    font-weight: 400;
+    font-weight: lighter;
     margin-bottom: 10px;
 }
 
@@ -142,8 +166,9 @@ a:hover {
 }
 
 .navigation .content > ul > li > a {
+    font-weight: bold;
     display: inline-block;
-    padding: 20px 22px;
+    padding: 20px 19px;
     color: #fff;
     text-decoration: none;
 }
@@ -196,13 +221,6 @@ a:hover {
     color: #000 !important;
     background: #e1e1e1;
 }
-
-/* HEADER */
-
-.fa-bars {
-    display: none;
-}
-
 .header .content {
     width: 90%;
 }
@@ -369,6 +387,191 @@ a:hover {
         opacity: 1;
     }
 }
+/* Responsive */
+/* Mobile: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+    .log {
+        display: none;
+    }
+
+    .nav_mobile {
+        width: 70%;
+    }
+    .content {
+        width: 98%;
+    }
+    .right-menu{
+        display: none;
+    }
+    .fa-bars {
+        display: block;
+        margin-left: 35px;
+    }
+
+    .header .content .logo {
+        margin-right: 10px;
+    }
+    .text_header {
+        display: none;
+    }
+
+    .text-item {
+        display: none;
+    }
+
+    .navigation .content > ul {
+        display: none;
+    }
+
+    .navigation .content > ul li a .fa-house {
+        font-size: 20px;
+    }
+
+    .center-footer .content {
+        width: 96%;
+        margin: 20px;
+        flex-direction: column;
+    }
+
+    .center-footer .content .contact {
+        width: 100%;
+    }
+
+    .center-footer .content .access {
+        width: 100%;
+    }
+
+    .center-footer .content .fanpage-h {
+        margin-left: 0;
+        width: 100%;
+    }
+    .fanpage-h .fanpage img {
+        width: 50%;
+    }
+
+    .head-footer .content i:first-child {
+        left: 5px;
+    }
+
+    .head-footer .content i:last-child {
+        right: 5px;
+    }
+
+    .head-footer {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    .img-wrap {
+        gap: 30px;
+        overflow: hidden;
+    }
+
+    .img-wrap img {
+        width: 120px;
+    }
+
+    .end-footer .content {
+        display: block;
+    }
+
+    .end-footer .content p {
+        text-align: center;
+    }
+
+    .end-footer .content .online {
+        justify-content: center;
+    }
+}
+
+/* Tablet: width >= 740px  width < 1024px*/
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .log {
+        display: none;
+    }
+    .content {
+        width: 98%;
+    }
+
+    .fa-bars {
+        display: block;
+        margin-left: 35px;
+    }
+
+    .header .content {
+        justify-content: space-between;
+    }
+
+    .text_header {
+        display: none;
+    }
+
+    .text-item {
+        display: none;
+    }
+
+    .navigation .content > ul {
+        display: none;
+    }
+
+    .center-footer .content {
+        width: 96%;
+        margin: 20px;
+        flex-direction: column;
+    }
+
+    .center-footer .content .contact {
+        width: 100%;
+    }
+
+    .center-footer .content .access {
+        width: 100%;
+    }
+
+    .center-footer .content .fanpage-h {
+        margin-left: 0;
+        width: 100%;
+    }
+    .fanpage-h .fanpage img {
+        width: 50%;
+    }
+
+    .head-footer .content i:first-child {
+        left: 5px;
+    }
+
+    .head-footer .content i:last-child {
+        right: 5px;
+    }
+
+    .head-footer {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    .img-wrap {
+        gap: 0;
+        overflow: hidden;
+    }
+
+    .img-wrap img {
+        width: 152px;
+    }
+
+    .end-footer .content {
+        display: block;
+    }
+
+    .end-footer .content p {
+        text-align: center;
+    }
+
+    .end-footer .content .online {
+        justify-content: center;
+    }
+}
+
+
 /* CSS Section */
 .nav-body{
     height: auto;

@@ -207,7 +207,7 @@ $pass = $user[4];
                 </div>
                 <div class="paragraph">
                     <p>Công ty CP Đào tạo và Cung ứng nhân lực quốc tế OKIO là doanh nghiệp thành lập từ năm 2007 hoạt
-                    1 [id] => 4 [7] => 4 )       động trong lĩnh vực đào tạo du học, với thị trường chiến lược là Nhật Bản. OKIO được Sở Giáo dục
+                        động trong lĩnh vực đào tạo du học, với thị trường chiến lược là Nhật Bản. OKIO được Sở Giáo dục
                         và Đào tạo Hà Nội cấp giấy phép đào tạo ngoại ngữ số 5489/CN-SGD&ĐT và giấy phép tư vấn du học
                         số 2910/CN-SGD&ĐT. Tới nay, sau hơn 12 năm, OKIO tự hào là doanh nghiệp hàng đầu về du học Nhật
                         Bản tại Hà Nội nói riêng và cả nước nói chung, là nơi chắp cánh cho hơn 4000 bạn trẻ đến Nhật
@@ -614,7 +614,7 @@ $pass = $user[4];
             </div>
         </div>
     </footer>
-    <script src="./Js/index.js"></script>
+    <script lang="Javascript" src="./Js/index.js"></script>
      <!-- <script src="../storage/datapost.js"></script> -->
     <!-- <script src="../storage/dataComent.js"></script> -->
     <!-- <script src="../storage/dataUser.js"></script>  -->

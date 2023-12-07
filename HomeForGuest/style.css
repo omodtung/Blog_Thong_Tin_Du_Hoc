@@ -767,7 +767,7 @@ section {
 
 /* footer */
 
-.partner-container {
+/* .partner-container {
        margin-top: 50px;
        background-color: #F7F7F7;
        display: flex;
@@ -783,7 +783,7 @@ section {
        justify-content: space-around;
        background-image: url("./image/bg_footer.jpg");
        /* background-repeat: no-repeat; */
-       padding: 50px;
+       /* padding: 50px;
 }
 
 .access-quickly a {
@@ -886,10 +886,559 @@ section {
        display: flex;
        justify-content: center;
        bottom: 0;
-}
+}*/
 
-.people-create h3 {
+/* .people-create h3 {
        font-family: var(--font-name);
        font-size: 15px;
        color: white;
+} */
+   /* Footer */
+   .head-footer {
+    background-color: #f7f7f7;
+}
+
+.head-footer .content-footer .img-wrap {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.head-footer .content-footer .img-wrap img:nth-child(6) {
+    display: none;
+}
+
+.head-footer .content-footer {
+    position: relative;
+}
+
+.head-footer .content-footer i:first-child {
+    display: none;
+    color: #333 !important;
+    top: 65px;
+    left: -26px;
+    position: absolute;
+}
+.head-footer .content-footer i:last-child {
+    display: none;
+    color: #333 !important;
+    right: -26px;
+    top: 65px;
+    position: absolute;
+}
+.center-footer {
+    background-image: url("./image/bg_footer.jpg");
+    padding: 50px 0px 35px;
+}
+
+.center-footer .content-footer {
+    gap: 30px;
+    display: flex;
+}
+
+.center-footer .content-footer .contact {
+    width: calc(39.9699% - (0.60030068728522 * 30px));
+}
+
+.center-footer .content-footer .access {
+    width: calc(29.0163% - (0.70983676975945 * 30px));
+}
+
+.center-footer .content-footer .fanpage-h {
+    margin-left: auto;
+    width: calc(31.0137% - (0.68986254295533 * 30px));
+}
+
+.center-footer .content-footer h2 {
+    position: relative;
+    color: #ffb300;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 45px;
+}
+
+.center-footer .content-footer h2::before {
+    content: "";
+    width: 40px;
+    height: 0.5px;
+    background: #fff;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
+.footer-item span {
+    font-family: "open sans", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.footer-item a {
+    font-family: "open sans", sans-serif;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.footer-item a:hover {
+    color: #25aae2 !important;
+}
+
+.footer-item .row {
+    margin-bottom: 14px;
+}
+
+.footer-item .sub-menu {
+    margin-left: 20px;
+}
+
+.sub-menu .row-sub {
+    margin-bottom: 10px;
+}
+
+/* END Footer */
+.end-footer {
+    background-color: #3171ae;
+    padding: 4px 0px;
+}
+
+.end-footer .content-footer {
+    display: flex;
+}
+
+.online {
+    margin-left: auto;
+    display: flex;
+}
+
+.onl-item:first-child {
+    margin-right: 20px;
+}
+
+.end-footer p,
+.end-footer span {
+    color: #fff;
+}
+
+.arrow-up i {
+    font-size: 25px;
+    color: #004e9a;
+    background-color: orange;
+    border-radius: 50%;
+    padding: 13px 16px;
+    position: fixed;
+    bottom: 70px;
+    right: 58px;
+}
+@media only screen and (min-width: 46.1875em) and  (max-width: 1025px) {
+    h2{
+           font-size: 20px;
+    }
+    .form-admissions{
+           width: 27%;
+    }
+    .admissions-news{
+           padding-bottom: 20px;
+           width: 90%;
+    }
+    .study-abroad-guide h2{
+           margin-left: 3%;
+    }
+}
+/* ------------------------------------------------------------------------------- */
+/* Mobile */
+@media only screen and (max-width: 46.1875em) {
+    .log {
+        display: none;
+    }
+
+    .nav_mobile {
+        width: 70%;
+    }
+    .content-header {
+        width: 98%;
+    }
+
+    .fa-bars {
+        display: block;
+        margin-left: 35px;
+    }
+
+    .header .content-header .logo {
+        margin-right: 10px;
+    }
+    .text_header {
+        display: none;
+    }
+
+    .text-item {
+        display: none;
+    }
+
+    .navigation .content-header > ul {
+        display: none;
+    }
+
+    .navigation .content-header > ul li a .fa-house {
+        font-size: 20px;
+    }
+
+    /* Section */
+    .infor{
+           margin: 0 5px;
+    }
+    .image-japan{
+           display: none;
+    }
+    .container-news{
+           flex-direction: column;
+    }
+    .image-news{
+           width: 100%;
+    }
+    .container-left{
+           padding-bottom: 20px;
+    }
+    .content .calender-watch{
+           left: 120px;
+    }
+    .content .name-news{
+           left: 130px;
+    }
+    .nav-btn {
+        display: block;
+    }
+    .content-footer {
+        width: 98%;
+    }
+    .posts-1{
+        flex-direction: column;
+        align-items: center;   
+    }
+    .form-admissions{
+           width: 80%;
+    }
+    .statistical{
+           height: 200px;
+    }
+    .statistical ul h2{
+           font-size: 20px;
+    }
+    .admissions-news{
+           margin-left: 5px;
+           margin-right: 5px;
+           width: auto;
+    }
+    .study-abroad-modules ul{
+           flex-direction: column;
+    }
+    .study-abroad-modules ul li{
+           width: auto;
+    }
+    /* Footer */
+    .center-footer .content-header {
+        width: 96%;
+        margin: 20px;
+        flex-direction: column;
+    }
+
+    .center-footer .content-header .contact {
+        width: 100%;
+    }
+
+    .center-footer .content-header .access {
+        width: 100%;
+    }
+
+    .center-footer .content-header .fanpage-h {
+        margin-left: 0;
+        width: 100%;
+    }
+    .fanpage-h .fanpage img {
+        width: 50%;
+    }
+    
+    .head-footer .content-header i:first-child {
+        left: 5px;
+    }
+
+    .head-footer .content-header i:last-child {
+        right: 5px;
+    }
+
+    .head-footer {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+    
+    .img-wrap {
+        gap: 30px;
+        overflow: hidden;
+    }
+    
+    .img-wrap img {
+        width: 120px;
+    }
+
+    .end-footer .content {
+        display: block;
+    }
+
+    .end-footer .content p {
+        text-align: center;
+    }
+
+    .end-footer .content .online {
+        justify-content: center;
+    }
+    .image-about-us{
+           display: none;
+    }
+    .nav-btn {
+        display: block;
+    }
+    .nav_mobile {
+        width: 70%;
+    }
+    .content-footer {
+        width: 98%;
+    }
+    .content .calender-watch{
+           left: 120px !important;
+    }
+    .fa-bars {
+        display: block;
+        margin-left: 35px;
+    }
+
+    .header .content-footer .logo {
+        margin-right: 10px;
+    }
+    .text_header {
+        display: none;
+    }
+
+    .text-item {
+        display: none;
+    }
+
+    .navigation .content-footer > ul {
+        display: none;
+    }
+
+    .navigation .content-footer > ul li a .fa-house {
+        font-size: 20px;
+    }
+
+    .center-footer .content-footer {
+        width: 96%;
+        margin: 20px;
+        flex-direction: column;
+    }
+
+    .center-footer .content-footer .contact {
+        width: 100%;
+    }
+
+    .center-footer .content-footer .access {
+        width: 100%;
+    }
+
+    .center-footer .content-footer .fanpage-h {
+        margin-left: 0;
+        width: 100%;
+    }
+    .fanpage-h .fanpage img {
+        width: 50%;
+    }
+
+    .head-footer .content-footer i:first-child {
+        left: 5px;
+    }
+
+    .head-footer .content-footer i:last-child {
+        right: 5px;
+    }
+
+    .head-footer {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    .img-wrap {
+        gap: 30px;
+        overflow: hidden;
+    }
+
+    .img-wrap img {
+        width: 120px;
+    }
+
+    .end-footer .content-footer {
+        display: block;
+    }
+
+    .end-footer .content-footer p {
+        text-align: center;
+    }
+
+    .end-footer .content-footer .online {
+        justify-content: center;
+    }
+    .arrow-up i {
+           right: 30px;
+    }
+}
+
+/* Tablet: width >= 740px  width < 1024px*/
+@media only screen and (min-width: 46.25em) and (max-width: 1025px) {
+    /* Header */
+    .log {
+           display: none;
+    }
+    .content-header {
+           width: 98%;
+    }
+
+    .fa-bars {
+           display: block;
+           margin-left: 35px;
+    }
+
+    .header .content-header {
+           justify-content: space-between;
+    }
+
+    .text_header {
+           display: none;
+    }
+
+    .text-item {
+           display: none;
+    }
+
+    .navigation .content-header > ul {
+           display: none;
+    }
+    .fanpage-h .fanpage img {
+           width: 50%;
+    }
+
+    /* Section */
+    .About-us{
+           margin: auto;
+    }
+    .infor{
+           width: 48%;
+    }
+    .image-about-us{
+           width: 48%;
+    }
+    .image-japan{
+           display: none;
+    }
+    .container-news{
+           flex-direction: column;
+    }
+    .image-news{
+           width: 100%;
+    }
+    .container-left{
+           padding-bottom: 20px;
+    }
+    .content .calender-watch{
+           left: 120px;
+    }
+    .content .name-news{
+           left: 130px;
+    }
+    .nav-btn {
+        display: block;
+    }
+    .content-footer {
+        width: 98%;
+    }
+    /* Footer */
+    .fa-bars {
+        display: block;
+        margin-left: 35px;
+    }
+
+    .header .content-footer {
+        justify-content: space-between;
+    }
+
+    .text_header {
+        display: none;
+    }
+
+    .text-item {
+        display: none;
+    }
+
+    .navigation .content-footer > ul {
+        display: none;
+    }
+
+    .center-footer .content-footer {
+        width: 96%;
+        margin: 20px;
+        flex-direction: column;
+    }
+
+    .center-footer .content-footer .contact {
+        width: 100%;
+    }
+
+    .center-footer .content-footer .access {
+        width: 100%;
+    }
+
+    .center-footer .content-footer .fanpage-h {
+        margin-left: 0;
+        width: 100%;
+    }
+    .fanpage-h .fanpage img {
+        width: 50%;
+    }
+
+    .head-footer .content-footer i:first-child {
+        left: 5px;
+    }
+
+    .head-footer .content-footer i:last-child {
+        right: 5px;
+    }
+
+    .head-footer {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    .img-wrap {
+        gap: 0;
+        overflow: hidden;
+    }
+
+    .img-wrap img {
+        width: 152px;
+    }
+
+    .end-footer .content-footer {
+        display: block;
+    }
+
+    .end-footer .content-footer p {
+        text-align: center;
+    }
+
+    .end-footer .content-footer .online {
+        justify-content: center;
+    }
 }
