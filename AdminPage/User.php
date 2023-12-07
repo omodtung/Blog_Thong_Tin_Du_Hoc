@@ -77,7 +77,7 @@ $(document).ready(function(){
 
                             </li>
                             <li>
-                                   <a href="#">
+                                   <a href="coments.html">
                                           <span class="icon"><i class="fa fa-comments" aria-hidden="true"></i></span>
                                           <span class="title">Quản lý bình luận</span>
                                    </a>
@@ -91,7 +91,7 @@ $(document).ready(function(){
 
                             </li>
                             <li>
-                                   <a href="#">
+                                   <a href="../Home/index.php">
                                           <span class="icon"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
                                           <span class="title">Trở về trang chủ</span>
                                    </a>
