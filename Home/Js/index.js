@@ -127,7 +127,7 @@ function postMain_articles(container) {
                                           var startIdxHeading = item.indexOf('"');
                                           var endIdxHeading = item.indexOf('"', startIdxHeading + 1);
                                           valueHeading = item.substring(startIdxHeading + 1, endIdxHeading);
-
+                                          
                                           HeadingString = `
                                                         <div class="name-news">
                                                                <a href="#" id="${post.id}" onclick="setStatePost(event,'${post.id}')">

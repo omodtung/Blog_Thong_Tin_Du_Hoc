@@ -403,7 +403,7 @@ function post_articles_3(container, numberOfPost, footerContainer) {
        
                                                  // date post
        
-                                                 let dateString = post.datePost.split('/');
+                                                 let dateString = post.datePost.split('-');
                                                  let day = dateString[0];
                                                  let month = dateString[1];
                                                  let year = dateString[2];
@@ -844,13 +844,14 @@ function loadComent(idPost, numberShow) {
 
 // xử lý nút xem bình thêm bình luận
 function watchAllComent() {
-       let watchMoreComent = document.querySelector('.container-article .container-left .coment-container .coment-content  .watch-coment-more span');
-       if(watchMoreComent != null){
-              watchMoreComent.addEventListener('click', () => {
-                     loadComent(ID_POST, 100);
-              });
-       }      
-       
+       // let watchMoreComent = document.querySelector('.container-article .container-left .coment-container .coment-content .watch-coment-more');
+       // console.log(1);
+       // if(watchMoreComent != null){
+       //        watchMoreComent.addEventListener('click', () => {
+       //               loadComent(ID_POST, 100);
+       //        });
+       // }      
+       loadComent(ID_POST, 100);
 }
 
 
