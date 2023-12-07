@@ -303,6 +303,10 @@ body {
     font-family: var(--font-name)
 }
 
+.login {
+    display: flex;
+    margin-left: 116px;
+}
 
 .disable{
     opacity: 0.5; /* Độ mờ có thể điều chỉnh */
@@ -456,6 +460,9 @@ body {
 /* Responsive */
 /* Mobile: width < 740px */
 @media only screen and (max-width: 46.1875em) {
+    .login{
+        display: none;
+    }
     .nav_mobile {
         width: 70%;
     }
@@ -547,8 +554,8 @@ body {
 }
 
 /* Tablet: width >= 740px  width < 1024px*/
-@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
-    .log {
+@media only screen and (min-width: 46.25em) and (max-width: 64em) {
+    .login {
         display: none;
     }
     .content {
