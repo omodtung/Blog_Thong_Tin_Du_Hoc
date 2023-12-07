@@ -64,3 +64,51 @@ for (let i = 0; i < list_menubar.length ; i++) {
 
 
 
+function validateForm() {
+       var x =  document.getElementById('name').value;
+       if (x == "") {
+           document.getElementById('status').innerHTML = "Name cannot be empty";
+           return false;
+       }
+       x =  document.getElementById('email').value;
+       if (x == "") {
+           document.getElementById('status').innerHTML = "Email cannot be empty";
+           return false;
+       } else {
+           // var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+     
+     
+           let email  =document.forms["contact-form"]["email"].value;
+           // console.log("test"+email);
+           // if(!re.test(x)){
+           //     document.getElementById('status').innerHTML = "Email format invalid";
+           //     return false;
+           // }
+     
+           if(email.search(/^.+@.+\..+$/i) == -1) {
+       alert("Email chưa đúng định dạng <sth>@<sth>.<sth>");
+       return false;
+     }
+       }
+       x =  document.getElementById('subject').value;
+       if (x == "") {
+           document.getElementById('status').innerHTML = "So Dien Thoai cannot be empty";
+           return false;
+       }
+
+       else
+       {
+
+       }
+       x =  document.getElementById('message').value;
+       if (x == "") {
+           document.getElementById('status').innerHTML = "Message cannot be empty";
+           return false;
+       }
+     
+     
+     document.getElementById('status').innerHTML = "Sending...";
+       document.getElementById('contact-form').submit();
+     
+     
+     }
