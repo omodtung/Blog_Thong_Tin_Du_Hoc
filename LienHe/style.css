@@ -417,6 +417,7 @@ section {
        font-family: var(--font-name);
        font-size: 15px;
        transition: 1s;
+       color: white;
 }
 
 .form .button button :hover {
