@@ -30,7 +30,7 @@ a:hover {
 .fa-bars {
     display: none;
 }
-.close {
+.closes {
     transform: translateY(-65%);
     position: sticky;
     top: 0px;
@@ -61,7 +61,7 @@ a:hover {
 
 .search-container {
     position: relative;
-    max-width: 340px;
+    max-width: 380px;
     width: 100%;
     /* margin-left: auto; */
     margin: 0 0 0 45px;
@@ -77,13 +77,13 @@ a:hover {
     border: 1px solid #ddd;
     text-indent: 10px;
     outline: none;
-    padding: 17px 0 17px 25px;
+    padding: 13px 0 13px 25px;
     background: transparent;
 }
 
 .search-container button {
     position: absolute;
-    top: 17px;
+    top: 11px;
     right: 8px;
     border: 0;
     background: 0;
@@ -150,8 +150,9 @@ a:hover {
 }
 
 .navigation .content > ul > li > a {
+    font-weight: bold;
     display: inline-block;
-    padding: 20px 22px;
+    padding: 20px 19px;
     color: #fff;
     text-decoration: none;
 }
@@ -383,20 +384,20 @@ html {
     border-radius: 10px;
 }
 
-.right-menu .row {
+.right-menu .row-right {
     display: flex;
     align-items: center;
 }
-.right-menu .row i {
+.right-menu .row-right i {
     margin-left: 22px;
 }
 
-.right-menu .row:nth-child(2) {
+.right-menu .row-right:nth-child(2) {
     border-top: 1px dotted rgba(255, 255, 255, 0.3);
     border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
 }
 
-.right-menu .row a {
+.right-menu .row-right a {
     text-decoration: none;
     font-size: 16px;
     line-height: 1.4;
@@ -406,7 +407,7 @@ html {
     margin-left: 22px;
 }
 
-.right-menu .row a:hover {
+.right-menu .row-right a:hover {
     color: #25aae2 !important;
 }
 
@@ -426,6 +427,7 @@ html {
     padding: 15px;
     font-size: 18px;
     font-weight: 700;
+    margin: 0;
 }
 
 .form .desc {
@@ -545,7 +547,7 @@ html {
 
 .btn {
     border: 0px;
-    background-color: #fbfbfb;
+    margin-top: 5px;
 }
 /* .btn:not(:disabled) {
     cursor: pointer;
@@ -956,6 +958,10 @@ section {
     width: 100%;
 }
 
+.modal-content {
+    width: auto;
+}
+
 /* HEADER */
 
 .fa-bars {
@@ -965,22 +971,9 @@ section {
     width: 90%;
 }
 
-.log {
+.login {
     display: flex;
     margin-left: 116px;
-}
-
-.log a:first-child {
-    margin-right: 15px;
-}
-
-.log a {
-    display: inline-block;
-    padding: 5px 10px;
-    font-size: 18px;
-    color: white;
-    background-color: #004e9a;
-    border-radius: 10px;
 }
 
 .nav_mobile > ul > li:nth-child(1) > a {
@@ -1130,7 +1123,7 @@ section {
 /* Responsive */
 /* Mobile: width < 740px */
 @media only screen and (max-width: 46.1875em) {
-    .log {
+    .login {
         display: none;
     }
 
@@ -1227,10 +1220,10 @@ section {
         flex-wrap: wrap;
         align-items: center;
     }
-    .right-menu .row i {
+    .right-menu .row-right i {
         margin-left: 0;
     }
-    .right-menu .row a {
+    .right-menu .row-right a {
         margin-left: 0;
     }
     .arrow-up i {
@@ -1258,6 +1251,7 @@ section {
     .row-content-main {
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
 
     .content-desc {
@@ -1267,7 +1261,7 @@ section {
 
 /* Tablet: width >= 740px  width < 1024px*/
 @media only screen and (min-width: 46.25em) and (max-width: 1025px) {
-    .log {
+    .login {
         display: none;
     }
     .content {
@@ -1350,4 +1344,19 @@ section {
     .end-footer .content .online {
         justify-content: center;
     }
+}
+
+@media (max-width: 576px) {
+    .modal-dialog {
+        left: 54px;
+        top: 143px;
+        position: fixed;
+    }
+    .modal-content {
+        width: auto;
+    }
+}
+
+.btn-outline-secondary {
+    border: 1px solid;
 }

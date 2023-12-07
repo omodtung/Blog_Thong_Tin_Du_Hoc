@@ -148,8 +148,9 @@ a:hover {
 }
 
 .navigation .content > ul > li > a {
+    font-weight: bold;
     display: inline-block;
-    padding: 20px 22px;
+    padding: 20px 19px;
     color: #fff;
     text-decoration: none;
 }
@@ -166,6 +167,7 @@ a:hover {
     visibility: visible;
     opacity: 1;
     display: block;
+    z-index: 1000;
 }
 
 .navigation .content .sub-menu {
@@ -962,22 +964,9 @@ section {
     width: 90%;
 }
 
-.log {
+.login {
     display: flex;
     margin-left: 116px;
-}
-
-.log a:first-child {
-    margin-right: 15px;
-}
-
-.log a {
-    display: inline-block;
-    padding: 5px 10px;
-    font-size: 18px;
-    color: white;
-    background-color: #004e9a;
-    border-radius: 10px;
 }
 
 .nav_mobile > ul > li:nth-child(1) > a {
@@ -1127,7 +1116,7 @@ section {
 /* Responsive */
 /* Mobile: width < 740px */
 @media only screen and (max-width: 46.1875em) {
-    .log {
+    .login {
         display: none;
     }
 
@@ -1264,7 +1253,7 @@ section {
 
 /* Tablet: width >= 740px  width < 1024px*/
 @media only screen and (min-width: 46.25em) and (max-width: 1025px) {
-    .log {
+    .login {
         display: none;
     }
     .content {
