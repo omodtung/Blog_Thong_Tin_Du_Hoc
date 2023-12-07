@@ -18,7 +18,7 @@
 
 a {
        text-decoration: none;
-       /* color: white !important; */
+       
 }
 
 li {
@@ -1073,7 +1073,7 @@ body {
    
    a {
        text-decoration: none;
-       color: #333;
+       color: white;
    }
    
    a:hover {
@@ -1476,8 +1476,8 @@ body {
    
 @media only screen and (min-width: 46.1875em) and  (max-width: 64em) {
     .logo{
-       margin-left: 5px;
-       margin-right: 350px;
+       margin-left: 10px;
+       margin-right: 250px;
     }
     .fa-bars{
        display: block;
@@ -1509,12 +1509,12 @@ body {
        justify-content: flex-start;
     }
     .logo img{
-       width: 75px;
-       height: 75px;
+       width: 90%;
+       height: auto;
     }
     .logo{
        margin-left: 20px;
-       margin-right: 6em;
+       margin-right: 3em;
     }
     .search{
        width: 50%;
