@@ -25,8 +25,6 @@
 //     }
 //   }
 // }
-
-<<<<<<< HEAD
 // function increaseFontSize() {
 //   var textElements = document.querySelectorAll(".main-content-text");
 //   textElements.forEach(function (element) {
@@ -35,7 +33,6 @@
 //       element.style.fontSize = newSize;
 //   });
 // }
-=======
 window.addEventListener("scroll", function () {
   const x = window.scrollX;
   const y = window.scrollY;
@@ -60,15 +57,14 @@ window.addEventListener("scroll", function () {
 });
 
 
-function increaseFontSize() {
-  var textElements = document.querySelectorAll(".main-content-text");
-  textElements.forEach(function (element) {
-      var currentSize = window.getComputedStyle(element, null).getPropertyValue('font-size');
-      var newSize = (parseFloat(currentSize) + 1) + 'px';
-      element.style.fontSize = newSize;
-  });
-}
->>>>>>> b6e79ff4a75cddc83798754b6fcf134850c3f831
+// function increaseFontSize() {
+//   var textElements = document.querySelectorAll(".main-content-text");
+//   textElements.forEach(function (element) {
+//       var currentSize = window.getComputedStyle(element, null).getPropertyValue('font-size');
+//       var newSize = (parseFloat(currentSize) + 1) + 'px';
+//       element.style.fontSize = newSize;
+//   });
+// }
 
 // function decreaseFontSize() {
 //   var textElements = document.querySelectorAll(".main-content-text");
