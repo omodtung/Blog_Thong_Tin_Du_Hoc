@@ -5,18 +5,26 @@
     margin-bottom: 50px;
   }
   .product .title h3 {
-    color: #f36f21;
+    color: white;
     padding-left: 10px;
+    font-size: 1.25rem;
+    font-weight: bold;
   }
   .product .list-game .item-game {
     border: 15px solid #F5F5F5;
+    box-shadow: 0 0 8px #ccc;
   }
   .product .list-game h4 {
     font-size: 1.125rem;
-  
+  }
+  .product .list-game img{
+    box-shadow: 0 0 5px #ccc;
   }
   .d-flex{
     align-items: center;
+    background-color: #004E9A;
+    box-shadow: 0 0 8px #333;
+    margin-bottom: 10px;
   }
   .product .row{
     justify-content: space-evenly;
@@ -144,8 +152,8 @@ body {
 
 .search-container button {
   position: absolute;
-  top: 17px;
-  right: -23px;
+  top: 20px;
+  right: 15px;
   border: 0;
   background: 0;
   transition: 0.3s;
@@ -507,6 +515,7 @@ body {
   opacity: 0.5; /* Độ mờ có thể điều chỉnh */
   pointer-events: none;
 }
+
 /* Responsive */
 /* Mobile: width < 740px */
 @media only screen and (max-width: 46.1875em) {
@@ -885,8 +894,11 @@ section {
   color: #1AA7E2;
 }
 
-.product .row{
-  align-items: center;
+.product .row .col-sm-4{
+  background-color: #cccccc3f;
+}
+.row .col-sm-4 p{
+  font-size: 16px;
 }
 /* footer */
 
@@ -1157,10 +1169,16 @@ a:hover {
   .end-footer .content .online {
       justify-content: center;
   }
+  .search-container .input-text{
+    padding-left: 0px;
+  }
 }
 
 /* Tablet: width >= 740px  width < 1024px*/
 @media only screen and (min-width: 46.25em) and (max-width: 64em) {
+  .list-game img{
+    height: 90px;
+  }
   .nav-btn {
       display: block;
   }

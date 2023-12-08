@@ -25,14 +25,6 @@
 //     }
 //   }
 // }
-// function increaseFontSize() {
-//   var textElements = document.querySelectorAll(".main-content-text");
-//   textElements.forEach(function (element) {
-//       var currentSize = window.getComputedStyle(element, null).getPropertyValue('font-size');
-//       var newSize = (parseFloat(currentSize) + 1) + 'px';
-//       element.style.fontSize = newSize;
-//   });
-// }
 window.addEventListener("scroll", function () {
   const x = window.scrollX;
   const y = window.scrollY;
@@ -57,52 +49,52 @@ window.addEventListener("scroll", function () {
 });
 
 
-// function increaseFontSize() {
-//   var textElements = document.querySelectorAll(".main-content-text");
-//   textElements.forEach(function (element) {
-//       var currentSize = window.getComputedStyle(element, null).getPropertyValue('font-size');
-//       var newSize = (parseFloat(currentSize) + 1) + 'px';
-//       element.style.fontSize = newSize;
-//   });
-// }
+function increaseFontSize() {
+  var textElements = document.querySelectorAll(".main-content-text");
+  textElements.forEach(function (element) {
+      var currentSize = window.getComputedStyle(element, null).getPropertyValue('font-size');
+      var newSize = (parseFloat(currentSize) + 1) + 'px';
+      element.style.fontSize = newSize;
+  });
+}
 
-// function decreaseFontSize() {
-//   var textElements = document.querySelectorAll(".main-content-text");
-//   textElements.forEach(function (element) {
-//       var currentSize = window.getComputedStyle(element, null).getPropertyValue('font-size');
-//       var newSize = (parseFloat(currentSize) - 1) + 'px';
-//       element.style.fontSize = newSize;
-//   });
-// }
+function decreaseFontSize() {
+  var textElements = document.querySelectorAll(".main-content-text");
+  textElements.forEach(function (element) {
+      var currentSize = window.getComputedStyle(element, null).getPropertyValue('font-size');
+      var newSize = (parseFloat(currentSize) - 1) + 'px';
+      element.style.fontSize = newSize;
+  });
+}
 
-// // Xem thêm lịch
-// let isHidden = true;
-// function showMoreSchedule(){
-//     const items = document.querySelectorAll('.row-calen');
-//     const showMoreBtn = document.querySelector('.btn');
+// Xem thêm lịch
+let isHidden = true;
+function showMoreSchedule(){
+    const items = document.querySelectorAll('.row-calen');
+    const showMoreBtn = document.querySelector('.btn');
 
-//     items.forEach((item, index) => {
-//       if (isHidden || index < 5) {
-//         item.style.display = 'flex';
-//       } else {
-//         item.style.display = 'none';
-//       }
-//     });
+    items.forEach((item, index) => {
+      if (isHidden || index < 5) {
+        item.style.display = 'flex';
+      } else {
+        item.style.display = 'none';
+      }
+    });
 
-//     isHidden = !isHidden; // Đảo ngược trạng thái
+    isHidden = !isHidden; // Đảo ngược trạng thái
 
-//     if (isHidden) {
-//       showMoreBtn.textContent = 'XEM THÊM';
-//     } else {
-//       showMoreBtn.textContent = 'THU GỌN';
-//     }
-// }
+    if (isHidden) {
+      showMoreBtn.textContent = 'XEM THÊM';
+    } else {
+      showMoreBtn.textContent = 'THU GỌN';
+    }
+}
 
 
-// const myModal = document.getElementById('myModal')
-// const myInput = document.getElementById('myInput')
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
 
-// myModal.addEventListener('shown.bs.modal', () => {
-//   myInput.focus()
-// })
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
 
