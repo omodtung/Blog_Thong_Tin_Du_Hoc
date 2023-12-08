@@ -30,7 +30,7 @@ a:hover {
 .fa-bars {
     display: none;
 }
-.close {
+.closes {
     transform: translateY(-65%);
     position: sticky;
     top: 0px;
@@ -204,7 +204,6 @@ a:hover {
     background: #e1e1e1;
 }
 
-  
 /* form login */
 .form-login {
     border: 1px solid white;
@@ -219,17 +218,17 @@ a:hover {
     align-items: center;
     display: none;
 }
-.form-login .close-form{
+.form-login .close-form {
     position: absolute;
     right: 5px;
     top: 2px;
 }
-.form-login .back-to-login{
+.form-login .back-to-login {
     position: absolute;
     left: 5px;
     top: 2px;
 }
-.form-login h3{
+.form-login h3 {
     font-family: var(--font-name-bold);
     font-size: 30px;
     text-align: center;
@@ -237,7 +236,7 @@ a:hover {
     margin-bottom: 30px;
     color: #ea7c69;
 }
-.form-login form input{
+.form-login form input {
     width: 300px;
     height: 40px;
     border-radius: 10px;
@@ -250,7 +249,7 @@ a:hover {
     visibility: hidden;
 }
 
-.form-login form .warning img{
+.form-login form .warning img {
     width: 15px;
 }
 .form-login form button {
@@ -267,35 +266,26 @@ a:hover {
     font-family: var(--font-name-bold);
     margin-bottom: 20px;
 }
-.form-login form .warning span{
+.form-login form .warning span {
     font-family: var(--font-name-bold);
     color: red;
 }
-.form-login form .register{
+.form-login form .register {
     text-align: right;
     margin-bottom: 10px;
 }
-.form-login form .register a{
+.form-login form .register a {
     color: #ea7c69;
     font-family: var(--font-name-bold);
 }
-.form-login form .register span{
-    font-family: var(--font-name)
+.form-login form .register span {
+    font-family: var(--font-name);
 }
 
-
-.disable{
+.disable {
     opacity: 0.5; /* Độ mờ có thể điều chỉnh */
     pointer-events: none;
 }
-
-
-
-
-
-
-
-
 
 /* SECTION */
 /* Banner */
@@ -348,7 +338,7 @@ a:hover {
     margin-left: auto;
     width: 23%;
 }
-.content-desc h2:hover{
+.content-desc h2:hover {
     color: #25aae2;
 }
 /* LEFTTTTTTTTT */
@@ -1100,26 +1090,27 @@ a:hover {
     .end-footer .content .online {
         justify-content: center;
     }
-    .content-right{
+    .content-right {
         display: flex;
         flex-direction: column;
         width: 100%;
         flex-wrap: wrap;
         align-items: center;
     }
-    .right-menu .row i{
+    .right-menu .row i {
         margin-left: 0;
     }
-    .right-menu .row a{
+    .right-menu .row a {
         margin-left: 0;
     }
-    .arrow-up i{
+    .arrow-up i {
         font-size: 18px !important;
     }
-    .form, .right-menu{
+    .form,
+    .right-menu {
         width: 70% !important;
     }
-    .right-menu{
+    .right-menu {
         display: none;
     }
     .content-page .content {
@@ -1128,10 +1119,10 @@ a:hover {
         margin-right: 0 !important;
         margin-left: 2px !important;
     }
-    .content-left{
+    .content-left {
         width: 100%;
     }
-    .row-content-main{
+    .row-content-main {
         flex-direction: column;
         align-items: center;
     }
