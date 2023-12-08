@@ -1054,9 +1054,6 @@ body {
               width: 400px;
               height: 400px;
        }
-       .arrow-up i{
-              right: 320px;
-       }
        .contact-info{
               flex-direction: column;
               align-items: center;
@@ -1101,7 +1098,6 @@ body {
    
        .center-footer .content {
            width: 96%;
-           margin: 20px;
            flex-direction: column;
        }
    

@@ -235,7 +235,7 @@ body {
 
     .center-footer .content {
         width: 96%;
-        margin: 20px;
+        margin: 20px 0;
         flex-direction: column;
     }
 
@@ -322,7 +322,6 @@ body {
 
     .center-footer .content {
         width: 96%;
-        margin: 20px;
         flex-direction: column;
     }
 
@@ -662,7 +661,6 @@ body {
 
     .center-footer .content {
         width: 96%;
-        margin: 20px;
         flex-direction: column;
     }
 
@@ -749,7 +747,6 @@ body {
 
     .center-footer .content {
         width: 96%;
-        margin: 20px;
         flex-direction: column;
     }
 
@@ -1311,7 +1308,9 @@ a:hover {
     margin-left: auto;
     width: calc(31.0137% - (0.68986254295533 * 30px));
 }
-
+.fanpage img{
+    width: 100%;
+}
 .center-footer .content h2 {
     position: relative;
     color: #ffb300;
@@ -1438,7 +1437,6 @@ a:hover {
 
     .center-footer .content {
         width: 96%;
-        margin: 20px;
         flex-direction: column;
     }
 
@@ -1494,7 +1492,7 @@ a:hover {
 }
 
 /* Tablet: width >= 740px  width < 1024px*/
-@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+@media only screen and (min-width: 46.25em) and (max-width: 64em) {
     .nav-btn {
         display: block;
     }
@@ -1525,7 +1523,6 @@ a:hover {
 
     .center-footer .content {
         width: 96%;
-        margin: 20px;
         flex-direction: column;
     }
 

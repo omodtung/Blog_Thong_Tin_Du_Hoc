@@ -17,7 +17,9 @@ a {
     text-decoration: none;
     color: #333;
 }
-
+p{
+    margin-bottom: 0 !important;
+}
 a:hover {
     color: #25aae2 !important;
 }
@@ -552,7 +554,7 @@ body {
     .content {
         width: 98%;
     }
-
+    
     .fa-bars {
         display: block;
         margin-left: 35px;
@@ -593,7 +595,7 @@ body {
         width: 100%;
     }
     .fanpage-h .fanpage img {
-        width: 50%;
+        width: 50% !important;
     }
 
     .head-footer .content i:first-child {
@@ -1025,6 +1027,9 @@ body {
     }
     .desc{
         padding-right: 0;
+    }
+    .fanpage-h .fanpage img{
+        width: 50% !important;
     }
     .arrow-up i{
         font-size: 20px !important;
