@@ -30,7 +30,7 @@ a:hover {
 .fa-bars {
     display: none;
 }
-.close {
+.closes {
     transform: translateY(-65%);
     position: sticky;
     top: 0px;
