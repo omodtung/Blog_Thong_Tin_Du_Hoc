@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="../page_gioithieu/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -259,7 +260,53 @@
                                         tạo bài bản. Chính vì lẽ đó mà Đài
                                         Loan đã, đang và sẽ là một điểm đến
                                         Du học phù hợp với nhiều Du học sinh
-                                        Việt Nam.</span>
+                                        Việt Nam.
+                                    </span>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal20">
+                                        Xem thêm
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade modal-fullscreen-sm-down" id="myModal20">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                        
+                                                <!-- Modal Header -->
+                                                <div class="modal-header">
+                                                <h4 class="modal-title">DU HỌC CANADA: HỌC BỔNG LÊN TỚI CA$20,000 TỪ TRƯỜNG ĐẠI HỌC
+                                                    BROCK UNIVERSITY</h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                </div>
+                                        
+                                                <!-- Modal body -->
+                                                <div class="modal-body">
+                                                    <p>Đài Loan từ lâu đã nổi lên như là
+                                                        một trong 4 con rồng Châu Á gồm: Đài
+                                                        Loan, Hàn Quốc, Hongkong và
+                                                        Singapore. Danh xưng đáng tự hào ấy
+                                                        không chỉ đến từ nền kinh tế hội
+                                                        nhập mở cửa với mức tăng trưởng mạnh
+                                                        mẽ hàng năm mà còn được đóng góp bởi
+                                                        chất lượng Giáo dục vượt trội, chất
+                                                        lượng nguồn nhân lực cao được đào
+                                                        tạo bài bản. Chính vì lẽ đó mà Đài
+                                                        Loan đã, đang và sẽ là một điểm đến
+                                                        Du học phù hợp với nhiều Du học sinh
+                                                        Việt Nam.
+                                                        <br><br>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
+                                                        sunt repellat iure ipsum placeat iusto, autem nemo minus dolor hic praesentium,
+                                                        illo sed aliquid fuga dignissimos sapiente optio reiciendis aperiam!
+                                                    </p>    
+                                                </div>
+                                        
+                                                <!-- Modal footer -->
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                                    <button type="button" class="btn btn-primary"><a href="#">Xem chi tiết</a></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row-content-main">
@@ -1074,7 +1121,7 @@
                                 </div>
 
                                 <div class="btn-add">
-                                    <button class="btn">
+                                    <button class="btn" onclick="showMoreSchedule()">
                                         <a href="#!">XEM THÊM</a>
                                     </button>
                                 </div>
@@ -1296,7 +1343,8 @@
                 </div>
             </footer>
         </main>
-        <script src="a.js"></script>
+        <script src="./a.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
 

@@ -132,13 +132,13 @@ body {
 }
 
 .navigation .content{
-    width: 71%;
+    width: 67%;
 }
 .navigation .content > ul > li > a {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
     display: inline-block;
-    padding: 23px 19px;
+    padding: 20px 19px;
     color: #fff;
     text-decoration: none;
 }
