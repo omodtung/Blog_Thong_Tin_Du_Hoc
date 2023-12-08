@@ -515,7 +515,9 @@ html {
     margin-bottom: 15px;
     position: relative;
 }
-
+.hidden{
+    display: none;
+}
 .row-calen > a {
     color: #333;
     font-size: 14px;
@@ -543,9 +545,12 @@ html {
     text-align: center;
 }
 
-.btn {
+.btn-show {
     border: 0px;
     background-color: #fbfbfb;
+}
+.btn-show:hover{
+    color: #004e9a;
 }
 /* .btn:not(:disabled) {
     cursor: pointer;

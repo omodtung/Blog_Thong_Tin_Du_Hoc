@@ -105,6 +105,27 @@ function validateForm() {
 
 document.getElementById('status').innerHTML = "Sending...";
   document.getElementById('contact-form').submit();
+}
 
+//Show thêm lịch
+let isHidden = true;
+function showMoreSchedule(){
+    const items = document.querySelectorAll('.row-calen');
+    const showMoreBtn = document.querySelector('.btn-show');
 
+    items.forEach((item, index) => {
+      if (isHidden || index < 5) {
+        item.style.display = 'flex';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    isHidden = !isHidden; // Đảo ngược trạng thái
+
+    if (isHidden) {
+      showMoreBtn.textContent = 'XEM THÊM';
+    } else {
+      showMoreBtn.textContent = 'THU GỌN';
+    }
 }

@@ -71,7 +71,7 @@ window.addEventListener("scroll", function () {
 let isHidden = true;
 function showMoreSchedule(){
     const items = document.querySelectorAll('.row-calen');
-    const showMoreBtn = document.querySelector('.btn');
+    const showMoreBtn = document.querySelector('.btn-show');
 
     items.forEach((item, index) => {
       if (isHidden || index < 5) {

@@ -543,11 +543,20 @@ html {
 
 .btn-add {
     text-align: center;
+    
 }
-
-.btn {
+.hidden{
+    display: none;
+}
+.btn-show {
     border: 0px;
-    margin-top: 5px;
+    background-color: #FBFBFB;
+}
+.btn-show a{
+    text-decoration: none;
+}
+.btn-show:hover{
+    color: #004e9a;
 }
 /* .btn:not(:disabled) {
     cursor: pointer;

@@ -592,9 +592,12 @@ a:hover {
     text-align: center;
 }
 
-.btn-add .btn {
+.btn-add .btn-show {
     border: 0px;
     background-color: #fbfbfb;
+}
+.btn-show:hover{
+    color: #004e9a;
 }
 .add a {
     color: #004e9a;
