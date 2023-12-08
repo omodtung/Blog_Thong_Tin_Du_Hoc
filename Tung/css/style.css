@@ -61,7 +61,7 @@ a:hover {
 
 .search-container {
     position: relative;
-    max-width: 340px;
+    max-width: 380px;
     width: 100%;
     /* margin-left: auto; */
     margin: 0 0 0 45px;
@@ -249,6 +249,7 @@ a:hover {
 
 .content-left {
     width: 100%;
+    margin-right: 10px;
 }
 
 .content-right {
@@ -382,20 +383,20 @@ html {
     border-radius: 10px;
 }
 
-.right-menu .row {
+.right-menu .row-right {
     display: flex;
     align-items: center;
 }
-.right-menu .row i {
+.right-menu .row-right i {
     margin-left: 22px;
 }
 
-.right-menu .row:nth-child(2) {
+.right-menu .row-right:nth-child(2) {
     border-top: 1px dotted rgba(255, 255, 255, 0.3);
     border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
 }
 
-.right-menu .row a {
+.right-menu .row-right a {
     text-decoration: none;
     font-size: 16px;
     line-height: 1.4;
@@ -405,7 +406,7 @@ html {
     margin-left: 22px;
 }
 
-.right-menu .row a:hover {
+.right-menu .row-right a:hover {
     color: #25aae2 !important;
 }
 
@@ -742,9 +743,11 @@ html {
 
 /* ----------------------- */
 #grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    flex-wrap: wrap;
+    display: flex;
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* grid-template-rows: repeat(3, 1fr); */
     gap: 10px;
 }
 
@@ -829,14 +832,22 @@ html {
 }
 
 .imageproduct2 {
-    width: 1500px;
+    height: auto;
+    width: 600px;
+    /* width: 1500px; */
     border-radius: 10px;
 }
 
 aside {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1001;
 }
 
 .row {
@@ -854,8 +865,10 @@ aside {
     filter: alpha(opacity=20);
 }
 .over-display {
+    text-align: center;
     position: absolute;
     top: 15%;
+    width: 70%;
 }
 .overlay {
     position: fixed;
@@ -1248,6 +1261,15 @@ section {
 
     .content-desc {
         margin-bottom: 20px;
+    }
+
+    #grid-item-picture {
+        width: 100%;
+        height: auto;
+    }
+
+    .imageproduct2 {
+        width: 100%;
     }
 }
 
