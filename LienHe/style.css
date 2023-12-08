@@ -184,7 +184,6 @@ header {
 
 .header-2 >ul>li:nth-child(1) {
     font-size: 25px;
-    background-color: #1A60A4;
 }
 
 .header-2>ul>li:hover {
