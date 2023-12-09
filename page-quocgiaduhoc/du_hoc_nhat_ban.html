@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="../page_gioithieu/bootstrap.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -61,7 +62,7 @@
                             </form>
                         </div>
                         <div class="login">
-                            <img width="50px" src="./img/login.png" alt="">
+                            <img width="50px" src="./img/login.png" alt="" />
                         </div>
                         <!-- THEM ZO NE -->
 
@@ -83,13 +84,19 @@
                                 ></a>
                             </li>
                             <li>
-                                <a href="../page_gioithieu/pagegioithieu.html">GIỚI THIỆU</a>
+                                <a href="../page_gioithieu/pagegioithieu.html"
+                                    >GIỚI THIỆU</a
+                                >
                             </li>
                             <li>
                                 <a href="#!">DỊCH VỤ</a>
                             </li>
                             <li>
-                                <a href="./quocgiaduhoc.html" style="background-color: #1A60A4;">QUỐC GIA DU HỌC </a>
+                                <a
+                                    href="./quocgiaduhoc.html"
+                                    style="background-color: #1a60a4"
+                                    >QUỐC GIA DU HỌC
+                                </a>
                                 <ul class="sub-menu">
                                     <li>
                                         <a href="./du_hoc_han_quoc.html"
@@ -109,13 +116,17 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="../Tung/HoiThaoDuHoc.html">HỘI THẢO DU HỌC</a>
+                                <a href="../Tung/HoiThaoDuHoc.html"
+                                    >HỘI THẢO DU HỌC</a
+                                >
                             </li>
                             <li>
                                 <a href="../Tung/ThuVien.html">THƯ VIỆN</a>
                             </li>
                             <li>
-                                <a href="../page_event/pagesk.html">TIN TỨC, SỰ KIỆN</a>
+                                <a href="../page_event/pagesk.html"
+                                    >TIN TỨC, SỰ KIỆN</a
+                                >
                             </li>
                             <li>
                                 <a href="../LienHe/index.html">LIÊN HỆ</a>
@@ -153,7 +164,9 @@
                             ></a>
                         </li>
                         <li>
-                            <a href="../page_gioithieu/pagegioithieu.html">Giới thiệu</a>
+                            <a href="../page_gioithieu/pagegioithieu.html"
+                                >Giới thiệu</a
+                            >
                         </li>
                         <li>
                             <a href="../SanPham/NationalUni.html">Dịch vụ</a>
@@ -188,13 +201,17 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="../Tung/HoiThaoDuHoc.html">Hội thảo du học</a>
+                            <a href="../Tung/HoiThaoDuHoc.html"
+                                >Hội thảo du học</a
+                            >
                         </li>
                         <li>
                             <a href="../Tung/ThuVien.html">Thư viện</a>
                         </li>
                         <li>
-                            <a href="../page_event/pagesk.html">Tin tức, sự kiện</a>
+                            <a href="../page_event/pagesk.html"
+                                >Tin tức, sự kiện</a
+                            >
                         </li>
                         <li>
                             <a href="../LienHe/index.html">Liên hệ</a>
@@ -204,6 +221,59 @@
                 <!-- Thêm cái overley zo -->
                 <label class="overley" for="input-check"></label>
             </div>
+
+            <!-- form login and register -->
+            <div class="form-login">
+                <img
+                    class="back-to-login"
+                    width="20px"
+                    src="./img/arrow.png"
+                    alt=""
+                />
+                <img
+                    class="close-form"
+                    width="20px"
+                    src="./img/close.png"
+                    alt=""
+                />
+                <h3>Đăng Nhập</h3>
+                <form onsubmit="return handleSubmit()">
+                    <div class="login-userName">
+                        <input type="text" placeholder="Họ tên" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Họ tên không được để trống</span>
+                        </div>
+                    </div>
+                    <div class="login-id">
+                        <input type="text" placeholder="Tên đăng nhập" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Tên đăng nhập không được để trống</span>
+                        </div>
+                    </div>
+                    <div class="login-password">
+                        <input type="text" placeholder="Mật khẩu" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Mật khẩu không được để trống</span>
+                        </div>
+                    </div>
+                    <div class="login-repeatpass">
+                        <input type="text" placeholder="Nhập lại mật khẩu" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Mật khẩu lặp lại không đúng</span>
+                        </div>
+                    </div>
+                    <button type="submit">ĐĂNG KÝ</button>
+                    <div class="register" onclick="register(event)">
+                        <span>Bạn chưa có tài khoản ?</span>
+                        <a href="#">Đăng ký</a>
+                    </div>
+                </form>
+            </div>
+
             <!-- SECTION -->
             <section>
                 <div class="banner">
@@ -265,6 +335,134 @@
                                             thú vị về đất nước, con người và văn
                                             hóa Nhật bản nhé!</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal24"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal24"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            NHỮNG ĐIỀU THÚ VỊ VỀ
+                                                            ĐẤT NƯỚC MẶT TRỜI
+                                                            MỌC
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <img
+                                                            src="./img/img-content-5.jpg"
+                                                            alt=""
+                                                        />
+                                                        <p>
+                                                            Du học Nhật Bản: Bạn
+                                                            sắp đặt chân đến đất
+                                                            nước Mặt trời mọc để
+                                                            học tập? Hãy cùng
+                                                            khám phá những sự
+                                                            thật thú vị về đất
+                                                            nước, con người và
+                                                            văn hóa Nhật bản
+                                                            nhé! Nhật Bản là một
+                                                            quốc gia hải đảo
+                                                            hình vòng cung, nằm
+                                                            xoải theo bên sườn
+                                                            phía Đông lục địa
+                                                            châu Á, ở phía Đông
+                                                            của Hàn Quốc, Nga và
+                                                            Trung Quốc. Từ xưa
+                                                            đến nay, Nhật Bản đã
+                                                            trở thành một trong
+                                                            những quốc gia có
+                                                            nền văn hóa độc đáo
+                                                            nhất cùng khoa học
+                                                            công nghệ phát triển
+                                                            thu hút sự quan tâm
+                                                            của cả thế
+                                                            giới.Những sự kiện
+                                                            thú vị này chứng
+                                                            minh với thế giới
+                                                            rằng Nhật Bản xứng
+                                                            đáng là một trong
+                                                            những cường quốc
+                                                            hàng đầu bởi văn hóa
+                                                            giàu truyền thống và
+                                                            nền kinh tế mạnh mẽ
+                                                            siêu quyền lực. 1.
+                                                            Tên gọi Nhật Bản có
+                                                            nghĩa là “gốc của
+                                                            Mặt Trời” và như thế
+                                                            được hiểu là “đất
+                                                            nước Mặt Trời mọc”.
+                                                            Nhật Bản còn có các
+                                                            mỹ danh là “xứ sở
+                                                            hoa anh đào”, vì
+                                                            loài hoa này nở rộ
+                                                            trên khắp nước Nhật
+                                                            từ Bắc xuống Nam,
+                                                            hay “đất nước hoa
+                                                            cúc” vì bông hoa cúc
+                                                            16 cánh giống như
+                                                            Mặt Trời đang tỏa
+                                                            chiếu là biểu tượng
+                                                            của hoàng gia và là
+                                                            quốc huy Nhật Bản
+                                                            hiện nay.Hay Nhật
+                                                            Bản còn được gọi là
+                                                            Phù Tang – một loại
+                                                            cây dâu. Theo truyền
+                                                            thuyết cổ phương
+                                                            Đông có cây dâu rỗng
+                                                            lòng gọi là Phù Tang
+                                                            hay Khổng Tang, là
+                                                            nơi thần Mặt Trời
+                                                            nghỉ ngơi trước khi
+                                                            cưỡi xe lửa du hành
+                                                            ngang qua bầu trời
+                                                            từ Đông sang Tây, do
+                                                            đó Phù Tang hàm
+                                                            nghĩa văn chương chỉ
+                                                            nơi Mặt Trời mọc.
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -297,6 +495,119 @@
                                             du học. Hãy tham khảo một số thông
                                             tin du học Nhật...</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal25"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal25"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            NHỮNG THÔNG TIN CẦN
+                                                            BIẾT DU HỌC NHẬT BẢN
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <img
+                                                            src="./img/img-content-6.jpg"
+                                                            alt=""
+                                                        />
+                                                        <p>
+                                                            Bạn đang chuẩn bị đi
+                                                            du học Nhật Bản. Bạn
+                                                            cần những thông tin
+                                                            khi đi du học. Hãy
+                                                            tham khảo một số
+                                                            thông tin du học
+                                                            Nhật 1. Y tế Đây là
+                                                            vấn đề cần được ưu
+                                                            tiên số 1. Chi phí y
+                                                            tế không bảo hiểm ở
+                                                            nước ngoài rất đắt
+                                                            đỏ, và cũng rất rắc
+                                                            rối khi đi khám.
+                                                            Chính vì vậy hãy tìm
+                                                            hiểu và làm ngay bảo
+                                                            hiểm y tế khi bạn có
+                                                            ý định đi du học.
+                                                            Nếu bạn phải thường
+                                                            xuyên uống một loại
+                                                            thuốc nhất định, hãy
+                                                            mang theo số thuốc
+                                                            đủ cho 3 đến 4
+                                                            tháng, kèm theo đó
+                                                            là đơn thuốc để sau
+                                                            đó tiếp tục mua tại
+                                                            nơi học nhé! Cảnh
+                                                            báo: Luôn có vài
+                                                            loại thuốc trong
+                                                            danh sách hàng cấm
+                                                            của mỗi quốc gia,
+                                                            tốt nhất bạn nên vào
+                                                            trang web của Bộ Y
+                                                            tế để xem và tránh
+                                                            nhầm lẫn. 2.
+                                                            Passport và các giấy
+                                                            tờ khác Tất cả những
+                                                            du học sinh kinh
+                                                            nghiệm đều khuyên
+                                                            bạn mang theo nhiều
+                                                            bản sao hộ chiếu –
+                                                            passport, cả bản
+                                                            giấy cầm theo và bản
+                                                            scan để làm hồ sơ
+                                                            trên mạng. Phải
+                                                            phòng trường hợp bạn
+                                                            mất hộ chiếu, mất cả
+                                                            bản sao thì cũng có
+                                                            cái để in ra ngay
+                                                            lập tức. Áp dụng
+                                                            việc copy, làm nhiều
+                                                            bản sao này cho tất
+                                                            cả các giấy tờ quan
+                                                            trọng khác của bạn
+                                                            nhé!
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -326,6 +637,96 @@
                                             >Hồ sơ du học Nhật Bản – bạn có
                                             biết...</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal26"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal26"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            HỒ SƠ DU HỌC NHẬT
+                                                            BẢN – BẠN CÓ BIẾT
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <img
+                                                            src="./img/img-content-7.jpg"
+                                                            alt=""
+                                                        />
+                                                        <p>
+                                                            I. HỌC SINH CHUẨN BỊ
+                                                            CÁC GIẤY TỜ: 1. Giấy
+                                                            khai sinh. 2. Bằng
+                                                            tốt nghiệp THPT,
+                                                            Trung Cấp, Cao đẳng,
+                                                            Đại học (nếu có). 3.
+                                                            Học bạ THPT hoặc
+                                                            bảng điểm nếu đã tốt
+                                                            nghiệp Trung Cấp,
+                                                            Cao đẳng, Đại học.
+                                                            4. Chứng minh thư
+                                                            nhân dân. 5. Sổ hộ
+                                                            khẩu. 6. 8 ảnh 3×4
+                                                            và 8 ảnh 4×6 mới
+                                                            chụp trong vòng 3
+                                                            tháng trở lại. 7. Hộ
+                                                            chiếu. 8. Giấy khám
+                                                            sức khỏe. 9. Giấy
+                                                            chứng nhận năng lực
+                                                            tiếng Nhật (YON KYU,
+                                                            SAN KYU, NI KYU, IT
+                                                            KYU hoặc NAT-TEST)
+                                                            (nếucó). 10. Nếu là
+                                                            Tu Nghiệp Sinh về
+                                                            nước cần nộp: Chứng
+                                                            chỉ hoàn thành Tu
+                                                            Nghiệp Sinh, Hợp
+                                                            đồng Tu nghiệp. 11.
+                                                            Giấy xác nhận quyền
+                                                            sử dụng đất. 12. Sổ
+                                                            tiết kiệm.
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -355,7 +756,121 @@
                                             những trường đại học lâu đời nhất ở
                                             Nhật bảntọa lạc tại thành phố
                                             Tokyo....</span
+                                        ><button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal28"
                                         >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal28"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            DU HỌC NHẬT BẢN: ĐẠI
+                                                            HỌC SEIKEI
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <img
+                                                            src="./img/img-content-9.jpg"
+                                                            alt=""
+                                                        />
+                                                        <p>
+                                                            Du học Nhật Bản: Đại
+                                                            học Seikei thành lập
+                                                            từ năm 1906, là một
+                                                            trong những trường
+                                                            đại học lâu đời nhất
+                                                            ở Nhật bảntọa lạc
+                                                            tại thành phố Tokyo.
+                                                            Bước đầu chỉ là một
+                                                            trường phổ thông nho
+                                                            nhỏ rồi sau đó nâng
+                                                            cấp thành 1 nhóm gồm
+                                                            một trường tiểu học,
+                                                            một trường Trung học
+                                                            nam, một trường
+                                                            trung học nữ và một
+                                                            trường kỹ thuật.Năm
+                                                            1925, trường trung
+                                                            học nam trở thành
+                                                            trường học theo
+                                                            chương trình 7 năm.
+                                                            Năm 1949 Đại học
+                                                            Seikei được chính
+                                                            thức thành lập, lúc
+                                                            đó có Khoa Khoa học
+                                                            Chính trị và Khoa
+                                                            Kinh tế. Đến năm
+                                                            1962 thêm Khoa Kỹ
+                                                            thuật, năm 1965 thêm
+                                                            Khoa Nhân văn, năm
+                                                            1966 thêm chương
+                                                            trình sau đại học
+                                                            với cấp Cao học kỹ
+                                                            thuật. Cứ thế,
+                                                            Trường phát triển
+                                                            dần, thêm từng khoa,
+                                                            từng cấp học.Đến năm
+                                                            1991, trường bắt đầu
+                                                            chương trình trao
+                                                            đổi với Đại học
+                                                            Griffith (Úc) và đặt
+                                                            một chương trình đặc
+                                                            biệt tại Đại học
+                                                            Edingburgh (Anh).
+                                                            Năm 1992 Trường bắt
+                                                            đầu có chương trình
+                                                            trao đổi với Đại học
+                                                            Edingburgh, đặc các
+                                                            chương trình đặc
+                                                            biệt tại cao đẳng
+                                                            Pembroke (Anh) và
+                                                            Đại học Gonzaga (Mỹ)
+                                                            . Từ đó Trường có
+                                                            thêm các chương
+                                                            trình trao đổi với
+                                                            những trường đại học
+                                                            khác trên thế giới.
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -400,6 +915,122 @@
                                             bạn khi tới trung tâm tư vấn hay
                                             thắc mắc.</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal40"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal40"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            SAI LẦM VỀ NHẬN THỨC
+                                                            KHI XIN HỌC BỔNG DU
+                                                            HỌC NHẬT BẢN
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            <i
+                                                                ><b
+                                                                    >“Tốn quá
+                                                                    nhiều thời
+                                                                    gian tìm
+                                                                    kiếm thông
+                                                                    tin học bổng
+                                                                    mà chắc gì
+                                                                    đã có kết
+                                                                    quả cao”</b
+                                                                ></i
+                                                            >
+                                                            <br />
+                                                            Bạn mất nhiều thời
+                                                            gian trong việc tìm
+                                                            kiếm thông tin học
+                                                            bổng là do bạn chưa
+                                                            có phương pháp tìm
+                                                            kiếm tốt nhất. Ngày
+                                                            nay, sinh viên
+                                                            thường tìm kiếm
+                                                            thông tin trên các
+                                                            trang web học bổng
+                                                            chính thống. Cách
+                                                            tốt nhất là học tìm
+                                                            đến các trung tâm du
+                                                            học uy tín để nhờ tư
+                                                            vấn. Do đó, thông
+                                                            tin bạn thu được sẽ
+                                                            được chọn lọc hơn.
+                                                            <br />
+                                                            GoToJapan tự hào là
+                                                            Trung tâm du học và
+                                                            đào tạo tiếng Nhật
+                                                            hàng đầu tại Việt
+                                                            nam có đội ngũ hỗ
+                                                            trợ Apply học bổng
+                                                            tốt nhất, mỗi năm
+                                                            đều giúp hàng trăm
+                                                            bạn học sinh, sinh
+                                                            viên nhận được học
+                                                            bổng Nhật bản thành
+                                                            công.
+                                                        </p>
+                                                        <img
+                                                            src="./img/img-content-23.png"
+                                                            alt=""
+                                                        />
+                                                        <p>
+                                                            Giám đốc Trung tâm
+                                                            GoToJapan Nguyễn Thị
+                                                            Minh Hải từng là
+                                                            sinh viên nhận được
+                                                            học bổng hãng hàng
+                                                            không Nhật ANA
+                                                            <br />
+                                                            Chia sẻ của học viên
+                                                            GoToJapan nhận học
+                                                            bổng toàn phần Đại
+                                                            học Toyo
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -443,6 +1074,106 @@
                                             phỏng vấn trực tiếp hoặc qua skype
                                             với người Nhật.</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal41"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal41"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            KINH NGHIỆM PHỎNG
+                                                            VẤN BẰNG TIẾNG NHẬT
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            Dạo này ad nhận được
+                                                            nhiều câu hỏi từ các
+                                                            bạn học viên, dạng
+                                                            như: “các câu hỏi
+                                                            thường gặp khi phỏng
+                                                            vấn với trường?”,
+                                                            “kinh nghiệm phỏng
+                                                            vấn du học Nhật”,
+                                                            “làm thế nào để đỗ
+                                                            phỏng vấn”…
+                                                            <br />
+                                                            Du học Nhật, apply
+                                                            học bổng Nhật, hay
+                                                            tham gia chương
+                                                            trình làm việc theo
+                                                            diện kỹ sư hoặc xuất
+                                                            khẩu lao động, thì
+                                                            các bạn đều phải
+                                                            trải qua các buổi
+                                                            phỏng vấn. Để du học
+                                                            Nhật hay làm việc
+                                                            tại Nhật thành công
+                                                            thì bước đầu tiên
+                                                            vẫn là vượt qua các
+                                                            buổi phỏng vấn. Có
+                                                            thể là phỏng vấn
+                                                            trực tiếp hoặc qua
+                                                            skype với người
+                                                            Nhật.
+                                                        </p>
+                                                        <img
+                                                            src="./img/img-content-24.jpg"
+                                                            alt=""
+                                                        />
+                                                        <p>
+                                                            Các buổi phỏng vấn
+                                                            thường sẽ có người
+                                                            Việt đi kèm để hỗ
+                                                            trợ trong các tình
+                                                            huống, tuy nhiên để
+                                                            gây ấn tượng tốt với
+                                                            người phỏng vấn thì
+                                                            bạn cần có sự giới
+                                                            thiệu trơn tru bằng
+                                                            tiếng Nhật.
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -480,6 +1211,269 @@
                                             nhé, mình tin rằng nó sẽ giúp ích
                                             cho các bạn:</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal42"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal42"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            BÀI HỌC QUÝ GIÁ DÀNH
+                                                            CHO CÁC DU HỌC SINH
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            GoToJapan xin được
+                                                            chia sẻ bài viết của
+                                                            chị Nguyễn Thị Minh
+                                                            Hải – Giám đốc Trung
+                                                            tâm GoToJapan – cũng
+                                                            chính là người trực
+                                                            tiếp hỗ trợ apply
+                                                            học bổng du học Nhật
+                                                            và định hướng tương
+                                                            lai cho hàng trăm
+                                                            bạn trẻ Việt Nam.
+                                                            Các bạn hãy dành
+                                                            thời gian để đọc
+                                                            nhé, mình tin rằng
+                                                            nó sẽ giúp ích cho
+                                                            các bạn:
+                                                            <br />
+                                                            … “Mình vừa phải
+                                                            mắng bạn học sinh
+                                                            nam 22 tuổi một
+                                                            trận. Vừa mắng vừa
+                                                            muốn rơi nước mắt
+                                                            <br />
+                                                            22 tuổi, học Đại học
+                                                            không tốt nghiệp
+                                                            được vì lười rồi giờ
+                                                            phải đi du học để
+                                                            làm lại; ấy vậy mà
+                                                            hỏi thì kêu em chỉ
+                                                            tự học ở nhà có 1
+                                                            tiếng, vậy cho nên
+                                                            hỏi tới cái gì cũng
+                                                            lơ mơ.
+                                                            <br />
+                                                            Mình bảo bạn ấy: Em
+                                                            22 tuổi rồi, là tuổi
+                                                            đáng ra em phải tự
+                                                            lo cho mình và lo
+                                                            được cả cho bố mẹ em
+                                                            rồi có biết không?
+                                                            Chứ không phải tới
+                                                            tuổi này rồi, vẫn
+                                                            phải để bố mẹ lo cho
+                                                            ăn học còn mình thì
+                                                            mang tiền đó quẳng
+                                                            cho người ta, rồi
+                                                            ngồi đó để ăn chơi.
+                                                            Em có biết em đi học
+                                                            có một buổi trên lớp
+                                                            còn thấy mệt thì bố
+                                                            mẹ em đi làm, rồi về
+                                                            nhà chăm sóc bọn em,
+                                                            lo lắng cho bọn em
+                                                            còn mệt như thế nào
+                                                            không?
+                                                            <br />
+                                                            Em có muốn nói
+                                                            chuyện với người em
+                                                            không thích không?
+                                                            Không đúng không?
+                                                            Nhưng bố mẹ em đi
+                                                            làm, có không thích
+                                                            vẫn phải nói, vì đó
+                                                            là công việc, vì
+                                                            không làm thế thì
+                                                            không có tiền nuôi
+                                                            em, lo cho em được
+                                                            một đống tiền để đi
+                                                            du học như thế này.
+                                                            Vậy mà em không nghĩ
+                                                            cho bố mẹ em, chỉ lo
+                                                            nghĩ tới thú vui của
+                                                            mình. Em chơi game,
+                                                            em đàn đúm bạn bè
+                                                            online offline, em
+                                                            có biết là em sướng
+                                                            một tẹo, bạn em
+                                                            sướng vì có em chơi
+                                                            cùng, nhưng rồi bạn
+                                                            bè em có nuôi em
+                                                            không? Bạn bè em có
+                                                            lo cho bố mẹ em
+                                                            không? Em định để bố
+                                                            mẹ em phải lo lắng
+                                                            và nuôi em tới khi
+                                                            nào? Và định cả sau
+                                                            này lấy vợ về, vợ sẽ
+                                                            nuôi em phải không?
+                                                            Nếu em không có khả
+                                                            năng học hành, nhưng
+                                                            em chăm chỉ lao
+                                                            động, kể cả nhặt
+                                                            rác, thì người ta
+                                                            cũng tôn trọng em,
+                                                            sau này con em nó
+                                                            cũng tôn trọng và
+                                                            thương em. Nhưng nếu
+                                                            em có khả năng mà em
+                                                            lười, người ta sẽ
+                                                            khinh thường em, và
+                                                            chính con em nó cũng
+                                                            coi thường em. Mà
+                                                            cái thất bại lớn
+                                                            nhất của một thằng
+                                                            đàn ông đó là không
+                                                            được chính người con
+                                                            của mình tôn trọng
+                                                            mình. Em đi học, em
+                                                            có ghét người ngày
+                                                            người kia, thích
+                                                            người này người kia
+                                                            để rồi nó ảnh hưởng
+                                                            tới việc học của em,
+                                                            tới sự nghiệp của
+                                                            em, thì chính em và
+                                                            2 người thân nhất
+                                                            của em đó là bố mẹ
+                                                            em sẽ chịu ảnh hưởng
+                                                            đầu tiên. Chả thầy
+                                                            cô nào, trường lớp
+                                                            nào, bạn bè nào bị
+                                                            thiệt thòi vì em
+                                                            không học, vì đời em
+                                                            khổ cả. Nên thầy cô
+                                                            hay trường học, bạn
+                                                            bè có nhắc em cũng
+                                                            là vì muốn tốt cho
+                                                            em. Người ngoài vậy
+                                                            người ta còn muốn em
+                                                            tốt, vậy tại sao tự
+                                                            bản thân em em không
+                                                            biết nghĩ cho em,
+                                                            không biết nghĩ cho
+                                                            bố mẹ em? Chị là
+                                                            người ngoài chị còn
+                                                            cảm thấy xót xa khi
+                                                            nhìn em, một cậu con
+                                                            trai 22 tuổi to khoẻ
+                                                            ntn nhưng lại vô
+                                                            cùng lười, chả lo
+                                                            lắng gì tới tương
+                                                            lai của mình ntn,
+                                                            vậy thì bố mẹ em sẽ
+                                                            còn lo lắng, xót xa
+                                                            như thế nào? Bố mẹ
+                                                            sinh em ra có thể
+                                                            không phải vì nguyện
+                                                            vọng của em, nhưng
+                                                            bố mẹ nuôi dạy em
+                                                            cũng chỉ mong em có
+                                                            thể tự đứng vững
+                                                            trên đôi chân của
+                                                            mình, tự lo được cho
+                                                            mình, vậy mà giờ 22
+                                                            tuổi, em còn lười
+                                                            biếng và không biết
+                                                            suy nghĩ ntn thì bố
+                                                            mẹ em sẽ lo lắng cho
+                                                            em ntn? Em không cảm
+                                                            thấy gì sao? Sẽ là
+                                                            rất khó để có thể
+                                                            thay đổi em nếu em
+                                                            không biết mục đích
+                                                            sống của mình là gì,
+                                                            không có kế hoạch
+                                                            một cách rõ ràng cho
+                                                            tương lai của mình.
+                                                            Thời gian trôi qua
+                                                            rất nhanh. Để lập
+                                                            nghiệp, người ta cần
+                                                            3 năm, 5 năm. Để
+                                                            thành công cần tới
+                                                            10 năm cố gắng. Vậy
+                                                            làm sai một cái là
+                                                            lại mất thêm quãng
+                                                            thời gian đó rồi. Là
+                                                            em đã 30, 40 rồi.
+                                                            Lúc đó ai còn nuôi
+                                                            em, nuôi vợ con em
+                                                            được nếu không phải
+                                                            là em? Cho nên đừng
+                                                            có nghĩ là em còn
+                                                            trẻ, còn có nhiều
+                                                            thời gian. Hãy về
+                                                            suy nghĩ cho thật kỹ
+                                                            xem mình có phù hợp
+                                                            với việc học không?
+                                                            Nếu không, hãy nghĩ
+                                                            xem mình sẽ làm cái
+                                                            gì. Kể cả có làm anh
+                                                            quét rác cũng phải
+                                                            có kế hoạch, phải
+                                                            tìm hiểu xem mình
+                                                            cần liên hệ ai để
+                                                            xin việc, cần phải
+                                                            có kiến thức để bảo
+                                                            vệ mình khỏi sự độc
+                                                            hại, phải có sự tìm
+                                                            hiểu để biết rác nào
+                                                            bán được mà còn kiếm
+                                                            thêm ít tiền,… Vậy
+                                                            cho nên hãy xác định
+                                                            mục tiêu thật rõ và
+                                                            có kế hoạch thật cụ
+                                                            thể. Đừng để mình
+                                                            không ngẩng đầu lên
+                                                            được với chính bản
+                                                            thân mình.”
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -516,6 +1510,139 @@
                                             đặc sắc khiến bạn phải “đứng ngồi
                                             không yên”.
                                         </span>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal43"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal43"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            CÁC LỄ HỘI HÈ NỔI
+                                                            TIẾNG TẠI NHẬT BẢN
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            ✔️ Lễ hội pháo hoa
+                                                            Sumidagawa
+                                                            <br /><br />
+                                                            Bắt nguồn từ năm
+                                                            1733, lễ hội pháo
+                                                            hoa Sumidagawa được
+                                                            ấn định sẽ diễn ra
+                                                            vào ngày Chủ Nhật
+                                                            thứ 4 của tháng 7
+                                                            hàng năm.
+                                                        </p>
+                                                        <img
+                                                            src="./img/img-content-26.jpg"
+                                                            alt=""
+                                                        />
+                                                        <p>
+                                                            Lễ hội này được đánh
+                                                            giá là “bữa tiệc
+                                                            pháo hoa” nổi bật ở
+                                                            Nhật Bản thu hút
+                                                            hàng triệu lượt
+                                                            khách đổ về Tokyo
+                                                            hàng năm.
+                                                            <br />
+                                                            Hình ảnh pháo hoa
+                                                            đánh dấu sự trở mình
+                                                            của Nhật Bản sau
+                                                            những tổn thất chiến
+                                                            tranh và thiên tai,
+                                                            để tưởng niệm, ăn
+                                                            mừng chiến thắng và
+                                                            thể hiện tinh thần
+                                                            yêu nước của người
+                                                            dân Nhật Bản. Mọi
+                                                            người đến lễ hội từ
+                                                            sớm để đặt một tấm
+                                                            nhựa màu xanh với
+                                                            tên của họ trên đó.
+                                                            Đây là cách để giữ
+                                                            một chỗ cho bữa tiệc
+                                                            đầy sắc màu. Nếu bạn
+                                                            muốn có một vị trí
+                                                            tốt, hãy gửi một
+                                                            người đi săn chỗ sớm
+                                                            để đặt tấm nhựa tên
+                                                            của bạn.
+                                                            <br />
+                                                            Bạn sẽ thấy rất
+                                                            nhiều người mặc
+                                                            yukata đến lễ hội
+                                                            này. Đây là một
+                                                            trang phục truyền
+                                                            thống của người Nhật
+                                                            trong các dịp lễ hội
+                                                            mùa hè và mùa thu.
+                                                            <br />
+                                                            Cảnh sát Tokyo luôn
+                                                            luôn có mặt để quản
+                                                            lý đám đông lớn. Vì
+                                                            vậy, bạn hãy yên tâm
+                                                            về an ninh tại lễ
+                                                            hội pháo hoa này.
+                                                            Chương trình lễ hội
+                                                            sẽ bị hủy bỏ trong
+                                                            trường hợp trời mưa.
+                                                            <br />
+                                                            Lễ hội pháo hoa
+                                                            Sumidagawa có thể
+                                                            được xem từ một số
+                                                            địa điểm ở cả hai
+                                                            bên của sông Sumida
+                                                            gần Trạm Asakusa.
+                                                            Nơi nổi tiếng nhất
+                                                            là Công viên Kuritsu
+                                                            Sumida ở hai bên bờ
+                                                            sông. Công viên này
+                                                            cách trạm Asakusa 5
+                                                            phút đi bộ.
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -608,101 +1735,126 @@
                             <div class="calendar form">
                                 <h2>LỊCH HỘI THẢO</h2>
                                 <div class="desc">
-                                    <div class="row-calen">
-                                        <div class="calen-box">
-                                            <span class="day">06</span>
-                                            <span class="mon-year"
-                                                >07/2020</span
+                                    <div>
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">06</span>
+                                                <span class="mon-year"
+                                                    >07/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Tầm quan trọng của hoạt động
+                                                ngoại ngóa trong hồ sơ du học</a
                                             >
                                         </div>
-                                        <a href="#!"
-                                            >Tầm quan trọng của hoạt động ngoại
-                                            ngóa trong hồ sơ du học</a
-                                        >
-                                    </div>
-                                    <div class="row-calen">
-                                        <div class="calen-box">
-                                            <span class="day">06</span>
-                                            <span class="mon-year"
-                                                >07/2020</span
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">06</span>
+                                                <span class="mon-year"
+                                                    >07/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội thảo online cùng University
+                                                of Melbourne – Trinity
+                                                College</a
                                             >
                                         </div>
-                                        <a href="#!"
-                                            >Hội thảo online cùng University of
-                                            Melbourne – Trinity College</a
-                                        >
-                                    </div>
-                                    <div class="row-calen">
-                                        <div class="calen-box">
-                                            <span class="day">06</span>
-                                            <span class="mon-year"
-                                                >07/2020</span
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">06</span>
+                                                <span class="mon-year"
+                                                    >07/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Đại học Adelaide, Australia cấp
+                                                học bổng đến 50%</a
                                             >
                                         </div>
-                                        <a href="#!"
-                                            >Đại học Adelaide, Australia cấp học
-                                            bổng đến 50%</a
-                                        >
-                                    </div>
-                                    <div class="row-calen">
-                                        <div class="calen-box">
-                                            <span class="day">25</span>
-                                            <span class="mon-year"
-                                                >06/2020</span
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Workshop Du Học: Canada Và Úc –
+                                                Lựa Chọn Nào Có Lợi Hơn Cho Du
+                                                Học Sinh Việt Nam</a
                                             >
                                         </div>
-                                        <a href="#!"
-                                            >Workshop Du Học: Canada Và Úc – Lựa
-                                            Chọn Nào Có Lợi Hơn Cho Du Học Sinh
-                                            Việt Nam</a
-                                        >
-                                    </div>
-                                    <div class="row-calen">
-                                        <div class="calen-box">
-                                            <span class="day">25</span>
-                                            <span class="mon-year"
-                                                >06/2020</span
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội Thảo Online: Săn Học Bổng
+                                                Du Học Hà Lan Lên Đến 5000 EURO
+                                                Cùng Với Trường Đại Học Fontys
+                                                University Of Applied
+                                                Sciences</a
                                             >
                                         </div>
-                                        <a href="#!"
-                                            >Hội Thảo Online: Săn Học Bổng Du
-                                            Học Hà Lan Lên Đến 5000 EURO Cùng
-                                            Với Trường Đại Học Fontys University
-                                            Of Applied Sciences</a
-                                        >
                                     </div>
-                                    <div class="row-calen hidden">
-                                        <div class="calen-box">
-                                            <span class="day">25</span>
-                                            <span class="mon-year">06/2020</span>
+                                    <div>
+                                        <div class="row-calen hidden">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội Thảo Online: Săn Học Bổng
+                                                Du Học Hà Lan Lên Đến 5000 EURO
+                                                Cùng Với Trường Đại Học Fontys
+                                                University Of Applied
+                                                Sciences</a
+                                            >
                                         </div>
-                                        <a href="#!">Hội Thảo Online: Săn Học Bổng Du
-                                            Học Hà Lan Lên Đến 5000 EURO Cùng
-                                            Với Trường Đại Học Fontys University
-                                            Of Applied Sciences</a>
-                                    </div>
-                                    <div class="row-calen hidden">
-                                        <div class="calen-box">
-                                            <span class="day">25</span>
-                                            <span class="mon-year">06/2020</span>
+                                        <div class="row-calen hidden">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội Thảo Online: Săn Học Bổng
+                                                Du Học Hà Lan Lên Đến 5000 EURO
+                                                Cùng Với Trường Đại Học Fontys
+                                                University Of Applied
+                                                Sciences</a
+                                            >
                                         </div>
-                                        <a href="#!">Hội Thảo Online: Săn Học Bổng Du
-                                            Học Hà Lan Lên Đến 5000 EURO Cùng
-                                            Với Trường Đại Học Fontys University
-                                            Of Applied Sciences</a>
-                                    </div>
-                                    <div class="row-calen hidden">
-                                        <div class="calen-box">
-                                            <span class="day">25</span>
-                                            <span class="mon-year">06/2020</span>
+                                        <div class="row-calen hidden">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội Thảo Online: Săn Học Bổng
+                                                Du Học Hà Lan Lên Đến 5000 EURO
+                                                Cùng Với Trường Đại Học Fontys
+                                                University Of Applied
+                                                Sciences</a
+                                            >
                                         </div>
-                                        <a href="#!">Hội Thảo Online: Săn Học Bổng Du
-                                            Học Hà Lan Lên Đến 5000 EURO Cùng
-                                            Với Trường Đại Học Fontys University
-                                            Of Applied Sciences</a>
                                     </div>
+
                                     <div class="btn-add">
-                                        <button class="btn btn-show" onclick="showMoreSchedule()">
+                                        <button
+                                            class="btn btn-show"
+                                            onclick="showMoreSchedule()"
+                                        >
                                             <a href="#!">XEM THÊM</a>
                                         </button>
                                     </div>
@@ -826,14 +1978,19 @@
                                         class="fa-regular fa-greater-than fa-2xs fa-2xs"
                                         style="color: #fff; margin-right: 12px"
                                     ></i>
-                                    <a href="../page_gioithieu/pagegioithieu.html">Giới thiệu</a>
+                                    <a
+                                        href="../page_gioithieu/pagegioithieu.html"
+                                        >Giới thiệu</a
+                                    >
                                 </div>
                                 <div class="row">
                                     <i
                                         class="fa-regular fa-greater-than fa-2xs"
                                         style="color: #fff; margin-right: 12px"
                                     ></i>
-                                    <a href="../SanPham/NationalUni.html">Dịch vụ</a>
+                                    <a href="../SanPham/NationalUni.html"
+                                        >Dịch vụ</a
+                                    >
                                 </div>
                                 <div class="row">
                                     <i
@@ -887,7 +2044,9 @@
                                         class="fa-regular fa-greater-than fa-2xs"
                                         style="color: #fff; margin-right: 12px"
                                     ></i>
-                                    <a href="../Tung/HoiThaoDuHoc.html">Hội thảo du học</a>
+                                    <a href="../Tung/HoiThaoDuHoc.html"
+                                        >Hội thảo du học</a
+                                    >
                                 </div>
                                 <div class="row">
                                     <i
@@ -901,7 +2060,9 @@
                                         class="fa-regular fa-greater-than fa-2xs"
                                         style="color: #fff; margin-right: 12px"
                                     ></i>
-                                    <a href="../page_event/pagesk.html">Tin tức, sự kiện</a>
+                                    <a href="../page_event/pagesk.html"
+                                        >Tin tức, sự kiện</a
+                                    >
                                 </div>
                                 <div class="row">
                                     <i
@@ -955,6 +2116,7 @@
                 </div>
             </footer>
         </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="./a.js"></script>
     </body>
 </html>

@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="../page_gioithieu/bootstrap.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -61,7 +62,7 @@
                             </form>
                         </div>
                         <div class="login">
-                            <img width="50px" src="./img/login.png" alt="">
+                            <img width="50px" src="./img/login.png" alt="" />
                         </div>
                         <!-- THEM ZO NE -->
 
@@ -83,13 +84,21 @@
                                 ></a>
                             </li>
                             <li>
-                                <a href="../page_gioithieu/pagegioithieu.html">GIỚI THIỆU</a>
+                                <a href="../page_gioithieu/pagegioithieu.html"
+                                    >GIỚI THIỆU</a
+                                >
                             </li>
                             <li>
-                                <a href="../SanPham/NationalUni.html">DỊCH VỤ</a>
+                                <a href="../SanPham/NationalUni.html"
+                                    >DỊCH VỤ</a
+                                >
                             </li>
                             <li>
-                                <a href="./quocgiaduhoc.html" style="background-color: #1A60A4;">QUỐC GIA DU HỌC</a>
+                                <a
+                                    href="./quocgiaduhoc.html"
+                                    style="background-color: #1a60a4"
+                                    >QUỐC GIA DU HỌC</a
+                                >
                                 <ul class="sub-menu">
                                     <li>
                                         <a href="./du_hoc_han_quoc.html"
@@ -109,13 +118,17 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="../Tung/HoiThaoDuHoc.html">HỘI THẢO DU HỌC</a>
+                                <a href="../Tung/HoiThaoDuHoc.html"
+                                    >HỘI THẢO DU HỌC</a
+                                >
                             </li>
                             <li>
                                 <a href="../Tung/ThuVien.html">THƯ VIỆN</a>
                             </li>
                             <li>
-                                <a href="../page_event/pagesk.html">TIN TỨC, SỰ KIỆN</a>
+                                <a href="../page_event/pagesk.html"
+                                    >TIN TỨC, SỰ KIỆN</a
+                                >
                             </li>
                             <li>
                                 <a href="../LienHe/index.html">LIÊN HỆ</a>
@@ -153,7 +166,9 @@
                             ></a>
                         </li>
                         <li>
-                            <a href="../page_gioithieu/pagegioithieu.html">Giới thiệu</a>
+                            <a href="../page_gioithieu/pagegioithieu.html"
+                                >Giới thiệu</a
+                            >
                         </li>
                         <li>
                             <a href="../SanPham/NationalUni.html">Dịch vụ</a>
@@ -188,13 +203,17 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="../Tung/HoiThaoDuHoc.html">Hội thảo du học</a>
+                            <a href="../Tung/HoiThaoDuHoc.html"
+                                >Hội thảo du học</a
+                            >
                         </li>
                         <li>
                             <a href="../Tung/ThuVien.html">Thư viện</a>
                         </li>
                         <li>
-                            <a href="../page_event/pagesk.html">Tin tức, sự kiện</a>
+                            <a href="../page_event/pagesk.html"
+                                >Tin tức, sự kiện</a
+                            >
                         </li>
                         <li>
                             <a href="../LienHe/index.html">Liên hệ</a>
@@ -204,6 +223,59 @@
                 <!-- Thêm cái overley zo -->
                 <label class="overley" for="input-check"></label>
             </div>
+
+            <!-- form login and register -->
+            <div class="form-login">
+                <img
+                    class="back-to-login"
+                    width="20px"
+                    src="./img/arrow.png"
+                    alt=""
+                />
+                <img
+                    class="close-form"
+                    width="20px"
+                    src="./img/close.png"
+                    alt=""
+                />
+                <h3>Đăng Nhập</h3>
+                <form onsubmit="return handleSubmit()">
+                    <div class="login-userName">
+                        <input type="text" placeholder="Họ tên" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Họ tên không được để trống</span>
+                        </div>
+                    </div>
+                    <div class="login-id">
+                        <input type="text" placeholder="Tên đăng nhập" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Tên đăng nhập không được để trống</span>
+                        </div>
+                    </div>
+                    <div class="login-password">
+                        <input type="text" placeholder="Mật khẩu" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Mật khẩu không được để trống</span>
+                        </div>
+                    </div>
+                    <div class="login-repeatpass">
+                        <input type="text" placeholder="Nhập lại mật khẩu" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Mật khẩu lặp lại không đúng</span>
+                        </div>
+                    </div>
+                    <button type="submit">ĐĂNG KÝ</button>
+                    <div class="register" onclick="register(event)">
+                        <span>Bạn chưa có tài khoản ?</span>
+                        <a href="#">Đăng ký</a>
+                    </div>
+                </form>
+            </div>
+
             <!-- SECTION -->
             <section>
                 <div class="banner">
@@ -272,6 +344,141 @@
                                             khác của trường cùng với bệnh viện
                                             của trường nằm ngay tại Daegu.</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal29"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal29"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            DU HỌC NGÀNH “DƯỢC
+                                                            MỸ PHẨM” TẠI NGÔI
+                                                            TRƯỜNG ĐÔNG Y CỔ
+                                                            TRUYỀN BẬC NHẤT HÀN
+                                                            QUỐC
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            Trường Đại học Daegu
+                                                            Haany là một trong
+                                                            số ít các trường đại
+                                                            học giảng dạy chuyên
+                                                            sâu về Đông y của
+                                                            Hàn Quốc và nổi
+                                                            tiếng về đào tạo
+                                                            chuyên ngành Điều
+                                                            chế mỹ phẩm tại Hàn.
+                                                            Đây là nơi lý tưởng
+                                                            để du học ngành
+                                                            “dược mỹ phẩm”. Trụ
+                                                            sở chính của trường
+                                                            được cách Daegu ở
+                                                            thành phố Gyeongsang
+                                                            một quãng ngắn. Trụ
+                                                            sở khác của trường
+                                                            cùng với bệnh viện
+                                                            của trường nằm ngay
+                                                            tại Daegu.
+                                                            <br /><br />
+                                                            Trường đại học Daegu
+                                                            Haany được xem là
+                                                            một trường đại học
+                                                            phục vụ cho lợi ích
+                                                            cộng đồng không chỉ
+                                                            trong khu vực mà còn
+                                                            ra cả quốc tế với sự
+                                                            chăm sóc sức khỏe
+                                                            chu đáo và toàn diện
+                                                            cùng những ứng dụng
+                                                            y học quý giá của
+                                                            ngành Đông y. Được
+                                                            thành lập kể từ năm
+                                                            1980, tính đến nay
+                                                            trường đại học Daegu
+                                                            Haany đã đóng góp
+                                                            một phần không nhỏ
+                                                            vào việc bồi dưỡng
+                                                            các tài năng đặc
+                                                            biệt trong lĩnh vực
+                                                            Đông y của Hàn Quốc.
+                                                        </p>
+                                                        <img
+                                                            src="./img/img-content-10.jpg"
+                                                            alt=""
+                                                        />
+                                                        <p>
+                                                            Không dừng lại ở đó,
+                                                            trường đại học Daegu
+                                                            Haany đã có rất
+                                                            nhiều chuyển biến
+                                                            tích cực trong giáo
+                                                            dục trước diễn biến
+                                                            toàn cầu hóa đang
+                                                            ngày một lan rộng,
+                                                            thế giới đang ngày
+                                                            một thu hẹp lại và
+                                                            các rào cản về văn
+                                                            hóa, giáo dục và
+                                                            kinh tế đang ngày
+                                                            một bị xóa nhòa đi.
+                                                            Vì thế trường đại
+                                                            học Daegu Haany đã
+                                                            có nhiều thay đổi
+                                                            trong chương trình
+                                                            giảng dạy để đáp ứng
+                                                            với những yêu cầu
+                                                            đặt ra của xã hội,
+                                                            cụ thể các chương
+                                                            trình dần chuyển
+                                                            sang công nghệ sinh
+                                                            học (BT), công nghệ
+                                                            văn hóa (CT), công
+                                                            nghệ thông tin (IT)
+                                                            và đào tạo nghiên
+                                                            cứu liên ngành.
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -310,6 +517,124 @@
                                             đại học có thẩm mĩ đẹp nhất Hàn
                                             Quốc.</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal30"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal30"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            ĐẠI HỌC DANKOOK TOP
+                                                            CÁC TRƯỜNG ĐẠI HỌC
+                                                            HÀN QUỐC
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            Bạn muốn du học đến
+                                                            xứ sở kim chi? Bạn
+                                                            muốn theo học một
+                                                            đại học hàng đầu
+                                                            Châu Á? Vậy đại học
+                                                            Dankook sẽ là sự lựa
+                                                            chọn hợp lý cho bạn.
+                                                            Một trường đại học
+                                                            tư thục nằm ở thành
+                                                            phố Yongin ở tỉnh
+                                                            Gyeonggi cách Seoul
+                                                            hơn 1 h đi tàu, với
+                                                            công nghệ tiên tiến,
+                                                            tiện nghi và là
+                                                            trường đại học có
+                                                            thẩm mĩ đẹp nhất Hàn
+                                                            Quốc. I. Giới thiệu
+                                                            chung Đại học
+                                                            Dankook là một
+                                                            trường đại học tư
+                                                            thục ở Seoul, Hàn
+                                                            Quốc. Đại học
+                                                            Dankook đã liên tục
+                                                            được công nhận là
+                                                            một trong những
+                                                            trường đại học hàng
+                                                            đầu ở châu Á xếp
+                                                            hạng thứ 148 trong
+                                                            khu vực châu Á qua
+                                                            Bảng xếp hạng của
+                                                            các trường Đại học
+                                                            châu Á năm 2010. Cơ
+                                                            sở chính của trường
+                                                            ở Seoul tự hào vì có
+                                                            công nghệ tiên tiến,
+                                                            tiện nghi cao cấp,
+                                                            không gian ký túc xá
+                                                            rộng rãi và Dankook
+                                                            là một trong những
+                                                            trường đại học thẩm
+                                                            mỹ đẹp nhất Hàn Quốc
+                                                            .
+                                                        </p>
+                                                        <img
+                                                            src="./img/img-content-11.jpg"
+                                                            alt=""
+                                                        />
+                                                        <p>
+                                                            Khuôn viên mở rộng
+                                                            khác của Dankook nằm
+                                                            ở Cheonan, một thành
+                                                            phố ở miền Nam tỉnh
+                                                            Chungcheong, nằm
+                                                            giữa một ngọn đồi và
+                                                            một hồ nước. Khuôn
+                                                            viên Cheonan bao gồm
+                                                            các bệnh viện lớn
+                                                            nhất trong khu vực
+                                                            và là một trong các
+                                                            chương trình nha
+                                                            khoa hàng đầu của
+                                                            Hàn Quốc
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -353,6 +678,136 @@
                                             mạnh mẽ đối với giới trẻ Viêt
                                             Nam.</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal31"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal31"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            TUYỂN SINH DU HỌC
+                                                            HÀN QUỐC KỲ THÁNG
+                                                            03/2021
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            Xuyên suốt nhiều năm
+                                                            qua, AMEC đã trở
+                                                            thành ĐẠI DIỆN TUYỂN
+                                                            SINH CHÍNH THỨC VÀ
+                                                            ĐÁNG TIN CẬY của rất
+                                                            nhiều trường thuộc
+                                                            top VISA THẲNG nhằm
+                                                            hỗ trợ cho các bạn
+                                                            học sinh có thêm
+                                                            nhiều lựa chọn phù
+                                                            hợp với nguyện vọng
+                                                            và tài chính gia
+                                                            đình. Như các bạn đã
+                                                            biết, đầu năm 2020
+                                                            đến nay tình hình du
+                                                            học cũng gặp nhiều
+                                                            khó khăn do ảnh
+                                                            hưởng của đại dịch
+                                                            Covid-19. Tuy nhiên,
+                                                            nhu cầu du học Hàn
+                                                            Quốc vẫn không giảm
+                                                            nhiều so với trước
+                                                            đây. Hàn Quốc vẫn
+                                                            còn sức hút mạnh mẽ
+                                                            đối với giới trẻ
+                                                            Viêt Nam.
+                                                            <br /><br />Chính vì
+                                                            vậy, AMEC chính thức
+                                                            mở kỳ tuyển sinh
+                                                            tháng 03/2021 và vẫn
+                                                            tự hào là đơn vị đại
+                                                            diện tuyển sinh uy
+                                                            tín cho nhiều trường
+                                                            Đại học danh tiếng,
+                                                            với mong muốn viết
+                                                            tiếp con đường chinh
+                                                            phục giấc mơ Du học
+                                                            Hàn Quốc của các bạn
+                                                            trẻ. AMEC luôn mở ra
+                                                            nhiều chương trình
+                                                            tuyển sinh phù hợp
+                                                            với nhiều trường hợp
+                                                            học sinh và đảm bảo
+                                                            tỷ lệ visa cao nhất
+                                                            cho các bạn. Các bạn
+                                                            có thể tham khảo
+                                                            thông tin dưới đây
+                                                            để nắm rõ hơn về
+                                                            chương trình. Các
+                                                            bạn hãy cùng AMEC
+                                                            chinh phục ước mơ du
+                                                            học Hàn Quốc với kỳ
+                                                            tuyển sinh tháng
+                                                            3.2021 sắp tới nhé.
+                                                        </p>
+                                                        <img
+                                                            src="./img/img-content-12.png"
+                                                            alt=""
+                                                        />
+                                                        <p>
+                                                            Đối tượng tuyển
+                                                            sinh: Độ tuổi 18 –
+                                                            30Tốt nghiệp THPT,
+                                                            Trung cấp, Cao đẳng,
+                                                            Đại họcĐiểm tổng kết
+                                                            học bạ 6.0 trở
+                                                            lênTốt nghiệp cấp 3
+                                                            không quá 5 năm hoặc
+                                                            tốt nghiệp Đại học
+                                                            dưới 35 tuổiSức khỏe
+                                                            tốt, không mắc các
+                                                            bệnh truyền nhiễm
+                                                            như viêm gan B, lao
+                                                            phổi
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -396,6 +851,147 @@
                                             học Sangmyung đào tạo cả nam và
                                             nữ.</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal33"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal33"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            ĐẠI HỌC SANGMYUNG
+                                                            2020- HỌC TẬP NGAY
+                                                            TRUNG TÂM SEOUL
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            I. Thông tin tổng
+                                                            quan về trường
+                                                            Sangmyung Trường đại
+                                                            học Sangmyung được
+                                                            thành lập vào năm
+                                                            1937, đây chính là
+                                                            thời điểm Nhật Bản
+                                                            chiếm đóng Hàn Quốc.
+                                                            Sangmyung được thành
+                                                            lập ngay tại trung
+                                                            tâm thủ đô Seoul,
+                                                            dưới mô hình Học
+                                                            viện đào tạo cao cấp
+                                                            với mục đích đào tạo
+                                                            các nhà lãnh đạo dân
+                                                            tộc. Trong khoảng
+                                                            thời gian từ năm
+                                                            1965- 1995, trường
+                                                            phát triển thành
+                                                            trường sư phạm nữ
+                                                            sinh và trường nữ
+                                                            sinh. Phải đến năm
+                                                            1996, đáp ứng sự
+                                                            thay đổi và cải tiến
+                                                            mở rộng đào tạo mà
+                                                            trường đổi tên thành
+                                                            Trường đại học
+                                                            Sangmyung đào tạo cả
+                                                            nam và nữ.
+                                                        </p>
+                                                        <img
+                                                            src="./img/img-content-13.jpg"
+                                                            alt=""
+                                                        />
+                                                        <p>
+                                                            III. Chương trình
+                                                            đào tạo đại học
+                                                            Trường đại học
+                                                            Sangmyung có 2 cơ
+                                                            sở, mỗi cơ sở đều
+                                                            đào tạo những chuyên
+                                                            ngành tương tự nhau
+                                                            nhưng mỗi cơ sở có
+                                                            thế mạnh khác nhau.
+                                                            Cụ thể: Cơ sở Seoul
+                                                            Đại học Khoa học xã
+                                                            hội và Nhân văn; Đại
+                                                            học Sư phạm; Đại học
+                                                            Kinh tế- Kinh doanh;
+                                                            Đại học Liên ngành
+                                                            Khoa học Công nghệ;
+                                                            Đại học Văn hóa nghệ
+                                                            thuật; Trung tâm
+                                                            giáo dục phổ thông
+                                                            Kyedangà Cơ sở Seoul
+                                                            chuyên đào tạo các
+                                                            ngành về kinh tế,
+                                                            khoa học xã hội và
+                                                            tự nhiên Cơ sở
+                                                            Cheonan Đại học Khoa
+                                                            học Nhân văn toàn
+                                                            cầu; Đại học Thiết
+                                                            kế; Đại học Nghệ
+                                                            thuật; Đại học Kỹ
+                                                            thuật tổng hợp; Đại
+                                                            học Kỹ thuật Công
+                                                            nghiệpà Cơ sở
+                                                            Cheonan chuyên đào
+                                                            tạo các ngành kỹ
+                                                            thuật và năng khiếu.
+                                                            Riêng đối với Trường
+                                                            Đại học Sư phạm sẽ
+                                                            chỉ lựa chọn 10%
+                                                            trong tổng số nhập
+                                                            học trường này và
+                                                            nếu là sinh viên
+                                                            nước ngoài sẽ không
+                                                            được nhận chứng chỉ
+                                                            Nghiệp vụ sư phạm
+                                                            của Hàn Quốc Trường
+                                                            đại học Sangmyung có
+                                                            cả hệ đào tạo dành
+                                                            cho học sinh mới
+                                                            nhập học và học sinh
+                                                            học liên thôn
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -428,6 +1024,157 @@
                                             hóa giao hàng đồ ăn của Hàn Quốc
                                             nhé!</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal34"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal34"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            VĂN HÓA GIAO HÀNG
+                                                            HÀN QUỐC
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            1. Giới thiệu chung
+                                                            <br /><br />
+                                                            Giao hàng thực phẩm
+                                                            là một trong những
+                                                            dịch vụ rất được ưa
+                                                            chuộng tại Hàn Quốc.
+                                                            Hàn Quốc đã trở
+                                                            thành thị trường
+                                                            giao hàng thực phẩm
+                                                            lớn thứ 4 thế giới.
+                                                            Với tổng giá trị lên
+                                                            tới 20 nghìn tỷ won.
+                                                            Mọi người đã bắt đầu
+                                                            chuyển sang đặt hàng
+                                                            và trả tiền cho tất
+                                                            cả hàng hóa trên 1
+                                                            nền tảng hệ thống,
+                                                            ứng dụng nào đó. Tại
+                                                            quốc gia này, sự
+                                                            tăng trưởng của các
+                                                            hộ gia đình độc
+                                                            thân, cùng với những
+                                                            ứng dụng giao hàng
+                                                            mọc lên như nấm.
+                                                            Đang thúc đẩy sự
+                                                            phát triển của những
+                                                            dịch vụ gọi thức ăn
+                                                            nhanh. Vì thế, người
+                                                            ta giờ đây lại chỉ
+                                                            thích gọi đồ ăn giao
+                                                            đến nhà mà không cần
+                                                            ra ngoài đường. Đến
+                                                            cả các món khó nhằn
+                                                            như: kem, bingsu,….
+                                                            Cũng không làm nhọc
+                                                            được các anh
+                                                            shipper. Hộp thư của
+                                                            các hộ gia đình ở
+                                                            tầng một chung cư
+                                                            thường được nhét đầy
+                                                            các tờ rơi quảng cáo
+                                                            và cả coupon khuyến
+                                                            mãi của các tiệm ăn
+                                                            quanh đấy. Internet
+                                                            thì cung cấp thông
+                                                            tin chi tiết về các
+                                                            quán ăn có dịch vụ
+                                                            giao hàng tại nhà
+                                                            gần khu vực của
+                                                            người sử dụng. Một
+                                                            cách gọi món hấp dẫn
+                                                            hơn nữa là bỏ qua
+                                                            luôn khâu gọi điện
+                                                            thoại đặt hàng. Với
+                                                            ứng dụng trên điện
+                                                            thoại thông minh,
+                                                            khách hàng dễ dàng
+                                                            chọn thực đơn, gọi
+                                                            món và thanh toán
+                                                            chỉ với vài lần nhấn
+                                                            nút.
+                                                        </p>
+                                                        <img
+                                                            src="./img/img-content-18.jpg"
+                                                            alt=""
+                                                        />
+                                                        <p>
+                                                            Đây là ứng dụng giao
+                                                            hàng nhanh lớn nhất
+                                                            Hàn Quốc. Trung bình
+                                                            1,2 triệu đơn mỗi
+                                                            ngày. Món ăn được
+                                                            order nhiều nhất
+                                                            trên app này chính
+                                                            là gà rán. Ngoài ra
+                                                            còn có Pizza, những
+                                                            món ăn Trung Quốc,
+                                                            thịt lợn hấp cũng là
+                                                            những thực phẩm được
+                                                            khách hàng ưa chuộng
+                                                            và thường gọi vào
+                                                            buổi trưa hoặc bữa
+                                                            ăn khuya. Thậm chí,
+                                                            có những khách hàng
+                                                            còn đặt một bữa cơm
+                                                            tối đầy đủ bao gồm
+                                                            súp, thịt, cơm và
+                                                            banchan (món phụ).
+                                                            Ứng dụng Baedal
+                                                            Minjok ra mắt thị
+                                                            trường và có liên
+                                                            kết hơn 80.000 nhà
+                                                            hàng. Đã mang về lợi
+                                                            nhuận ròng cực lớn
+                                                            cho công ty mẹ
+                                                            Woowaa Brothers.
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -472,6 +1219,133 @@
                                             nổi bật nhất hiện nay là trường nào?
                                             Hãy cùng AMEC tìm hiểu nhé.</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal35"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal35"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            DU HỌC THẠC SĨ HÀN
+                                                            QUỐC – TOP TRƯỜNG
+                                                            ĐÀO TẠO NỔI BẬT NHẤT
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            Hiện tại nhu cầu
+                                                            nâng cao trình độ
+                                                            học vấn cũng như
+                                                            kiến thức chuyên môn
+                                                            ngày càng nhiều đối
+                                                            với sinh viên Việt
+                                                            Nam. Vì vậy, sau khi
+                                                            kết thúc chương
+                                                            trình Đại học các
+                                                            bạn có xu hướng muốn
+                                                            học cao hơn lên
+                                                            chương trình Thạc
+                                                            sĩ. Tuy nhiên, đa số
+                                                            các bạn lựa chọn học
+                                                            Thạc sĩ tại các quốc
+                                                            gia khác để có thể
+                                                            học hỏi những kiến
+                                                            thức hiện đại hơn.
+                                                            Trong đó, Hàn Quốc
+                                                            là một trong những
+                                                            sự lựa chọn của sinh
+                                                            viên Việt Nam hiện
+                                                            nay. Vậy thì du học
+                                                            Thạc sĩ Hàn Quốc có
+                                                            khó không? Và các
+                                                            trường đào tạo nổi
+                                                            bật nhất hiện nay là
+                                                            trường nào? Hãy cùng
+                                                            AMEC tìm hiểu nhé.
+                                                        </p>
+                                                        <img
+                                                            src="./img/img-content-19.jpg"
+                                                            alt=""
+                                                        />
+                                                        <p>
+                                                            Chương trình học sau
+                                                            đại học là gì?
+                                                            <br />
+                                                            Chương trình sau đại
+                                                            học được hiểu đơn
+                                                            giản là chương trình
+                                                            học và nghiên cứu hệ
+                                                            thạc sĩ sau khi hoàn
+                                                            thành xong chương
+                                                            trình đại học. Tại
+                                                            Hàn, chương trình
+                                                            thạc sĩ được đào tạo
+                                                            trong vòng 2 năm.
+                                                            Như các bạn đã biết
+                                                            thì chương trình
+                                                            giảng dạy của Hàn
+                                                            Quốc có phần khác
+                                                            biệt so với các quốc
+                                                            gia phương Tây như
+                                                            Anh, Pháp, Mỹ,…
+                                                            Chương trình nghiên
+                                                            cứu sẽ đi từ khoa
+                                                            học cơ bản đến khoa
+                                                            học ứng dụng nhưng
+                                                            Hàn Quốc thì ngược
+                                                            lại. Khởi đầu là
+                                                            khoa học nghiên cứu
+                                                            ứng dụng rồi sau đó
+                                                            mới tiến tới khoa
+                                                            học cơ bản. Chính
+                                                            điều này đã đem lại
+                                                            cho Hàn Quốc sự phát
+                                                            triển vượt bậc của
+                                                            khoa học ứng dụng
+                                                            trong đời sống người
+                                                            dân.
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -509,6 +1383,104 @@
                                             học của các bạn du học sinh Hàn Quốc
                                             nhé!</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal36"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal36"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            HÀNH LÝ DU HỌC HÀN
+                                                            QUỐC GỒM NHỮNG GÌ?
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            <i
+                                                                >Vậy là bạn
+                                                                chuẩn bị đi du
+                                                                học ở xứ Kim
+                                                                chi, bạn lo lắng
+                                                                vì chưa biết
+                                                                chuẩn bị hành lý
+                                                                du học như thế
+                                                                nào. Việc sắp
+                                                                xếp những gì và
+                                                                cất ở đâu cho
+                                                                thật hợp lý là
+                                                                rất quan trọng
+                                                                nhé! Hãy cùng
+                                                                tham khảo kinh
+                                                                nghiệm sắp xếp
+                                                                đồ đạc cần thiết
+                                                                khi đi du học
+                                                                của các bạn du
+                                                                học sinh Hàn
+                                                                Quốc nhé!</i
+                                                            >
+                                                        </p>
+                                                        <img
+                                                            src="./img/img-content-20.jpg"
+                                                            alt=""
+                                                        />
+                                                        <p>
+                                                            Những thứ NHẤT ĐỊNH
+                                                            phải có trong hành
+                                                            lý du học Hàn Quốc
+                                                            <br />
+                                                            1.Giấy tờ cá nhân:
+                                                            <br />
+                                                            2. Ảnh thẻ <br />
+                                                            Chụp dư mấy bìa ảnh
+                                                            4×6, 3×4 mang sang
+                                                            đây để nộp cho nhà
+                                                            trường bên này lúc
+                                                            cần các bạn ạ. Cứ
+                                                            nền trắng thích thì
+                                                            thêm cái cà vạt cho
+                                                            nó lịch sự :).
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -544,6 +1516,133 @@
                                             sở Hàn Quốc rất quan trọng:
                                             Kkon-dae꼰대</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal37"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal37"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            VĂN HÓA CÔNG SỞ HÀN
+                                                            QUỐC KKON-DAE- 꼰대
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            Bạn chuẩn bị đặt
+                                                            chân đến du học tại
+                                                            xứ sở kim chi. Đừng
+                                                            quên ghi nhớ những
+                                                            văn hóa trong đời
+                                                            sống của người dân
+                                                            Hàn Quốc. AMEC xin
+                                                            giới thiệu đến các
+                                                            bạn một văn hóa công
+                                                            sở Hàn Quốc rất quan
+                                                            trọng: Kkon-dae꼰대
+                                                            <br />
+
+                                                            1. 꼰대là gì? <br />
+                                                            꼰대 được hiểu nôm
+                                                            na là sự hạ mình
+                                                            trước những người
+                                                            lớn tuổi. Nếu các
+                                                            bạn đã biết đến Thế
+                                                            hệ Thiên niên kỷ
+                                                            (Millenial) dùg để
+                                                            chỉ những người ở độ
+                                                            tuổi 19-40 tuổi.
+                                                            Sinh ra từ sau năm
+                                                            1980 và được chứng
+                                                            kiến 2 cuộc khủng
+                                                            hoảng tài chính lớn
+                                                            vào năm 1997 và
+                                                            2008. Một tên gọi
+                                                            khác nữa chính là
+                                                            “thế hệ 88 vạn won”
+                                                            ( 88 만원세대) hay “
+                                                            thế hệ Sampo”
+                                                            (삼포). Thì꼰대
+                                                            chính là “ thế hệ
+                                                            sống lâu thành lão
+                                                            làng”.
+                                                        </p>
+                                                        <img
+                                                            src="./img/img-content-21.jpg"
+                                                            alt=""
+                                                        />
+                                                        <p>
+                                                            Ảnh: ” Khi còn trẻ,
+                                                            tôi chưa từng đến
+                                                            trước 8h” <br />
+
+                                                            2. Văn hóa Kkon-dae
+                                                            biểu hiện <br />
+                                                            Người lớn tuổi ở đây
+                                                            được hiểu là tuổi
+                                                            đời cũng như cả tuổi
+                                                            trong nghề. Văn hóa
+                                                            này được biểu hiện
+                                                            rõ nhất tại nơi làm
+                                                            việc, đối với những
+                                                            người quản lý trong
+                                                            công ty từ cấp trung
+                                                            trở lên. Kkon-dae
+                                                            hầu như là dành cho
+                                                            đàn ông, và sử dụng
+                                                            với nghĩa tiêu cực.
+                                                            Nói thẳng ra, chính
+                                                            là kiểu “ ma cũ bắt
+                                                            nạt ma mới” mà người
+                                                            Việt cũng thường
+                                                            xuyên gặp phải. Mạnh
+                                                            dạn loại bỏ những ý
+                                                            kiến của người trẻ
+                                                            và sẵn sàng yêu cầu
+                                                            mọi người phải phục
+                                                            tùng mình.
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -591,6 +1690,130 @@
                                             của các trường ĐH tại Hàn Quốc có gì
                                             khác biệt?</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal38"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal38"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            CHƯƠNG TRÌNH CHUYỂN
+                                                            TIẾP ĐẠI HỌC HÀN
+                                                            QUỐC
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            Cụm từ “du học Hàn
+                                                            Quốc” hẳn không còn
+                                                            xa lạ với rất nhiều
+                                                            bậc phụ huynh và đặc
+                                                            biệt là các bạn trẻ.
+                                                            Với sự phát triển
+                                                            như vũ bão của nền
+                                                            công nghiệp giải
+                                                            trí, nhiều người lầm
+                                                            tưởng đây chính là
+                                                            nguyên nhân tất yếu
+                                                            nhiều bạn trẻ ở lứa
+                                                            tuổi đôi mươi đầy
+                                                            đam mê và cháy bỏng
+                                                            đã quyết tâm được
+                                                            một lần đặt chân đến
+                                                            xử sở kim chi đầy
+                                                            màu sắc. Tuy nhiên,
+                                                            không thể phủ nhận
+                                                            Hàn Quốc là một nước
+                                                            Á Đông gần gũi và có
+                                                            nền giáo dục, đào
+                                                            tạo hàng đầu ở châu
+                                                            Á nên chuyển tiếp
+                                                            tại trường đại học ở
+                                                            Hàn Quốc cũng trở
+                                                            thành mục tiêu chinh
+                                                            phục của nhiều du
+                                                            học sinh Việt.” Vậy
+                                                            chương trình chuyển
+                                                            tiếp của các trường
+                                                            ĐH tại Hàn Quốc có
+                                                            gì khác biệt?
+                                                        </p>
+                                                        <img
+                                                            src="./img/img-content-22.jpg"
+                                                            alt=""
+                                                        />
+                                                        <p>
+                                                            Trường đại học
+                                                            Myongji là đại học
+                                                            tư thục được thành
+                                                            lập vào năm 1948 với
+                                                            2 cơ sở chính Nhân
+                                                            văn (tại Seoul) và
+                                                            chi nhánh Tự nhiên
+                                                            (tại Yongin). Nhà
+                                                            trường có 9 đại học
+                                                            chuyên khoa với 45
+                                                            khoa và chuyên
+                                                            ngành. Với số lượng
+                                                            khoảng hơn 15000
+                                                            sinh viên đang theo
+                                                            học, 47 chuyên ngành
+                                                            đào tạo thạc sĩ, 45
+                                                            chuyên ngành đào tạo
+                                                            tiến sĩ, 20 chuyên
+                                                            ngành đào tạo kết
+                                                            hợp thạc và tiến sĩ
+                                                            có với hơn 1900
+                                                            nghiên cứu sinh đang
+                                                            theo học, đây chính
+                                                            là địa điểm đáng tin
+                                                            cậy để thế hệ trẻ
+                                                            sinh viên Việt Nam
+                                                            có thể tin tưởng và
+                                                            gửi gắm tương lai
+                                                            của mình.
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -602,21 +1825,27 @@
                                         class="fa-solid fa-caret-right"
                                         style="color: #5aaeff"
                                     ></i>
-                                    <a href="./du_hoc_dai_loan.html">Du học Đài Loan</a>
+                                    <a href="./du_hoc_dai_loan.html"
+                                        >Du học Đài Loan</a
+                                    >
                                 </div>
                                 <div class="row">
                                     <i
                                         class="fa-solid fa-caret-right"
                                         style="color: #5aaeff"
                                     ></i>
-                                    <a href="./du_hoc_han_quoc.html">Du học Hàn Quốc</a>
+                                    <a href="./du_hoc_han_quoc.html"
+                                        >Du học Hàn Quốc</a
+                                    >
                                 </div>
                                 <div class="row">
                                     <i
                                         class="fa-solid fa-caret-right"
                                         style="color: #5aaeff"
                                     ></i>
-                                    <a href="./du_hoc_nhat_ban.html">Du học Nhật Bản</a>
+                                    <a href="./du_hoc_nhat_ban.html"
+                                        >Du học Nhật Bản</a
+                                    >
                                 </div>
                             </div>
                             <div class="tips form">
@@ -683,101 +1912,126 @@
                             <div class="calendar form">
                                 <h2>LỊCH HỘI THẢO</h2>
                                 <div class="desc">
-                                    <div class="row-calen">
-                                        <div class="calen-box">
-                                            <span class="day">06</span>
-                                            <span class="mon-year"
-                                                >07/2020</span
+                                    <div>
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">06</span>
+                                                <span class="mon-year"
+                                                    >07/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Tầm quan trọng của hoạt động
+                                                ngoại ngóa trong hồ sơ du học</a
                                             >
                                         </div>
-                                        <a href="#!"
-                                            >Tầm quan trọng của hoạt động ngoại
-                                            ngóa trong hồ sơ du học</a
-                                        >
-                                    </div>
-                                    <div class="row-calen">
-                                        <div class="calen-box">
-                                            <span class="day">06</span>
-                                            <span class="mon-year"
-                                                >07/2020</span
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">06</span>
+                                                <span class="mon-year"
+                                                    >07/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội thảo online cùng University
+                                                of Melbourne – Trinity
+                                                College</a
                                             >
                                         </div>
-                                        <a href="#!"
-                                            >Hội thảo online cùng University of
-                                            Melbourne – Trinity College</a
-                                        >
-                                    </div>
-                                    <div class="row-calen">
-                                        <div class="calen-box">
-                                            <span class="day">06</span>
-                                            <span class="mon-year"
-                                                >07/2020</span
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">06</span>
+                                                <span class="mon-year"
+                                                    >07/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Đại học Adelaide, Australia cấp
+                                                học bổng đến 50%</a
                                             >
                                         </div>
-                                        <a href="#!"
-                                            >Đại học Adelaide, Australia cấp học
-                                            bổng đến 50%</a
-                                        >
-                                    </div>
-                                    <div class="row-calen">
-                                        <div class="calen-box">
-                                            <span class="day">25</span>
-                                            <span class="mon-year"
-                                                >06/2020</span
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Workshop Du Học: Canada Và Úc –
+                                                Lựa Chọn Nào Có Lợi Hơn Cho Du
+                                                Học Sinh Việt Nam</a
                                             >
                                         </div>
-                                        <a href="#!"
-                                            >Workshop Du Học: Canada Và Úc – Lựa
-                                            Chọn Nào Có Lợi Hơn Cho Du Học Sinh
-                                            Việt Nam</a
-                                        >
-                                    </div>
-                                    <div class="row-calen">
-                                        <div class="calen-box">
-                                            <span class="day">25</span>
-                                            <span class="mon-year"
-                                                >06/2020</span
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội Thảo Online: Săn Học Bổng
+                                                Du Học Hà Lan Lên Đến 5000 EURO
+                                                Cùng Với Trường Đại Học Fontys
+                                                University Of Applied
+                                                Sciences</a
                                             >
                                         </div>
-                                        <a href="#!"
-                                            >Hội Thảo Online: Săn Học Bổng Du
-                                            Học Hà Lan Lên Đến 5000 EURO Cùng
-                                            Với Trường Đại Học Fontys University
-                                            Of Applied Sciences</a
-                                        >
                                     </div>
-                                    <div class="row-calen hidden">
-                                        <div class="calen-box">
-                                            <span class="day">25</span>
-                                            <span class="mon-year">06/2020</span>
+                                    <div>
+                                        <div class="row-calen hidden">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội Thảo Online: Săn Học Bổng
+                                                Du Học Hà Lan Lên Đến 5000 EURO
+                                                Cùng Với Trường Đại Học Fontys
+                                                University Of Applied
+                                                Sciences</a
+                                            >
                                         </div>
-                                        <a href="#!">Hội Thảo Online: Săn Học Bổng Du
-                                            Học Hà Lan Lên Đến 5000 EURO Cùng
-                                            Với Trường Đại Học Fontys University
-                                            Of Applied Sciences</a>
-                                    </div>
-                                    <div class="row-calen hidden">
-                                        <div class="calen-box">
-                                            <span class="day">25</span>
-                                            <span class="mon-year">06/2020</span>
+                                        <div class="row-calen hidden">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội Thảo Online: Săn Học Bổng
+                                                Du Học Hà Lan Lên Đến 5000 EURO
+                                                Cùng Với Trường Đại Học Fontys
+                                                University Of Applied
+                                                Sciences</a
+                                            >
                                         </div>
-                                        <a href="#!">Hội Thảo Online: Săn Học Bổng Du
-                                            Học Hà Lan Lên Đến 5000 EURO Cùng
-                                            Với Trường Đại Học Fontys University
-                                            Of Applied Sciences</a>
-                                    </div>
-                                    <div class="row-calen hidden">
-                                        <div class="calen-box">
-                                            <span class="day">25</span>
-                                            <span class="mon-year">06/2020</span>
+                                        <div class="row-calen hidden">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội Thảo Online: Săn Học Bổng
+                                                Du Học Hà Lan Lên Đến 5000 EURO
+                                                Cùng Với Trường Đại Học Fontys
+                                                University Of Applied
+                                                Sciences</a
+                                            >
                                         </div>
-                                        <a href="#!">Hội Thảo Online: Săn Học Bổng Du
-                                            Học Hà Lan Lên Đến 5000 EURO Cùng
-                                            Với Trường Đại Học Fontys University
-                                            Of Applied Sciences</a>
                                     </div>
+
                                     <div class="btn-add">
-                                        <button class="btn btn-show" onclick="showMoreSchedule()">
+                                        <button
+                                            class="btn btn-show"
+                                            onclick="showMoreSchedule()"
+                                        >
                                             <a href="#!">XEM THÊM</a>
                                         </button>
                                     </div>
@@ -908,7 +2162,9 @@
                                         class="fa-regular fa-greater-than fa-2xs"
                                         style="color: #fff; margin-right: 12px"
                                     ></i>
-                                    <a href="../SanPham/NationalUni.html">Dịch vụ</a>
+                                    <a href="../SanPham/NationalUni.html"
+                                        >Dịch vụ</a
+                                    >
                                 </div>
                                 <div class="row">
                                     <i
@@ -962,7 +2218,9 @@
                                         class="fa-regular fa-greater-than fa-2xs"
                                         style="color: #fff; margin-right: 12px"
                                     ></i>
-                                    <a href="../Tung/HoiThaoDuHoc.html">Hội thảo du học</a>
+                                    <a href="../Tung/HoiThaoDuHoc.html"
+                                        >Hội thảo du học</a
+                                    >
                                 </div>
                                 <div class="row">
                                     <i
@@ -976,7 +2234,9 @@
                                         class="fa-regular fa-greater-than fa-2xs"
                                         style="color: #fff; margin-right: 12px"
                                     ></i>
-                                    <a href="../page_event/pagesk.html">Tin tức, sự kiện</a>
+                                    <a href="../page_event/pagesk.html"
+                                        >Tin tức, sự kiện</a
+                                    >
                                 </div>
                                 <div class="row">
                                     <i
@@ -1030,6 +2290,7 @@
                 </div>
             </footer>
         </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="a.js"></script>
     </body>
 </html>

@@ -380,10 +380,10 @@ a:hover {
     height: 180px;
 }
 
-.desc .hidden{
+.desc .hidden {
     display: none;
 }
-.row-content-main .btn:hover{
+.row-content-main .btn:hover {
     background-color: #0044aa;
 }
 .content-desc > h2 {
@@ -418,7 +418,7 @@ a:hover {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
-.modal-footer a{
+.modal-footer a {
     color: white;
     font-weight: bold;
 }
@@ -596,7 +596,7 @@ a:hover {
     border: 0px;
     background-color: #fbfbfb;
 }
-.btn-show:hover{
+.btn-show:hover {
     color: #004e9a;
 }
 .add a {
@@ -1133,14 +1133,21 @@ a:hover {
     .content-page .content {
         flex-direction: column;
         width: 95% !important;
-        margin-right: 0 !important;
-        margin-left: 2px !important;
+        margin-right: auto;
+        margin-left: auto;
     }
     .content-left {
         width: 100%;
     }
     .row-content-main {
         flex-direction: column;
+        align-items: center;
+    }
+    .content-desc {
+        margin-top: 10px;
+        text-align: center;
+        flex-direction: column;
+        display: flex;
         align-items: center;
     }
 }
@@ -1230,4 +1237,24 @@ a:hover {
     .end-footer .content .online {
         justify-content: center;
     }
+}
+
+/* SANG */
+.modal-body {
+    text-align: left;
+    flex-direction: column;
+    display: flex;
+    height: 500px;
+    overflow-x: hidden;
+}
+
+.btn-primary {
+    margin-top: 5px;
+}
+
+.modal-body > img {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }

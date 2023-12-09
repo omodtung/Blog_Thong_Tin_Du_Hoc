@@ -69,34 +69,34 @@ window.addEventListener("scroll", function () {
 
 //Show thêm lịch
 let isHidden = true;
-function showMoreSchedule(){
-    const items = document.querySelectorAll('.row-calen');
-    const showMoreBtn = document.querySelector('.btn-show');
+function showMoreSchedule() {
+    const items = document.querySelectorAll(".row-calen");
+    const showMoreBtn = document.querySelector(".btn-show");
 
     items.forEach((item, index) => {
-      if (isHidden || index < 5) {
-        item.style.display = 'flex';
-      } else {
-        item.style.display = 'none';
-      }
+        if (isHidden || index < 5) {
+            item.style.display = "flex";
+        } else {
+            item.style.display = "none";
+        }
     });
 
     isHidden = !isHidden; // Đảo ngược trạng thái
 
     if (isHidden) {
-      showMoreBtn.textContent = 'XEM THÊM';
+        showMoreBtn.textContent = "XEM THÊM";
     } else {
-      showMoreBtn.textContent = 'THU GỌN';
+        showMoreBtn.textContent = "THU GỌN";
     }
 }
 
 // Pop Up use Bootstrap
-const myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
+// const myModal = document.getElementById("myModal20");
+// const myInput = document.getElementById("myInput");
 
-myModal.addEventListener('shown.bs.modal', () => {
-  myInput.focus()
-})
+// myModal.addEventListener("shown.bs.modal", () => {
+//     myInput.focus();
+// });
 
 // set up post
 function setStatePost(event, valueId) {

@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="../page_gioithieu/bootstrap.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -61,7 +62,7 @@
                             </form>
                         </div>
                         <div class="login">
-                            <img width="50px" src="./img/login.png" alt="">
+                            <img width="50px" src="./img/login.png" alt="" />
                         </div>
                         <!-- THEM ZO NE -->
 
@@ -83,13 +84,21 @@
                                 ></a>
                             </li>
                             <li>
-                                <a href="../page_gioithieu/pagegioithieu.html">GIỚI THIỆU</a>
+                                <a href="../page_gioithieu/pagegioithieu.html"
+                                    >GIỚI THIỆU</a
+                                >
                             </li>
                             <li>
-                                <a href="../SanPham/NationalUni.html">DỊCH VỤ</a>
+                                <a href="../SanPham/NationalUni.html"
+                                    >DỊCH VỤ</a
+                                >
                             </li>
                             <li>
-                                <a href="./quocgiaduhoc.html" style="background-color: #1A60A4;">QUỐC GIA DU HỌC</a>
+                                <a
+                                    href="./quocgiaduhoc.html"
+                                    style="background-color: #1a60a4"
+                                    >QUỐC GIA DU HỌC</a
+                                >
                                 <ul class="sub-menu">
                                     <li>
                                         <a href="./du_hoc_han_quoc.html"
@@ -109,13 +118,17 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="../Tung/HoiThaoDuHoc.html">HỘI THẢO DU HỌC</a>
+                                <a href="../Tung/HoiThaoDuHoc.html"
+                                    >HỘI THẢO DU HỌC</a
+                                >
                             </li>
                             <li>
                                 <a href="../Tung/ThuVien.html">THƯ VIỆN</a>
                             </li>
                             <li>
-                                <a href="../page_event/pagesk.html">TIN TỨC, SỰ KIỆN</a>
+                                <a href="../page_event/pagesk.html"
+                                    >TIN TỨC, SỰ KIỆN</a
+                                >
                             </li>
                             <li>
                                 <a href="../LienHe/index.html">LIÊN HỆ</a>
@@ -153,13 +166,17 @@
                             ></a>
                         </li>
                         <li>
-                            <a href="../page_gioithieu/pagegioithieu.html">Giới thiệu</a>
+                            <a href="../page_gioithieu/pagegioithieu.html"
+                                >Giới thiệu</a
+                            >
                         </li>
                         <li>
                             <a href="../SanPham/NationalUni.html">Dịch vụ</a>
                         </li>
                         <li>
-                            <a href="../page-quocgiaduhoc/quocgiaduhoc.html">Quốc gia du học</a>
+                            <a href="../page-quocgiaduhoc/quocgiaduhoc.html"
+                                >Quốc gia du học</a
+                            >
                             <input
                                 type="checkbox"
                                 hidden
@@ -171,12 +188,14 @@
 
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="../page-quocgiaduhoc/du_hoc_han_quoc.html"
+                                    <a
+                                        href="../page-quocgiaduhoc/du_hoc_han_quoc.html"
                                         >Du học Hàn Quốc</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="../page-quocgiaduhoc/du_hoc_nhat_ban.html"
+                                    <a
+                                        href="../page-quocgiaduhoc/du_hoc_nhat_ban.html"
                                         >Du học Nhật Bản</a
                                     >
                                 </li>
@@ -188,13 +207,17 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="../Tung/HoiThaoDuHoc.html">Hội thảo du học</a>
+                            <a href="../Tung/HoiThaoDuHoc.html"
+                                >Hội thảo du học</a
+                            >
                         </li>
                         <li>
                             <a href="../Tung/ThuVien.html">Thư viện</a>
                         </li>
                         <li>
-                            <a href="../page_event/pagesk.html">Tin tức, sự kiện</a>
+                            <a href="../page_event/pagesk.html"
+                                >Tin tức, sự kiện</a
+                            >
                         </li>
                         <li>
                             <a href="../LienHe/index.html">Liên hệ</a>
@@ -204,6 +227,59 @@
                 <!-- Thêm cái overley zo -->
                 <label class="overley" for="input-check"></label>
             </div>
+
+            <!-- form login and register -->
+            <div class="form-login">
+                <img
+                    class="back-to-login"
+                    width="20px"
+                    src="./img/arrow.png"
+                    alt=""
+                />
+                <img
+                    class="close-form"
+                    width="20px"
+                    src="./img/close.png"
+                    alt=""
+                />
+                <h3>Đăng Nhập</h3>
+                <form onsubmit="return handleSubmit()">
+                    <div class="login-userName">
+                        <input type="text" placeholder="Họ tên" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Họ tên không được để trống</span>
+                        </div>
+                    </div>
+                    <div class="login-id">
+                        <input type="text" placeholder="Tên đăng nhập" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Tên đăng nhập không được để trống</span>
+                        </div>
+                    </div>
+                    <div class="login-password">
+                        <input type="text" placeholder="Mật khẩu" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Mật khẩu không được để trống</span>
+                        </div>
+                    </div>
+                    <div class="login-repeatpass">
+                        <input type="text" placeholder="Nhập lại mật khẩu" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Mật khẩu lặp lại không đúng</span>
+                        </div>
+                    </div>
+                    <button type="submit">ĐĂNG KÝ</button>
+                    <div class="register" onclick="register(event)">
+                        <span>Bạn chưa có tài khoản ?</span>
+                        <a href="#">Đăng ký</a>
+                    </div>
+                </form>
+            </div>
+
             <!-- SECTION -->
             <section>
                 <div class="banner">
@@ -271,8 +347,158 @@
                                             tạo bài bản. Chính vì lẽ đó mà Đài
                                             Loan đã, đang và sẽ là một điểm đến
                                             Du học phù hợp với nhiều Du học sinh
-                                            Việt Nam.</span
+                                            Việt Nam.
+                                        </span>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal20"
                                         >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal20"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            DU HỌC ĐÀI LOAN – LÍ
+                                                            DO GÌ NÊN CHỌN CHO
+                                                            HÀNH TRÌNH DU HỌC
+                                                            TRỌN VẸN
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            Đài Loan từ lâu đã
+                                                            nổi lên như là một
+                                                            trong 4 con rồng
+                                                            Châu Á gồm: Đài
+                                                            Loan, Hàn Quốc,
+                                                            Hongkong và
+                                                            Singapore. Danh xưng
+                                                            đáng tự hào ấy không
+                                                            chỉ đến từ nền kinh
+                                                            tế hội nhập mở cửa
+                                                            với mức tăng trưởng
+                                                            mạnh mẽ hàng năm mà
+                                                            còn được đóng góp
+                                                            bởi chất lượng Giáo
+                                                            dục vượt trội, chất
+                                                            lượng nguồn nhân lực
+                                                            cao được đào tạo bài
+                                                            bản. Chính vì lẽ đó
+                                                            mà Đài Loan đã, đang
+                                                            và sẽ là một điểm
+                                                            đến Du học phù hợp
+                                                            với nhiều Du học
+                                                            sinh Việt Nam.
+                                                        </p>
+                                                        <img
+                                                            src="./img/img-content-1.jpg"
+                                                            alt=""
+                                                        />
+                                                        <p>
+                                                            Là một trong bốn Con
+                                                            rồng Châu Á cùng với
+                                                            Singapore, Hong
+                                                            Kong, và Hàn Quốc –
+                                                            Kinh tế liên tục
+                                                            phát triển với tốc
+                                                            độ chóng mặt kể từ
+                                                            những năm 1960, đưa
+                                                            Đài Loan gia nhập
+                                                            “hội” những quốc gia
+                                                            giàu nhất thế giới.
+                                                            Đài Loan cũng là
+                                                            trung tâm quan trọng
+                                                            cung cấp hàng triệu
+                                                            linh kiện điện tử
+                                                            hàng đầu. – Đài Loan
+                                                            hiện xếp thứ 12 trên
+                                                            thế giới về kinh tế,
+                                                            xếp thứ 4 khu vực
+                                                            châu Á – Thái Bình
+                                                            Dương trong Báo Cáo
+                                                            Năng lực cạnh tranh
+                                                            toàn cầu 2019 của
+                                                            WEF (Diễn đàn kinh
+                                                            tế Toàn Cầu) – Nền
+                                                            kinh tế lớn nhất
+                                                            không phụ thuộc Tổ
+                                                            chức Liên hiệp Quốc
+                                                            với mức thu nhập
+                                                            bình quân theo đầu
+                                                            người là
+                                                            14.000USD/năm, xếp
+                                                            thứ 25 trên thế
+                                                            giới. – Sức mua
+                                                            (PPP) tại Đài Loan
+                                                            cao hơn các nước
+                                                            Pháp, Anh, Canada,
+                                                            Phần Lan, Đan Mạch
+                                                            và được IMF (Quỹ
+                                                            tiền tệ quốc tế) dự
+                                                            đoán sẽ vượt mặt Đức
+                                                            trong năm nay – Dự
+                                                            trữ ngoại hối tại
+                                                            Đài Loan đứng thứ 6
+                                                            trên thế giới
+                                                            (480,385 tỷ USD),
+                                                            (dữ liệu tháng
+                                                            3/2020) – Tỉ lệ dân
+                                                            số nghèo thấp nhất
+                                                            thế giới (chiếm
+                                                            1.5%) -> Có nghĩa
+                                                            gần 99% dân số Đài
+                                                            Loan có thể đáp ứng
+                                                            được mức sống cơ
+                                                            bản. Tại Đài Bắc,
+                                                            một người cần khoảng
+                                                            337 USD/ tháng để
+                                                            phục vụ các nhu cầu
+                                                            cơ bản như thức ăn,
+                                                            chỗ ở, quần áo và
+                                                            học phí. Các mức
+                                                            sinh hoạt tối thiểu
+                                                            thay đổi theo từng
+                                                            thành phố khác nhau.
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -306,6 +532,97 @@
                                             Diploma / Certificate là như
                                             sau:...</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal21"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal21"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            THỦ TỤC VISA DU HỌC
+                                                            ĐÀI LOAN DÀNH CHO
+                                                            SINH VIÊN QUỐC TẾ
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            Các yêu cầu xin visa
+                                                            cho sinh viên quốc
+                                                            tế đang theo học
+                                                            toàn thời gian hoặc
+                                                            tiến sĩ, thạc sĩ, Cử
+                                                            nhân hay Diploma /
+                                                            Certificate là như
+                                                            sau: Hai ảnh hộ
+                                                            chiếuBản sao hộ
+                                                            chiếu, có giá trị ít
+                                                            nhất sáu thángBản
+                                                            gốc và bản sao giấy
+                                                            chứng nhận sức
+                                                            khỏeBản gốc và bản
+                                                            sao của giấy phép
+                                                            nhập học và đăng ký
+                                                            tuyển sinhBản gốc và
+                                                            bản sao của văn bằng
+                                                            giáo dục cao
+                                                            nhấtBằng chứng về
+                                                            khả năng tài chính
+                                                            Quá trình nộp hồ sơ
+                                                            có thể rất căng
+                                                            thẳng. Với thông tin
+                                                            được minh họa dưới
+                                                            đây, bạn sẽ thấy
+                                                            chính xác những gì
+                                                            cần phải được thực
+                                                            hiện và đảm bảo
+                                                            không quên bất cứ
+                                                            điều gì.
+                                                        </p>
+                                                        <img
+                                                            src="./img/img-content-2.jpg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -338,6 +655,95 @@
                                             trong Top 400 các trường Đại học,
                                             trong đó:...</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal22"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal22"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            HỆ THỐNG TRƯỜNG ĐẠI
+                                                            HỌC HÀNG ĐẦU TẠI ĐÀI
+                                                            LOAN
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            Năm 2015, bảng xếp
+                                                            hạng QS Ranking, có
+                                                            9 trường đại học tại
+                                                            Đài Loan nằm trong
+                                                            Top 400 các trường
+                                                            Đại học, trong đó:
+                                                            Đại học quốc gia Đài
+                                                            LoanĐại học Quốc Gia
+                                                            Thanh HoaĐại học
+                                                            Quốc gia Giao
+                                                            thôngĐại học quốc
+                                                            gia Thành CôngĐại
+                                                            học Khoa học và Công
+                                                            nghệ quốc gia Đài
+                                                            LoanĐại học quốc gia
+                                                            Dương MinhĐại học sư
+                                                            phạm quốc gia Đài
+                                                            LoanĐại học quốc gia
+                                                            Tôn Trung SơnĐại học
+                                                            quốc gia Trung ương
+                                                            Ngoài ra, một số
+                                                            trường Đại học của
+                                                            Đài Loan cũng được
+                                                            biết đến là các
+                                                            trường hàng đầu nước
+                                                            này trong việc đào
+                                                            tạo các chương trình
+                                                            Đại học năm
+                                                            2016/2017
+                                                        </p>
+                                                        <img
+                                                            src="./img/img-content-3.jpg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -371,6 +777,133 @@
                                             điểm du học hoàn hảo dành cho sinh
                                             viên quốc tế.</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal23"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal23"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            CÓ NÊN DU HỌC ĐÀI
+                                                            LOAN HAY KHÔNG?
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            Như đã tóm tắt ngắn
+                                                            gọn về những điểm
+                                                            cộng khi lựa chọn du
+                                                            học Đài Loan ở trên,
+                                                            Đài Loan hội tụ đầy
+                                                            đủ những yếu cấu cần
+                                                            thiết cho một địa
+                                                            điểm du học hoàn hảo
+                                                            dành cho sinh viên
+                                                            quốc tế.
+                                                        </p>
+                                                        <img
+                                                            src="./img/img-content-4.jpg"
+                                                            alt=""
+                                                        />
+                                                        <p>
+                                                            Chất lượng giáo dục
+                                                            cao Giáo dục Đài
+                                                            Loan được đánh giá
+                                                            là một trong những
+                                                            nền giáo dục chất
+                                                            lượng cao của châu
+                                                            Á. Các trường đại
+                                                            học ở Đài Loan, đặc
+                                                            biệt các trường hàng
+                                                            đầu, có vị trí không
+                                                            hề khiêm tốn trong
+                                                            khu vực và trên thế
+                                                            giới, góp mặt 4
+                                                            trường đó là
+                                                            National Taiwan
+                                                            University, National
+                                                            Cheng Kung
+                                                            University, National
+                                                            Tsing Hua
+                                                            University, National
+                                                            Chiao Tung
+                                                            University trong số
+                                                            100 trường Đại học
+                                                            hàng đầu thế giới.
+                                                            Chính phủ luôn chú
+                                                            trọng và có những
+                                                            chính sách tốt để
+                                                            ngành giáo dục phát
+                                                            triển. Truyền thống
+                                                            đề cao học hành đã
+                                                            được gieo mầm và
+                                                            phát triển đến tận
+                                                            ngày nay. Chuyên
+                                                            ngành đa dạng, phong
+                                                            phú Đài Loan có đầy
+                                                            đủ các ngành học ở
+                                                            mọi lĩnh vực như:
+                                                            Khoa công nghệ sinh
+                                                            học, Ứng dụng & quản
+                                                            lý mỹ phẩm, Quản lý
+                                                            ăn uống – quản trị
+                                                            kinh doanh, Quản trị
+                                                            doanh nghiệp, Quản
+                                                            lý du lịch & giải
+                                                            trí, Quản trị thông
+                                                            tin, chăm sóc sức
+                                                            khỏe, khoa hộ lý,
+                                                            khoa điều dưỡng
+                                                            …..vv điện công
+                                                            trình, sức khỏe &
+                                                            giải trí, v.v…Tùy
+                                                            theo năng lực, khả
+                                                            năng tài chính,
+                                                            ngành nghề quan tâm
+                                                            mà các bạn đưa ra
+                                                            lựa chọn cho mình.
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -411,6 +944,126 @@
                                             về trường mình sẽ học không? Có đi
                                             làm thêm ở</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal45"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal45"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            NHỮNG KINH NGHIỆM DU
+                                                            HỌC ĐÀI LOAN
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <h5>
+                                                            1. Hình thức giấy tờ
+                                                            và Visa tại Việt Nam
+                                                        </h5>
+                                                        <h6>1.1. Visa</h6>
+                                                        <p>
+                                                            Văn phòng Kinh tế và
+                                                            Văn hóa Đài Bắc
+                                                            (TECO): Tất cả các
+                                                            thủ tục và các câu
+                                                            hỏi về các giấy tờ
+                                                            chứng nhận được
+                                                            thông báo và quy
+                                                            định tại đây.<br />Phỏng
+                                                            vấn <br />
+                                                        </p>
+                                                        <ul>
+                                                            <li>
+                                                                Người phỏng vấn
+                                                                là người Đài
+                                                                Loan.
+                                                            </li>
+                                                            <li>
+                                                                Ngôn ngữ: tiếng
+                                                                Anh hoặc tiếng
+                                                                Trung Quốc phụ
+                                                                thuộc vào chương
+                                                                trình sẽ theo
+                                                                học.
+                                                            </li>
+                                                            <li>
+                                                                Các câu hỏi
+                                                                thường gặp: Học
+                                                                về cái gì? Tại
+                                                                sao học? Bạn có
+                                                                biết gì về
+                                                                trường mình sẽ
+                                                                học không? Có đi
+                                                                làm thêm ở bên
+                                                                ngoài không? Có
+                                                                người quen bên
+                                                                Đài Loan hay
+                                                                không? Bạn biết
+                                                                gì về Đài Loan?
+                                                                Lên kế hoạch cho
+                                                                tương lai như
+                                                                thế nào? Sẽ trở
+                                                                lại Việt Nam hay
+                                                                ở lại Đài Loan
+                                                                làm việc… Khi
+                                                                được phỏng vấn,
+                                                                vấn đề quan
+                                                                trọng nhất là
+                                                                các ứng viên
+                                                                phải thể hiện ý
+                                                                định đến Đài
+                                                                Loan để học bởi
+                                                                vì họ sợ bạn đến
+                                                                Đài Loan để đi
+                                                                làm hoặc bỏ
+                                                                trốn.
+                                                            </li>
+                                                        </ul>
+                                                        <img
+                                                            src="./img/img-content-14.jpg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -448,6 +1101,123 @@
                                             tôi xin chia sẻ một số thông tin chi
                                             tiết như sau.</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal46"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal46"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            HƯỚNG DẪN LÀM THỦ
+                                                            TỤC XIN VISA DU HỌC
+                                                            ĐÀI LOAN HỆ CHÍNH
+                                                            QUY 2020
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <h5>
+                                                            1. MỘT SỐ KINH
+                                                            NGHIỆM KHI LÀM VISA
+                                                            DU HỌC ĐÀI LOAN
+                                                        </h5>
+                                                        <p>
+                                                            Trong quá trình làm
+                                                            visa du học Đài Loan
+                                                            có thể các bạn sẽ
+                                                            gặp phải khá nhiều
+                                                            rắc rối. Ví dụ như:
+                                                            <br />
+                                                            – Việc chuẩn bị văn
+                                                            bằng bảng điểm. Các
+                                                            bạn cần kiểm tra kỹ
+                                                            con dấu và chữ ký
+                                                            trên bản điểm, phải
+                                                            đảm bảo là chữ ký
+                                                            tươi nếu không sẽ
+                                                            không được Sở Ngoại
+                                                            vụ xác nhận. Chỉ một
+                                                            giấy tờ không hợp lệ
+                                                            thì thủ tục xin visa
+                                                            du học Đài Loan sẽ
+                                                            bị từ chối
+                                                            <br />
+                                                            – Trên bảng điểm
+                                                            tiếng Anh, chữ ký
+                                                            phải là của người có
+                                                            tên trong hệ thống
+                                                            Sở Ngoại vụ
+                                                            <br />
+                                                            – Các bản photo công
+                                                            chứng tại phường
+                                                            phải được Chủ tịch
+                                                            hoặc Phó Chủ tịch
+                                                            phường xác nhận. Khi
+                                                            đi xin xác nhận giấy
+                                                            tờ các bạn cố gắng
+                                                            tới sớm để khỏi phải
+                                                            chờ đợi nhiều
+                                                            <br />
+                                                            – Đi khám sức khỏe
+                                                            các bạn nên ăn sáng
+                                                            trước khi đi. Ngoài
+                                                            ra, cũng nên tẩy
+                                                            giun trước khi đi
+                                                            khám sức khỏe từ 1 –
+                                                            2 tuần. Trong trường
+                                                            hợp các bạn còn chưa
+                                                            tiêm phòng ngừa mũi
+                                                            3 in 1 thì phải đi
+                                                            tiêm sau đó nộp
+                                                            phiếu theo dõi tiêm
+                                                            chủng cho bệnh viện
+                                                            thì mới lấy được
+                                                            giấy khám sức khỏe
+                                                        </p>
+                                                        <img
+                                                            src="./img/img-content-15.jpg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -486,6 +1256,167 @@
                                             hai ở Đài Loan có thể bạn chưa
                                             biết.</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal47"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal47"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            10 NÉT ĐẸP VĂN HÓA
+                                                            CÓ MỘT KHÔNG HAI Ở
+                                                            ĐÀI LOAN
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            Mặc dù hòn đảo cần
+                                                            cù này từ lâu nổi
+                                                            tiếng với danh hiệu
+                                                            toàn cầu về ngành
+                                                            công nghiệp điện tử
+                                                            giá rẻ, nhưng nó vẫn
+                                                            được xem là một
+                                                            trong bốn con hổ của
+                                                            châu Á (hay bốn con
+                                                            rồng nhỏ của châu Á)
+                                                            cùng với Hồng Kông,
+                                                            Singapore và Hàn
+                                                            Quốc. Dưới đây là 10
+                                                            nét văn hóa có một
+                                                            không hai ở Đài Loan
+                                                            có thể bạn chưa
+                                                            biết.
+                                                        </p>
+                                                        <h5>1. Chợ đêm</h5>
+                                                        <p>
+                                                            Đối với người Việt,
+                                                            hai chữ “chợ đêm”
+                                                            không có gì xa lạ.
+                                                            Sài Gòn, Phú Quốc,
+                                                            Đà Lạt, Nha Trang,
+                                                            Hội An, Huế… đều có
+                                                            chợ đêm tấp nập, rộn
+                                                            ràng; nhưng “chợ
+                                                            đêm” tại Đài Loan
+                                                            không chỉ đơn thuần
+                                                            là… chợ họp ban đêm!
+                                                            <br />
+                                                            Đài Loan chỉ là một
+                                                            hòn đảo nhỏ, nhưng
+                                                            lại có rất nhiều chợ
+                                                            đêm. Phần lớn các
+                                                            chợ đêm ngoài trời
+                                                            rất được yêu thích,
+                                                            đặc biệt tại đây có
+                                                            nhiều món ăn đường
+                                                            phố rất ngon mà
+                                                            người địa phương gọi
+                                                            là “xiao-chi”, nghĩa
+                                                            là “đồ ăn nhẹ″.
+                                                            <br />
+                                                            Có nhiều chợ đêm nổi
+                                                            tiếng ở Đài Loan như
+                                                            Tây Môn Đinh, Sĩ Lâm
+                                                            (TP. Đài Bắc), Phụng
+                                                            Giáp (TP. Đài
+                                                            Trung), Lục Hợp (TP.
+                                                            Cao Hùng)… thường
+                                                            bắt đầu nhộn nhịp
+                                                            vào khoảng 5 giờ
+                                                            chiều và kéo dài đến
+                                                            12 giờ đêm. Tại đây,
+                                                            bạn sẽ dễ dàng tìm
+                                                            mua những món ăn rất
+                                                            đặc trưng của người
+                                                            Hoa như cá viên
+                                                            chiên, tàu hũ chiên,
+                                                            cánh gà chiên, mì
+                                                            xào, mì hoành thánh.
+                                                        </p>
+                                                        <img
+                                                            src="./img/img-content-16.jpg"
+                                                            alt=""
+                                                        />
+
+                                                        <p>
+                                                            Chợ đêm lớn nhất ở
+                                                            Đài Loan là Sĩ Lâm
+                                                            (Shihlin night
+                                                            market), tiếp đến là
+                                                            Tây Môn Đinh (Ximen
+                                                            night market) tại
+                                                            thành phố Đài Bắc
+                                                            (Tapei)… với rất
+                                                            nhiều mặt hàng đủ
+                                                            loại, thậm chí có cả
+                                                            những quầy bán trái
+                                                            cây với đủ loại
+                                                            quả…. vừa là nơi ăn
+                                                            uống, thỏa mãn nhu
+                                                            cầu mua sắm vừa là
+                                                            nơi vui chơi, giải
+                                                            trí của nhiều lứa
+                                                            tuổi.
+                                                            <br />
+                                                            Theo thống kê của
+                                                            Cục Du lịch Đài
+                                                            Loan, có khoảng 70%
+                                                            khách du lịch đến
+                                                            Đài Loan sẽ ghé thăm
+                                                            chợ đêm ít nhất một
+                                                            lần. Trong đó, ba
+                                                            hot Facebookers đã
+                                                            từng check-in
+                                                            Facebook vào năm
+                                                            2013 tại Đài Loan
+                                                            cũng đã từng đến các
+                                                            chợ đêm ở Đài Loan:
+                                                            Chợ đêm Hoa Đài Nam;
+                                                            Chợ đêm La Đông và
+                                                            Chợ đêm Feng Chia.
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row-content-main">
@@ -523,6 +1454,127 @@
                                             một không khí vô cùng náo nhiệt,
                                             đông vui.</span
                                         >
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#myModal48"
+                                        >
+                                            Xem thêm
+                                        </button>
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade modal-fullscreen-sm-down"
+                                            id="myModal48"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">
+                                                            NHỮNG KHU CHỢ ĐÊM
+                                                            NỔI TIẾNG CỦA ĐÀI
+                                                            LOAN
+                                                        </h4>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                        ></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <h5>
+                                                            5. Chợ đêm Liuhe,
+                                                            Cao Hùng
+                                                        </h5>
+                                                        <p>
+                                                            Quang cảnh chợ đêm
+                                                            Liuhe
+                                                        </p>
+
+                                                        <img
+                                                            src="./img/img-content-17.jpg"
+                                                            alt=""
+                                                        />
+                                                        <p>
+                                                            Chợ đêm Liuhe ở Cao
+                                                            Hùng giống như một
+                                                            khu chợ truyền thống
+                                                            hơn là một khu chợ
+                                                            đêm, bán đầy đủ các
+                                                            mặt hàng từ thực
+                                                            phẩm, quần áo, dao
+                                                            và thậm chí là cả
+                                                            động vật sống.
+                                                            <br />
+                                                            Trong số các món ăn
+                                                            yêu thích của địa
+                                                            phương, chắc chắn
+                                                            phải nhắc đến một
+                                                            món ăn thú vị rất
+                                                            phổ biến ở chợ đêm
+                                                            Liuhe và trên khắp
+                                                            Đài Loan là món đậu
+                                                            hũ thối.
+                                                            <br />
+                                                            Đậu hũ thối là một
+                                                            món ăn vô cùng nổi
+                                                            danh, được chế biến
+                                                            từ đậu hũ lên men
+                                                            với một loại sốt đặc
+                                                            biệt trong vài
+                                                            tháng, có mùi khá
+                                                            nặng và hương vị có
+                                                            thể được so sánh với
+                                                            một loại phô mai
+                                                            xanh.
+                                                            <br />
+                                                            Ngoài ra, chợ đêm
+                                                            Liuhe còn là một địa
+                                                            điểm quen thuộc nếu
+                                                            bạn muốn làm đẹp cho
+                                                            thú cưng của mình. Ở
+                                                            đây có rất nhiều
+                                                            quầy hàng chăm sóc
+                                                            thú, cho dù đó là
+                                                            một con mèo, một con
+                                                            chó hoặc một con
+                                                            khỉ, những chủ hàng
+                                                            cũng có thể hô biến
+                                                            nó trở nên mới lạ
+                                                            hơn với một bộ lông
+                                                            ngộ nghĩnh.
+                                                            <br />
+                                                            Bạn nên đến sớm vì
+                                                            các cửa hàng ở đây
+                                                            khá đông khách vào
+                                                            buổi tối.
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Đóng
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-primary"
+                                                        >
+                                                            <a href="#"
+                                                                >Xem chi tiết</a
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -615,101 +1667,126 @@
                             <div class="calendar form">
                                 <h2>LỊCH HỘI THẢO</h2>
                                 <div class="desc">
-                                    <div class="row-calen">
-                                        <div class="calen-box">
-                                            <span class="day">06</span>
-                                            <span class="mon-year"
-                                                >07/2020</span
+                                    <div>
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">06</span>
+                                                <span class="mon-year"
+                                                    >07/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Tầm quan trọng của hoạt động
+                                                ngoại ngóa trong hồ sơ du học</a
                                             >
                                         </div>
-                                        <a href="#!"
-                                            >Tầm quan trọng của hoạt động ngoại
-                                            ngóa trong hồ sơ du học</a
-                                        >
-                                    </div>
-                                    <div class="row-calen">
-                                        <div class="calen-box">
-                                            <span class="day">06</span>
-                                            <span class="mon-year"
-                                                >07/2020</span
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">06</span>
+                                                <span class="mon-year"
+                                                    >07/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội thảo online cùng University
+                                                of Melbourne – Trinity
+                                                College</a
                                             >
                                         </div>
-                                        <a href="#!"
-                                            >Hội thảo online cùng University of
-                                            Melbourne – Trinity College</a
-                                        >
-                                    </div>
-                                    <div class="row-calen">
-                                        <div class="calen-box">
-                                            <span class="day">06</span>
-                                            <span class="mon-year"
-                                                >07/2020</span
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">06</span>
+                                                <span class="mon-year"
+                                                    >07/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Đại học Adelaide, Australia cấp
+                                                học bổng đến 50%</a
                                             >
                                         </div>
-                                        <a href="#!"
-                                            >Đại học Adelaide, Australia cấp học
-                                            bổng đến 50%</a
-                                        >
-                                    </div>
-                                    <div class="row-calen">
-                                        <div class="calen-box">
-                                            <span class="day">25</span>
-                                            <span class="mon-year"
-                                                >06/2020</span
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Workshop Du Học: Canada Và Úc –
+                                                Lựa Chọn Nào Có Lợi Hơn Cho Du
+                                                Học Sinh Việt Nam</a
                                             >
                                         </div>
-                                        <a href="#!"
-                                            >Workshop Du Học: Canada Và Úc – Lựa
-                                            Chọn Nào Có Lợi Hơn Cho Du Học Sinh
-                                            Việt Nam</a
-                                        >
-                                    </div>
-                                    <div class="row-calen">
-                                        <div class="calen-box">
-                                            <span class="day">25</span>
-                                            <span class="mon-year"
-                                                >06/2020</span
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội Thảo Online: Săn Học Bổng
+                                                Du Học Hà Lan Lên Đến 5000 EURO
+                                                Cùng Với Trường Đại Học Fontys
+                                                University Of Applied
+                                                Sciences</a
                                             >
                                         </div>
-                                        <a href="#!"
-                                            >Hội Thảo Online: Săn Học Bổng Du
-                                            Học Hà Lan Lên Đến 5000 EURO Cùng
-                                            Với Trường Đại Học Fontys University
-                                            Of Applied Sciences</a
-                                        >
                                     </div>
-                                    <div class="row-calen hidden">
-                                        <div class="calen-box">
-                                            <span class="day">25</span>
-                                            <span class="mon-year">06/2020</span>
+                                    <div>
+                                        <div class="row-calen hidden">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội Thảo Online: Săn Học Bổng
+                                                Du Học Hà Lan Lên Đến 5000 EURO
+                                                Cùng Với Trường Đại Học Fontys
+                                                University Of Applied
+                                                Sciences</a
+                                            >
                                         </div>
-                                        <a href="#!">Hội Thảo Online: Săn Học Bổng Du
-                                            Học Hà Lan Lên Đến 5000 EURO Cùng
-                                            Với Trường Đại Học Fontys University
-                                            Of Applied Sciences</a>
-                                    </div>
-                                    <div class="row-calen hidden">
-                                        <div class="calen-box">
-                                            <span class="day">25</span>
-                                            <span class="mon-year">06/2020</span>
+                                        <div class="row-calen hidden">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội Thảo Online: Săn Học Bổng
+                                                Du Học Hà Lan Lên Đến 5000 EURO
+                                                Cùng Với Trường Đại Học Fontys
+                                                University Of Applied
+                                                Sciences</a
+                                            >
                                         </div>
-                                        <a href="#!">Hội Thảo Online: Săn Học Bổng Du
-                                            Học Hà Lan Lên Đến 5000 EURO Cùng
-                                            Với Trường Đại Học Fontys University
-                                            Of Applied Sciences</a>
-                                    </div>
-                                    <div class="row-calen hidden">
-                                        <div class="calen-box">
-                                            <span class="day">25</span>
-                                            <span class="mon-year">06/2020</span>
+                                        <div class="row-calen hidden">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội Thảo Online: Săn Học Bổng
+                                                Du Học Hà Lan Lên Đến 5000 EURO
+                                                Cùng Với Trường Đại Học Fontys
+                                                University Of Applied
+                                                Sciences</a
+                                            >
                                         </div>
-                                        <a href="#!">Hội Thảo Online: Săn Học Bổng Du
-                                            Học Hà Lan Lên Đến 5000 EURO Cùng
-                                            Với Trường Đại Học Fontys University
-                                            Of Applied Sciences</a>
                                     </div>
+
                                     <div class="btn-add">
-                                        <button class="btn btn-show" onclick="showMoreSchedule()">
+                                        <button
+                                            class="btn btn-show"
+                                            onclick="showMoreSchedule()"
+                                        >
                                             <a href="#!">XEM THÊM</a>
                                         </button>
                                     </div>
@@ -840,7 +1917,9 @@
                                         class="fa-regular fa-greater-than fa-2xs"
                                         style="color: #fff; margin-right: 12px"
                                     ></i>
-                                    <a href="../SanPham/NationalUni.html">Dịch vụ</a>
+                                    <a href="../SanPham/NationalUni.html"
+                                        >Dịch vụ</a
+                                    >
                                 </div>
                                 <div class="row">
                                     <i
@@ -894,7 +1973,9 @@
                                         class="fa-regular fa-greater-than fa-2xs"
                                         style="color: #fff; margin-right: 12px"
                                     ></i>
-                                    <a href="../Tung/HoiThaoDuHoc.html">Hội thảo du học</a>
+                                    <a href="../Tung/HoiThaoDuHoc.html"
+                                        >Hội thảo du học</a
+                                    >
                                 </div>
                                 <div class="row">
                                     <i
@@ -908,7 +1989,9 @@
                                         class="fa-regular fa-greater-than fa-2xs"
                                         style="color: #fff; margin-right: 12px"
                                     ></i>
-                                    <a href="../page_event/pagesk.html">Tin tức, sự kiện</a>
+                                    <a href="../page_event/pagesk.html"
+                                        >Tin tức, sự kiện</a
+                                    >
                                 </div>
                                 <div class="row">
                                     <i
@@ -962,6 +2045,7 @@
                 </div>
             </footer>
         </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="a.js"></script>
     </body>
 </html>
