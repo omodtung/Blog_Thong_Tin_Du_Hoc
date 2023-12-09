@@ -1150,6 +1150,61 @@ a:hover {
         display: flex;
         align-items: center;
     }
+    /* FORM LOGIN */
+    .form-login {
+        border: 1px solid white;
+        background-color: white;
+        position: fixed;
+        z-index: 5000;
+        left: 0px;
+        top: 0px;
+        height: auto;
+        width: 100vw;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+    .form-login .form-container-login {
+        width: 100%;
+        height: 100%;
+    }
+
+    .form-login .form-container-login > h3 {
+        margin-top: 229px;
+    }
+
+    .form-login .form-container-login > form {
+        text-align: center;
+    }
+
+    .form-login form button {
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 20px;
+        background-color: #ea7c69;
+        width: 36%;
+    }
+
+    .form-login .close-form {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .form-login .back-to-login {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+    }
+
+    .form-login form .register {
+        text-align: center;
+    }
 }
 
 /* Tablet: width >= 740px  width < 1024px*/
@@ -1236,6 +1291,59 @@ a:hover {
 
     .end-footer .content .online {
         justify-content: center;
+    }
+    .form-login {
+        border: 1px solid white;
+        background-color: white;
+        position: fixed;
+        z-index: 5000;
+        left: 0px;
+        top: 0px;
+        height: auto;
+        width: 100vw;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+    .form-login .form-container-login {
+        width: 100%;
+        height: 100%;
+    }
+
+    .form-login .form-container-login > h3 {
+        margin-top: 229px;
+    }
+
+    .form-login .form-container-login > form {
+        text-align: center;
+    }
+
+    .form-login form button {
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 20px;
+        background-color: #ea7c69;
+        width: 36%;
+    }
+
+    .form-login .close-form {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .form-login .back-to-login {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+    }
+    .form-login form .register {
+        text-align: center;
     }
 }
 

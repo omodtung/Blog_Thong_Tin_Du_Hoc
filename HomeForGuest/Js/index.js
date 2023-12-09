@@ -5,6 +5,7 @@ buton.onclick = () => {
     delayLoop(0, 1);
 };
 
+/// cho nay ben lien he chua co do chua co JS login
 window.addEventListener("resize", function () {
     // if (this.window.innerWidth > 1024) {
     //     this.document.querySelector(".login").style.display = "flex";
