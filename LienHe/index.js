@@ -100,3 +100,10 @@ function validateForm() {
     document.getElementById("status").innerHTML = "Sending...";
     document.getElementById("contact-form").submit();
 }
+window.addEventListener("load", function () {
+    if (this.window.innerWidth >= 1026) {
+        this.document.querySelector(".login").style.display = "flex";
+    } else {
+        this.document.querySelector(".login").style.display = "none";
+    }
+});
