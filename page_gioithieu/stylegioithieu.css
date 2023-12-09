@@ -1064,7 +1064,7 @@ body {
     height: 9px;
 }
 
-.row-calen, .row-calen-hidden {
+.row-calen{
     display: flex;
     padding-bottom: 15px;
     margin-bottom: 15px;
@@ -1683,7 +1683,7 @@ a:hover {
         padding: 2px;
     } 
   } 
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1025px) {
     .fa-bars{
         display: none !important;
     }
