@@ -939,13 +939,18 @@ function registerForm() {
 
 // show login
 function login() {
-       let startLogin = document.querySelector('.header-1 .login');
-       let form = document.querySelector('.form-login');
-       startLogin.addEventListener('click', () => {
-              form.style.display = 'flex';
-              loginForm();
+       let startLogin = document.querySelector(".header-phat .login");
+       let form = document.querySelector(".form-login");
+       let startLogin_toMobile = document.querySelector(".login-mobile");
+       startLogin.addEventListener("click", () => {
+           form.style.display = "flex";
+           loginForm();
        });
-}
+       startLogin_toMobile.addEventListener("click", () => {
+           form.style.display = "flex";
+           loginForm();
+       });
+   }
 login();
 // show register
 function register(event) {
