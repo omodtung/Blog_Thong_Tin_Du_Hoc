@@ -5,6 +5,23 @@ buton.onclick = () => {
     delayLoop(0, 1);
 };
 
+window.addEventListener("resize", function () {
+    // if (this.window.innerWidth > 1024) {
+    //     this.document.querySelector(".login").style.display = "flex";
+    // } else {
+    //     this.document.querySelector(".login").style.display = "none";
+    // }
+    if (isLogin() != null) {
+        icon.style.display = "none";
+    } else {
+        if (this.window.innerWidth > 1024) {
+            this.document.querySelector(".login").style.display = "flex";
+        } else {
+            this.document.querySelector(".login").style.display = "none";
+        }
+    }
+});
+
 function delayLoop(iterations, delay) {
     let count = window.scrollY;
 
@@ -766,3 +783,10 @@ function setUpLogin() {
     }
 }
 setUpLogin();
+window.addEventListener("load", function () {
+    if (this.window.innerWidth >= 1026) {
+        this.document.querySelector(".login").style.display = "flex";
+    } else {
+        this.document.querySelector(".login").style.display = "none";
+    }
+});

@@ -5,6 +5,7 @@ buton.onclick = () => {
     delayLoop(0, 1);
 };
 
+/// cho nay ben lien he chua co do chua co JS login
 window.addEventListener("resize", function () {
     // if (this.window.innerWidth > 1024) {
     //     this.document.querySelector(".login").style.display = "flex";
@@ -45,7 +46,6 @@ window.addEventListener("scroll", function () {
         if (Math.round(y) > 50) {
             header_element.classList.add("closes");
             buton.style.display = "flex";
-            console.log("hehe");
         } else {
             header_element.classList.remove("closes");
             buton.style.display = "none";
@@ -812,3 +812,10 @@ function setUpLogin() {
     }
 }
 setUpLogin();
+window.addEventListener("load", function () {
+    if (this.window.innerWidth >= 1026) {
+        this.document.querySelector(".login").style.display = "flex";
+    } else {
+        this.document.querySelector(".login").style.display = "none";
+    }
+});
