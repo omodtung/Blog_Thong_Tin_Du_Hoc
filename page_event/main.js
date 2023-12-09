@@ -24,22 +24,22 @@ window.addEventListener("scroll", function () {
   });
 
 // Xem thêm lịch
-let isHidden = true;
+let isHidden1 = true;
 function showMoreSchedule(){
     const items = document.querySelectorAll('.row-calen');
     const showMoreBtn = document.querySelector('.btn-show');
 
     items.forEach((item, index) => {
-      if (isHidden || index < 5) {
+      if (isHidden1 || index < 5) {
         item.style.display = 'flex';
       } else {
         item.style.display = 'none';
       }
     });
 
-    isHidden = !isHidden; // Đảo ngược trạng thái
+    isHidden1 = !isHidden1; // Đảo ngược trạng thái
 
-    if (isHidden) {
+    if (isHidden1) {
       showMoreBtn.textContent = 'XEM THÊM';
     } else {
       showMoreBtn.textContent = 'THU GỌN';
