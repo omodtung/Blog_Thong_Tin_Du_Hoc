@@ -33,6 +33,7 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="./css/style3.css" />
+        <link rel="stylesheet" href="./css/styleformlogin.css" />
         <script
             src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -264,6 +265,56 @@
                 <label class="overley" for="input-check"></label>
             </div>
 
+            <div class="form-login">
+                <img
+                    class="back-to-login"
+                    width="20px"
+                    src="./img/arrow.png"
+                    alt=""
+                />
+                <img
+                    class="close-form"
+                    width="20px"
+                    src="./img/close.png"
+                    alt=""
+                />
+                <h3>Đăng Nhập</h3>
+                <form onsubmit="return handleSubmit()">
+                    <div class="login-userName">
+                        <input type="text" placeholder="Họ tên" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Họ tên không được để trống</span>
+                        </div>
+                    </div>
+                    <div class="login-id">
+                        <input type="text" placeholder="Tên đăng nhập" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Tên đăng nhập không được để trống</span>
+                        </div>
+                    </div>
+                    <div class="login-password">
+                        <input type="text" placeholder="Mật khẩu" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Mật khẩu không được để trống</span>
+                        </div>
+                    </div>
+                    <div class="login-repeatpass">
+                        <input type="text" placeholder="Nhập lại mật khẩu" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Mật khẩu lặp lại không đúng</span>
+                        </div>
+                    </div>
+                    <button type="submit">ĐĂNG KÝ</button>
+                    <div class="register" onclick="register(event)">
+                        <span>Bạn chưa có tài khoản ?</span>
+                        <a href="#">Đăng ký</a>
+                    </div>
+                </form>
+            </div>
             <!-- SECTION -->
 
             <section>

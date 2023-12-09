@@ -445,9 +445,11 @@ function registerForm() {
 
 // show login
 function login() {
-    let startLogin = document.querySelector(".header-phat .login");
+    let startLogin = document.querySelector(".login");
     let form = document.querySelector(".form-login");
-    let startLogin_toMobile = document.querySelector(".login-mobile");
+    let startLogin_toMobile = document.querySelector(
+        ".nav_mobile .login-mobile"
+    );
     startLogin.addEventListener("click", () => {
         form.style.display = "flex";
         loginForm();

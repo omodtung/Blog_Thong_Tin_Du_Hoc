@@ -28,7 +28,6 @@ window.addEventListener("scroll", function () {
         if (Math.round(y) > 50) {
             header_element.classList.add("closes");
             buton.style.display = "flex";
-            console.log("hehe");
         } else {
             header_element.classList.remove("closes");
             buton.style.display = "none";
