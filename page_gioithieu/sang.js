@@ -25,25 +25,29 @@
 //     }
 //   }
 // }
+
+let header_element1 = document.querySelector("#head");
+let button = document.querySelector(".hello");
+
 window.addEventListener("scroll", function () {
   const x = window.scrollX;
   const y = window.scrollY;
 
   if (this.window.innerWidth >= 1026) {
       if (Math.round(y) > 50) {
-          header_element.classList.add("close");
-          buton.style.display = "flex";
+          header_element1.classList.add("close");
+          button.style.display = "flex";
       } else {
-          header_element.classList.remove("close");
-          buton.style.display = "none";
+          header_element1.classList.remove("close");
+          button.style.display = "none";
       }
   } else {
       if (Math.round(y) > 10) {
-          header_element.classList.add("close_mobile");
-          buton.style.display = "flex";
+          header_element1.classList.add("close_mobile");
+          button.style.display = "flex";
       } else {
-          header_element.classList.remove("close_mobile");
-          buton.style.display = "none";
+          header_element1.classList.remove("close_mobile");
+          button.style.display = "none";
       }
   }
 });
@@ -81,7 +85,7 @@ function showMoreSchedule(){
       }
     });
 
-    isHidden = !isHidden; // Đảo ngược trạng thái
+    isHidden = !isHidden // Đảo ngược trạng thái
 
     if (isHidden) {
       showMoreBtn.textContent = 'XEM THÊM';
@@ -91,10 +95,10 @@ function showMoreSchedule(){
 }
 
 // Pop Up use Bootstrap
-const myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
+// const myModal = document.getElementById('myModal')
+// const myInput = document.getElementById('myInput')
 
-myModal.addEventListener('shown.bs.modal', () => {
-  myInput.focus()
-})
+// myModal.addEventListener('shown.bs.modal', () => {
+//   myInput.focus()
+// })
 
