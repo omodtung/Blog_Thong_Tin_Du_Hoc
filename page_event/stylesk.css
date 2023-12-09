@@ -954,7 +954,13 @@ body {
 .add a {
     color: #004e9a;
 }
-
+.modal-body{
+    height: 500px;
+    overflow-x: hidden;
+}
+.modal-body img{
+    width: 100%;
+}
 /* SIGN-UP */
 .info-item {
     margin-bottom: 10px;
