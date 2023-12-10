@@ -1,569 +1,937 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="./css/style2.css" /> -->
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/reset.css" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <link rel="stylesheet" href="./css/style2.css" /> -->
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
 
-    <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+        <link rel="stylesheet" href="./font/stylesheet.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/styleformlogin.css" />
+        <title>Album Picture</title>
+    </head>
+    <body>
+        <main>
+            <!-- HEADER -->
+            <header id="head">
+                <div class="header">
+                    <div class="content">
+                        <div class="logo">
+                            <img src="./img/logo.png" alt="logo" />
+                        </div>
+                        <div class="text_header">
+                            <div class="text-item">
+                                <img
+                                    src="./img/call_header.png"
+                                    alt="icon-call"
+                                />
+                                <div class="item">
+                                    <span class="title">Hotline</span>
+                                    <span class="info">0948.468.558</span>
+                                </div>
+                            </div>
+                            <div class="text-item">
+                                <img
+                                    src="./img/mail_header.png"
+                                    alt="icon-mail"
+                                    width="36px"
+                                    height="25px"
+                                />
+                                <div class="item">
+                                    <span class="title">Email</span>
+                                    <span class="info">lienhe@crv.vn</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-container">
+                            <form action="#!">
+                                <input
+                                    type="text"
+                                    placeholder="Enter key search"
+                                    class="input-text"
+                                />
+                                <button type="submit">
+                                    <img src="./img/search.png" alt="search" />
+                                </button>
+                            </form>
+                        </div>
+                        <div class="login">
+                            <img width="50px" src="./img/login.png" alt="" />
+                        </div>
+                        <!-- THEM ZO NE -->
 
-    <link rel="stylesheet" href="./font/stylesheet.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Hoi Thao DU Hoc</title>
-  </head>
-  <body>
-    <main>
-      <!-- HEADER -->
-      <header id="head" id="header">
-        <div class="header">
-          <div class="content">
-            <div class="logo">
-              <img src="./img/logo.png" alt="logo" />
-            </div>
-            <div class="text_header">
-              <div class="text-item">
-                <img src="./img/call_header.png" alt="icon-call" />
-                <div class="item">
-                  <span class="title">Hotline</span>
-                  <span class="info">0948.468.558</span>
+                        <label class="nav-btn" for="input-check">
+                            <i
+                                class="fa-solid fa-bars fa-2xl"
+                                style="cursor: pointer"
+                            ></i>
+                        </label>
+                    </div>
                 </div>
-              </div>
-              <div class="text-item">
-                <img
-                  src="./img/mail_header.png"
-                  alt="icon-mail"
-                  width="36px"
-                  height="25px"
-                />
-                <div class="item">
-                  <span class="title">Email</span>
-                  <span class="info">lienhe@crv.vn</span>
-                </div>
-              </div>
-            </div>
-            <div class="search-container">
-              <form action="#!">
+
+                <nav class="navigation">
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <a href="../HomeForGuest/index.html"
+                                    ><i class="fa-solid fa-house"></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="../page_gioithieu/pagegioithieu.html"
+                                    >GIỚI THIỆU</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../SanPham/NationalUni.html"
+                                    >DỊCH VỤ</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../page-quocgiaduhoc/quocgiaduhoc.html"
+                                    >QUỐC GIA DU HỌC
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a
+                                            href="../page-quocgiaduhoc/du_hoc_han_quoc.html"
+                                            >Du học Hàn Quốc</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="../page-quocgiaduhoc/du_hoc_nhat_ban.html"
+                                            >Du học Nhật Bản</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="../page-quocgiaduhoc/du_hoc_dai_loan.html"
+                                            >Du học Đài Loan</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../Tung/HoiThaoDuHoc.html"
+                                    >HỘI THẢO DU HỌC</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../Tung/ThuVien.html">THƯ VIỆN</a>
+                            </li>
+                            <li>
+                                <a href="../page_event/pagesk.html"
+                                    >TIN TỨC, SỰ KIỆN</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../LienHe/index.html">LIÊN HỆ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- INPUT -->
+            </header>
+            <div class="navigation_mobile">
                 <input
-                  type="text"
-                  placeholder="Enter key search"
-                  class="input-text"
+                    type="checkbox"
+                    name=""
+                    hidden
+                    class="nav_input"
+                    id="input-check"
                 />
-                <button type="submit">
-                  <img src="./img/search.png" alt="search" />
-                </button>
-              </form>
+                <!-- NAV MOBILE -->
+                <nav class="nav_mobile">
+                    <label class="close-icon-mobile" for="input-check">
+                        <i class="fa-solid fa-square-xmark"></i>
+                    </label>
+
+                    <ul>
+                        <li class="login-mobile">
+                            <a href="#!"
+                                ><i class="fa-solid fa-right-to-bracket"></i>
+                                <span>Đăng nhập</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../HomeForGuest/index.html"
+                                ><i class="fa-solid fa-house"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="../page_gioithieu/pagegioithieu.html"
+                                >Giới thiệu</a
+                            >
+                        </li>
+                        <li>
+                            <a href="../SanPham/NationalUni.html">Dịch vụ</a>
+                        </li>
+                        <li>
+                            <a href="../page-quocgiaduhoc/quocgiaduhoc.html"
+                                >Quốc gia du học</a
+                            >
+                            <input
+                                type="checkbox"
+                                hidden
+                                class="nav-input-submenu"
+                                id="input-submenu"
+                            />
+                            <label class="plus" for="input-submenu">+</label>
+                            <label class="minus" for="input-submenu">-</label>
+
+                            <ul class="sub-menu">
+                                <li>
+                                    <a
+                                        href="../page-quocgiaduhoc/du_hoc_han_quoc.html"
+                                        >Du học Hàn Quốc</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="../page-quocgiaduhoc/du_hoc_nhat_ban.html"
+                                        >Du học Nhật Bản</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="../page-quocgiaduhoc/du_hoc_dai_loan.html"
+                                        >Du học Đài Loan</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../Tung/HoiThaoDuHoc.html"
+                                >Hội thảo du học</a
+                            >
+                        </li>
+                        <li>
+                            <a href="../Tung/ThuVien.html">Thư viện</a>
+                        </li>
+                        <li>
+                            <a href="../page_event/pagesk.html"
+                                >Tin tức, sự kiện</a
+                            >
+                        </li>
+                        <li>
+                            <a href="../LienHe/index.html">Liên hệ</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Thêm cái overley zo -->
+                <label class="overley" for="input-check"></label>
             </div>
-          </div>
-        </div>
-        <nav class="navigation">
-          <div class="content">
-            <ul>
-              <li>
-                <a href="#!"
-                  ><img
-                    src="./img/home.png"
-                    alt="logo-home"
-                    style="color: #fff"
+            <div class="form-login">
+                <img
+                    class="back-to-login"
                     width="20px"
-                    height="20px"
-                /></a>
-              </li>
-              <li>
-                <a href="#!">GIỚI THIỆU</a>
-              </li>
-              <li>
-                <a href="#!">DỊCH VỤ</a>
-              </li>
-              <li>
-                <a href="#!">QUỐC GIA DU HỌC </a>
-                <ul class="sub-menu">
-                  <li>
-                    <a href="#!">Du học Hàn Quốc</a>
-                  </li>
-                  <li>
-                    <a href="#!">Du học Nhật Bản</a>
-                  </li>
-                  <li>
-                    <a href="#!">Du học Đài Loan</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#!">HỘI THẢO DU HỌC</a>
-              </li>
-              <li>
-                <a href="#!">THƯ VIỆN</a>
-              </li>
-              <li>
-                <a href="#!">TIN TỨC, SỰ KIỆN</a>
-              </li>
-              <li>
-                <a href="#!">LIÊN HỆ</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-
-      <!-- SECTION -->
-
-      <section  id="body" class="main-content-body" >
-        <div class="image-study-abroad">
-          <img src="./img/hoiThaoDuHoc.jpg" alt="image-1">
-          <img src="./img/banner-web-du-hoc-1900x630.jpg" alt="image-2">
-          <img src="./img/banner.jpg" alt="image-3">
-      </div>
-        <div class="path">
-          <div class="content">
-            <a href="#!">
-              <img
-                src="./img/home-path.png"
-                alt="path-home"
-                width="20px"
-                height="20px"
-              />
-              <span>Home</span>
-              <img
-                src="./img/right-arrow.png"
-                alt="right-arrow"
-                width="10px"
-                height="10px"
-              />
-            </a>
-            <a href="#!">Hoi Thao Du Hoc </a>
-          </div>
-        </div>
-        <div class="content-page">
-          <div class="content">
-            <div class="content-left">
-              <h1>Thu Vien</h1>
-              <div class="content-page-main">
-                <div class="row-content-main">
-
-                  <div id="thumbnail-row">
-                  <div id=grid>
-                    <div id="cover-grid-item-picture" class="grid-item grid-item-1" >
-                      <img id="grid-item-picture"class="thumbnail cursor" src="./img/nhugnsailam.png" onclick="displayslide()" alt="">
+                    src="./img/arrow.png"
+                    alt=""
+                />
+                <img
+                    class="close-form"
+                    width="20px"
+                    src="./img/close.png"
+                    alt=""
+                />
+                <h3>Đăng Nhập</h3>
+                <form onsubmit="return handleSubmit()">
+                    <div class="login-userName">
+                        <input type="text" placeholder="Họ tên" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Họ tên không được để trống</span>
+                        </div>
                     </div>
-                    <div class="grid-item grid-item-2">
-                      <img id="grid-item-picture"class="thumbnail cursor" src="./img/nhugnsailam.png" onclick="displayslide()" alt="">
-
+                    <div class="login-id">
+                        <input type="text" placeholder="Tên đăng nhập" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Tên đăng nhập không được để trống</span>
+                        </div>
                     </div>
-                    <div class="grid-item grid-item-3">
-
-                      <img id="grid-item-picture"class="thumbnail cursor" src="./img/nhugnsailam.png" onclick="displayslide()" alt="">
-
+                    <div class="login-password">
+                        <input type="text" placeholder="Mật khẩu" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Mật khẩu không được để trống</span>
+                        </div>
                     </div>
-                    <div class="grid-item grid-item-4">
-                      <img id="grid-item-picture"class="thumbnail cursor" src="./img/nhugnsailam.png" onclick="displayslide()" alt="">
+                    <div class="login-repeatpass">
+                        <input type="text" placeholder="Nhập lại mật khẩu" />
+                        <div class="warning">
+                            <img src="./img/exclamation.png" alt="" />
+                            <span>Mật khẩu lặp lại không đúng</span>
+                        </div>
                     </div>
-                    <div class="grid-item grid-item-5">
-                      <img id="grid-item-picture"class="thumbnail cursor" src="./img/nhugnsailam.png" onclick="displayslide()" alt="">
+                    <button type="submit">ĐĂNG KÝ</button>
+                    <div class="register" onclick="register(event)">
+                        <span>Bạn chưa có tài khoản ?</span>
+                        <a href="#">Đăng ký</a>
                     </div>
-
-                    <div class="grid-item grid-item-6">
-                      <img id="grid-item-picture"class="thumbnail cursor" src="./img/nhugnsailam.png" onclick="displayslide()" alt="">
-                    </div>
-                  </div>
-                  </div>
-                  </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="content-right">
-              <div class="right-menu">
-                <div class="row">
-                  <i class="fa-solid fa-caret-right" style="color: #5aaeff"></i>
-                  <a href="#!">Du học Đài Loan</a>
-                </div>
-                <div class="row">
-                  <i class="fa-solid fa-caret-right" style="color: #5aaeff"></i>
-                  <a href="#!">Du học Hàn Quốc</a>
-                </div>
-                <div class="row">
-                  <i class="fa-solid fa-caret-right" style="color: #5aaeff"></i>
-                  <a href="#!">Du học Nhật Bản</a>
-                </div>
-              </div>
-              <div class="tips form">
-                <h2>CẨM NANG DU HỌC</h2>
-                <div class="desc">
-                  <div class="row-blog">
-                    <a href="#!"
-                      ><img src="./img/img-blog1.png" alt="IMG-BLOG1"
-                    /></a>
-                    <a href="#!">
-                      Tầm quan trọng của hoạt động ngoại khóa trong hồ sơ du
-                      học</a
-                    >
-                  </div>
-                  <div class="row-blog">
-                    <a href="#!"
-                      ><img src="./img/img-blog2.jpg" alt="IMG-BLOG2"
-                    /></a>
-                    <a href="#!"
-                      >Cách viết bài tự luận ấn tượng vào đại học Mỹ</a
-                    >
-                  </div>
-                  <div class="row-blog">
-                    <a href="#!"
-                      ><img src="./img/img-blog3.jpg" alt="IMG-BLOG3"
-                    /></a>
-                    <a href="#!">
-                      Vì sao Australia muốn mở cửa biên giới đón du học sinh?
-                    </a>
-                  </div>
-                  <div class="row-blog">
-                    <a href="#!"
-                      ><img src="./img/img-blog4.jpg" alt="IMG-BLOG4"
-                    /></a>
-                    <a href="#!">
-                      Đại học Adelaide, Australia cấp học bổng đến 50%
-                    </a>
-                  </div>
-                  <div class="row-blog">
-                    <a href="#!"
-                      ><img src="./img/img-blog5.webp" alt="IMG-BLOG5"
-                    /></a>
-                    <a href="#!">
-                      Workshop Du Học: Canada và Úc - Lựa chọn nào có lợi hơn
-                      cho du học sinh Việt Nam
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="calendar form">
-                <h2>LỊCH HỘI THẢO</h2>
-                <div class="desc">
-                  <div class="row-calen">
-                    <div class="calen-box">
-                      <span class="day">06</span>
-                      <span class="mon-year">07/2020</span>
-                    </div>
-                    <a href="#!"
-                      >Tầm quan trọng của hoạt động ngoại ngóa trong hồ sơ du
-                      học</a
-                    >
-                  </div>
-                  <div class="row-calen">
-                    <div class="calen-box">
-                      <span class="day">06</span>
-                      <span class="mon-year">07/2020</span>
-                    </div>
-                    <a href="#!"
-                      >Hội thảo online cùng University of Melbourne – Trinity
-                      College</a
-                    >
-                  </div>
-                  <div class="row-calen">
-                    <div class="calen-box">
-                      <span class="day">06</span>
-                      <span class="mon-year">07/2020</span>
-                    </div>
-                    <a href="#!"
-                      >Đại học Adelaide, Australia cấp học bổng đến 50%</a
-                    >
-                  </div>
-                  <div class="row-calen">
-                    <div class="calen-box">
-                      <span class="day">25</span>
-                      <span class="mon-year">06/2020</span>
-                    </div>
-                    <a href="#!"
-                      >Workshop Du Học: Canada Và Úc – Lựa Chọn Nào Có Lợi Hơn
-                      Cho Du Học Sinh Việt Nam</a
-                    >
-                  </div>
-                  <div class="row-calen">
-                    <div class="calen-box">
-                      <span class="day">25</span>
-                      <span class="mon-year">06/2020</span>
-                    </div>
-                    <a href="#!"
-                      >Hội Thảo Online: Săn Học Bổng Du Học Hà Lan Lên Đến 5000
-                      EURO Cùng Với Trường Đại Học Fontys University Of Applied
-                      Sciences</a
-                    >
-                  </div>
-                  <div class="btn-add">
-                    <button class="btn">
-                      <a href="#!">XEM THÊM</a>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="sign-up form">
-                <h2>ĐĂNG KÍ TƯ VẤN</h2>
-                <div class="desc">
-                  <form action="post">
-                    <p>
-                      Vui lòng để lại thông tin để nhận được những ưu đãi tốt
-                      nhất từ chúng tôi
-                    </p>
-                    <div class="info-item">
-                      <input type="text" placeholder="Họ và tên" />
-                    </div>
-                    <div class="info-item">
-                      <input type="text" placeholder="Điện thoại" />
-                    </div>
-                    <div class="info-item">
-                      <input type="text" placeholder="Email của bạn" />
-                    </div>
-                    <div class="info-item">
-                      <textarea
-                        name=""
-                        id=""
-                        cols="40"
-                        rows="10"
-                        placeholder="Nội dung"
-                      ></textarea>
-                    </div>
-                  </form>
-                  <div class="btn-post">
-                    <a href="#!">GỬI YÊU CẦU</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- FOOTER -->
-      <footer>
-        <div class="head-footer">
-          <div class="content">
-            <i class="fa-solid fa-greater-than fa-rotate-180 fa-2xl"></i>
-
-            <div class="img-wrap">
-              <img src="./img/footer-img1.jpg" alt="footer img" />
-              <img src="./img/footer-img2.jpg" alt="footer img" />
-              <img src="./img/footer-img3.jpg" alt="footer img" />
-              <img src="./img/footer-img4.jpg" alt="footer img" />
-              <img src="./img/footer-img5.jpg" alt="footer img" />
-              <img src="./img/footer-img6.jpg" alt="footer img" />
+                </form>
             </div>
 
-            <i class="fa-solid fa-greater-than fa-2xl"></i>
-          </div>
-        </div>
-        <div class="center-footer">
-          <div class="content">
-            <div class="footer-item contact">
-              <h2>CÔNG TY THIẾT KẾ WEBSITE CREATIVE VIỆT NAM</h2>
-              <div class="info-contact">
-                <div class="row">
-                  <i
-                    class="fa-solid fa-house"
-                    style="color: white; margin-right: 13px"
-                  ></i>
-                  <span>Địa chỉ : N06, 82 Nguyễn Tuân, Thanh Xuân, HN</span>
+            <!-- SECTION -->
+
+            <section id="body" class="main-content-body">
+                <div class="image-study-abroad" style="margin-bottom: -5px">
+                    <img src="./img/banner.jpg" alt="image-3" />
                 </div>
-                <div class="row">
-                  <i
-                    class="fa-solid fa-phone-flip"
-                    style="color: #fff; margin-right: 13px"
-                  ></i>
-                  <span>Hotline : 0973872184 - 0834570092</span>
+                <div class="path">
+                    <div class="content">
+                        <a href="#!">
+                            <img
+                                src="./img/home-path.png"
+                                alt="path-home"
+                                width="20px"
+                                height="20px"
+                            />
+                            <span>Home</span>
+                            <img
+                                src="./img/right-arrow.png"
+                                alt="right-arrow"
+                                width="10px"
+                                height="10px"
+                            />
+                        </a>
+                        <a href="#!">Thư Viện</a>
+                    </div>
                 </div>
-                <div class="row">
-                  <i
-                    class="fa-solid fa-envelope"
-                    style="color: #fff; margin-right: 13px"
-                  ></i>
-                  <span>Email : lienhe@crv.vn</span>
+                <div class="content-page">
+                    <div class="content">
+                        <div class="content-left">
+                            <h1>Thư Viện</h1>
+                            <div class="content-page-main">
+                                <div class="row-content-main">
+                                    <div id="thumbnail-row">
+                                        <div id="grid">
+                                            <div
+                                                id="cover-grid-item-picture"
+                                                class="grid-item grid-item-1"
+                                            >
+                                                <img
+                                                    id="grid-item-picture"
+                                                    class="thumbnail cursor"
+                                                    src="./IMG/dai-hoc-mo-dia-chat.jpg"
+                                                    onclick="displayslide()"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="grid-item grid-item-2">
+                                                <img
+                                                    id="grid-item-picture"
+                                                    class="thumbnail cursor"
+                                                    src="./IMG/dient.jpeg"
+                                                    onclick="displayslide()"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="grid-item grid-item-3">
+                                                <img
+                                                    id="grid-item-picture"
+                                                    class="thumbnail cursor"
+                                                    src="./IMG/Y-da-khoa.png"
+                                                    onclick="displayslide()"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="grid-item grid-item-4">
+                                                <img
+                                                    id="grid-item-picture"
+                                                    class="thumbnail cursor"
+                                                    src="./IMG/khonggian.jpg"
+                                                    onclick="displayslide()"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="grid-item grid-item-5">
+                                                <img
+                                                    id="grid-item-picture"
+                                                    class="thumbnail cursor"
+                                                    src="./IMG/dai-hoc-da-lat.webp"
+                                                    onclick="displayslide()"
+                                                    alt=""
+                                                />
+                                            </div>
+
+                                            <div class="grid-item grid-item-6">
+                                                <img
+                                                    id="grid-item-picture"
+                                                    class="thumbnail cursor"
+                                                    src="./IMG/dh-nong-lam-hue.png"
+                                                    onclick="displayslide()"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-right">
+                            <div class="right-menu">
+                                <div class="row-right">
+                                    <i
+                                        class="fa-solid fa-caret-right"
+                                        style="color: #5aaeff"
+                                    ></i>
+                                    <a href="#!">Du học Đài Loan</a>
+                                </div>
+                                <div class="row-right">
+                                    <i
+                                        class="fa-solid fa-caret-right"
+                                        style="color: #5aaeff"
+                                    ></i>
+                                    <a href="#!">Du học Hàn Quốc</a>
+                                </div>
+                                <div class="row-right">
+                                    <i
+                                        class="fa-solid fa-caret-right"
+                                        style="color: #5aaeff"
+                                    ></i>
+                                    <a href="#!">Du học Nhật Bản</a>
+                                </div>
+                            </div>
+                            <div class="tips form">
+                                <h2>CẨM NANG DU HỌC</h2>
+                                <div class="desc">
+                                    <div class="row-blog">
+                                        <a href="#!"
+                                            ><img
+                                                src="./img/img-blog1.png"
+                                                alt="IMG-BLOG1"
+                                        /></a>
+                                        <a href="#!">
+                                            Tầm quan trọng của hoạt động ngoại
+                                            khóa trong hồ sơ du học</a
+                                        >
+                                    </div>
+                                    <div class="row-blog">
+                                        <a href="#!"
+                                            ><img
+                                                src="./img/img-blog2.jpg"
+                                                alt="IMG-BLOG2"
+                                        /></a>
+                                        <a href="#!"
+                                            >Cách viết bài tự luận ấn tượng vào
+                                            đại học Mỹ</a
+                                        >
+                                    </div>
+                                    <div class="row-blog">
+                                        <a href="#!"
+                                            ><img
+                                                src="./img/img-blog3.jpg"
+                                                alt="IMG-BLOG3"
+                                        /></a>
+                                        <a href="#!">
+                                            Vì sao Australia muốn mở cửa biên
+                                            giới đón du học sinh?
+                                        </a>
+                                    </div>
+                                    <div class="row-blog">
+                                        <a href="#!"
+                                            ><img
+                                                src="./img/img-blog4.jpg"
+                                                alt="IMG-BLOG4"
+                                        /></a>
+                                        <a href="#!">
+                                            Đại học Adelaide, Australia cấp học
+                                            bổng đến 50%
+                                        </a>
+                                    </div>
+                                    <div class="row-blog">
+                                        <a href="#!"
+                                            ><img
+                                                src="./img/img-blog5.webp"
+                                                alt="IMG-BLOG5"
+                                        /></a>
+                                        <a href="#!">
+                                            Workshop Du Học: Canada và Úc - Lựa
+                                            chọn nào có lợi hơn cho du học sinh
+                                            Việt Nam
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar form">
+                                <h2>LỊCH HỘI THẢO</h2>
+                                <div class="desc">
+                                    <div>
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">06</span>
+                                                <span class="mon-year"
+                                                    >07/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Tầm quan trọng của hoạt động
+                                                ngoại ngóa trong hồ sơ du học</a
+                                            >
+                                        </div>
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">06</span>
+                                                <span class="mon-year"
+                                                    >07/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội thảo online cùng University
+                                                of Melbourne – Trinity
+                                                College</a
+                                            >
+                                        </div>
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">06</span>
+                                                <span class="mon-year"
+                                                    >07/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Đại học Adelaide, Australia cấp
+                                                học bổng đến 50%</a
+                                            >
+                                        </div>
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Workshop Du Học: Canada Và Úc –
+                                                Lựa Chọn Nào Có Lợi Hơn Cho Du
+                                                Học Sinh Việt Nam</a
+                                            >
+                                        </div>
+                                        <div class="row-calen">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội Thảo Online: Săn Học Bổng
+                                                Du Học Hà Lan Lên Đến 5000 EURO
+                                                Cùng Với Trường Đại Học Fontys
+                                                University Of Applied
+                                                Sciences</a
+                                            >
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="row-calen hidden">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội Thảo Online: Săn Học Bổng
+                                                Du Học Hà Lan Lên Đến 5000 EURO
+                                                Cùng Với Trường Đại Học Fontys
+                                                University Of Applied
+                                                Sciences</a
+                                            >
+                                        </div>
+                                        <div class="row-calen hidden">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội Thảo Online: Săn Học Bổng
+                                                Du Học Hà Lan Lên Đến 5000 EURO
+                                                Cùng Với Trường Đại Học Fontys
+                                                University Of Applied
+                                                Sciences</a
+                                            >
+                                        </div>
+                                        <div class="row-calen hidden">
+                                            <div class="calen-box">
+                                                <span class="day">25</span>
+                                                <span class="mon-year"
+                                                    >06/2020</span
+                                                >
+                                            </div>
+                                            <a href="#!"
+                                                >Hội Thảo Online: Săn Học Bổng
+                                                Du Học Hà Lan Lên Đến 5000 EURO
+                                                Cùng Với Trường Đại Học Fontys
+                                                University Of Applied
+                                                Sciences</a
+                                            >
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-add">
+                                        <button
+                                            class="btn btn-show"
+                                            onclick="showMoreSchedule()"
+                                        >
+                                            <a href="#!">XEM THÊM</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sign-up form">
+                                <h2>ĐĂNG KÍ TƯ VẤN</h2>
+                                <div class="desc">
+                                    <form action="post">
+                                        <p>
+                                            Vui lòng để lại thông tin để nhận
+                                            được những ưu đãi tốt nhất từ chúng
+                                            tôi
+                                        </p>
+                                        <div class="info-item">
+                                            <input
+                                                type="text"
+                                                placeholder="Họ và tên"
+                                            />
+                                        </div>
+                                        <div class="info-item">
+                                            <input
+                                                type="text"
+                                                placeholder="Điện thoại"
+                                            />
+                                        </div>
+                                        <div class="info-item">
+                                            <input
+                                                type="text"
+                                                placeholder="Email của bạn"
+                                            />
+                                        </div>
+                                        <div class="info-item">
+                                            <textarea
+                                                name=""
+                                                id=""
+                                                cols="40"
+                                                rows="10"
+                                                placeholder="Nội dung"
+                                            ></textarea>
+                                        </div>
+                                    </form>
+                                    <div class="btn-post">
+                                        <a href="#!">GỬI YÊU CẦU</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
-                  <i
-                    class="fas fa-globe"
-                    aria-hidden="true"
-                    style="color: #fff; margin-right: 13px"
-                  ></i>
-                  <span>Địa chỉ : N06, 82 Nguyễn Tuân, Thanh Xuân, HN</span>
-                </div>
-              </div>
-            </div>
-            <div class="footer-item access">
-              <h2>TRUY CẬP NHANH</h2>
-              <div class="fast-access">
-                <div class="row">
-                  <i
-                    class="fa-regular fa-greater-than fa-2xs fa-2xs"
-                    style="color: #fff; margin-right: 12px"
-                  ></i>
-                  <a href="#!">Giới thiệu</a>
-                </div>
-                <div class="row">
-                  <i
-                    class="fa-regular fa-greater-than fa-2xs"
-                    style="color: #fff; margin-right: 12px"
-                  ></i>
-                  <a href="#!">Dịch vụ</a>
-                </div>
-                <div class="row">
-                  <i
-                    class="fa-regular fa-greater-than fa-2xs"
-                    style="color: #fff; margin-right: 12px"
-                  ></i>
-                  <a href="#!"
-                    >Quốc gia du học
-                    <div class="sub-menu">
-                      <div class="row-sub">
+            </section>
+            <!-- FOOTER -->
+            <footer>
+                <div class="head-footer">
+                    <div class="content">
                         <i
-                          class="fa-regular fa-greater-than fa-2xs"
-                          style="color: #fff; margin-right: 12px"
+                            class="fa-solid fa-greater-than fa-rotate-180 fa-2xl"
                         ></i>
-                        <a href="#!">Du học Hàn Quốc</a>
-                      </div>
-                      <div class="row-sub">
-                        <i
-                          class="fa-regular fa-greater-than fa-2xs"
-                          style="color: #fff; margin-right: 12px"
-                        ></i>
-                        <a href="#!">Du học Nhật Bản</a>
-                      </div>
-                      <div class="row-sub">
-                        <i
-                          class="fa-regular fa-greater-than fa-2xs"
-                          style="color: #fff; margin-right: 12px"
-                        ></i>
-                        <a href="#!">Du học Đài Loan</a>
-                      </div>
+
+                        <div class="img-wrap">
+                            <img src="./img/footer-img1.jpg" alt="footer img" />
+                            <img src="./img/footer-img2.jpg" alt="footer img" />
+                            <img src="./img/footer-img3.jpg" alt="footer img" />
+                            <img src="./img/footer-img4.jpg" alt="footer img" />
+                            <img src="./img/footer-img5.jpg" alt="footer img" />
+                            <img src="./img/footer-img6.jpg" alt="footer img" />
+                        </div>
+
+                        <i class="fa-solid fa-greater-than fa-2xl"></i>
                     </div>
-                  </a>
+                </div>
+                <div class="center-footer">
+                    <div class="content">
+                        <div class="footer-item contact-footer">
+                            <h2>CÔNG TY THIẾT KẾ WEBSITE CREATIVE VIỆT NAM</h2>
+                            <div class="info-contact">
+                                <div class="row-footer">
+                                    <i
+                                        class="fa-solid fa-house"
+                                        style="color: white; margin-right: 13px"
+                                    ></i>
+                                    <span
+                                        >Địa chỉ : N06, 82 Nguyễn Tuân, Thanh
+                                        Xuân, HN</span
+                                    >
+                                </div>
+                                <div class="row-footer">
+                                    <i
+                                        class="fa-solid fa-phone-flip"
+                                        style="color: #fff; margin-right: 13px"
+                                    ></i>
+                                    <span
+                                        >Hotline : 0973872184 - 0834570092</span
+                                    >
+                                </div>
+                                <div class="row-footer">
+                                    <i
+                                        class="fa-solid fa-envelope"
+                                        style="color: #fff; margin-right: 13px"
+                                    ></i>
+                                    <span>Email : lienhe@crv.vn</span>
+                                </div>
+                                <div class="row-footer">
+                                    <i
+                                        class="fas fa-globe"
+                                        aria-hidden="true"
+                                        style="color: #fff; margin-right: 13px"
+                                    ></i>
+                                    <span
+                                        >Địa chỉ : N06, 82 Nguyễn Tuân, Thanh
+                                        Xuân, HN</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-item access">
+                            <h2>TRUY CẬP NHANH</h2>
+                            <div class="fast-access">
+                                <div class="row-footer">
+                                    <i
+                                        class="fa-regular fa-greater-than fa-2xs fa-2xs"
+                                        style="color: #fff; margin-right: 12px"
+                                    ></i>
+                                    <a href="#!">Giới thiệu</a>
+                                </div>
+                                <div class="row-footer">
+                                    <i
+                                        class="fa-regular fa-greater-than fa-2xs"
+                                        style="color: #fff; margin-right: 12px"
+                                    ></i>
+                                    <a href="#!">Dịch vụ</a>
+                                </div>
+                                <div class="row-footer">
+                                    <i
+                                        class="fa-regular fa-greater-than fa-2xs"
+                                        style="color: #fff; margin-right: 12px"
+                                    ></i>
+                                    <a href="./index.html"
+                                        >Quốc gia du học
+                                        <div class="sub-menu">
+                                            <div class="row-sub">
+                                                <i
+                                                    class="fa-regular fa-greater-than fa-2xs"
+                                                    style="
+                                                        color: #fff;
+                                                        margin-right: 12px;
+                                                    "
+                                                ></i>
+                                                <a href="./du_hoc_han_quoc.html"
+                                                    >Du học Hàn Quốc</a
+                                                >
+                                            </div>
+                                            <div class="row-sub">
+                                                <i
+                                                    class="fa-regular fa-greater-than fa-2xs"
+                                                    style="
+                                                        color: #fff;
+                                                        margin-right: 12px;
+                                                    "
+                                                ></i>
+                                                <a href="./du_hoc_nhat_ban.html"
+                                                    >Du học Nhật Bản</a
+                                                >
+                                            </div>
+                                            <div class="row-sub">
+                                                <i
+                                                    class="fa-regular fa-greater-than fa-2xs"
+                                                    style="
+                                                        color: #fff;
+                                                        margin-right: 12px;
+                                                    "
+                                                ></i>
+                                                <a href="./du_hoc_dai_loan.html"
+                                                    >Du học Đài Loan</a
+                                                >
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="row-footer">
+                                    <i
+                                        class="fa-regular fa-greater-than fa-2xs"
+                                        style="color: #fff; margin-right: 12px"
+                                    ></i>
+                                    <a href="#!">Hội thảo du học</a>
+                                </div>
+                                <div class="row-footer">
+                                    <i
+                                        class="fa-regular fa-greater-than fa-2xs"
+                                        style="color: #fff; margin-right: 12px"
+                                    ></i>
+                                    <a href="#!">Thư viện</a>
+                                </div>
+                                <div class="row-footer">
+                                    <i
+                                        class="fa-regular fa-greater-than fa-2xs"
+                                        style="color: #fff; margin-right: 12px"
+                                    ></i>
+                                    <a href="#!">Tin tức, sự kiện</a>
+                                </div>
+                                <div class="row-footer">
+                                    <i
+                                        class="fa-regular fa-greater-than fa-2xs"
+                                        style="color: #fff; margin-right: 12px"
+                                    ></i>
+                                    <a href="#!">Liên hệ</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-item fanpage-h">
+                            <h2>FANPAGE</h2>
+                            <div class="fanpage">
+                                <img src="./img/img-facebook.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="end-footer">
+                    <div class="content">
+                        <p>
+                            Copyright @ 2020 creative ĐÀIvietnam.vn. All rights
+                            reserved.
+                        </p>
+                        <div class="online">
+                            <div class="onl-item">
+                                <i
+                                    class="fas fa-signal"
+                                    aria-hidden="true"
+                                    style="color: #fff"
+                                ></i>
+                                <span>Online : 2</span>
+                            </div>
+                            <div class="onl-item">
+                                <i
+                                    class="fas fa-users"
+                                    aria-hidden="true"
+                                    style="color: #fff"
+                                ></i>
+                                <span>Tổng truy cập : 56671</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrow-up">
+                    <i class="fas fa-arrow-up hello" aria-hidden="true"></i>
+                </div>
+            </footer>
+        </main>
+
+        <aside>
+            <div class="overlay"></div>
+            <div class="over-display">
+                <img
+                    src="./img/icon-close.svg"
+                    class="close-icon"
+                    onclick="displayslide()"
+                    id="close"
+                    alt=""
+                />
+                <div class="mySlides">
+                    <img src="./IMG/dai-hoc-mo-dia-chat.jpg" class="imageproduct2" />
+                </div>
+                <div class="mySlides">
+                    <img src="./IMG/Y-da-khoa.png" class="imageproduct2" />
+                </div>
+                <div class="mySlides">
+                    <img
+                        src="./IMG/khonggian.jpg"
+                        class="imageproduct2"
+                    />
+                </div>
+
+                <div class="mySlides">
+                    <img src="./IMG/dient.jpeg" class="imageproduct2" />
+                </div>
+                <div class="mySlides">
+                    <img src="./IMG/dai-hoc-da-lat.webp" class="imageproduct2" />
+                </div>
+                <div class="mySlides">
+                    <img src="./IMG/dh-nong-lam-hue.png" class="imageproduct2" />
+                </div>
+
+                <div class="prev-btn" onclick="plusSlides(-1)">
+                    <img src="./img/icon-previous.svg" class="prev" alt="" />
+                </div>
+                <div class="next-btn" onclick="plusSlides(1)">
+                    <img src="./img/icon-next.svg" class="next" alt="" />
                 </div>
                 <div class="row">
-                  <i
-                    class="fa-regular fa-greater-than fa-2xs"
-                    style="color: #fff; margin-right: 12px"
-                  ></i>
-                  <a href="#!">Hội thảo du học</a>
+                    <div class="column">
+                        <img
+                            class="demo cursor"
+                            src="./IMG/dai-hoc-mo-dia-chat.jpg"
+                            onclick="currentSlide(1)"
+                            alt=""
+                        />
+                    </div>
+                    <div class="column">
+                        <img
+                            class="demo cursor"
+                            src="./IMG/Y-da-khoa.png"
+                            onclick="currentSlide(2)"
+                            alt=""
+                        />
+                    </div>
+                    <div class="column">
+                        <img
+                            class="demo cursor"
+                            src="./IMG/khonggian.jpg"
+                            onclick="currentSlide(3)"
+                            alt=""
+                        />
+                    </div>
                 </div>
                 <div class="row">
-                  <i
-                    class="fa-regular fa-greater-than fa-2xs"
-                    style="color: #fff; margin-right: 12px"
-                  ></i>
-                  <a href="#!">Thư viện</a>
+                    <div class="column">
+                        <img
+                            class="demo cursor"
+                            src="./IMG/dient.jpeg"
+                            onclick="currentSlide(4)"
+                            alt=""
+                        />
+                    </div>
+                    <div class="column">
+                        <img
+                            class="demo cursor"
+                            src="./IMG/dai-hoc-da-lat.webp"
+                            onclick="currentSlide(5)"
+                            alt=""
+                        />
+                    </div>
+                    <div class="column">
+                        <img
+                            class="demo cursor"
+                            src="./IMG/dh-nong-lam-hue.png"
+                            onclick="currentSlide(6)"
+                            alt=""
+                        />
+                    </div>
                 </div>
-                <div class="row">
-                  <i
-                    class="fa-regular fa-greater-than fa-2xs"
-                    style="color: #fff; margin-right: 12px"
-                  ></i>
-                  <a href="#!">Tin tức, sự kiện</a>
-                </div>
-                <div class="row">
-                  <i
-                    class="fa-regular fa-greater-than fa-2xs"
-                    style="color: #fff; margin-right: 12px"
-                  ></i>
-                  <a href="#!">Liên hệ</a>
-                </div>
-              </div>
             </div>
-            <div class="footer-item fanpage-h">
-              <h2>FANPAGE</h2>
-              <div class="fanpage">
-                <img src="./img/img-facebook.png" alt="" style="width: 100%" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="end-footer">
-          <div class="content">
-            <p>Copyright @ 2020 creative vietnam.vn. All rights reserved.</p>
-            <div class="online">
-              <div class="onl-item">
-                <i
-                  class="fas fa-signal"
-                  aria-hidden="true"
-                  style="color: #fff"
-                ></i>
-                <span>Online : 2</span>
-              </div>
-              <div class="onl-item">
-                <i
-                  class="fas fa-users"
-                  aria-hidden="true"
-                  style="color: #fff"
-                ></i>
-                <span>Tổng truy cập : 56671</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="arrow-up">
-          <a href="#head"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
-        </div>
-      </footer>
-    </main>
-
-
-    <aside>
-      <div class="overlay"></div>
-      <div class="over-display">
-        <img src="./img/icon-close.svg" class="close-icon" onclick="displayslide()" id="close" alt="">
-          <div class="mySlides">
-              <img src="./img/nhugnsailam.png" class="imageproduct2">
-           </div> 
-           <div class="mySlides">
-            <img src="./img/img-facebook.png" class="imageproduct2">
-           </div>  
-          <div class="mySlides">
-            <img src="./img/study-in-taiwin.jpg" class="imageproduct2">
-          </div> 
-          
-
-          <div class="mySlides">
-            <img src="./img/test.png" class="imageproduct2">
-          </div>
-          <div class="mySlides">
-            <img src="./img/test.png" class="imageproduct2">
-          </div>
-          <div class="mySlides">
-            <img src="./img/test.png" class="imageproduct2">
-          </div>
-         
-
-          <div class="prev-btn" onclick="plusSlides(-1)"><img src="./img/icon-previous.svg" class="prev" alt=""></div>
-          <div class="next-btn" onclick="plusSlides(1)"><img src="./img/icon-next.svg" class="next" alt=""></div>
-          <div class="row">
-           <div class="column">
-             <img class="demo cursor" src="./img/test.png" onclick="currentSlide(1)" alt="">
-           </div>
-           <div class="column">
-             <img class="demo cursor" src="./img/img-facebook.png" onclick="currentSlide(2)" alt="">
-           </div>
-           <div class="column">
-             <img class="demo cursor" src="./img/study-in-taiwin.jpg" onclick="currentSlide(3)" alt="">
-           </div>
-           
-         </div> 
-         <div class="row">
-          <div class="column">
-            <img class="demo cursor" src="./img/nhugnsailam.png" onclick="currentSlide(4)" alt="">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="./img/nhugnsailam.png" onclick="currentSlide(5)" alt="">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="./img/nhugnsailam.png" onclick="currentSlide(6)" alt="">
-          </div>
-         
-        </div> 
-      </div>
-  </aside>
-
-  <script src="./script.js"></script>
-  </body>
+        </aside>
+        <script src="./script.js"></script>
+        <!-- <script src="./phat.js"></script> -->
+    </body>
 </html>
