@@ -32,19 +32,19 @@ function showSlides(n) {
 }
 
 /* plus and minus btns */
-var value = document.getElementById("value").value;
-var plusbtn = document.getElementById("plus-btn");
-plusbtn.onclick = () => {
-    value++;
-    document.getElementById("value").value = value;
-};
-var minusbtn = document.getElementById("minus-btn");
-minusbtn.onclick = () => {
-    if (value > 0) {
-        value--;
-        document.getElementById("value").value = value;
-    }
-};
+// var value = document.getElementById("value").value;
+// var plusbtn = document.getElementById("plus-btn");
+// plusbtn.onclick = () => {
+//     value++;
+//     document.getElementById("value").value = value;
+// };
+// var minusbtn = document.getElementById("minus-btn");
+// minusbtn.onclick = () => {
+//     if (value > 0) {
+//         value--;
+//         document.getElementById("value").value = value;
+//     }
+// };
 
 /* slideshow display */
 function displayslide() {
