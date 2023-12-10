@@ -40,6 +40,14 @@ $pass = $user[4];
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+
+<?php include("./Home/Js/AutoLogin.php")?>
+    <script>
+ var auto_refresh = setInterval(function () {
+            handleSubmit();
+        }, 2000);
+  
+        </script>
 </head>
 
 <body>
@@ -145,8 +153,8 @@ $pass = $user[4];
     </header>
     <!-- header end -->
 
-    <!-- form login and register -->
-    <div class="form-login">
+    <!-- form login and register -->Ho
+    <!-- <div class="form-login">
         <img class="back-to-login" width="20px" src="./image/arrow.png" alt="">
         <img class="close-form" width="20px" src="./image/close.png" alt="">
         <h3>Đăng Nhập</h3>
@@ -179,14 +187,14 @@ $pass = $user[4];
                     <span>Mật khẩu lặp lại không đúng</span>
                 </div>
             </div>
-            <button type="submit">ĐĂNG KÝ</button>
+            <button type="submit">ĐĂNG KÝ </button>
             <div class="register" onclick="register(event)">
                 <span>Bạn chưa có tài khoản ?</span>
                 <a href="#">Đăng ký</a>
             </div>
         </form>
     </div>
-    
+     -->
 
     <!-- section body start -->
     <section id="body" class="main-content-body">
