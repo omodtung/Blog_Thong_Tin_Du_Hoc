@@ -96,8 +96,10 @@ $allComplain = getAllComplain($conn);
                                    </a>
 
                             </li>
+                           
                             <li>
-                                   <a href="../Home/index.php">
+                                   <a href="../HomeForGuest/index.html">
+                                   <a href="../HomeForGuest/index.html">
                                           <span class="icon"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
                                           <span class="title">Trở về trang chủ</span>
                                    </a>
@@ -105,7 +107,9 @@ $allComplain = getAllComplain($conn);
                             </li>
                      </ul>
               </div>
-              <div class="post-management-page">
+
+
+              <div class="post-management-page2" style="width: 80%; background-color:#2F353A ;">
                      <!-- <h3>Quản lý bài đăng</h3> -->
                      <!-- <div class="total-posts">
                             <table>
@@ -152,7 +156,7 @@ $allComplain = getAllComplain($conn);
                                    </tr>
                             </table>
                      </div> -->
-                     <h3>Quan Ly User</h3>
+                     <h3 style="text-align: center; color:wheat" >Quản Lý Liên Hệ</h3>
                      <!-- <div class="action-post">
                             <table>
                                    <tr>
@@ -207,7 +211,7 @@ $allComplain = getAllComplain($conn);
 <?php foreach($allComplain as $complain ) {?>
 
 
-    <tr>
+    <tr style="color: black;">
                                             <!-- <th scope="row">1</th> -->
                                           
                                             <td><?= $complain['content'] ?></td>

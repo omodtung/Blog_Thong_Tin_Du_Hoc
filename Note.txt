@@ -1,0 +1,41 @@
+
+                     <table class="table table-bordered ">
+  <thead>
+    <tr class="table-success">
+
+     
+      <th scope="col">First name </th>
+      <th scope="col">last name</th>
+      <th scope="col">email </th>
+      <th scope="col">Password</th>
+      <th scope="col">Ngay sinh </th>
+      <th scope="col">gender</th>
+     
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody   id="myTable" >
+
+<?php foreach($allUser as $user) {?>
+
+    <tr>
+                                            <!-- <th scope="row">1</th> -->
+                                          
+                                         <td><?= $user['fname'] ?></td> 
+                                            <td><?= $user['lname'] ?></td>
+                                            <td><?= $user['email'] ?></td>
+                                            <td><?= $user['pass'] ?></td>
+                                            <td><?= $user['ngaysinh'] ?></td>
+                                            <td><?= $user['gender'] ?></td>
+<td>
+
+
+<a href="../Tung/BE/DeleteUser.php?id=<?= $user['id']?>" class="btn btn-danger">Ban</a>
+                                            <!-- <a href="./BL/deleteteacher.php?id=<?= $teacher['id'] ?>" class="btn btn-danger">Delete</a> -->
+
+</td>
+    </tr>
+
+    <?php }?>
+  </tbody>
+</table>
