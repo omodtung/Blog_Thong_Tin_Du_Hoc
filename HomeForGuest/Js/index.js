@@ -7,13 +7,9 @@ buton.onclick = () => {
 
 /// cho nay ben lien he chua co do chua co JS login
 window.addEventListener("resize", function () {
-    // if (this.window.innerWidth > 1024) {
-    //     this.document.querySelector(".login").style.display = "flex";
-    // } else {
-    //     this.document.querySelector(".login").style.display = "none";
-    // }
+
     if (isLogin() != null) {
-        icon.style.display = "none";
+        this.document.querySelector(".login").style.display = "none";
     } else {
         if (this.window.innerWidth > 1024) {
             this.document.querySelector(".login").style.display = "flex";
@@ -61,37 +57,6 @@ window.addEventListener("scroll", function () {
     }
 });
 
-// for bai bao post
-
-// let admissions_news_main = document.querySelector('.container-left');
-// let admissions_news_secondary = document.querySelector('.container-right');
-
-// let string = `
-//        <div class="image-news">
-//               <img src="./image/457-1593405900-1661-1593422718-326x220.png" alt="">
-//        </div>
-//        <div class="name-news">
-//               <a href="#">
-//               <h3>TẦM QUAN TRỌNG CỦA HOẠT ĐỘNG NGOẠI KHÓA TRONG HỒ SƠ DU HỌC</h3>
-//        </a>
-//        </div>
-//        <div class="calender-watch">
-//               <span class="calender">
-//               <i class="fa fa-calendar" aria-hidden="true"><span>06/07/2020</span></i>
-//        </span>
-//        <span class="watch">
-//               <i class="fa fa-eye" aria-hidden="true"></i>
-//               <span>5 lượt xem</span>
-//        </span>
-//        </div>
-//        <p>
-//               Bên cạnh điểm SAT, hoạt động ngoại khoá nổi bật là điều kiện cần thiết khi nộp hồ sơ vào...
-//        </p>
-//        <div class="button-watch-more">
-//               <a href="#">Xem chi tiết <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-//        </div>
-// `;
-// // admissions_news_main.innerHTML = string;
 
 // post chinh
 function postMain_articles(container) {
@@ -191,11 +156,9 @@ function postMain_articles(container) {
                 containerPosts.innerHTML = ` ${array.join("")} 
                                    
                                    <div class="button-watch-more">
-                                          <a href="#" id="${
-                                              post.id
-                                          }" onclick="setStatePost(event,'${
-                    post.id
-                }')">Xem chi tiết <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                          <a href="#" id="${post.id
+                    }" onclick="setStatePost(event,'${post.id
+                    }')">Xem chi tiết <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                    </div>
                                    
                                    `;
@@ -220,7 +183,7 @@ function post_articles(container, numberOfPost, footerContainer) {
         isPost.push(false);
     });
     // chọn bài đăng một cách ngẫu nhiên
-    for (let i = 0; i < numberOfPost; ) {
+    for (let i = 0; i < numberOfPost;) {
         let randomNumber = Math.floor(Math.random() * sizeArr);
         if (isPost[randomNumber] == false) {
             isPost[randomNumber] = true;
@@ -464,20 +427,24 @@ function registerForm() {
 }
 
 // show login
-function login() {
-    let startLogin = document.querySelector(".header-phat .login");
-    let form = document.querySelector(".form-login");
-    let startLogin_toMobile = document.querySelector(".login-mobile");
-    startLogin.addEventListener("click", () => {
-        form.style.display = "flex";
-        loginForm();
-    });
-    startLogin_toMobile.addEventListener("click", () => {
-        form.style.display = "flex";
-        loginForm();
-    });
+function login(event) {
+    // let startLogin = document.querySelector(".header-phat .login");
+    // let form = document.querySelector(".form-login");
+    // let startLogin_toMobile = document.querySelector(".login-mobile");
+    // startLogin.addEventListener("click", () => {
+    //     form.style.display = "flex";
+    //     loginForm();
+    // });
+    // startLogin_toMobile.addEventListener("click", () => {
+    //     form.style.display = "flex";
+    //     loginForm();
+    // });
+    let form = document.querySelector('.form-login');
+    event.preventDefault();
+    form.style.display = 'flex';
+    loginForm();
 }
-login();
+// login();
 // show register
 function register(event) {
     // ngăn chặn hành đông thẻ a
@@ -642,18 +609,28 @@ function checkLogin(userId, passWord) {
                 setStateLogin(userId);
                 // kiểm tra xem có phải admin không
                 let adminSetting = document.querySelector(
-                    ".header-2 .admin-setting"
+                    ".admin-setting"
+                );
+                let adminSetting_onMobile = document.querySelector(
+                    ".nav_mobile .admin-setting"
                 );
                 let userSetting = document.querySelector(
-                    ".header-2 .user-setting"
+                    ".user-setting"
+                );
+                let userSetting_onMobile = document.querySelector(
+                    ".nav_mobile .user-setting"
                 );
                 if (value.role == "admin") {
                     // hiện trang admin
                     adminSetting.style.display = "block";
+                    adminSetting_onMobile.style.display = "block";
                     userSetting.style.display = "none";
+                    userSetting_onMobile.style.display = "none";
                 } else {
                     adminSetting.style.display = "none";
+                    adminSetting_onMobile.style.display = "none";
                     userSetting.style.display = "block";
+                    userSetting_onMobile.style.display = "block";
                 }
             }
         });
@@ -765,11 +742,14 @@ function handleSubmit() {
 
 // ẩn biểu tượng đăng nhập khi thực hiện đăng nhập thành công
 function iconLogin() {
-    let icon = document.querySelector(".header-phat .login");
+    let icon = document.querySelector(".login");
+    let login_inMobile = document.querySelector('.nav_mobile .login-mobile');
     if (isLogin() != null) {
         icon.style.display = "none";
+        login_inMobile.style.display = "none";
     } else {
         icon.style.display = "block";
+        login_inMobile.style.display = "block";
     }
 }
 
@@ -795,27 +775,42 @@ function isLogin() {
 
 // set  up
 function setUpLogin() {
+    let adminSetting = document.querySelector(".admin-setting");
+    let adminSetting_onMobile = document.querySelector(".nav_mobile .admin-setting");
+    let userSetting = document.querySelector(".user-setting");
+    let userSetting_onMobile = document.querySelector(".nav_mobile .user-setting");
     iconLogin();
     if (isLogin() != null) {
         let objUser = isLogin();
         //  kiểm tra xem có phải admin không
-        let adminSetting = document.querySelector(".header-2 .admin-setting");
-        let userSetting = document.querySelector(".header-2 .user-setting");
+
         if (objUser.role == "admin") {
             // hiện trang admin
             adminSetting.style.display = "block";
+            adminSetting_onMobile.style.display = "block";
             userSetting.style.display = "none";
+            userSetting_onMobile.style.display = "none";
         } else {
             adminSetting.style.display = "none";
+            adminSetting_onMobile.style.display = "none";
             userSetting.style.display = "block";
+            userSetting_onMobile.style.display = "block";
         }
+    }
+    else {
+        adminSetting.style.display = "none";
+        adminSetting_onMobile.style.display = "none";
+        userSetting.style.display = "none";
+        userSetting_onMobile.style.display = "none";
     }
 }
 setUpLogin();
 window.addEventListener("load", function () {
     if (this.window.innerWidth >= 1026) {
         this.document.querySelector(".login").style.display = "flex";
+        iconLogin();
     } else {
         this.document.querySelector(".login").style.display = "none";
+        iconLogin();
     }
 });

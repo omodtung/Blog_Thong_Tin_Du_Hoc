@@ -357,6 +357,108 @@ function post_articles_3(container, numberOfPost, footerContainer) {
 }
 post_articles_3(".content-right .calendar .desc div:nth-child(1)", 5, "");
 
+
+// show bài post ẩn ở lịch hội thảo
+
+function post_articles_4(container, numberOfPost, footerContainer) {
+
+    // truy suat container chua no
+    let containerPosts = document.querySelector(container);
+
+    // lấy dữ liệu các bài đăng
+    let posts = window.localStorage.getItem('post');
+    let postArr = JSON.parse(posts);
+    let sizeArr = postArr.length;
+    let isPost = [];     // kiểm tra xem bài đăng nào đã được đăng lên container
+    // khởi tạo mảng với giá trị các bài đăng ban đầu đều là false
+    postArr.forEach((value) => {
+           isPost.push(false);
+    });
+    // chọn bài đăng một cách ngẫu nhiên
+    for (let i = 0; i < numberOfPost;) {
+           let randomNumber = Math.floor(Math.random() * sizeArr);
+           if (isPost[randomNumber] == false) {
+                  isPost[randomNumber] = true;
+                  let post = postArr[randomNumber];
+                  if (post.isPost == '1') {
+                         let pathText = post.path;
+                         i++;
+                         if (containerPosts) {
+                                fetch(pathText)
+                                       .then(response => response.text())
+                                       .then(content => {
+                                              let paragraphs = content.split('\n');
+                                              let array = [];
+                                              let valueHeading = '';
+                                              let HeadingString = '';
+                                              paragraphs.forEach((item) => {
+                                                     if (item.startsWith('Heading') && valueHeading == '') {
+                                                            // Xử lý khi gặp dòng bắt đầu bằng 'Heading'
+                                                            // ...
+                                                            var startIdxHeading = item.indexOf('"');
+                                                            var endIdxHeading = item.indexOf('"', startIdxHeading + 1);
+                                                            valueHeading = item.substring(startIdxHeading + 1, endIdxHeading);
+                                                            valueHeading = valueHeading.slice(0, 47) + '...';
+                                                            HeadingString = `
+                                                                   <a href="#" id="${post.id}" onclick="setStatePost(event,'${post.id}')">
+                                                                          ${valueHeading}
+                                                                   </a>
+                                                            `;
+
+
+                                                     }
+
+                                              });
+                                              // form 
+
+                                              // date post
+
+                                              let dateString = post.datePost.split('-');
+                                              let day = dateString[0];
+                                              let month = dateString[1];
+                                              let year = dateString[2];
+
+                                              let datePost = `
+                                                     <div class="calen-box">
+                                                            <span class="day">${day}</span>
+                                                            <span class="mon-year">${month}/${year}</span>
+                                                     </div>
+                                              `;
+
+                                              // array.push(pictureString);
+                                              array.push(datePost);
+                                              array.push(HeadingString);
+
+                                              // them bai post
+
+                                              let div = document.createElement('div');
+                                              div.className = 'row-calen hidden';
+                                              // console.log(div);
+                                              div.innerHTML = `${array.join('')}
+                                                            ${footerContainer}
+                                                            `;
+                                              // if (i < numberOfPost) {
+                                              //        li.innerHTML = `${array.join('')}
+                                              //               ${footerContainer}
+                                              //               `;
+                                              // } else {
+                                              //        li.innerHTML = `${array.join('')}
+                                              //               `;
+                                              // }
+                                              containerPosts.appendChild(div);
+                                       })
+                                       .catch(error => {
+                                              console.error('Lỗi:', error);
+                                       });
+                         }
+                         
+                  }
+           }
+    }
+}
+post_articles_4('.content-right .calendar .desc div:nth-child(2)', 3, '');
+
+
 // data dùng cho đăng nhập
 const temp = window.localStorage.getItem("user");
 const users = JSON.parse(temp);
@@ -444,22 +546,24 @@ function registerForm() {
 }
 
 // show login
-function login() {
-    let startLogin = document.querySelector(".login");
-    let form = document.querySelector(".form-login");
-    let startLogin_toMobile = document.querySelector(
-        ".nav_mobile .login-mobile"
-    );
-    startLogin.addEventListener("click", () => {
-        form.style.display = "flex";
-        loginForm();
-    });
-    startLogin_toMobile.addEventListener("click", () => {
-        form.style.display = "flex";
-        loginForm();
-    });
+function login(event) {
+    // let startLogin = document.querySelector(".header-phat .login");
+    // let form = document.querySelector(".form-login");
+    // let startLogin_toMobile = document.querySelector(".login-mobile");
+    // startLogin.addEventListener("click", () => {
+    //     form.style.display = "flex";
+    //     loginForm();
+    // });
+    // startLogin_toMobile.addEventListener("click", () => {
+    //     form.style.display = "flex";
+    //     loginForm();
+    // });
+    let form = document.querySelector('.form-login');
+    event.preventDefault();
+    form.style.display = 'flex';
+    loginForm();
 }
-login();
+// login();
 // show register
 function register(event) {
     // ngăn chặn hành đông thẻ a
@@ -623,15 +727,29 @@ function checkLogin(userId, passWord) {
                 check = 1;
                 setStateLogin(userId);
                 // kiểm tra xem có phải admin không
-                let adminSetting = document.querySelector(".admin-setting");
-                let userSetting = document.querySelector(".user-setting");
+                let adminSetting = document.querySelector(
+                    ".admin-setting"
+                );
+                let adminSetting_onMobile = document.querySelector(
+                    ".nav_mobile .admin-setting"
+                );
+                let userSetting = document.querySelector(
+                    ".user-setting"
+                );
+                let userSetting_onMobile = document.querySelector(
+                    ".nav_mobile .user-setting"
+                );
                 if (value.role == "admin") {
                     // hiện trang admin
                     adminSetting.style.display = "block";
+                    adminSetting_onMobile.style.display = "block";
                     userSetting.style.display = "none";
+                    userSetting_onMobile.style.display = "none";
                 } else {
                     adminSetting.style.display = "none";
+                    adminSetting_onMobile.style.display = "none";
                     userSetting.style.display = "block";
+                    userSetting_onMobile.style.display = "block";
                 }
             }
         });
@@ -722,6 +840,7 @@ function handleSubmit() {
             repeatPass == ""
         ) {
             if (checkLogin(userId, passWord) == true) {
+                console.log("ok ne");
                 window.alert("Đăng nhập thành công");
                 closeForm();
                 iconLogin();
@@ -743,11 +862,13 @@ function handleSubmit() {
 // ẩn biểu tượng đăng nhập khi thực hiện đăng nhập thành công
 function iconLogin() {
     let icon = document.querySelector(".login");
-
+    let login_inMobile = document.querySelector('.nav_mobile .login-mobile');
     if (isLogin() != null) {
         icon.style.display = "none";
+        login_inMobile.style.display = "none";
     } else {
         icon.style.display = "block";
+        login_inMobile.style.display = "block";
     }
 }
 
@@ -773,27 +894,43 @@ function isLogin() {
 
 // set  up
 function setUpLogin() {
+    let adminSetting = document.querySelector(".admin-setting");
+    let adminSetting_onMobile = document.querySelector(".nav_mobile .admin-setting");
+    let userSetting = document.querySelector(".user-setting");
+    let userSetting_onMobile = document.querySelector(".nav_mobile .user-setting");
     iconLogin();
     if (isLogin() != null) {
         let objUser = isLogin();
         //  kiểm tra xem có phải admin không
-        let adminSetting = document.querySelector(".admin-setting");
-        let userSetting = document.querySelector(".user-setting");
+
         if (objUser.role == "admin") {
             // hiện trang admin
             adminSetting.style.display = "block";
+            adminSetting_onMobile.style.display = "block";
             userSetting.style.display = "none";
+            userSetting_onMobile.style.display = "none";
         } else {
             adminSetting.style.display = "none";
+            adminSetting_onMobile.style.display = "none";
             userSetting.style.display = "block";
+            userSetting_onMobile.style.display = "block";
         }
+    }
+    else {
+        adminSetting.style.display = "none";
+        adminSetting_onMobile.style.display = "none";
+        userSetting.style.display = "none";
+        userSetting_onMobile.style.display = "none";
     }
 }
 setUpLogin();
+
 window.addEventListener("load", function () {
     if (this.window.innerWidth >= 1026) {
         this.document.querySelector(".login").style.display = "flex";
+        iconLogin();
     } else {
         this.document.querySelector(".login").style.display = "none";
+        iconLogin();
     }
 });

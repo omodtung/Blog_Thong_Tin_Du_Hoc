@@ -67,8 +67,8 @@
                                 </button>
                             </form>
                         </div>
-                        <div class="login">
-                            <img width="50px" src="./img/login.png" alt="" />
+                        <div onclick="login(event)" class="login">
+                            <img style="cursor: pointer;" width="50px" src="./img/login.png" alt="" />
                         </div>
                         <!-- THEM ZO NE -->
 
@@ -139,6 +139,16 @@
                             <li>
                                 <a href="../LienHe/index.html">LIÊN HỆ</a>
                             </li>
+                            <li style="display: none" class="admin-setting">
+                                <a href="../AdminPage/posts.html">
+                                    ADMIN
+                                </a>
+                            </li>
+                            <li style="display: none" class="user-setting">
+                                <a href="../UserPage/index.html">
+                                    USER
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -160,7 +170,7 @@
                     </label>
 
                     <ul>
-                        <li class="login-mobile">
+                        <li onclick="login(event)" class="login-mobile">
                             <a href="#!"
                                 ><i class="fa-solid fa-right-to-bracket"></i>
                                 <span>Đăng nhập</span>
@@ -223,6 +233,16 @@
                         </li>
                         <li>
                             <a href="../LienHe/index.html">Liên hệ</a>
+                        </li>
+                        <li style="display: none" class="admin-setting">
+                            <a href="../AdminPage/posts.html">
+                                ADMIN
+                            </a>
+                        </li>
+                        <li style="display: none" class="user-setting">
+                            <a href="../UserPage/index.html">
+                                USER
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -1662,27 +1682,27 @@
                                         class="fa-solid fa-caret-right"
                                         style="color: #5aaeff"
                                     ></i>
-                                    <a href="#!">Du học Đài Loan</a>
+                                    <a href="./du_hoc_dai_loan.html">Du học Đài Loan</a>
                                 </div>
                                 <div class="row">
                                     <i
                                         class="fa-solid fa-caret-right"
                                         style="color: #5aaeff"
                                     ></i>
-                                    <a href="#!">Du học Hàn Quốc</a>
+                                    <a href="./du_hoc_han_quoc.html">Du học Hàn Quốc</a>
                                 </div>
                                 <div class="row">
                                     <i
                                         class="fa-solid fa-caret-right"
                                         style="color: #5aaeff"
                                     ></i>
-                                    <a href="#!">Du học Nhật Bản</a>
+                                    <a href="./du_hoc_nhat_ban.html">Du học Nhật Bản</a>
                                 </div>
                             </div>
                             <div class="tips form">
                                 <h2>CẨM NANG DU HỌC</h2>
                                 <div class="desc">
-                                    <div class="row-blog">
+                                    <!-- <div class="row-blog">
                                         <a href="#!"
                                             ><img
                                                 src="./img/img-blog1.png"
@@ -1737,14 +1757,14 @@
                                             chọn nào có lợi hơn cho du học sinh
                                             Việt Nam
                                         </a>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="calendar form">
                                 <h2>LỊCH HỘI THẢO</h2>
                                 <div class="desc">
                                     <div>
-                                        <div class="row-calen">
+                                        <!-- <div class="row-calen">
                                             <div class="calen-box">
                                                 <span class="day">06</span>
                                                 <span class="mon-year"
@@ -1808,10 +1828,10 @@
                                                 University Of Applied
                                                 Sciences</a
                                             >
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div>
-                                        <div class="row-calen hidden">
+                                        <!-- <div class="row-calen hidden">
                                             <div class="calen-box">
                                                 <span class="day">25</span>
                                                 <span class="mon-year"
@@ -1855,7 +1875,7 @@
                                                 University Of Applied
                                                 Sciences</a
                                             >
-                                        </div>
+                                        </div> -->
                                     </div>
 
                                     <div class="btn-add">
@@ -2119,7 +2139,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="arrow-up">
+                <div style="cursor: pointer;" class="arrow-up">
                     <i class="fas fa-arrow-up hello" aria-hidden="true"></i>
                 </div>
             </footer>
