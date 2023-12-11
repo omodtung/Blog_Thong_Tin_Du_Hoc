@@ -5,22 +5,22 @@ include("../Tung/DB_connection.php");
 function layThongTinPhiaUser($conn)
 {
 
-    $sql = "SELECT * FROM user WHERE id =".$_SESSION['id'];
-   $stmt = $conn->prepare($sql);
-   $stmt->execute();
+    $sql = "SELECT * FROM user WHERE id =" . $_SESSION['id'];
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
 
-   if ($stmt->rowCount() == 1) {
-     $user = $stmt->fetch();
-     return $user;
-   }else {
-   	return 0;
-   }
+    if ($stmt->rowCount() == 1) {
+        $user = $stmt->fetch();
+        return $user;
+    } else {
+        return 0;
+    }
 }
 
 
 $user = layThongTinPhiaUser($conn);
 
-print_r ($user);
+// print_r($user);
 
 
 $tenDangNhap = $user[0];
@@ -41,13 +41,29 @@ $pass = $user[4];
     <link rel="stylesheet" href="style.css">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 
-<?php include("./Home/Js/AutoLogin.php")?>
+
     <script>
- var auto_refresh = setInterval(function () {
-            handleSubmit();
-        }, 2000);
-  
-        </script>
+        //  var auto_refresh = setInterval(function() {
+        //             submitForm();
+        //         }, 2000);
+
+        //         function submitForm() {
+        //         //     alert('Form will be submitted now.');
+        //         //     document.forms["myForm"].submit();
+        //         // }\
+
+
+        //         } 
+        window.addEventListener("load", function() {
+            setTimeout(
+                function open(event) {
+                    document.querySelector(".form-login").style.display = "block";
+                }, 1000
+
+            )
+        });
+    </script>
+
 </head>
 
 <body>
@@ -69,7 +85,7 @@ $pass = $user[4];
             <div class="Email">
                 <img src="./image/mail_header.png" alt="mail-icon">
                 <div class="email-name">
-                    <h3>Email</h3>
+                    // document.forms["myForm"].submit(); <h3>Email</h3>
                     <h3 class="mail">lienhe@crv.vn</h3>
                 </div>
 
@@ -136,12 +152,12 @@ $pass = $user[4];
                         <h3>LIÊN HỆ</h3>
                     </a>
                 </li>
-                <li class ="admin-setting">
+                <li class="admin-setting">
                     <a href="#">
                         <h3>ADMIN</h3>
                     </a>
                 </li>
-                <li class ="user-setting">
+                <li class="user-setting">
                     <a href="../UserPage/index.html">
                         <h3>USER</h3>
                     </a>
@@ -153,8 +169,8 @@ $pass = $user[4];
     </header>
     <!-- header end -->
 
-    <!-- form login and register -->Ho
-    <!-- <div class="form-login">
+    <!-- form login and register -->
+    <div class="form-login">
         <img class="back-to-login" width="20px" src="./image/arrow.png" alt="">
         <img class="close-form" width="20px" src="./image/close.png" alt="">
         <h3>Đăng Nhập</h3>
@@ -167,7 +183,7 @@ $pass = $user[4];
                 </div>
             </div>
             <div class="login-id">
-                <input type="text" placeholder="Tên đăng nhập" value ="<?= $tenDangNhap?>">
+                <input type="text" placeholder="Tên đăng nhập" value ="<?= $tenDangNhap ?>">
                 <div class="warning">
                     <img src="./image/exclamation.png" alt="">
                     <span>Tên đăng nhập không được để trống</span>
@@ -188,17 +204,62 @@ $pass = $user[4];
                 </div>
             </div>
             <button type="submit">ĐĂNG KÝ </button>
-            <div class="register" onclick="register(event)">
+             <div class="register" onclick="register(event)">
                 <span>Bạn chưa có tài khoản ?</span>
                 <a href="#">Đăng ký</a>
+            </div> 
+    </form>
+     </div>
+
+
+
+    <!-- <div class="form-login">
+        <img class="back-to-login" width="20px" src="./image/arrow.png" alt="">
+        <img class="close-form" width="20px" src="./image/close.png" alt="">
+        <h3>Đăng Nhập</h3>
+        <form onsubmit="return handleSubmit()" name="myForm" id="myForm">
+            <div class="login-userName">
+                <input type="text" placeholder="Họ tên">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Họ tên không được để trống</span>
+                </div>
             </div>
-        </form>
-    </div>
-     -->
+            <div class="login-id">
+                <input type="text" placeholder="Tên đăng nhập" value="<?= $tenDangNhap ?>">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Tên đăng nhập không được để trống</span>
+                </div>
+            </div>
+            <div class="login-password">
+                <input type="text" placeholder="Mật khẩu" value="<?= $pass ?>">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Mật khẩu không được để trống</span>
+                </div>
+            </div>
+            <div class="login-repeatpass">
+                <input type="text" placeholder="Nhập lại mật khẩu">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Mật khẩu lặp lại không đúng</span>
+                </div>
+            </div>
+             <p>
+                <input type ="submit" value="Submit"/>
+            </p> -->
+            <!-- <button type="submit">ĐĂNG KÝ </button> -->
+            <!-- <div class="register" onclick="register(event)">
+                <span>Bạn chưa có tài khoản ?</span>
+                <a href="#">Đăng ký</a>
+            </div> -->
+        <!-- </form> -->
+    <!-- </div> --> 
 
     <!-- section body start -->
     <section id="body" class="main-content-body">
-        
+
         <div class="image-study-abroad">
             <img src="./image/banner-du-học.png" alt="image-1">
             <img src="./image/banner-web-du-hoc-1900x630.jpg" alt="image-2">
@@ -215,7 +276,7 @@ $pass = $user[4];
                 </div>
                 <div class="paragraph">
                     <p>Công ty CP Đào tạo và Cung ứng nhân lực quốc tế OKIO là doanh nghiệp thành lập từ năm 2007 hoạt
-                    1 [id] => 4 [7] => 4 )       động trong lĩnh vực đào tạo du học, với thị trường chiến lược là Nhật Bản. OKIO được Sở Giáo dục
+                        1 [id] => 4 [7] => 4 ) động trong lĩnh vực đào tạo du học, với thị trường chiến lược là Nhật Bản. OKIO được Sở Giáo dục
                         và Đào tạo Hà Nội cấp giấy phép đào tạo ngoại ngữ số 5489/CN-SGD&ĐT và giấy phép tư vấn du học
                         số 2910/CN-SGD&ĐT. Tới nay, sau hơn 12 năm, OKIO tự hào là doanh nghiệp hàng đầu về du học Nhật
                         Bản tại Hà Nội nói riêng và cả nước nói chung, là nơi chắp cánh cho hơn 4000 bạn trẻ đến Nhật
@@ -294,103 +355,11 @@ $pass = $user[4];
                 <div class="line"></div>
                 <div class="container-news">
                     <div class="container-left">
-                        <!-- <div class="image-news">
-                            <img src="./image/457-1593405900-1661-1593422718-326x220.png" alt="">
-                        </div>
-                        <div class="name-news">
-                            <a href="#">
-                                <h3>TẦM QUAN TRỌNG CỦA HOẠT ĐỘNG NGOẠI KHÓA TRONG HỒ SƠ DU HỌC</h3>
-                            </a>
-                        </div>
-                        <div class="calender-watch">
-                            <span class="calender">
-                                <i class="fa fa-calendar" aria-hidden="true"><span>06/07/2020</span></i>
-                            </span>
-                            <span class="watch">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
-                                <span>3 lượt xem</span>
-                            </span>
-                        </div>
-                        <p>
-                            Bên cạnh điểm SAT, hoạt động ngoại khoá nổi bật là điều kiện cần thiết khi nộp hồ sơ vào...
-                        </p>
-                        <div class="button-watch-more">
-                            <a href="#">Xem chi tiết <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div> -->
+
                     </div>
                     <div class="container-right">
                         <ul>
-                            <!-- <li class="content">
-                                <div class="image-news">
-                                    <img src="./image/a1-5783-1593596508-140x93.jpg" alt="">
-                                </div>
-                                <div class="name-news">
-                                    <a href="#">
-                                        <h3>CÁCH VIẾT MỘT BÀI TỰ LUẬN ẤN TƯỢNG VÀO ĐẠI HỌC MỸ</h3>
-                                    </a>
-                                </div>
-                                <div class="calender-watch">
-                                    <span class="calender">
-                                        <i class="fa fa-calendar" aria-hidden="true"><span>06/07/2020</span></i>
-                                    </span>
-                                    <span class="watch">
-                                        <i class="fa fa-eye" aria-hidden="true"></i>
-                                        <span>3 lượt xem</span>
-                                    </span>
-                                </div>
-                                <p>
-                                    Một bài luận ấn tượng cần súc tích, đồng nhất, trung thực và thể hiện sự thông minh,
-                                    cuốn hút...
-                                </p>
-                                <div class="line"></div>
-                            </li>
-                            <li class="content">
-                                <div class="image-news">
-                                    <img src="./image/image002-2916-1593775180-140x93.jpg" alt="">
-                                </div>
-                                <div class="name-news">
-                                    <a href="#">
-                                        <h3>HỘI THẢO ONLINE CÙNG UNIVERSITY OF MELBOURNE-...</h3>
-                                    </a>
-                                </div>
-                                <div class="calender-watch">
-                                    <span class="calender">
-                                        <i class="fa fa-calendar" aria-hidden="true"><span>06/07/2020</span></i>
-                                    </span>
-                                    <span class="watch">
-                                        <i class="fa fa-eye" aria-hidden="true"></i>
-                                        <span>3 lượt xem</span>
-                                    </span>
-                                </div>
-                                <p>
-                                    Đại hội thảo online, đại diện University of Melbourne & Trinity College sẽ giải đáp
-                                    các thắc mắc về học...
-                                </p>
-                                <div class="line"></div>
-                            </li>
-                            <li class="content">
-                                <div class="image-news">
-                                    <img src="./image/2-1593659130-5746-1593659246-140x93.jpg" alt="">
-                                </div>
-                                <div class="name-news">
-                                    <a href="#">
-                                        <h3>VÌ SAO AUTRALIA MUỐN MỞ CỬA BIÊN GIỚI ĐÓN DU HỌC...</h3>
-                                    </a>
-                                </div>
-                                <div class="calender-watch">
-                                    <span class="calender">
-                                        <i class="fa fa-calendar" aria-hidden="true"><span>06/07/2020</span></i>
-                                    </span>
-                                    <span class="watch">
-                                        <i class="fa fa-eye" aria-hidden="true"></i>
-                                        <span>3 lượt xem</span>
-                                    </span>
-                                </div>
-                                <p>
-                                    Đại hội thảo online, đại diện University of Melbourne & Trinity College sẽ giải đáp
-                                    các thắc mắc về học...
-                                </p>
-                            </li> -->
+
                         </ul>
                     </div>
                 </div>
@@ -446,103 +415,11 @@ $pass = $user[4];
             <div class="admissions-news">
                 <div class="container-news">
                     <div class="container-left">
-                        <!-- <div class="image-news">
-                            <img src="./image/457-1593405900-1661-1593422718-326x220.png" alt="">
-                        </div>
-                        <div class="name-news">
-                            <a href="#">
-                                <h3>TẦM QUAN TRỌNG CỦA HOẠT ĐỘNG NGOẠI KHÓA TRONG HỒ SƠ DU HỌC</h3>
-                            </a>
-                        </div>
-                        <div class="calender-watch">
-                            <span class="calender">
-                                <i class="fa fa-calendar" aria-hidden="true"><span>06/07/2020</span></i>
-                            </span>
-                            <span class="watch">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
-                                <span>3 lượt xem</span>
-                            </span>
-                        </div>
-                        <p>
-                            Bên cạnh điểm SAT, hoạt động ngoại khoá nổi bật là điều kiện cần thiết khi nộp hồ sơ vào...
-                        </p>
-                        <div class="button-watch-more">
-                            <a href="#">Xem chi tiết <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div> -->
+
                     </div>
                     <div class="container-right">
                         <ul>
-                            <!-- <li class="content">
-                                <div class="image-news">
-                                    <img src="./image/a1-5783-1593596508-140x93.jpg" alt="">
-                                </div>
-                                <div class="name-news">
-                                    <a href="#">
-                                        <h3>CÁCH VIẾT MỘT BÀI TỰ LUẬN ẤN TƯỢNG VÀO ĐẠI HỌC MỸ</h3>
-                                    </a>
-                                </div>
-                                <div class="calender-watch">
-                                    <span class="calender">
-                                        <i class="fa fa-calendar" aria-hidden="true"><span>06/07/2020</span></i>
-                                    </span>
-                                    <span class="watch">
-                                        <i class="fa fa-eye" aria-hidden="true"></i>
-                                        <span>3 lượt xem</span>
-                                    </span>
-                                </div>
-                                <p>
-                                    Một bài luận ấn tượng cần súc tích, đồng nhất, trung thực và thể hiện sự thông minh,
-                                    cuốn hút...
-                                </p>
-                                <div class="line"></div>
-                            </li>
-                            <li class="content">
-                                <div class="image-news">
-                                    <img src="./image/image002-2916-1593775180-140x93.jpg" alt="">
-                                </div>
-                                <div class="name-news">
-                                    <a href="#">
-                                        <h3>HỘI THẢO ONLINE CÙNG UNIVERSITY OF MELBOURNE-...</h3>
-                                    </a>
-                                </div>
-                                <div class="calender-watch">
-                                    <span class="calender">
-                                        <i class="fa fa-calendar" aria-hidden="true"><span>06/07/2020</span></i>
-                                    </span>
-                                    <span class="watch">
-                                        <i class="fa fa-eye" aria-hidden="true"></i>
-                                        <span>3 lượt xem</span>
-                                    </span>
-                                </div>
-                                <p>
-                                    Đại hội thảo online, đại diện University of Melbourne & Trinity College sẽ giải đáp
-                                    các thắc mắc về học...
-                                </p>
-                                <div class="line"></div>
-                            </li>
-                            <li class="content">
-                                <div class="image-news">
-                                    <img src="./image/sinh-vien-2886-1593765145-140x93.jpg" alt="">
-                                </div>
-                                <div class="name-news">
-                                    <a href="#">
-                                        <h3>ĐẠI HỌC ADELAIDE, AUSTRALIA CẤP HỌC BỔNG LÊN TỚI 50% </h3>
-                                    </a>
-                                </div>
-                                <div class="calender-watch">
-                                    <span class="calender">
-                                        <i class="fa fa-calendar" aria-hidden="true"><span>06/07/2020</span></i>
-                                    </span>
-                                    <span class="watch">
-                                        <i class="fa fa-eye" aria-hidden="true"></i>
-                                        <span>3 lượt xem</span>
-                                    </span>
-                                </div>
-                                <p>
-                                    Trường ĐH Adelaide cấp học bổng đến 50% học phí cho chương trình cử nhân và thạc sĩ
-                                    tín chỉ....
-                                </p>
-                            </li> -->
+
                         </ul>
                     </div>
                 </div>
@@ -611,8 +488,7 @@ $pass = $user[4];
             <div class="fanpage">
                 <h3>FANPAGE</h3>
                 <div class="line"></div>
-                <a href="https://www.facebook.com/"><img src="./image/Ảnh chụp màn hình 2023-10-19 120620.png"
-                        alt=""></a>
+                <a href="https://www.facebook.com/"><img src="./image/Ảnh chụp màn hình 2023-10-19 120620.png" alt=""></a>
             </div>
             <div class="button-to-top">
                 <i class="fa fa-arrow-up" aria-hidden="true"></i>
@@ -623,7 +499,7 @@ $pass = $user[4];
         </div>
     </footer>
     <script src="./Js/index.js"></script>
-     <!-- <script src="../storage/datapost.js"></script> -->
+    <!-- <script src="../storage/datapost.js"></script> -->
     <!-- <script src="../storage/dataComent.js"></script> -->
     <!-- <script src="../storage/dataUser.js"></script>  -->
 </body>
