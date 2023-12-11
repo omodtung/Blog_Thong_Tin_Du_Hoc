@@ -207,7 +207,7 @@ function logOut(idUser) {
               });
               let ex = JSON.stringify(users)
               window.localStorage.setItem('user', ex);
-              window.location.href = '../Home/index.html';
+              window.location.href = '../HomeForGuest/index.html';
        });
 }
 
@@ -215,7 +215,7 @@ function logOut(idUser) {
 function backUserSetting(){
        if(isLogin() == null){
               window.alert('Bạn chưa đăng nhập, hãy đăng nhập trước !!');
-              window.location.href = '../Home/index.html';
+              window.location.href = '../HomeForGuest/index.html';
        }
 }
 backUserSetting();
