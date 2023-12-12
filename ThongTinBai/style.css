@@ -550,7 +550,7 @@ section {
 .container-left .news-in-the-same-category ul {
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
+    text-align: left;
 }
 
 .container-left .news-in-the-same-category ul li {
