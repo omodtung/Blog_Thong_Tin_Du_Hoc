@@ -1,0 +1,148 @@
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+    <section class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+            <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body p-5">
+                                <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+                                <form id ="contact-form" name="contact-form"  method="post" action="../BE/addUser.php" onsubmit="return KiemTra()">
+
+                                    <div class="form-outline mb-4">
+                                        <input type="text" class="form-control form-control-lg" id="firstName" onfocus="this.placeholder=''" onblur="this.placeholder='Enter First name ...'" placeholder="Enter First name ..." name="fname" />
+                                        <label class="form-label" for="form3Example1cg">Your Name</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="text" class="form-control form-control-lg" id="email" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Email'" placeholder="Enter Email ..." name="email" />
+                                        <label class="form-label" for="form3Example3cg">Your Email</label>
+                                    </div>
+
+
+
+                                    <div class="form-outline mb-4">
+                                        <input type="text" class="form-control col-9" id="lastName" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Last name ...'" placeholder="Enter Last name ..." name="lname" />
+                                        <label class="form-label" for="form3Example3cg">Last Name</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="password" class="form-control form-control-lg" id="password" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Password'" placeholder="Enter Password ..." name="pass" />
+                                        <label class="form-label" for="form3Example4cg">Password</label>
+                                    </div>
+
+
+
+
+                                    <div class="form-outline mb-4">
+                                        <!-- <input type="password" id="form3Example4cdg" class="form-control form-control-lg" /> -->
+                                        <div class="row form-group">
+
+                                            <label for="date" class="col-sm-1 col-form-label"></label>
+
+                                            <div class="input-group date" id="datepicker">
+                                                <input type="text" class="form-control" name="birthdate" id="ngaysinh">
+                                                <span class="input-group-append">
+                                                    <span class="input-group-text bg-white">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </span>
+                                                </span>
+                                            </div>
+
+
+
+
+                                        </div>
+                                        <label class="form-label" for="form3Example4cdg">Birth Date</label>
+
+                                        <script type="text/javascript">
+                                            $(function() {
+                                                $('#datepicker').datepicker();
+                                            });
+                                        </script>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <div  class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                                            <input autofocus type="radio" class="btn-check" name="genderbtn" value="M" id="btnradio1">
+                                            <label class="btn btn-outline-primary rounded ms-5" for="btnradio1">Nam</label>
+
+                                            <input type="radio" class="btn-check" name="genderbtn" value="F" id="btnradio2">
+                                            <label class="btn btn-outline-primary rounded ms-2" for="btnradio2">Nu</label>
+
+                                        </div>
+
+
+                                        <label class="form-label" for="form3Example3cg">Gioi Tinh</label>
+                                    </div>
+
+                                    <div class="form-check d-flex justify-content-center mb-5">validateForm
+                                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
+                                        <label class="form-check-label" for="form2Example3g">
+                                            I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                                        </label>
+                                    </div>
+                                    <div class="button">
+
+
+
+
+                                        <div class="d-flex justify-content-center">
+                                            <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body submit">
+
+
+                                                <a onclick="KiemTra()">
+                                                    Register
+
+                                                </a>
+
+
+                                            </button>
+                                        </div>
+
+                                    </div>
+
+                                    <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!" class="fw-bold text-body"><u>Login here</u></a></p>
+
+                                </form>
+                                <div class="status" id="status"></div>
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </section>
+    <script src="./CheckingForm.js"></script>
+</body>
+
+</html>

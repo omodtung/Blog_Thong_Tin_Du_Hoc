@@ -54,14 +54,19 @@ $pass = $user[4];
 
 
         //         } 
+
+
         window.addEventListener("load", function() {
             setTimeout(
                 function open(event) {
                     document.querySelector(".form-login").style.display = "block";
-                }, 1000
-
+                },
+                1000
             )
         });
+
+
+        // document.forms["myForm"].submit();
     </script>
 
 </head>
@@ -85,7 +90,7 @@ $pass = $user[4];
             <div class="Email">
                 <img src="./image/mail_header.png" alt="mail-icon">
                 <div class="email-name">
-                    // document.forms["myForm"].submit(); <h3>Email</h3>
+                    <h3>Email</h3>
                     <h3 class="mail">lienhe@crv.vn</h3>
                 </div>
 
@@ -173,43 +178,53 @@ $pass = $user[4];
     <div class="form-login">
         <img class="back-to-login" width="20px" src="./image/arrow.png" alt="">
         <img class="close-form" width="20px" src="./image/close.png" alt="">
-        <h3>Đăng Nhập</h3>
+        <!-- <h3>Đăng Nhập</h3> -->
+        <h3> Chao User Quay lai</h3>
         <form onsubmit="return handleSubmit()">
             <div class="login-userName">
-                <input type="text" placeholder="Họ tên">
+                <input disabled type="text" placeholder="Họ tên" value="">
                 <div class="warning">
                     <img src="./image/exclamation.png" alt="">
                     <span>Họ tên không được để trống</span>
                 </div>
             </div>
             <div class="login-id">
-                <input type="text" placeholder="Tên đăng nhập" value ="<?= $tenDangNhap ?>">
+                <input type="text" disabled placeholder="Tên đăng nhập" value="<?= $tenDangNhap ?>">
                 <div class="warning">
                     <img src="./image/exclamation.png" alt="">
                     <span>Tên đăng nhập không được để trống</span>
                 </div>
             </div>
-            <div class="login-password">
-                <input type="text" placeholder="Mật khẩu" value ="<?= $pass ?>">
-                <div class="warning">
-                    <img src="./image/exclamation.png" alt="">
-                    <span>Mật khẩu không được để trống</span>
-                </div>
-            </div>
+
+
             <div class="login-repeatpass">
-                <input type="text" placeholder="Nhập lại mật khẩu">
+                <input type="text" disabled placeholder="NL mật khẩu" value="">
                 <div class="warning">
                     <img src="./image/exclamation.png" alt="">
                     <span>Mật khẩu lặp lại không đúng</span>
                 </div>
             </div>
-            <button type="submit">ĐĂNG KÝ </button>
-             <div class="register" onclick="register(event)">
+            <div class="login-password">
+                <input type="text" disabled placeholder="Mật khẩu" value="<?= $pass ?>">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Mật khẩu không được để trống</span>
+                </div>
+            </div>
+            <!-- <div class="login-repeatpass">
+                <input type="text" placeholder="Nhập lại mật khẩu" value="">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Mật khẩu lặp lại không đúng</span>
+                </div>
+            </div> -->
+            <button type="submit">Oke</button>
+            <div class="register" onclick="register(event)">
                 <span>Bạn chưa có tài khoản ?</span>
                 <a href="#">Đăng ký</a>
-            </div> 
-    </form>
-     </div>
+            </div>
+        </form>
+    </div>
 
 
 
@@ -249,13 +264,13 @@ $pass = $user[4];
              <p>
                 <input type ="submit" value="Submit"/>
             </p> -->
-            <!-- <button type="submit">ĐĂNG KÝ </button> -->
-            <!-- <div class="register" onclick="register(event)">
+    <!-- <button type="submit">ĐĂNG KÝ </button> -->
+    <!-- <div class="register" onclick="register(event)">
                 <span>Bạn chưa có tài khoản ?</span>
                 <a href="#">Đăng ký</a>
             </div> -->
-        <!-- </form> -->
-    <!-- </div> --> 
+    <!-- </form> -->
+    <!-- </div> -->
 
     <!-- section body start -->
     <section id="body" class="main-content-body">
