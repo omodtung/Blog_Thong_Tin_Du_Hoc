@@ -158,8 +158,8 @@ header {
 }
 .search-container button {
     position: absolute;
-    top: 17px;
-    right: -11px;
+    top: 16px;
+    right: 8px;
     border: 0;
     background: 0;
     transition: 0.3s;
