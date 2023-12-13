@@ -40,6 +40,19 @@ $pass = $user[4];
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+
+    <script>
+
+window.addEventListener("load", function() {
+            setTimeout(
+                function open(event) {
+                    document.querySelector(".form-login").style.display = "block";
+                },
+                1000
+            )
+        });
+
+    </script>
 </head>
 
 <body>
@@ -146,7 +159,9 @@ $pass = $user[4];
     <!-- header end -->
 
     <!-- form login and register -->
-    <div class="form-login">
+
+    <!-- code Login using local storage by APu -->
+    <!-- <div class="form-login">
         <img class="back-to-login" width="20px" src="./image/arrow.png" alt="">
         <img class="close-form" width="20px" src="./image/close.png" alt="">
         <h3>Đăng Nhập</h3>
@@ -185,8 +200,105 @@ $pass = $user[4];
                 <a href="#">Đăng ký</a>
             </div>
         </form>
-    </div>
+    </div> -->
     
+
+
+    <div class="form-login">
+        <img class="back-to-login" width="20px" src="./image/arrow.png" alt="">
+        <img class="close-form" width="20px" src="./image/close.png" alt="">
+        <h3>Đăng Nhập</h3>
+        <form onsubmit="return handleSubmit()">
+            <div class="login-userName">
+                <input disabled type="text" placeholder="Họ tên" value="">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Họ tên không được để trống</span>
+                </div>
+            </div>
+            <div class="login-id">
+                <input type="text" disabled placeholder="Tên đăng nhập" value="<?= $tenDangNhap ?>">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Tên đăng nhập không được để trống</span>
+                </div>
+            </div>
+
+
+            <div class="login-repeatpass">
+                <input type="text" disabled placeholder="NL mật khẩu" value="">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Mật khẩu lặp lại không đúng</span>
+                </div>
+            </div>
+            <div class="login-password">
+                <input type="text" disabled placeholder="Mật khẩu" value="<?= $pass ?>">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Mật khẩu không được để trống</span>
+                </div>
+            </div>
+            <!-- <div class="login-repeatpass">
+                <input type="text" placeholder="Nhập lại mật khẩu" value="">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Mật khẩu lặp lại không đúng</span>
+                </div>
+            </div> -->
+            <button type="submit">Oke</button>
+            <div class="register" onclick="register(event)">
+                <span>Bạn chưa có tài khoản ?</span>
+                <a href="#">Đăng ký</a>
+            </div>
+        </form>
+    </div>
+
+<!-- code login by The Tung follow to Code Login By Apu -->
+<!-- <form onsubmit="return handleSubmit()">
+            <div class="login-userName">
+                <input disabled type="text" placeholder="Họ tên" value="">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Họ tên không được để trống</span>
+                </div>
+            </div>
+            <div class="login-id">
+                <input type="text" disabled placeholder="Tên đăng nhập" value="<?= $tenDangNhap ?>">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Tên đăng nhập không được để trống</span>
+                </div>
+            </div>
+
+
+            <div class="login-repeatpass">
+                <input type="text" disabled placeholder="NL mật khẩu" value="">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Mật khẩu lặp lại không đúng</span>
+                </div>
+            </div>
+            <div class="login-password">
+                <input type="text" disabled placeholder="Mật khẩu" value="<?= $pass ?>">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Mật khẩu không được để trống</span>
+                </div>
+            </div>
+            <!-- <div class="login-repeatpass">
+                <input type="text" placeholder="Nhập lại mật khẩu" value="">
+                <div class="warning">
+                    <img src="./image/exclamation.png" alt="">
+                    <span>Mật khẩu lặp lại không đúng</span>
+                </div>
+            </div> -->
+            <button type="submit">Oke</button>
+            <div class="register" onclick="register(event)">
+                <span>Bạn chưa có tài khoản ?</span>
+                <a href="#">Đăng ký</a>
+            </div>
+        <!-- </form> --> -->
 
     <!-- section body start -->
     <section id="body" class="main-content-body">
