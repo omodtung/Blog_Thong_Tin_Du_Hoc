@@ -808,60 +808,85 @@ function checkRePass(valuePass, valueRepeatPass) {
   return false;
 }
 
+function checkBan(idUser) {
+  let use = window.localStorage.getItem('user');
+  let userArr = JSON.parse(use);
+
+  for (let i = 0; i < userArr.length; i++) {
+      let value = userArr[i];
+      if (value.idUser == idUser) {
+          if (value.state == '1') {
+              return false;
+          } else {
+              console.log(1);
+              window.alert('Tài khoản của bạn đã bị khóa! Hãy liên hệ ban quản trị để mở khóa');
+              return true;
+          }
+      }
+  }
+
+  // Nếu không tìm thấy người dùng, có thể xem xét trạng thái mặc định nếu cần
+  return false;
+}
+
 function setStateLogin(userId) {
   users.forEach((value) => {
-    if (value.idUser == userId) {
-      value.stateLogin = "1";
-    } else {
-      value.stateLogin = "0";
-    }
+      if (value.idUser == userId) {
+          value.stateLogin = "1";
+      } else {
+          value.stateLogin = "0";
+      }
   });
   let temp = JSON.stringify(users);
   window.localStorage.setItem("user", temp);
 }
 
+
+
 function checkLogin(userId, passWord) {
   //
   if (checkIdUser(userId) == true && checkPass(passWord) == true) {
-    let check = 0;
-    users.forEach((value) => {
-      if (value.idUser == userId && value.Password == passWord) {
-        check = 1;
-        setStateLogin(userId);
-        // kiểm tra xem có phải admin không
-        let adminSetting = document.querySelector(
-          ".admin-setting"
-        );
-        let adminSetting_onMobile = document.querySelector(
-          ".nav_mobile .admin-setting"
-        );
-        let userSetting = document.querySelector(
-          ".user-setting"
-        );
-        let userSetting_onMobile = document.querySelector(
-          ".nav_mobile .user-setting"
-        );
-        if (value.role == "admin") {
-          // hiện trang admin
-          adminSetting.style.display = "block";
-          adminSetting_onMobile.style.display = "block";
-          userSetting.style.display = "none";
-          userSetting_onMobile.style.display = "none";
-        } else {
-          adminSetting.style.display = "none";
-          adminSetting_onMobile.style.display = "none";
-          userSetting.style.display = "block";
-          userSetting_onMobile.style.display = "block";
-        }
+      let check = 0;
+      if (checkBan(userId) == false) {
+          users.forEach((value) => {
+              if (value.idUser == userId && value.Password == passWord) {
+                  check = 1;
+                  setStateLogin(userId);
+                  // kiểm tra xem có phải admin không
+                  let adminSetting = document.querySelector(
+                      ".admin-setting"
+                  );
+                  let adminSetting_onMobile = document.querySelector(
+                      ".nav_mobile .admin-setting"
+                  );
+                  let userSetting = document.querySelector(
+                      ".user-setting"
+                  );
+                  let userSetting_onMobile = document.querySelector(
+                      ".nav_mobile .user-setting"
+                  );
+                  if (value.role == "admin") {
+                      // hiện trang admin
+                      adminSetting.style.display = "block";
+                      adminSetting_onMobile.style.display = "block";
+                      userSetting.style.display = "none";
+                      userSetting_onMobile.style.display = "none";
+                  } else {
+                      adminSetting.style.display = "none";
+                      adminSetting_onMobile.style.display = "none";
+                      userSetting.style.display = "block";
+                      userSetting_onMobile.style.display = "block";
+                  }
+              }
+          });
       }
-    });
-    if (check == 1) {
-      return true;
-    } else {
-      warningUserId("Kiểm tra lại tên đăng nhập", true);
-      warningPass("Kiểm tra lại mật khẩu", true);
-      return false;
-    }
+      if (check == 1) {
+          return true;
+      } else {
+          warningUserId("Kiểm tra lại tên đăng nhập", true);
+          warningPass("Kiểm tra lại mật khẩu", true);
+          return false;
+      }
   }
   return false;
 }

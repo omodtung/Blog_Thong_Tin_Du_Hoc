@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Admin</title>
+       <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> -->
+       <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+       <link rel="stylesheet" href="./css/users.css">
+</head>
+
+<body>
+       <!-- start heading -->
+       <header>
+              <span>Admin Setting</span>
+              <img src="./image/logout.png" alt="" onclick="logOut()">
+       </header>
+       <!-- end -->
+       <!-- start body -->
+       <section class="main-content-body">
+              <div class="sidebar">
+                     <h3>MENU</h3>
+                     <ul>
+                            <li>
+                                   <a href="./posts.html">
+                                          <span class="icon"><i class="fa fa-file-text-o" aria-hidden="true"></i></span>
+                                          <span class="title">Quản lý bài đăng</span>
+                                   </a>
+
+                            </li>
+                            <li>
+                                   <a href="./coments.html">
+                                          <span class="icon"><i class="fa fa-comments" aria-hidden="true"></i></span>
+                                          <span class="title">Quản lý bình luận</span>
+                                   </a>
+
+                            </li>
+                            <li>
+                                   <a href="./Users.html">
+                                          <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                                          <span class="title">Quản lý người dùng</span>
+                                   </a>
+
+                            </li>
+                            <li>
+                                   <a href="../HomeForGuest/index.html">
+                                          <span class="icon"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                                          <span class="title">Trở về trang chủ</span>
+                                   </a>
+
+                            </li>
+                     </ul>
+              </div>
+              <div class="user-management-page">
+                     <h3>Quản lý bài người dùng</h3>
+                     <div class="action-filter-user">
+                            <label for="">Tìm kiếm: </label>
+                            <input oninput="filter()" type="text">
+                     </div>
+                     <div class="total-user">
+                            <table>
+                                   <tr>
+                                          <th>
+                                                 <span>ID Người dùng</span>
+                                          </th>
+                                          <th>
+                                                 <span>Họ tên</span>
+                                          </th>
+                                          <th>
+                                                 <span>Mật khẩu</span>
+                                          </th>
+                                          <th>
+                                                 <span>Vai trò</span>
+                                          </th>
+                                          <th>
+                                                 <span>Trạng thái</span>
+                                          </th>
+                                          <th>
+                                                 <span>Hành động</span>
+                                          </th>
+                                   </tr>
+                                   <tr>
+                                          <td class="id-user">
+                                                 <span class="value">null</span>
+                                          </td>
+                                          <td class="full-name">
+                                                 <span class="value">0</span>
+                                          </td>
+                                          <td class="password">
+                                                 <span class="value">0</span>
+                                          </td>
+                                          <td class="role">
+                                                 <span class="value">null</span>
+                                          </td>
+                                          <td class="state-user">
+                                                 <span class="value">null</span>
+                                          </td>
+                                          <td class="action-delete-user">
+                                                 <span><i class="fa fa-ban" aria-hidden="true"></i></span>
+                                                 <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                          </td>
+                                   </tr>
+                            </table>
+                     </div>
+              </div>
+       </section>
+       <!-- <script src="./js/coments.js"></script> -->
+       <script src="./js/users.js"></script>
+</body>
+
+</html>
