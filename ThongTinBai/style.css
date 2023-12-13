@@ -1581,7 +1581,7 @@ a:hover {
     max-width: 340px;
     width: 100%;
     /* margin-left: auto; */
-    margin: 0 0 0 45px;
+    margin: 0 0 0 147px;
 }
 
 .search-container-phat form {
@@ -1663,7 +1663,7 @@ a:hover {
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
     display: inline-block;
-    padding: 20px 19px;
+    padding: 20px 17px;
     color: #fff;
     text-decoration: none;
 }

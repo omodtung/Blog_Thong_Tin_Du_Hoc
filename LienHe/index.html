@@ -1,451 +1,673 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Liên hệ</title>
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="./img/logo.png"
+            style="width: 16px"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        />
+        <link
+            href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Liên hệ</title>
-    <link rel="shortcut icon" type="image/x-icon" href="./img/logo.png" style="width: 16px" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" />
-</head>
-
-<body>
-    <!-- header start -->
-    <header id="head">
-        <div class="header-phat">
-            <div class="content-phat">
-                <div class="logo-phat">
-                    <img src="./image/logo.png" alt="logo" />
-                </div>
-                <div class="text_header-phat">
-                    <div class="text-item-phat">
-                        <img src="./image/call_header.png" alt="icon-call" />
-                        <div class="item-phat">
-                            <span class="title-phat">Hotline</span>
-                            <span class="info-phat">0948.468.558</span>
+    <body>
+        <!-- header start -->
+        <header id="head">
+            <div class="header-phat">
+                <div class="content-phat">
+                    <div class="logo-phat">
+                        <img src="./image/logo.png" alt="logo" />
+                    </div>
+                    <div class="text_header-phat">
+                        <div class="text-item-phat">
+                            <img
+                                src="./image/call_header.png"
+                                alt="icon-call"
+                            />
+                            <div class="item-phat">
+                                <span class="title-phat">Hotline</span>
+                                <span class="info-phat">0948.468.558</span>
+                            </div>
+                        </div>
+                        <div class="text-item-phat">
+                            <img
+                                src="./image/mail_header.png"
+                                alt="icon-mail"
+                                width="36px"
+                                height="25px"
+                            />
+                            <div class="item-phat">
+                                <span class="title-phat">Email</span>
+                                <span class="info-phat">lienhe@crv.vn</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="text-item-phat">
-                        <img src="./image/mail_header.png" alt="icon-mail" width="36px" height="25px" />
-                        <div class="item-phat">
-                            <span class="title-phat">Email</span>
-                            <span class="info-phat">lienhe@crv.vn</span>
-                        </div>
+                    <div class="search-container-phat">
+                        <form action="#!">
+                            <input
+                                type="text"
+                                placeholder="Enter key search"
+                                class="input-text-phat"
+                            />
+                            <button type="submit">
+                                <img src="./image/search.png" alt="search" />
+                            </button>
+                        </form>
                     </div>
-                </div>
-                <div class="search-container-phat">
-                    <form action="#!">
-                        <input type="text" placeholder="Enter key search" class="input-text-phat" />
-                        <button type="submit">
-                            <img src="./image/search.png" alt="search" />
-                        </button>
-                    </form>
-                </div>
-                <div onclick="login(event)" class="login">
-                    <img style="cursor: pointer;" width="50px" src="./image/login.png" alt="Login" />
-                </div>
-                <!-- THEM ZO NE -->
+                    <div onclick="login(event)" class="login">
+                        <img
+                            style="cursor: pointer"
+                            width="50px"
+                            src="./image/login.png"
+                            alt="Login"
+                        />
+                    </div>
+                    <!-- THEM ZO NE -->
 
-                <label class="nav-btn-phat" for="input-check">
-                    <i class="fa-solid fa-bars fa-2xl" style="cursor: pointer"></i>
-                </label>
+                    <label class="nav-btn-phat" for="input-check">
+                        <i
+                            class="fa-solid fa-bars fa-2xl"
+                            style="cursor: pointer"
+                        ></i>
+                    </label>
+                </div>
             </div>
-        </div>
 
-        <nav class="navigation-phat">
-            <div class="content-phat">
+            <nav class="navigation-phat">
+                <div class="content-phat">
+                    <ul>
+                        <li>
+                            <a href="../HomeForGuest/index.html"
+                                ><i class="fa-solid fa-house"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="../page_gioithieu/pagegioithieu.html"
+                                >GIỚI THIỆU</a
+                            >
+                        </li>
+                        <li>
+                            <a href="../SanPham/NationalUni.html">DỊCH VỤ</a>
+                        </li>
+                        <li>
+                            <a href="../page-quocgiaduhoc/quocgiaduhoc.html"
+                                >QUỐC GIA DU HỌC
+                            </a>
+                            <ul class="sub-menu-phat">
+                                <li>
+                                    <a
+                                        href="../page-quocgiaduhoc/du_hoc_han_quoc.html"
+                                        >Du học Hàn Quốc</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="../page-quocgiaduhoc/du_hoc_nhat_ban.html"
+                                        >Du học Nhật Bản</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="../page-quocgiaduhoc/du_hoc_dai_loan.html"
+                                        >Du học Đài Loan</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../Tung/HoiThaoDuHoc.html"
+                                >HỘI THẢO DU HỌC</a
+                            >
+                        </li>
+                        <li>
+                            <a href="../Tung/ThuVien.html">THƯ VIỆN</a>
+                        </li>
+                        <li>
+                            <a href="../page_event/pagesk.html"
+                                >TIN TỨC, SỰ KIỆN</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="../LienHe/index.html"
+                                style="background-color: #1a60a4"
+                                >LIÊN HỆ</a
+                            >
+                        </li>
+                        <li>
+                            <a href="../Tung/contact.html">ĐỊA CHỈ</a>
+                        </li>
+                        <li class="admin-setting">
+                            <a href="../AdminPage/posts.html"> ADMIN </a>
+                        </li>
+                        <li class="user-setting">
+                            <a href="../UserPage/index.html"> USER </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- INPUT -->
+        </header>
+        <div class="navigation_mobile">
+            <input
+                type="checkbox"
+                name=""
+                hidden
+                class="nav_input"
+                id="input-check"
+            />
+            <!-- NAV MOBILE -->
+            <nav class="nav_mobile">
+                <label class="close-icon" for="input-check">
+                    <i class="fa-solid fa-square-xmark"></i>
+                </label>
+
                 <ul>
-                    <li>
-                        <a href="../HomeForGuest/index.html"><i class="fa-solid fa-house"></i></a>
-                    </li>
-                    <li>
-                        <a href="../page_gioithieu/pagegioithieu.html">GIỚI THIỆU</a>
-                    </li>
-                    <li>
-                        <a href="../SanPham/NationalUni.html">DỊCH VỤ</a>
-                    </li>
-                    <li>
-                        <a href="../page-quocgiaduhoc/quocgiaduhoc.html">QUỐC GIA DU HỌC
+                    <li class="login-mobile">
+                        <a onclick="login(event)" href="#!"
+                            ><i class="fa-solid fa-right-to-bracket"></i>
+                            <span>Đăng nhập</span>
                         </a>
+                    </li>
+                    <li>
+                        <a href="../HomeForGuest/index.html"
+                            ><i class="fa-solid fa-house"></i
+                        ></a>
+                    </li>
+                    <li>
+                        <a href="../page_gioithieu/pagegioithieu.html"
+                            >Giới thiệu</a
+                        >
+                    </li>
+                    <li>
+                        <a href="../SanPham/NationalUni.html">Dịch vụ</a>
+                    </li>
+                    <li>
+                        <a href="../page-quocgiaduhoc/quocgiaduhoc.html"
+                            >Quốc gia du học</a
+                        >
+                        <input
+                            type="checkbox"
+                            hidden
+                            class="nav-input-submenu"
+                            id="input-submenu"
+                        />
+                        <label class="plus" for="input-submenu">+</label>
+                        <label class="minus" for="input-submenu">-</label>
+
                         <ul class="sub-menu-phat">
                             <li>
-                                <a href="../page-quocgiaduhoc/du_hoc_han_quoc.html">Du học Hàn Quốc</a>
+                                <a
+                                    href="../page-quocgiaduhoc/du_hoc_han_quoc.html"
+                                    >Du học Hàn Quốc</a
+                                >
                             </li>
                             <li>
-                                <a href="../page-quocgiaduhoc/du_hoc_nhat_ban.html">Du học Nhật Bản</a>
+                                <a
+                                    href="../page-quocgiaduhoc/du_hoc_nhat_ban.html"
+                                    >Du học Nhật Bản</a
+                                >
                             </li>
                             <li>
-                                <a href="../page-quocgiaduhoc/du_hoc_dai_loan.html">Du học Đài Loan</a>
+                                <a
+                                    href="../page-quocgiaduhoc/du_hoc_dai_loan.html"
+                                    >Du học Đài Loan</a
+                                >
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="../Tung/HoiThaoDuHoc.html">HỘI THẢO DU HỌC</a>
+                        <a href="../Tung/HoiThaoDuHoc.html">Hội thảo du học</a>
                     </li>
                     <li>
-                        <a href="../Tung/ThuVien.html">THƯ VIỆN</a>
+                        <a href="../Tung/ThuVien.html">Thư viện</a>
                     </li>
                     <li>
-                        <a href="../page_event/pagesk.html">TIN TỨC, SỰ KIỆN</a>
+                        <a href="../page_event/pagesk.html">Tin tức, sự kiện</a>
                     </li>
                     <li>
-                        <a href="../LienHe/index.html" style="background-color: #1a60a4;">LIÊN HỆ</a>
+                        <a href="../LienHe/index.html">Liên hệ</a>
                     </li>
-                    <li class="admin-setting">
-                        <a href="../AdminPage/posts.html">
-                            ADMIN
+                    <li style="display: none" class="admin-setting">
+                        <a href="../AdminPage/posts.html"> ADMIN </a>
+                    </li>
+                    <li style="display: none" class="user-setting">
+                        <a href="../UserPage/index.html"> USER </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Thêm cái overley zo -->
+            <label class="overley-phat" for="input-check"></label>
+        </div>
+        <!-- header end -->
+
+        <!-- form login and register -->
+        <div class="form-login">
+            <div class="form-container-login">
+                <img
+                    class="back-to-login"
+                    width="20px"
+                    src="./image/arrow.png"
+                    alt=""
+                />
+                <img
+                    class="close-form"
+                    width="20px"
+                    src="./image/close.png"
+                    alt=""
+                />
+                <h3>Đăng Nhập</h3>
+                <form onsubmit="return handleSubmit()">
+                    <div class="login-userName">
+                        <input type="text" placeholder="Họ tên" />
+                        <div class="warning">
+                            <img src="./image/exclamation.png" alt="" />
+                            <span>Họ tên không được để trống</span>
+                        </div>
+                    </div>
+                    <div class="login-id">
+                        <input type="text" placeholder="Tên đăng nhập" />
+                        <div class="warning">
+                            <img src="./image/exclamation.png" alt="" />
+                            <span>Tên đăng nhập không được để trống</span>
+                        </div>
+                    </div>
+                    <div class="login-password">
+                        <input type="text" placeholder="Mật khẩu" />
+                        <div class="warning">
+                            <img src="./image/exclamation.png" alt="" />
+                            <span>Mật khẩu không được để trống</span>
+                        </div>
+                    </div>
+                    <div class="login-repeatpass">
+                        <input type="text" placeholder="Nhập lại mật khẩu" />
+                        <div class="warning">
+                            <img src="./image/exclamation.png" alt="" />
+                            <span>Mật khẩu lặp lại không đúng</span>
+                        </div>
+                    </div>
+                    <button type="submit">ĐĂNG KÝ</button>
+                    <div class="register" onclick="register(event)">
+                        <span>Bạn chưa có tài khoản ?</span>
+                        <a href="#">Đăng ký</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- start section body  -->
+        <section id="body" class="main-content-body">
+            <div class="image-study-abroad">
+                <img src="./image/banner-du-học.png" alt="image-1" />
+                <img
+                    src="./image/banner-web-du-hoc-1900x630.jpg"
+                    alt="image-2"
+                />
+                <img src="./image/banner.jpg" alt="image-3" />
+            </div>
+            <div class="container-path">
+                <ul>
+                    <li>
+                        <a href="../HomeForGuest/index.html">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            <span class="home-icon">Home</span>
+                            <i class="fa-solid fa-angle-right"></i>
                         </a>
                     </li>
-                    <li class="user-setting">
-                        <a href="../UserPage/index.html">
-                            USER
+                    <li>
+                        <a href="./index.html">
+                            <span>Liên hệ</span>
                         </a>
                     </li>
                 </ul>
             </div>
-        </nav>
 
-        <!-- INPUT -->
-    </header>
-    <div class="navigation_mobile">
-        <input type="checkbox" name="" hidden class="nav_input" id="input-check" />
-        <!-- NAV MOBILE -->
-        <nav class="nav_mobile">
-            <label class="close-icon" for="input-check">
-                <i class="fa-solid fa-square-xmark"></i>
-            </label>
-
-            <ul>
-                <li class="login-mobile">
-                    <a onclick="login(event)" href="#!"><i class="fa-solid fa-right-to-bracket"></i>
-                        <span>Đăng nhập</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="../HomeForGuest/index.html"><i class="fa-solid fa-house"></i></a>
-                </li>
-                <li>
-                    <a href="../page_gioithieu/pagegioithieu.html">Giới thiệu</a>
-                </li>
-                <li>
-                    <a href="../SanPham/NationalUni.html">Dịch vụ</a>
-                </li>
-                <li>
-                    <a href="../page-quocgiaduhoc/quocgiaduhoc.html">Quốc gia du học</a>
-                    <input type="checkbox" hidden class="nav-input-submenu" id="input-submenu" />
-                    <label class="plus" for="input-submenu">+</label>
-                    <label class="minus" for="input-submenu">-</label>
-
-                    <ul class="sub-menu-phat">
-                        <li>
-                            <a href="../page-quocgiaduhoc/du_hoc_han_quoc.html">Du học Hàn Quốc</a>
-                        </li>
-                        <li>
-                            <a href="../page-quocgiaduhoc/du_hoc_nhat_ban.html">Du học Nhật Bản</a>
-                        </li>
-                        <li>
-                            <a href="../page-quocgiaduhoc/du_hoc_dai_loan.html">Du học Đài Loan</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="../Tung/HoiThaoDuHoc.html">Hội thảo du học</a>
-                </li>
-                <li>
-                    <a href="../Tung/ThuVien.html">Thư viện</a>
-                </li>
-                <li>
-                    <a href="../page_event/pagesk.html">Tin tức, sự kiện</a>
-                </li>
-                <li>
-                    <a href="../LienHe/index.html">Liên hệ</a>
-                </li>
-                <li style="display: none" class="admin-setting">
-                    <a href="../AdminPage/posts.html">
-                        ADMIN
-                    </a>
-                </li>
-                <li style="display: none" class="user-setting">
-                    <a href="../UserPage/index.html">
-                        USER
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <!-- Thêm cái overley zo -->
-        <label class="overley-phat" for="input-check"></label>
-    </div>
-    <!-- header end -->
-
-    <!-- form login and register -->
-    <div class="form-login">
-        <div class="form-container-login">
-            <img class="back-to-login" width="20px" src="./image/arrow.png" alt="" />
-            <img class="close-form" width="20px" src="./image/close.png" alt="" />
-            <h3>Đăng Nhập</h3>
-            <form onsubmit="return handleSubmit()">
-                <div class="login-userName">
-                    <input type="text" placeholder="Họ tên" />
-                    <div class="warning">
-                        <img src="./image/exclamation.png" alt="" />
-                        <span>Họ tên không được để trống</span>
+            <div class="contact-info">
+                <div class="infor-about-us">
+                    <div class="address">
+                        <h2>CÔNG TY CREATIVE VIETNAM</h2>
+                        <ul>
+                            <li>
+                                <span class="icon"
+                                    ><i
+                                        class="fa fa-home"
+                                        aria-hidden="true"
+                                    ></i
+                                ></span>
+                                <span class="text"
+                                    >Địa chỉ : N06, 82 Nguyễn Tuân, Thanh Xuân,
+                                    HN</span
+                                >
+                            </li>
+                            <li>
+                                <span class="icon"
+                                    ><i
+                                        class="fa fa-phone"
+                                        aria-hidden="true"
+                                    ></i
+                                ></span>
+                                <span class="text"
+                                    >Hotline : 0973872184 - 0834570092</span
+                                >
+                            </li>
+                            <li>
+                                <span class="icon"
+                                    ><i
+                                        class="fa fa-envelope"
+                                        aria-hidden="true"
+                                    ></i
+                                ></span>
+                                <span class="text">Email: lienhe@crv.vn</span>
+                            </li>
+                            <li>
+                                <span class="icon"
+                                    ><i
+                                        class="fa fa-globe"
+                                        aria-hidden="true"
+                                    ></i
+                                ></span>
+                                <span class="text"
+                                    >Website: thietkewebsite.pro.vn</span
+                                >
+                            </li>
+                        </ul>
                     </div>
-                </div>
-                <div class="login-id">
-                    <input type="text" placeholder="Tên đăng nhập" />
-                    <div class="warning">
-                        <img src="./image/exclamation.png" alt="" />
-                        <span>Tên đăng nhập không được để trống</span>
-                    </div>
-                </div>
-                <div class="login-password">
-                    <input type="text" placeholder="Mật khẩu" />
-                    <div class="warning">
-                        <img src="./image/exclamation.png" alt="" />
-                        <span>Mật khẩu không được để trống</span>
-                    </div>
-                </div>
-                <div class="login-repeatpass">
-                    <input type="text" placeholder="Nhập lại mật khẩu" />
-                    <div class="warning">
-                        <img src="./image/exclamation.png" alt="" />
-                        <span>Mật khẩu lặp lại không đúng</span>
-                    </div>
-                </div>
-                <button type="submit">ĐĂNG KÝ</button>
-                <div class="register" onclick="register(event)">
-                    <span>Bạn chưa có tài khoản ?</span>
-                    <a href="#">Đăng ký</a>
-                </div>
-            </form>
-        </div>
-    </div>
-    <!-- start section body  -->
-    <section id="body" class="main-content-body">
-        <div class="image-study-abroad">
-            <img src="./image/banner-du-học.png" alt="image-1" />
-            <img src="./image/banner-web-du-hoc-1900x630.jpg" alt="image-2" />
-            <img src="./image/banner.jpg" alt="image-3" />
-        </div>
-        <div class="container-path">
-            <ul>
-                <li>
-                    <a href="../HomeForGuest/index.html">
-                        <i class="fa fa-home" aria-hidden="true"></i>
-                        <span class="home-icon">Home</span>
-                        <i class="fa-solid fa-angle-right"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="./index.html">
-                        <span>Liên hệ</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+                    <div class="form">
+                        <h2>GỬI THÔNG TIN LIÊN HỆ</h2>
+                        <form
+                            id="contact-form"
+                            name="contact-form"
+                            action="../Tung/BE/mail.php"
+                            method="POST"
+                            onsubmit="return validateForm()"
+                        >
+                            <!-- <input type="text" placeholder="Họ và tên"> -->
 
-        <div class="contact-info">
-            <div class="infor-about-us">
-                <div class="address">
-                    <h2>CÔNG TY CREATIVE VIETNAM</h2>
-                    <ul>
-                        <li>
-                            <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
-                            <span class="text">Địa chỉ : N06, 82 Nguyễn Tuân, Thanh Xuân,
-                                HN</span>
-                        </li>
-                        <li>
-                            <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
-                            <span class="text">Hotline : 0973872184 - 0834570092</span>
-                        </li>
-                        <li>
-                            <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-                            <span class="text">Email: lienhe@crv.vn</span>
-                        </li>
-                        <li>
-                            <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
-                            <span class="text">Website: thietkewebsite.pro.vn</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="form">
-                    <h2>GỬI THÔNG TIN LIÊN HỆ</h2>
-                    <form id="contact-form" name="contact-form" action="../Tung/BE/mail.php" method="POST"
-                        onsubmit="return validateForm()">
-                        <!-- <input type="text" placeholder="Họ và tên"> -->
+                            <input
+                                placeholder="Họ và tên"
+                                type="text"
+                                id="name"
+                                name="name"
+                                class="form-control"
+                            />
+                            <!-- <input type="text" placeholder="Điện thoại"> -->
 
-                        <input placeholder="Họ và tên" type="text" id="name" name="name" class="form-control" />
-                        <!-- <input type="text" placeholder="Điện thoại"> -->
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                class="form-control"
+                                placeholder="Dien Thoai"
+                            />
+                            <!-- <input type="text" placeholder="Email của bạn"> -->
+                            <input
+                                type="text"
+                                id="email"
+                                name="email"
+                                class="form-control"
+                                placeholder="Email của bạn"
+                            />
+                            <!-- <textarea name="" id="" cols="30" rows="2" placeholder="Nội dung"></textarea> -->
 
-                        <input type="text" id="subject" name="subject" class="form-control" placeholder="Dien Thoai" />
-                        <!-- <input type="text" placeholder="Email của bạn"> -->
-                        <input type="text" id="email" name="email" class="form-control" placeholder="Email của bạn" />
-                        <!-- <textarea name="" id="" cols="30" rows="2" placeholder="Nội dung"></textarea> -->
+                            <textarea
+                                type="text"
+                                id="message"
+                                name="message"
+                                class="md-textarea"
+                                placeholder="Nội dung"
+                            ></textarea>
+                            <div class="button">
+                                <button type="submit" class="submit">
+                                    <!-- <a href="#">GỬI YÊU CẦU</a> -->
+                                    <a onclick="validateForm()">GỬI</a>
+                                </button>
+                                <button class="reload">
+                                    <a href="#">NHẬP LẠI</a>
+                                </button>
+                            </div>
+                        </form>
 
-                        <textarea type="text" id="message" name="message" class="md-textarea"
-                            placeholder="Nội dung"></textarea>
-                        <div class="button">
-                            <button type="submit" class="submit">
-                                <!-- <a href="#">GỬI YÊU CẦU</a> -->
-                                <a onclick="validateForm()">GỬI</a>
-                            </button>
-                            <button class="reload">
-                                <a href="#">NHẬP LẠI</a>
-                            </button>
-                        </div>
-                    </form>
-
-                    <div class="status" id="status"></div>
-                    <!-- <div class="center-on-small-only">
+                        <div class="status" id="status"></div>
+                        <!-- <div class="center-on-small-only">
                         <a class="btn btn-primary" onclick="validateForm()">Send</a>
                     </div> <div class="status" id="status"></div> -->
-                </div>
-            </div>
-            <div class="map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.735159338553!2d105.80197467499985!3d21.003250788654757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aca26246de77%3A0x8b427c1ca65e7159!2zMjcgxJAuIEzDqiBWxINuIEzGsMahbmcsIE5ow6JuIENow61uaCwgVGhhbmggWHXDom4sIEjDoCBO4buZaSAxMDAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2sus!4v1698589374937!5m2!1svi!2sus"
-                    width="580" height="580" style="border: 0" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
-    <!-- section body end -->
-
-    <!-- footer start -->
-    <footer>
-        <div class="head-footer">
-            <div class="content">
-                <i class="fa-solid fa-greater-than fa-rotate-180 fa-2xl"></i>
-
-                <div class="img-wrap">
-                    <img src="./image/doitac1.png" alt="footer img" />
-                    <img src="./image/doitac2.jpg" alt="footer img" />
-                    <img src="./image/doitac3.jpg" alt="footer img" />
-                    <img src="./image/doitac4.jpg" alt="footer img" />
-                    <img src="./image/doitac5.jpg" alt="footer img" />
-                    <img src="./image/doitac6.jpg" alt="footer img" />
-                </div>
-
-                <i class="fa-solid fa-greater-than fa-2xl"></i>
-            </div>
-        </div>
-        <div class="center-footer">
-            <div class="content">
-                <div class="footer-item contact">
-                    <h2>CÔNG TY THIẾT KẾ WEBSITE CREATIVE VIỆT NAM</h2>
-                    <div class="info-contact">
-                        <div class="row">
-                            <i class="fa-solid fa-house" style="color: white; margin-right: 13px"></i>
-                            <span>Địa chỉ : N06, 82 Nguyễn Tuân, Thanh Xuân,
-                                HN</span>
-                        </div>
-                        <div class="row">
-                            <i class="fa-solid fa-phone-flip" style="color: #fff; margin-right: 13px"></i>
-                            <span>Hotline : 0973872184 - 0834570092</span>
-                        </div>
-                        <div class="row">
-                            <i class="fa-solid fa-envelope" style="color: #fff; margin-right: 13px"></i>
-                            <span>Email : lienhe@crv.vn</span>
-                        </div>
-                        <div class="row">
-                            <i class="fas fa-globe" aria-hidden="true" style="color: #fff; margin-right: 13px"></i>
-                            <span>Địa chỉ : N06, 82 Nguyễn Tuân, Thanh Xuân,
-                                HN</span>
-                        </div>
                     </div>
                 </div>
-                <div class="footer-item access">
-                    <h2>TRUY CẬP NHANH</h2>
-                    <div class="fast-access">
-                        <div class="row">
-                            <i class="fa-regular fa-greater-than fa-2xs fa-2xs"
-                                style="color: #fff; margin-right: 12px"></i>
-                            <a href="../page_gioithieu/pagegioithieu.html">Giới thiệu</a>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.735159338553!2d105.80197467499985!3d21.003250788654757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aca26246de77%3A0x8b427c1ca65e7159!2zMjcgxJAuIEzDqiBWxINuIEzGsMahbmcsIE5ow6JuIENow61uaCwgVGhhbmggWHXDom4sIEjDoCBO4buZaSAxMDAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2sus!4v1698589374937!5m2!1svi!2sus"
+                        width="580"
+                        height="580"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </div>
+        </section>
+        <!-- section body end -->
+
+        <!-- footer start -->
+        <footer>
+            <div class="head-footer">
+                <div class="content">
+                    <i
+                        class="fa-solid fa-greater-than fa-rotate-180 fa-2xl"
+                    ></i>
+
+                    <div class="img-wrap">
+                        <img src="./image/doitac1.png" alt="footer img" />
+                        <img src="./image/doitac2.jpg" alt="footer img" />
+                        <img src="./image/doitac3.jpg" alt="footer img" />
+                        <img src="./image/doitac4.jpg" alt="footer img" />
+                        <img src="./image/doitac5.jpg" alt="footer img" />
+                        <img src="./image/doitac6.jpg" alt="footer img" />
+                    </div>
+
+                    <i class="fa-solid fa-greater-than fa-2xl"></i>
+                </div>
+            </div>
+            <div class="center-footer">
+                <div class="content">
+                    <div class="footer-item contact">
+                        <h2>CÔNG TY THIẾT KẾ WEBSITE CREATIVE VIỆT NAM</h2>
+                        <div class="info-contact">
+                            <div class="row">
+                                <i
+                                    class="fa-solid fa-house"
+                                    style="color: white; margin-right: 13px"
+                                ></i>
+                                <span
+                                    >Địa chỉ : N06, 82 Nguyễn Tuân, Thanh Xuân,
+                                    HN</span
+                                >
+                            </div>
+                            <div class="row">
+                                <i
+                                    class="fa-solid fa-phone-flip"
+                                    style="color: #fff; margin-right: 13px"
+                                ></i>
+                                <span>Hotline : 0973872184 - 0834570092</span>
+                            </div>
+                            <div class="row">
+                                <i
+                                    class="fa-solid fa-envelope"
+                                    style="color: #fff; margin-right: 13px"
+                                ></i>
+                                <span>Email : lienhe@crv.vn</span>
+                            </div>
+                            <div class="row">
+                                <i
+                                    class="fas fa-globe"
+                                    aria-hidden="true"
+                                    style="color: #fff; margin-right: 13px"
+                                ></i>
+                                <span
+                                    >Địa chỉ : N06, 82 Nguyễn Tuân, Thanh Xuân,
+                                    HN</span
+                                >
+                            </div>
                         </div>
-                        <div class="row">
-                            <i class="fa-regular fa-greater-than fa-2xs" style="color: #fff; margin-right: 12px"></i>
-                            <a href="../SanPham/NationalUni.html">Dịch vụ</a>
-                        </div>
-                        <div class="row">
-                            <i class="fa-regular fa-greater-than fa-2xs" style="color: #fff; margin-right: 12px"></i>
-                            <a href="../page-quocgiaduhoc/quocgiaduhoc.html">Quốc gia du học
-                                <div class="sub-menu">
-                                    <div class="row-sub">
-                                        <i class="fa-regular fa-greater-than fa-2xs" style="
+                    </div>
+                    <div class="footer-item access">
+                        <h2>TRUY CẬP NHANH</h2>
+                        <div class="fast-access">
+                            <div class="row">
+                                <i
+                                    class="fa-regular fa-greater-than fa-2xs fa-2xs"
+                                    style="color: #fff; margin-right: 12px"
+                                ></i>
+                                <a href="../page_gioithieu/pagegioithieu.html"
+                                    >Giới thiệu</a
+                                >
+                            </div>
+                            <div class="row">
+                                <i
+                                    class="fa-regular fa-greater-than fa-2xs"
+                                    style="color: #fff; margin-right: 12px"
+                                ></i>
+                                <a href="../SanPham/NationalUni.html"
+                                    >Dịch vụ</a
+                                >
+                            </div>
+                            <div class="row">
+                                <i
+                                    class="fa-regular fa-greater-than fa-2xs"
+                                    style="color: #fff; margin-right: 12px"
+                                ></i>
+                                <a href="../page-quocgiaduhoc/quocgiaduhoc.html"
+                                    >Quốc gia du học
+                                    <div class="sub-menu">
+                                        <div class="row-sub">
+                                            <i
+                                                class="fa-regular fa-greater-than fa-2xs"
+                                                style="
                                                     color: #fff;
                                                     margin-right: 12px;
-                                                "></i>
-                                        <a href="../page-quocgiaduhoc/du_hoc_han_quoc.html">Du học Hàn Quốc</a>
-                                    </div>
-                                    <div class="row-sub">
-                                        <i class="fa-regular fa-greater-than fa-2xs" style="
+                                                "
+                                            ></i>
+                                            <a
+                                                href="../page-quocgiaduhoc/du_hoc_han_quoc.html"
+                                                >Du học Hàn Quốc</a
+                                            >
+                                        </div>
+                                        <div class="row-sub">
+                                            <i
+                                                class="fa-regular fa-greater-than fa-2xs"
+                                                style="
                                                     color: #fff;
                                                     margin-right: 12px;
-                                                "></i>
-                                        <a href="../page-quocgiaduhoc/du_hoc_nhat_ban.html">Du học Nhật Bản</a>
-                                    </div>
-                                    <div class="row-sub">
-                                        <i class="fa-regular fa-greater-than fa-2xs" style="
+                                                "
+                                            ></i>
+                                            <a
+                                                href="../page-quocgiaduhoc/du_hoc_nhat_ban.html"
+                                                >Du học Nhật Bản</a
+                                            >
+                                        </div>
+                                        <div class="row-sub">
+                                            <i
+                                                class="fa-regular fa-greater-than fa-2xs"
+                                                style="
                                                     color: #fff;
                                                     margin-right: 12px;
-                                                "></i>
-                                        <a href="../page-quocgiaduhoc/du_hoc_dai_loan.html">Du học Đài Loan</a>
+                                                "
+                                            ></i>
+                                            <a
+                                                href="../page-quocgiaduhoc/du_hoc_dai_loan.html"
+                                                >Du học Đài Loan</a
+                                            >
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="row">
-                            <i class="fa-regular fa-greater-than fa-2xs" style="color: #fff; margin-right: 12px"></i>
-                            <a href="../Tung/HoiThaoDuHoc.html">Hội thảo du học</a>
-                        </div>
-                        <div class="row">
-                            <i class="fa-regular fa-greater-than fa-2xs" style="color: #fff; margin-right: 12px"></i>
-                            <a href="../Tung/ThuVien.html">Thư viện</a>
-                        </div>
-                        <div class="row">
-                            <i class="fa-regular fa-greater-than fa-2xs" style="color: #fff; margin-right: 12px"></i>
-                            <a href="../page_event/pagesk.html">Tin tức, sự kiện</a>
-                        </div>
-                        <div class="row">
-                            <i class="fa-regular fa-greater-than fa-2xs" style="color: #fff; margin-right: 12px"></i>
-                            <a href="./index.html">Liên hệ</a>
+                                </a>
+                            </div>
+                            <div class="row">
+                                <i
+                                    class="fa-regular fa-greater-than fa-2xs"
+                                    style="color: #fff; margin-right: 12px"
+                                ></i>
+                                <a href="../Tung/HoiThaoDuHoc.html"
+                                    >Hội thảo du học</a
+                                >
+                            </div>
+                            <div class="row">
+                                <i
+                                    class="fa-regular fa-greater-than fa-2xs"
+                                    style="color: #fff; margin-right: 12px"
+                                ></i>
+                                <a href="../Tung/ThuVien.html">Thư viện</a>
+                            </div>
+                            <div class="row">
+                                <i
+                                    class="fa-regular fa-greater-than fa-2xs"
+                                    style="color: #fff; margin-right: 12px"
+                                ></i>
+                                <a href="../page_event/pagesk.html"
+                                    >Tin tức, sự kiện</a
+                                >
+                            </div>
+                            <div class="row">
+                                <i
+                                    class="fa-regular fa-greater-than fa-2xs"
+                                    style="color: #fff; margin-right: 12px"
+                                ></i>
+                                <a href="./index.html">Liên hệ</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="footer-item fanpage-h">
-                    <h2>FANPAGE</h2>
-                    <div class="fanpage">
-                        <img src="./image/Ảnh chụp màn hình 2023-10-19 120620.png" alt="" />
+                    <div class="footer-item fanpage-h">
+                        <h2>FANPAGE</h2>
+                        <div class="fanpage">
+                            <img
+                                src="./image/Ảnh chụp màn hình 2023-10-19 120620.png"
+                                alt=""
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="end-footer">
-            <div class="content">
-                <p>
-                    Copyright @ 2020 creative vietnam.vn. All rights
-                    reserved.
-                </p>
-                <div class="online">
-                    <div class="onl-item">
-                        <i class="fas fa-signal" aria-hidden="true" style="color: #fff"></i>
-                        <span>Online : 2</span>
-                    </div>
-                    <div class="onl-item">
-                        <i class="fas fa-users" aria-hidden="true" style="color: #fff"></i>
-                        <span>Tổng truy cập : 56671</span>
+            <div class="end-footer">
+                <div class="content">
+                    <p>
+                        Copyright @ 2020 creative vietnam.vn. All rights
+                        reserved.
+                    </p>
+                    <div class="online">
+                        <div class="onl-item">
+                            <i
+                                class="fas fa-signal"
+                                aria-hidden="true"
+                                style="color: #fff"
+                            ></i>
+                            <span>Online : 2</span>
+                        </div>
+                        <div class="onl-item">
+                            <i
+                                class="fas fa-users"
+                                aria-hidden="true"
+                                style="color: #fff"
+                            ></i>
+                            <span>Tổng truy cập : 56671</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div style="cursor: pointer;" class="arrow-up button-to-top">
-            <i class="fas fa-arrow-up hello" aria-hidden="true"></i>
-        </div>
-    </footer>
-    <!-- end footer -->
-    <script src="./index.js"></script>
-</body>
-
+            <div style="cursor: pointer" class="arrow-up button-to-top">
+                <i class="fas fa-arrow-up hello" aria-hidden="true"></i>
+            </div>
+        </footer>
+        <!-- end footer -->
+        <script src="./index.js"></script>
+    </body>
 </html>

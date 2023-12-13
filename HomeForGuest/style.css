@@ -1746,17 +1746,17 @@ a:hover {
     .container-news {
         flex-direction: column;
     }
-    .posts-1 .container-news{
+    .posts-1 .container-news {
         margin-left: 30px;
     }
     .container-left {
         padding-bottom: 20px;
         width: 100%;
     }
-    .container-left .image-news img{
+    .container-left .image-news img {
         width: 85%;
     }
-    .admissions-news h2{
+    .admissions-news h2 {
         margin-left: 30px;
     }
     .content .calender-watch {
@@ -1848,7 +1848,7 @@ a:hover {
     .end-footer .content-footer .online {
         justify-content: center;
     }
-    .fanpage img{
+    .fanpage img {
         max-width: 50%;
     }
 }
@@ -1908,7 +1908,7 @@ a:hover {
     max-width: 340px;
     width: 100%;
     /* margin-left: auto; */
-    margin: 0 0 0 45px;
+    margin: 0 0 0 147px;
 }
 
 .search-container-phat form {

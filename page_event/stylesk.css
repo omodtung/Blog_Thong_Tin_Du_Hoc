@@ -17,7 +17,7 @@ a {
     text-decoration: none;
     color: #333;
 }
-p{
+p {
     margin-bottom: 0 !important;
 }
 a:hover {
@@ -74,7 +74,7 @@ body {
     max-width: 340px;
     width: 100%;
     /* margin-left: auto; */
-    margin: 0 0 0 45px;
+    margin: 0 0 0 147px;
 }
 
 .search-container form {
@@ -161,7 +161,7 @@ body {
     font-weight: bold;
     display: inline-block;
     font-size: 15px;
-    padding: 20px 19px;
+    padding: 20px 18px;
     color: #fff;
     text-decoration: none;
 }
@@ -232,17 +232,17 @@ body {
     align-items: center;
     display: none;
 }
-.form-login .close-form{
+.form-login .close-form {
     position: absolute;
     right: 5px;
     top: 2px;
 }
-.form-login .back-to-login{
+.form-login .back-to-login {
     position: absolute;
     left: 5px;
     top: 2px;
 }
-.form-login h3{
+.form-login h3 {
     font-family: var(--font-name-bold);
     font-size: 30px;
     text-align: center;
@@ -250,7 +250,7 @@ body {
     margin-bottom: 30px;
     color: #ea7c69;
 }
-.form-login form input{
+.form-login form input {
     width: 300px;
     height: 40px;
     border-radius: 10px;
@@ -263,7 +263,7 @@ body {
     visibility: hidden;
 }
 
-.form-login form .warning img{
+.form-login form .warning img {
     width: 15px;
 }
 .form-login form button {
@@ -280,20 +280,20 @@ body {
     font-family: var(--font-name-bold);
     margin-bottom: 20px;
 }
-.form-login form .warning span{
+.form-login form .warning span {
     font-family: var(--font-name-bold);
     color: red;
 }
-.form-login form .register{
+.form-login form .register {
     text-align: right;
     margin-bottom: 10px;
 }
-.form-login form .register a{
+.form-login form .register a {
     color: #ea7c69;
     font-family: var(--font-name-bold);
 }
-.form-login form .register span{
-    font-family: var(--font-name)
+.form-login form .register span {
+    font-family: var(--font-name);
 }
 
 .login {
@@ -301,7 +301,7 @@ body {
     margin-left: 116px;
 }
 
-.disable{
+.disable {
     opacity: 0.5; /* Độ mờ có thể điều chỉnh */
     pointer-events: none;
 }
@@ -453,7 +453,7 @@ body {
 /* Responsive */
 /* Mobile: width < 740px */
 @media only screen and (max-width: 46.1875em) {
-    .login{
+    .login {
         display: none !important;
     }
     .nav_mobile {
@@ -462,7 +462,7 @@ body {
     .content {
         width: 98%;
     }
-    .right-menu{
+    .right-menu {
         display: none;
     }
     .fa-bars {
@@ -554,7 +554,7 @@ body {
     .content {
         width: 98%;
     }
-    
+
     .fa-bars {
         display: block;
         margin-left: 35px;
@@ -633,64 +633,63 @@ body {
     }
 }
 
-
 /* CSS Section */
-.nav-body{
+.nav-body {
     height: auto;
     width: 100%;
-    box-shadow:0 0 15px 0 #ccc;
+    box-shadow: 0 0 15px 0 #ccc;
     padding: 10px 0px;
 }
-.nav{
+.nav {
     width: 80% !important;
     margin: auto;
     position: relative;
 }
-.nav img{
+.nav img {
     width: 20px;
     padding-right: 10px;
 }
-.nav ol{
+.nav ol {
     display: flex;
     align-items: center;
     list-style-type: none;
     margin-left: 3%;
 }
-.nav li{
+.nav li {
     padding-right: 10px;
 }
-.nav a:hover{
+.nav a:hover {
     color: rgb(1, 147, 237);
 }
-.nav a{
+.nav a {
     text-decoration: none;
     color: black;
 }
-.nav li:first-child{
+.nav li:first-child {
     padding-right: 0px;
 }
-.nav li:last-child::before{
+.nav li:last-child::before {
     content: ">";
     font-size: 18px;
     margin-right: 10px;
     color: black;
 }
-.container{
+.container {
     display: flex;
     width: 75%;
     margin: auto;
     padding-top: 45px;
 }
-.main-content-title{
+.main-content-title {
     border-bottom: 2px rgba(184, 184, 184, 0.279) solid;
 }
-.main-content-title h1{
+.main-content-title h1 {
     font-size: 24px;
     color: #004e9a;
     font-weight: bold;
     padding-bottom: 25px;
 }
-#solid:before{
+#solid:before {
     content: "";
     width: 215px;
     height: 2px;
@@ -701,50 +700,50 @@ body {
     left: 20;
     z-index: 2;
 }
-.main-content{
+.main-content {
     width: 78%;
     height: auto;
     margin-right: 10px;
 }
-.main-content-text{
+.main-content-text {
     padding-bottom: 50px;
-    margin-top: 5px;   
+    margin-top: 5px;
 }
-.content-text{
+.content-text {
     display: flex;
     padding: 20px 0;
     overflow: hidden;
     border-bottom: 1px #ddd solid;
 }
-.content-text .text-img img{
+.content-text .text-img img {
     width: 270px;
     height: auto;
     padding-right: 20px;
 }
-.time_view{
+.time_view {
     display: flex;
     color: #999;
     text-wrap: wrap;
     padding-bottom: 15px;
 }
-.time_view .time_post{
+.time_view .time_post {
     padding-right: 15px;
 }
-.fas{
+.fas {
     font-size: 14px;
 }
-.text-title{
+.text-title {
     padding-bottom: 15px;
 }
-.text-main{
+.text-main {
     display: block;
     margin-right: 10px;
 }
-.text-main a{
+.text-main a {
     font-size: 18px;
     font-weight: bold;
 }
-.text-p p{
+.text-p p {
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -754,7 +753,7 @@ body {
     font-size: 16px;
     line-height: 1.3;
 }
-.modal-body p{
+.modal-body p {
     overflow: none;
     font-size: 15px;
 }
@@ -762,7 +761,7 @@ body {
     font-weight: bold;
     font-size: 20px;
 }
-.modal-footer a{
+.modal-footer a {
     color: white;
 }
 .modal-body {
@@ -784,7 +783,7 @@ body {
     margin-right: auto;
 }
 /* CSS Main Side Bar */
-.content-right{
+.content-right {
     width: 22%;
 }
 .right-menu {
@@ -821,7 +820,7 @@ body {
 }
 
 /* TIPS */
-.form{
+.form {
     margin-top: 22px;
     border-radius: 10px;
     overflow: hidden;
@@ -928,7 +927,7 @@ body {
     margin-bottom: 15px;
     position: relative;
 }
-.hidden{
+.hidden {
     display: none;
 }
 .row-calen > a {
@@ -944,7 +943,7 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
-.row-calen a:hover{
+.row-calen a:hover {
     color: #25aae2;
 }
 
@@ -966,17 +965,17 @@ body {
     border: 0px;
     background-color: #fbfbfb;
 }
-.btn-show:hover{
+.btn-show:hover {
     color: #004e9a;
 }
 .add a {
     color: #004e9a;
 }
-.modal-body{
+.modal-body {
     height: 500px;
     overflow-x: hidden;
 }
-.modal-body img{
+.modal-body img {
     width: 100%;
 }
 /* SIGN-UP */
@@ -1021,96 +1020,98 @@ body {
 /* -------------------------------------------------------------- */
 /* Responsiveeeeeeeeeeee */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
-    .arrow-up i{
+    .arrow-up i {
         right: 25% !important;
     }
 }
 /* Mobile */
 @media screen and (max-width: 600px) {
-    .container{
+    .container {
         flex-direction: column;
         width: 95% !important;
     }
-    .text-img{
+    .text-img {
         text-align: center !important;
     }
-    .text-main{
+    .text-main {
         text-align: center !important;
     }
-    .text-main .text-p{
+    .text-main .text-p {
         text-align: start !important;
     }
-    .content-text{
+    .content-text {
         flex-direction: column;
     }
-    .main-content{
+    .main-content {
         width: 100%;
     }
-    .content-right{
+    .content-right {
         display: flex;
         flex-direction: column;
         width: 100%;
         flex-wrap: wrap;
         align-items: center;
     }
-    .desc{
+    .desc {
         padding-right: 0;
     }
-    .fanpage-h .fanpage img{
+    .fanpage-h .fanpage img {
         width: 50% !important;
     }
-    .arrow-up i{
+    .arrow-up i {
         font-size: 20px !important;
     }
-    .nav{
+    .nav {
         margin-left: 2% !important;
     }
-    .text-img img{
+    .text-img img {
         padding-right: 0 !important;
     }
-    .row-blog > a:nth-child(2), .row-calen > a {
+    .row-blog > a:nth-child(2),
+    .row-calen > a {
         width: auto;
     }
-    .form, .right-menu{
+    .form,
+    .right-menu {
         width: 70% !important;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
     /* Responsive for tablet */
-    h1{
-        font-size: 20px!important;
+    h1 {
+        font-size: 20px !important;
     }
-    .nav{
+    .nav {
         margin-left: 20px !important;
     }
-    .container{
+    .container {
         width: 100%;
     }
-    .content-right{
+    .content-right {
         margin-right: 3%;
     }
-    .right-menu .row i{
+    .right-menu .row i {
         margin-left: 0;
     }
-    .right-menu .row a{
+    .right-menu .row a {
         margin-left: 1em;
     }
-    h2{
-        font-size: 16px!important;
+    h2 {
+        font-size: 16px !important;
     }
-    .desc{
+    .desc {
         padding: 10px !important;
     }
-    .desc img{
+    .desc img {
         width: 80%;
     }
-    #solid::before{
+    #solid::before {
         margin-top: 49px;
     }
-  }
+}
 
-  @media only screen and (min-width: 1025px) {
-    .fa-bars{
+@media only screen and (min-width: 1025px) {
+    .fa-bars {
         display: none !important;
     }
-  }
+}

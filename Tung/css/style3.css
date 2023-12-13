@@ -64,7 +64,7 @@ a:hover {
     max-width: 380px;
     width: 100%;
     /* margin-left: auto; */
-    margin: 0 0 0 45px;
+    margin: 0 0 0 147px;
 }
 
 .search-container form {
@@ -152,7 +152,7 @@ a:hover {
 .navigation .content > ul > li > a {
     font-weight: bold;
     display: inline-block;
-    padding: 20px 19px;
+    padding: 20px 18px;
     color: #fff;
     text-decoration: none;
 }
@@ -543,19 +543,18 @@ html {
 
 .btn-add {
     text-align: center;
-    
 }
-.hidden{
+.hidden {
     display: none;
 }
 .btn-show {
     border: 0px;
-    background-color: #FBFBFB;
+    background-color: #fbfbfb;
 }
-.btn-show a{
+.btn-show a {
     text-decoration: none;
 }
-.btn-show:hover{
+.btn-show:hover {
     color: #004e9a;
 }
 /* .btn:not(:disabled) {
