@@ -475,8 +475,13 @@ function iconLogin() {
         icon.style.display = "none";
         login_inMobile.style.display = "none";
     } else {
-        icon.style.display = "block";
-        login_inMobile.style.display = "block";
+        if (this.window.innerWidth >= 1026) {
+            icon.style.display = "block";
+            login_inMobile.style.display = "block";
+        } else {
+            icon.style.display = "none";
+            login_inMobile.style.display = "none";
+        }
     }
 }
 
