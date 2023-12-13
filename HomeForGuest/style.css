@@ -169,7 +169,7 @@ header {
 }
 
 .login {
-    margin-right: 150px;
+    margin-right: 79px;
     margin-left: -272px;
 }
 
@@ -1895,7 +1895,8 @@ a:hover {
 }
 
 .logo-phat {
-    margin-right: 180px;
+    /* margin-right: 180px; */
+    margin-right: 275px;
 }
 
 .header-phat .content-phat {
