@@ -1,24 +1,24 @@
 let header_element = document.querySelector("#head");
 let buton = document.querySelector(".arrow-up");
 
-buton.onclick = () => {
-  delayLoop(0, 1);
-};
+// buton.onclick = () => {
+//   delayLoop(0, 1);
+// };
 
-function delayLoop(iterations, delay) {
-  let count = window.scrollY;
+// function delayLoop(iterations, delay) {
+//   let count = window.scrollY;
 
-  const intervalId = setInterval(function () {
-    //   console.log('Lần lặp thứ', count);
-    window.scrollTo(0, count)
-    count -= 10;
+//   const intervalId = setInterval(function () {
+//     //   console.log('Lần lặp thứ', count);
+//     window.scrollTo(0, count)
+//     count -= 10;
 
-    if (count <= iterations) {
-      clearInterval(intervalId); // Dừng lặp khi đạt số lần lặp
-      buton.style.display = 'none';
-    }
-  }, delay);
-}
+//     if (count <= iterations) {
+//       clearInterval(intervalId); // Dừng lặp khi đạt số lần lặp
+//       buton.style.display = 'none';
+//     }
+//   }, delay);
+// }
 // chuyen dong header
 window.addEventListener("scroll", function () {
   const x = window.scrollX;
