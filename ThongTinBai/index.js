@@ -741,7 +741,6 @@ function postStructure(idComent, userName, dateString, valueText, numberLike, nu
        li.innerHTML = post_structure.join('');
 
        containerComent.appendChild(li);
-
 }
 // dăng bài bình luận
 function postComments() {
@@ -812,7 +811,7 @@ function objComent(idComent, idUser, idPost, dateComent, valueText) {
 function loadComent(idPost, numberShow) {
        let storagrComent = localStorage.getItem('coment');
        let arr = JSON.parse(storagrComent);
-       let numberComent = document.querySelector('.container-article .container-left .coment-container .number-coment .number')
+       let numberComent = document.querySelector('.container-article .container-left .coment-container .number-coment .number');
        // lam moi
        let containerComent = document.querySelector('.container-article .container-left .coment-container .coment-content ul');
        containerComent.innerHTML = '';
