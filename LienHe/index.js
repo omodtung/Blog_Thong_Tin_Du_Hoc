@@ -100,9 +100,6 @@ function validateForm() {
     document.getElementById("contact-form").submit();
 }
 
-
-
-
 // data dùng cho đăng nhập
 const temp = window.localStorage.getItem("user");
 const users = JSON.parse(temp);
@@ -202,9 +199,9 @@ function login(event) {
     //     form.style.display = "flex";
     //     loginForm();
     // });
-    let form = document.querySelector('.form-login');
+    let form = document.querySelector(".form-login");
     event.preventDefault();
-    form.style.display = 'flex';
+    form.style.display = "flex";
     loginForm();
 }
 // login();
@@ -531,13 +528,18 @@ function handleSubmit() {
 // ẩn biểu tượng đăng nhập khi thực hiện đăng nhập thành công
 function iconLogin() {
     let icon = document.querySelector(".login");
-    let login_inMobile = document.querySelector('.nav_mobile .login-mobile');
+    let login_inMobile = document.querySelector(".nav_mobile .login-mobile");
     if (isLogin() != null) {
         icon.style.display = "none";
         login_inMobile.style.display = "none";
     } else {
-        icon.style.display = "block";
-        login_inMobile.style.display = "block";
+        if (this.window.innerWidth >= 1026) {
+            icon.style.display = "block";
+            login_inMobile.style.display = "block";
+        } else {
+            icon.style.display = "none";
+            login_inMobile.style.display = "none";
+        }
     }
 }
 
@@ -564,9 +566,13 @@ function isLogin() {
 // set  up
 function setUpLogin() {
     let adminSetting = document.querySelector(".admin-setting");
-    let adminSetting_onMobile = document.querySelector(".nav_mobile .admin-setting");
+    let adminSetting_onMobile = document.querySelector(
+        ".nav_mobile .admin-setting"
+    );
     let userSetting = document.querySelector(".user-setting");
-    let userSetting_onMobile = document.querySelector(".nav_mobile .user-setting");
+    let userSetting_onMobile = document.querySelector(
+        ".nav_mobile .user-setting"
+    );
     iconLogin();
     if (isLogin() != null) {
         let objUser = isLogin();
@@ -584,8 +590,7 @@ function setUpLogin() {
             userSetting.style.display = "block";
             userSetting_onMobile.style.display = "block";
         }
-    }
-    else {
+    } else {
         adminSetting.style.display = "none";
         adminSetting_onMobile.style.display = "none";
         userSetting.style.display = "none";
@@ -606,7 +611,6 @@ window.addEventListener("load", function () {
 
 /// cho nay ben lien he chua co do chua co JS login
 window.addEventListener("resize", function () {
-
     if (isLogin() != null) {
         this.document.querySelector(".login").style.display = "none";
     } else {
@@ -617,7 +621,3 @@ window.addEventListener("resize", function () {
         }
     }
 });
-
-
-
-

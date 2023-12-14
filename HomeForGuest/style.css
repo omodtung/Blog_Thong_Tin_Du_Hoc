@@ -158,8 +158,8 @@ header {
 }
 .search-container button {
     position: absolute;
-    top: 17px;
-    right: -11px;
+    top: 16px;
+    right: 8px;
     border: 0;
     background: 0;
     transition: 0.3s;
@@ -169,7 +169,7 @@ header {
 }
 
 .login {
-    margin-right: 150px;
+    margin-right: 79px;
     margin-left: -272px;
 }
 
@@ -1746,17 +1746,17 @@ a:hover {
     .container-news {
         flex-direction: column;
     }
-    .posts-1 .container-news{
+    .posts-1 .container-news {
         margin-left: 30px;
     }
     .container-left {
         padding-bottom: 20px;
         width: 100%;
     }
-    .container-left .image-news img{
+    .container-left .image-news img {
         width: 85%;
     }
-    .admissions-news h2{
+    .admissions-news h2 {
         margin-left: 30px;
     }
     .content .calender-watch {
@@ -1848,7 +1848,7 @@ a:hover {
     .end-footer .content-footer .online {
         justify-content: center;
     }
-    .fanpage img{
+    .fanpage img {
         max-width: 50%;
     }
 }
@@ -1895,7 +1895,8 @@ a:hover {
 }
 
 .logo-phat {
-    margin-right: 180px;
+    /* margin-right: 180px; */
+    margin-right: 275px;
 }
 
 .header-phat .content-phat {
@@ -1908,7 +1909,7 @@ a:hover {
     max-width: 340px;
     width: 100%;
     /* margin-left: auto; */
-    margin: 0 0 0 45px;
+    margin: 0 0 0 147px;
 }
 
 .search-container-phat form {
@@ -1989,7 +1990,7 @@ a:hover {
 .navigation-phat .content-phat > ul > li > a {
     font-weight: bold;
     display: inline-block;
-    padding: 20px 19px;
+    padding: 20px 20px;
     color: #fff;
     text-decoration: none;
 }

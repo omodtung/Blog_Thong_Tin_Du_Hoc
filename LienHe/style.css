@@ -1307,7 +1307,7 @@ a:hover {
 }
 
 .logo-phat {
-    margin-right: 180px;
+    margin-right: 275px;
 }
 
 .header-phat .content-phat {
@@ -1320,7 +1320,7 @@ a:hover {
     max-width: 340px;
     width: 100%;
     /* margin-left: auto; */
-    margin: 0 0 0 45px;
+    margin: 0 0 0 147px;
 }
 
 .search-container-phat form {
@@ -1401,7 +1401,7 @@ a:hover {
 .navigation-phat .content-phat > ul > li > a {
     font-weight: bold;
     display: inline-block;
-    padding: 20px 19px;
+    padding: 20px 20px;
     color: #fff;
     text-decoration: none;
 }
