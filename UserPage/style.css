@@ -182,11 +182,14 @@ header {
     font-size: 25px;
 }
 
-.header-2 > ul > li:nth-child(9),
-.header-2 > ul > li:nth-child(10) {
+
+.header-2 > ul > li:nth-child(9) {
+    font-family: var(--font-name);
+    font-weight: 600;
+}
+.header-2 > ul > li:last-child {
     background-color: #1a60a4;
 }
-
 .header-2 > ul > li:hover {
     background-color: #1a60a4;
 }
