@@ -24,7 +24,7 @@ let buton = document.querySelector(".hello");
 // window.addEventListener("scroll", function () {
 //        const x = window.scrollX;
 //        const y = window.scrollY;
-     
+
 //        if (this.window.innerWidth >= 1026) {
 //            if (Math.round(y) > 50) {
 //                header_element.classList.add("close");
@@ -44,355 +44,365 @@ let buton = document.querySelector(".hello");
 //        }
 //      });
 
-
-
-
-
-
-
 // set up post
 function setStatePost(event, valueId) {
-       // Ngăn chặn hành động mặc định của thẻ a
-       event.preventDefault();
+    // Ngăn chặn hành động mặc định của thẻ a
+    event.preventDefault();
 
-       let storePost = window.localStorage.getItem('post');
-       let arr = JSON.parse(storePost);
+    let storePost = window.localStorage.getItem("post");
+    let arr = JSON.parse(storePost);
 
-       arr.forEach((value) => {
-              if (value.id == valueId) {
-                     console.log(value);
-                     value.state = 1;
-                     let numberView = Number(value.view) + 1;
-                     value.view = numberView;
-
-              } else {
-                     value.state = 0;
-              }
-       });
-       let temp = JSON.stringify(arr);
-       window.localStorage.setItem('post', temp);
-       window.location.href = '../ThongTinBai/index.html';
+    arr.forEach((value) => {
+        if (value.id == valueId) {
+            console.log(value);
+            value.state = 1;
+            let numberView = Number(value.view) + 1;
+            value.view = numberView;
+        } else {
+            value.state = 0;
+        }
+    });
+    let temp = JSON.stringify(arr);
+    window.localStorage.setItem("post", temp);
+    window.location.href = "../ThongTinBai/index.html";
 }
-
 
 // load bài ở cẩm nag du học
 function post_articles_2(container, numberOfPost, footerContainer) {
+    // truy suat container chua no
+    let containerPosts = document.querySelector(container);
 
-       // truy suat container chua no
-       let containerPosts = document.querySelector(container);
+    // lấy dữ liệu các bài đăng
+    let posts = window.localStorage.getItem("post");
+    let postArr = JSON.parse(posts);
+    let sizeArr = postArr.length;
+    let isPost = []; // kiểm tra xem bài đăng nào đã được đăng lên container
+    // khởi tạo mảng với giá trị các bài đăng ban đầu đều là false
+    postArr.forEach((value) => {
+        isPost.push(false);
+    });
+    // chọn bài đăng một cách ngẫu nhiên
+    for (let i = 0; i < numberOfPost; ) {
+        let randomNumber = Math.floor(Math.random() * sizeArr);
+        if (isPost[randomNumber] == false) {
+            isPost[randomNumber] = true;
+            let post = postArr[randomNumber];
+            if (post.isPost == "1") {
+                let pathText = post.path;
+                i++;
+                if (containerPosts) {
+                    fetch(pathText)
+                        .then((response) => response.text())
+                        .then((content) => {
+                            // console.log(pathText);
+                            let paragraphs = content.split("\n");
+                            let array = [];
+                            let pictureURL = "";
+                            let pictureString = "";
+                            let valueHeading = "";
+                            let HeadingString = "";
+                            let introductory_paragraph = "";
+                            paragraphs.forEach((item) => {
+                                if (
+                                    item.startsWith("Picture") &&
+                                    pictureURL == ""
+                                ) {
+                                    // Xử lý khi gặp dòng bắt đầu bằng 'Picture'
+                                    // ...
+                                    var startIdxURL = item.indexOf('"');
+                                    var endIdxURL = item.indexOf(
+                                        '"',
+                                        startIdxURL + 1
+                                    );
+                                    pictureURL = item.substring(
+                                        startIdxURL + 1,
+                                        endIdxURL
+                                    );
+                                    console.log(pictureURL);
 
-       // lấy dữ liệu các bài đăng
-       let posts = window.localStorage.getItem('post');
-       let postArr = JSON.parse(posts);
-       let sizeArr = postArr.length;
-       let isPost = [];     // kiểm tra xem bài đăng nào đã được đăng lên container
-       // khởi tạo mảng với giá trị các bài đăng ban đầu đều là false
-       postArr.forEach((value) => {
-              isPost.push(false);
-       });
-       // chọn bài đăng một cách ngẫu nhiên
-       for (let i = 0; i < numberOfPost;) {
-              let randomNumber = Math.floor(Math.random() * sizeArr);
-              if (isPost[randomNumber] == false) {
-                     isPost[randomNumber] = true;
-                     let post = postArr[randomNumber];
-                     if (post.isPost == '1') {
-                            let pathText = post.path;
-                            i++;
-                            if (containerPosts) {
-                                   fetch(pathText)
-                                          .then(response => response.text())
-                                          .then(content => {
-                                                 // console.log(pathText);
-                                                 let paragraphs = content.split('\n');
-                                                 let array = [];
-                                                 let pictureURL = '';
-                                                 let pictureString = '';
-                                                 let valueHeading = '';
-                                                 let HeadingString = '';
-                                                 let introductory_paragraph = '';
-                                                 paragraphs.forEach((item) => {
-                                                        if (item.startsWith('Picture') && pictureURL == '') {
-                                                               // Xử lý khi gặp dòng bắt đầu bằng 'Picture'
-                                                               // ...
-                                                               var startIdxURL = item.indexOf('"');
-                                                               var endIdxURL = item.indexOf('"', startIdxURL + 1);
-                                                               pictureURL = item.substring(startIdxURL + 1, endIdxURL);
-                                                               console.log(pictureURL);
-
-                                                               pictureString = `
+                                    pictureString = `
                                                                       <a href="#" id="${post.id}" onclick="setStatePost(event,'${post.id}')">
                                                                              <img src="${pictureURL}" alt="" />
                                                                       </a>
                                                                 `;
-
-
-                                                        } else if (item.startsWith('Heading') && valueHeading == '') {
-                                                               // Xử lý khi gặp dòng bắt đầu bằng 'Heading'
-                                                               // ...
-                                                               var startIdxHeading = item.indexOf('"');
-                                                               var endIdxHeading = item.indexOf('"', startIdxHeading + 1);
-                                                               valueHeading = item.substring(startIdxHeading + 1, endIdxHeading);
-                                                               valueHeading = valueHeading.slice(0, 47) + '...';
-                                                               HeadingString = `
+                                } else if (
+                                    item.startsWith("Heading") &&
+                                    valueHeading == ""
+                                ) {
+                                    // Xử lý khi gặp dòng bắt đầu bằng 'Heading'
+                                    // ...
+                                    var startIdxHeading = item.indexOf('"');
+                                    var endIdxHeading = item.indexOf(
+                                        '"',
+                                        startIdxHeading + 1
+                                    );
+                                    valueHeading = item.substring(
+                                        startIdxHeading + 1,
+                                        endIdxHeading
+                                    );
+                                    valueHeading =
+                                        valueHeading.slice(0, 47) + "...";
+                                    HeadingString = `
                                                                       <a href="#" id="${post.id}" onclick="setStatePost(event,'${post.id}')">
                                                                              ${valueHeading}
                                                                       </a>
                                                                `;
+                                }
+                            });
+                            // form
+                            array.push(pictureString);
+                            array.push(HeadingString);
 
+                            // them bai post
 
-                                                        }
-
-                                                 });
-                                                 // form 
-                                                 array.push(pictureString);
-                                                 array.push(HeadingString);
-
-                                                 // them bai post
-
-                                                 let div = document.createElement('div');
-                                                 div.className = 'row-blog';
-                                                 // console.log(div);
-                                                 div.innerHTML = `${array.join('')}
+                            let div = document.createElement("div");
+                            div.className = "row-blog";
+                            // console.log(div);
+                            div.innerHTML = `${array.join("")}
                                                                ${footerContainer}
                                                                `;
-                                                 // if (i < numberOfPost) {
-                                                 //        li.innerHTML = `${array.join('')}
-                                                 //               ${footerContainer}
-                                                 //               `;
-                                                 // } else {
-                                                 //        li.innerHTML = `${array.join('')}
-                                                 //               `;
-                                                 // }
-                                                 containerPosts.appendChild(div);
-                                          })
-                                          .catch(error => {
-                                                 console.error('Lỗi:', error);
-                                          });
-                            }
-                     }
-
-              }
-       }
+                            // if (i < numberOfPost) {
+                            //        li.innerHTML = `${array.join('')}
+                            //               ${footerContainer}
+                            //               `;
+                            // } else {
+                            //        li.innerHTML = `${array.join('')}
+                            //               `;
+                            // }
+                            containerPosts.appendChild(div);
+                        })
+                        .catch((error) => {
+                            console.error("Lỗi:", error);
+                        });
+                }
+            }
+        }
+    }
 }
-post_articles_2('.content-right .tips .desc', 5, '');
-
+post_articles_2(".content-right .tips .desc", 5, "");
 
 // show bài post ở lịch hội thảo
 
 function post_articles_3(container, numberOfPost, footerContainer) {
+    // truy suat container chua no
+    let containerPosts = document.querySelector(container);
 
-       // truy suat container chua no
-       let containerPosts = document.querySelector(container);
-
-       // lấy dữ liệu các bài đăng
-       let posts = window.localStorage.getItem('post');
-       let postArr = JSON.parse(posts);
-       let sizeArr = postArr.length;
-       let isPost = [];     // kiểm tra xem bài đăng nào đã được đăng lên container
-       // khởi tạo mảng với giá trị các bài đăng ban đầu đều là false
-       postArr.forEach((value) => {
-              isPost.push(false);
-       });
-       // chọn bài đăng một cách ngẫu nhiên
-       for (let i = 0; i < numberOfPost;) {
-              let randomNumber = Math.floor(Math.random() * sizeArr);
-              if (isPost[randomNumber] == false) {
-                     isPost[randomNumber] = true;
-                     let post = postArr[randomNumber];
-                     if (post.isPost == '1') {
-                            let pathText = post.path;
-                            i++;
-                            if (containerPosts) {
-                                   fetch(pathText)
-                                          .then(response => response.text())
-                                          .then(content => {
-                                                 let paragraphs = content.split('\n');
-                                                 let array = [];
-                                                 let valueHeading = '';
-                                                 let HeadingString = '';
-                                                 paragraphs.forEach((item) => {
-                                                        if (item.startsWith('Heading') && valueHeading == '') {
-                                                               // Xử lý khi gặp dòng bắt đầu bằng 'Heading'
-                                                               // ...
-                                                               var startIdxHeading = item.indexOf('"');
-                                                               var endIdxHeading = item.indexOf('"', startIdxHeading + 1);
-                                                               valueHeading = item.substring(startIdxHeading + 1, endIdxHeading);
-                                                               valueHeading = valueHeading.slice(0, 47) + '...';
-                                                               HeadingString = `
+    // lấy dữ liệu các bài đăng
+    let posts = window.localStorage.getItem("post");
+    let postArr = JSON.parse(posts);
+    let sizeArr = postArr.length;
+    let isPost = []; // kiểm tra xem bài đăng nào đã được đăng lên container
+    // khởi tạo mảng với giá trị các bài đăng ban đầu đều là false
+    postArr.forEach((value) => {
+        isPost.push(false);
+    });
+    // chọn bài đăng một cách ngẫu nhiên
+    for (let i = 0; i < numberOfPost; ) {
+        let randomNumber = Math.floor(Math.random() * sizeArr);
+        if (isPost[randomNumber] == false) {
+            isPost[randomNumber] = true;
+            let post = postArr[randomNumber];
+            if (post.isPost == "1") {
+                let pathText = post.path;
+                i++;
+                if (containerPosts) {
+                    fetch(pathText)
+                        .then((response) => response.text())
+                        .then((content) => {
+                            let paragraphs = content.split("\n");
+                            let array = [];
+                            let valueHeading = "";
+                            let HeadingString = "";
+                            paragraphs.forEach((item) => {
+                                if (
+                                    item.startsWith("Heading") &&
+                                    valueHeading == ""
+                                ) {
+                                    // Xử lý khi gặp dòng bắt đầu bằng 'Heading'
+                                    // ...
+                                    var startIdxHeading = item.indexOf('"');
+                                    var endIdxHeading = item.indexOf(
+                                        '"',
+                                        startIdxHeading + 1
+                                    );
+                                    valueHeading = item.substring(
+                                        startIdxHeading + 1,
+                                        endIdxHeading
+                                    );
+                                    valueHeading =
+                                        valueHeading.slice(0, 47) + "...";
+                                    HeadingString = `
                                                                       <a href="#" id="${post.id}" onclick="setStatePost(event,'${post.id}')">
                                                                              ${valueHeading}
                                                                       </a>
                                                                `;
+                                }
+                            });
+                            // form
 
+                            // date post
 
-                                                        }
+                            let dateString = post.datePost.split("-");
+                            let day = dateString[0];
+                            let month = dateString[1];
+                            let year = dateString[2];
 
-                                                 });
-                                                 // form 
-
-                                                 // date post
-
-                                                 let dateString = post.datePost.split('-');
-                                                 let day = dateString[0];
-                                                 let month = dateString[1];
-                                                 let year = dateString[2];
-
-                                                 let datePost = `
+                            let datePost = `
                                                         <div class="calen-box">
                                                                <span class="day">${day}</span>
                                                                <span class="mon-year">${month}/${year}</span>
                                                         </div>
                                                  `;
 
-                                                 // array.push(pictureString);
-                                                 array.push(datePost);
-                                                 array.push(HeadingString);
+                            // array.push(pictureString);
+                            array.push(datePost);
+                            array.push(HeadingString);
 
-                                                 // them bai post
+                            // them bai post
 
-                                                 let div = document.createElement('div');
-                                                 div.className = 'row-calen';
-                                                 // console.log(div);
-                                                 div.innerHTML = `${array.join('')}
+                            let div = document.createElement("div");
+                            div.className = "row-calen";
+                            // console.log(div);
+                            div.innerHTML = `${array.join("")}
                                                                ${footerContainer}
                                                                `;
-                                                 // if (i < numberOfPost) {
-                                                 //        li.innerHTML = `${array.join('')}
-                                                 //               ${footerContainer}
-                                                 //               `;
-                                                 // } else {
-                                                 //        li.innerHTML = `${array.join('')}
-                                                 //               `;
-                                                 // }
-                                                 containerPosts.appendChild(div);
-                                          })
-                                          .catch(error => {
-                                                 console.error('Lỗi:', error);
-                                          });
-                            }
-                            
-                     }
-              }
-       }
-
+                            // if (i < numberOfPost) {
+                            //        li.innerHTML = `${array.join('')}
+                            //               ${footerContainer}
+                            //               `;
+                            // } else {
+                            //        li.innerHTML = `${array.join('')}
+                            //               `;
+                            // }
+                            containerPosts.appendChild(div);
+                        })
+                        .catch((error) => {
+                            console.error("Lỗi:", error);
+                        });
+                }
+            }
+        }
+    }
 }
-post_articles_3('.content-right .calendar .desc div:nth-child(1)', 5, '');
-
+post_articles_3(".content-right .calendar .desc div:nth-child(1)", 5, "");
 
 // show bài post ẩn ở lịch hội thảo
 
 function post_articles_4(container, numberOfPost, footerContainer) {
+    // truy suat container chua no
+    let containerPosts = document.querySelector(container);
 
-       // truy suat container chua no
-       let containerPosts = document.querySelector(container);
-
-       // lấy dữ liệu các bài đăng
-       let posts = window.localStorage.getItem('post');
-       let postArr = JSON.parse(posts);
-       let sizeArr = postArr.length;
-       let isPost = [];     // kiểm tra xem bài đăng nào đã được đăng lên container
-       // khởi tạo mảng với giá trị các bài đăng ban đầu đều là false
-       postArr.forEach((value) => {
-              isPost.push(false);
-       });
-       // chọn bài đăng một cách ngẫu nhiên
-       for (let i = 0; i < numberOfPost;) {
-              let randomNumber = Math.floor(Math.random() * sizeArr);
-              if (isPost[randomNumber] == false) {
-                     isPost[randomNumber] = true;
-                     let post = postArr[randomNumber];
-                     if (post.isPost == '1') {
-                            let pathText = post.path;
-                            i++;
-                            if (containerPosts) {
-                                   fetch(pathText)
-                                          .then(response => response.text())
-                                          .then(content => {
-                                                 let paragraphs = content.split('\n');
-                                                 let array = [];
-                                                 let valueHeading = '';
-                                                 let HeadingString = '';
-                                                 paragraphs.forEach((item) => {
-                                                        if (item.startsWith('Heading') && valueHeading == '') {
-                                                               // Xử lý khi gặp dòng bắt đầu bằng 'Heading'
-                                                               // ...
-                                                               var startIdxHeading = item.indexOf('"');
-                                                               var endIdxHeading = item.indexOf('"', startIdxHeading + 1);
-                                                               valueHeading = item.substring(startIdxHeading + 1, endIdxHeading);
-                                                               valueHeading = valueHeading.slice(0, 47) + '...';
-                                                               HeadingString = `
+    // lấy dữ liệu các bài đăng
+    let posts = window.localStorage.getItem("post");
+    let postArr = JSON.parse(posts);
+    let sizeArr = postArr.length;
+    let isPost = []; // kiểm tra xem bài đăng nào đã được đăng lên container
+    // khởi tạo mảng với giá trị các bài đăng ban đầu đều là false
+    postArr.forEach((value) => {
+        isPost.push(false);
+    });
+    // chọn bài đăng một cách ngẫu nhiên
+    for (let i = 0; i < numberOfPost; ) {
+        let randomNumber = Math.floor(Math.random() * sizeArr);
+        if (isPost[randomNumber] == false) {
+            isPost[randomNumber] = true;
+            let post = postArr[randomNumber];
+            if (post.isPost == "1") {
+                let pathText = post.path;
+                i++;
+                if (containerPosts) {
+                    fetch(pathText)
+                        .then((response) => response.text())
+                        .then((content) => {
+                            let paragraphs = content.split("\n");
+                            let array = [];
+                            let valueHeading = "";
+                            let HeadingString = "";
+                            paragraphs.forEach((item) => {
+                                if (
+                                    item.startsWith("Heading") &&
+                                    valueHeading == ""
+                                ) {
+                                    // Xử lý khi gặp dòng bắt đầu bằng 'Heading'
+                                    // ...
+                                    var startIdxHeading = item.indexOf('"');
+                                    var endIdxHeading = item.indexOf(
+                                        '"',
+                                        startIdxHeading + 1
+                                    );
+                                    valueHeading = item.substring(
+                                        startIdxHeading + 1,
+                                        endIdxHeading
+                                    );
+                                    valueHeading =
+                                        valueHeading.slice(0, 47) + "...";
+                                    HeadingString = `
                                                                       <a href="#" id="${post.id}" onclick="setStatePost(event,'${post.id}')">
                                                                              ${valueHeading}
                                                                       </a>
                                                                `;
+                                }
+                            });
+                            // form
 
+                            // date post
 
-                                                        }
+                            let dateString = post.datePost.split("-");
+                            let day = dateString[0];
+                            let month = dateString[1];
+                            let year = dateString[2];
 
-                                                 });
-                                                 // form 
-
-                                                 // date post
-
-                                                 let dateString = post.datePost.split('-');
-                                                 let day = dateString[0];
-                                                 let month = dateString[1];
-                                                 let year = dateString[2];
-
-                                                 let datePost = `
+                            let datePost = `
                                                         <div class="calen-box">
                                                                <span class="day">${day}</span>
                                                                <span class="mon-year">${month}/${year}</span>
                                                         </div>
                                                  `;
 
-                                                 // array.push(pictureString);
-                                                 array.push(datePost);
-                                                 array.push(HeadingString);
+                            // array.push(pictureString);
+                            array.push(datePost);
+                            array.push(HeadingString);
 
-                                                 // them bai post
+                            // them bai post
 
-                                                 let div = document.createElement('div');
-                                                 div.className = 'row-calen hidden';
-                                                 // console.log(div);
-                                                 div.innerHTML = `${array.join('')}
+                            let div = document.createElement("div");
+                            div.className = "row-calen hidden";
+                            // console.log(div);
+                            div.innerHTML = `${array.join("")}
                                                                ${footerContainer}
                                                                `;
-                                                 // if (i < numberOfPost) {
-                                                 //        li.innerHTML = `${array.join('')}
-                                                 //               ${footerContainer}
-                                                 //               `;
-                                                 // } else {
-                                                 //        li.innerHTML = `${array.join('')}
-                                                 //               `;
-                                                 // }
-                                                 containerPosts.appendChild(div);
-                                          })
-                                          .catch(error => {
-                                                 console.error('Lỗi:', error);
-                                          });
-                            }
-                            
-                     }
-              }
-       }
+                            // if (i < numberOfPost) {
+                            //        li.innerHTML = `${array.join('')}
+                            //               ${footerContainer}
+                            //               `;
+                            // } else {
+                            //        li.innerHTML = `${array.join('')}
+                            //               `;
+                            // }
+                            containerPosts.appendChild(div);
+                        })
+                        .catch((error) => {
+                            console.error("Lỗi:", error);
+                        });
+                }
+            }
+        }
+    }
 }
-post_articles_4('.content-right .calendar .desc div:nth-child(2)', 3, '');
+post_articles_4(".content-right .calendar .desc div:nth-child(2)", 3, "");
 
 /// cho nay ben lien he chua co do chua co JS login
 window.addEventListener("resize", function () {
-
-       if (isLogin() != null) {
-           this.document.querySelector(".login").style.display = "none";
-       } else {
-           if (this.window.innerWidth > 1024) {
-               this.document.querySelector(".login").style.display = "flex";
-           } else {
-               this.document.querySelector(".login").style.display = "none";
-           }
-       }
-   });
+    if (isLogin() != null) {
+        this.document.querySelector(".login").style.display = "none";
+    } else {
+        if (this.window.innerWidth > 1024) {
+            this.document.querySelector(".login").style.display = "flex";
+        } else {
+            this.document.querySelector(".login").style.display = "none";
+        }
+    }
+});
 
 // data dùng cho đăng nhập
 const temp = window.localStorage.getItem("user");
@@ -493,9 +503,9 @@ function login(event) {
     //     form.style.display = "flex";
     //     loginForm();
     // });
-    let form = document.querySelector('.form-login');
+    let form = document.querySelector(".form-login");
     event.preventDefault();
-    form.style.display = 'flex';
+    form.style.display = "flex";
     loginForm();
 }
 // login();
@@ -642,17 +652,19 @@ function checkRePass(valuePass, valueRepeatPass) {
 }
 
 function checkBan(idUser) {
-    let use = window.localStorage.getItem('user');
+    let use = window.localStorage.getItem("user");
     let userArr = JSON.parse(use);
 
     for (let i = 0; i < userArr.length; i++) {
         let value = userArr[i];
         if (value.idUser == idUser) {
-            if (value.state == '1') {
+            if (value.state == "1") {
                 return false;
             } else {
                 console.log(1);
-                window.alert('Tài khoản của bạn đã bị khóa! Hãy liên hệ ban quản trị để mở khóa');
+                window.alert(
+                    "Tài khoản của bạn đã bị khóa! Hãy liên hệ ban quản trị để mở khóa"
+                );
                 return true;
             }
         }
@@ -674,8 +686,6 @@ function setStateLogin(userId) {
     window.localStorage.setItem("user", temp);
 }
 
-
-
 function checkLogin(userId, passWord) {
     //
     if (checkIdUser(userId) == true && checkPass(passWord) == true) {
@@ -686,15 +696,11 @@ function checkLogin(userId, passWord) {
                     check = 1;
                     setStateLogin(userId);
                     // kiểm tra xem có phải admin không
-                    let adminSetting = document.querySelector(
-                        ".admin-setting"
-                    );
+                    let adminSetting = document.querySelector(".admin-setting");
                     let adminSetting_onMobile = document.querySelector(
                         ".nav_mobile .admin-setting"
                     );
-                    let userSetting = document.querySelector(
-                        ".user-setting"
-                    );
+                    let userSetting = document.querySelector(".user-setting");
                     let userSetting_onMobile = document.querySelector(
                         ".nav_mobile .user-setting"
                     );
@@ -749,23 +755,32 @@ function checkRegister(fullName, userId, passWord, repeatPass) {
                 Password: passWord,
                 role: "user",
                 stateLogin: "0",
+                state: "1",
             };
             users.push(user);
             let temp = JSON.stringify(users);
             window.localStorage.setItem("user", temp);
 
             // kiểm tra xem có phải admin không
-            let adminSetting = document.querySelector(
-                ".header-2 .admin-setting"
+            let adminSetting = document.querySelector(".admin-setting");
+            let adminSetting_onMobile = document.querySelector(
+                ".nav_mobile .admin-setting"
             );
-            let userSetting = document.querySelector(".header-2 .user-setting");
+            let userSetting_onMobile = document.querySelector(
+                ".nav_mobile .user-setting"
+            );
+            let userSetting = document.querySelector(".user-setting");
             if (user.role == "admin") {
                 // hiện trang admin
                 adminSetting.style.display = "block";
+                adminSetting_onMobile.style.display = "block";
                 userSetting.style.display = "none";
+                userSetting_onMobile.style.display = "none";
             } else {
                 adminSetting.style.display = "none";
+                adminSetting_onMobile.style.display = "none";
                 userSetting.style.display = "block";
+                userSetting_onMobile.style.display = "block";
             }
 
             setStateLogin(userId);
@@ -822,7 +837,7 @@ function handleSubmit() {
 // ẩn biểu tượng đăng nhập khi thực hiện đăng nhập thành công
 function iconLogin() {
     let icon = document.querySelector(".login");
-    let login_inMobile = document.querySelector('.nav_mobile .login-mobile');
+    let login_inMobile = document.querySelector(".nav_mobile .login-mobile");
     if (isLogin() != null) {
         icon.style.display = "none";
         login_inMobile.style.display = "none";
@@ -855,9 +870,13 @@ function isLogin() {
 // set  up
 function setUpLogin() {
     let adminSetting = document.querySelector(".admin-setting");
-    let adminSetting_onMobile = document.querySelector(".nav_mobile .admin-setting");
+    let adminSetting_onMobile = document.querySelector(
+        ".nav_mobile .admin-setting"
+    );
     let userSetting = document.querySelector(".user-setting");
-    let userSetting_onMobile = document.querySelector(".nav_mobile .user-setting");
+    let userSetting_onMobile = document.querySelector(
+        ".nav_mobile .user-setting"
+    );
     iconLogin();
     if (isLogin() != null) {
         let objUser = isLogin();
@@ -875,8 +894,7 @@ function setUpLogin() {
             userSetting.style.display = "block";
             userSetting_onMobile.style.display = "block";
         }
-    }
-    else {
+    } else {
         adminSetting.style.display = "none";
         adminSetting_onMobile.style.display = "none";
         userSetting.style.display = "none";
@@ -885,18 +903,16 @@ function setUpLogin() {
 }
 setUpLogin();
 
-
-
 // function addWatchMore(){
 //        let container = document.querySelector('.content-right .calendar .desc');
 //        let div = document.querySelector('div');
 //        div.className = 'btn-add';
 //        div.innerHTML = `
-              
+
 //                      <button class="btn" onclick="showMoreSchedule()">
 //                      <a href="#!">XEM THÊM</a>
 //                      </button>
-              
+
 //        `
 //        container.appendChild(div);
 // }

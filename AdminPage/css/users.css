@@ -1,181 +1,179 @@
 /* phần dùng chung */
 
 @font-face {
-       font-family: 'open sans';
-       src: url('../font/Open_Sans/static/OpenSans-Regular.ttf');
+    font-family: "open sans";
+    src: url("../font/Open_Sans/static/OpenSans-Regular.ttf");
 }
 
 @font-face {
-       font-family: 'open sans bold';
-       src: url('../font/Open_Sans/static/OpenSans-Bold.ttf');
+    font-family: "open sans bold";
+    src: url("../font/Open_Sans/static/OpenSans-Bold.ttf");
 }
 
-
 @font-face {
-       font-family: 'fontawesome';
-       src: url('http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css');
+    font-family: "fontawesome";
+    src: url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css");
 }
 
 a {
-       text-decoration: none;
-       color: white;
+    text-decoration: none;
+    color: white;
 }
 
 li {
-       list-style: none;
+    list-style: none;
 }
 
 * {
-       margin: 0;
-       padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
-       --corler: #FCB100;
-       --font-name: 'open sans';
-       --font-name-bold: 'open sans bold';
+    --corler: #fcb100;
+    --font-name: "open sans";
+    --font-name-bold: "open sans bold";
 }
 
 /* hết phần dùng chung */
 
 /* header */
-header{
-       background-color: #3A4149;
-       padding: 20px;
+header {
+    background-color: #3a4149;
+    padding: 20px;
 }
-header span{
-       font-family: var(--font-name-bold);
-       color: white;
-       font-size: 30px;
+header span {
+    font-family: var(--font-name-bold);
+    color: white;
+    font-size: 30px;
 }
 header img {
-       position: absolute;
-       right: 30px;
-       top: 20px;
-       width: 40px;
-       cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    width: 40px;
+    cursor: pointer;
 }
 /* end header */
-.main-content-body{
-       display: flex;
-
+.main-content-body {
+    display: flex;
 }
 
 /* sidebar */
-.sidebar{
-       width: 20%;
-       background-color: #2F353A;
-       display: flex;
-       flex-direction: column;
-       align-items: center;
+.sidebar {
+    width: 20%;
+    background-color: #2f353a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.sidebar h3{
-       font-family: var(--font-name-bold);
-       color: white;
-       font-size: 24px;
-       margin-top: 10px;
-       margin-bottom: 10px;
+.sidebar h3 {
+    font-family: var(--font-name-bold);
+    color: white;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .sidebar span {
-       font-family: var(--font-name-bold);
-       color: #73818f;
+    font-family: var(--font-name-bold);
+    color: #73818f;
 }
 .sidebar ul {
-       width: 100%;
-       display: flex;
-       flex-direction: column;
-       align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.sidebar ul li{
-       box-sizing: border-box;
-       display: block;
-       /* border: 2px solid white; */
-       width: 100%;
-       /* height: 30px; */
-       
-       padding-left: 50px;
-       padding-top: 20px;
-       padding-bottom: 20px;
+.sidebar ul li {
+    box-sizing: border-box;
+    display: block;
+    /* border: 2px solid white; */
+    width: 100%;
+    /* height: 30px; */
+
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .sidebar ul li:hover {
-       background-color: #EA7C69;
+    background-color: #ea7c69;
 }
-.sidebar ul li:nth-child(3){
-       background-color: #EA7C69;
+.sidebar ul li:nth-child(3) {
+    background-color: #ea7c69;
 }
-.sidebar ul li:nth-child(3) span{
-       color: white;
+.sidebar ul li:nth-child(3) span {
+    color: white;
 }
-.sidebar ul li a .icon{
-       margin-right: 10px;
+.sidebar ul li a .icon {
+    margin-right: 10px;
 }
-.sidebar ul li:nth-child(4){
-       margin-top: 20px;
-       border-top: 1px solid grey;
+.sidebar ul li:nth-child(4) {
+    margin-top: 20px;
+    border-top: 1px solid grey;
 }
 /* end sidebar*/
 
-.user-management-page{
-       background-color:#2F353A;
-       width: 80%;
-       height: 800px;
+.user-management-page {
+    background-color: #2f353a;
+    width: 80%;
+    height: auto;
 }
-.user-management-page > h3{
-       font-family: var(--font-name-bold);
-       font-size: 30px;
-       text-align: center;
-       color: white;
-       margin-top: 30px;
-       margin-bottom: 10px;
+.user-management-page > h3 {
+    font-family: var(--font-name-bold);
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
-.total-user{
-       display: flex;
-       justify-content: center;
+.total-user {
+    display: flex;
+    justify-content: center;
 }
 .total-user table {
-       border: 1px solid silver;
-       margin-top: 20px;
-       width: 90%;
+    border: 1px solid silver;
+    margin-top: 20px;
+    width: 90%;
 }
-.total-user table tr{
-       border: 1px solid silver;
+.total-user table tr {
+    border: 1px solid silver;
 }
 
 .total-user table th {
-       font-family: var(--font-name-bold);
-       color: #FCB100;
-       border: 1px solid silver;
-       padding: 5px;
+    font-family: var(--font-name-bold);
+    color: #fcb100;
+    border: 1px solid silver;
+    padding: 5px;
 }
 .total-user table td {
-       border: 1px solid silver;
-       padding: 5px;
-       text-align: center;
+    border: 1px solid silver;
+    padding: 5px;
+    text-align: center;
 }
-.total-user table td span{
-       font-family: var(--font-name);
-       color: white;
-}
-
-.action-filter-user{
-       text-align: center;
-       margin-top: 30px;
-}
-.action-filter-user label{
-       font-family: var(--font-name-bold);
-       font-size: 20px;
-       color: white;
-       margin-right: 20px;
-}
-.action-filter-user input{
-       font-family: var(--font-name);
-}
-.action-filter-user input:focus{
-       outline: none;
-       font-family: var(--font-name);
-       font-size: 15px;
+.total-user table td span {
+    font-family: var(--font-name);
+    color: white;
 }
 
-.action-delete-user span:nth-child(1){
-       margin-right: 20px;
+.action-filter-user {
+    text-align: center;
+    margin-top: 30px;
+}
+.action-filter-user label {
+    font-family: var(--font-name-bold);
+    font-size: 20px;
+    color: white;
+    margin-right: 20px;
+}
+.action-filter-user input {
+    font-family: var(--font-name);
+}
+.action-filter-user input:focus {
+    outline: none;
+    font-family: var(--font-name);
+    font-size: 15px;
+}
+
+.action-delete-user span:nth-child(1) {
+    margin-right: 20px;
 }

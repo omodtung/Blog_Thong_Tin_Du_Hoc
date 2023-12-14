@@ -720,17 +720,19 @@ function checkRePass(valuePass, valueRepeatPass) {
 }
 
 function checkBan(idUser) {
-    let use = window.localStorage.getItem('user');
+    let use = window.localStorage.getItem("user");
     let userArr = JSON.parse(use);
 
     for (let i = 0; i < userArr.length; i++) {
         let value = userArr[i];
         if (value.idUser == idUser) {
-            if (value.state == '1') {
+            if (value.state == "1") {
                 return false;
             } else {
                 console.log(1);
-                window.alert('Tài khoản của bạn đã bị khóa! Hãy liên hệ ban quản trị để mở khóa');
+                window.alert(
+                    "Tài khoản của bạn đã bị khóa! Hãy liên hệ ban quản trị để mở khóa"
+                );
                 return true;
             }
         }
@@ -752,8 +754,6 @@ function setStateLogin(userId) {
     window.localStorage.setItem("user", temp);
 }
 
-
-
 function checkLogin(userId, passWord) {
     //
     if (checkIdUser(userId) == true && checkPass(passWord) == true) {
@@ -764,15 +764,11 @@ function checkLogin(userId, passWord) {
                     check = 1;
                     setStateLogin(userId);
                     // kiểm tra xem có phải admin không
-                    let adminSetting = document.querySelector(
-                        ".admin-setting"
-                    );
+                    let adminSetting = document.querySelector(".admin-setting");
                     let adminSetting_onMobile = document.querySelector(
                         ".nav_mobile .admin-setting"
                     );
-                    let userSetting = document.querySelector(
-                        ".user-setting"
-                    );
+                    let userSetting = document.querySelector(".user-setting");
                     let userSetting_onMobile = document.querySelector(
                         ".nav_mobile .user-setting"
                     );
@@ -827,23 +823,32 @@ function checkRegister(fullName, userId, passWord, repeatPass) {
                 Password: passWord,
                 role: "user",
                 stateLogin: "0",
+                state: "1",
             };
             users.push(user);
             let temp = JSON.stringify(users);
             window.localStorage.setItem("user", temp);
 
             // kiểm tra xem có phải admin không
-            let adminSetting = document.querySelector(
-                ".header-2 .admin-setting"
+            let adminSetting = document.querySelector(".admin-setting");
+            let adminSetting_onMobile = document.querySelector(
+                ".nav_mobile .admin-setting"
             );
-            let userSetting = document.querySelector(".header-2 .user-setting");
+            let userSetting_onMobile = document.querySelector(
+                ".nav_mobile .user-setting"
+            );
+            let userSetting = document.querySelector(".user-setting");
             if (user.role == "admin") {
                 // hiện trang admin
                 adminSetting.style.display = "block";
+                adminSetting_onMobile.style.display = "block";
                 userSetting.style.display = "none";
+                userSetting_onMobile.style.display = "none";
             } else {
                 adminSetting.style.display = "none";
+                adminSetting_onMobile.style.display = "none";
                 userSetting.style.display = "block";
+                userSetting_onMobile.style.display = "block";
             }
 
             setStateLogin(userId);
@@ -910,7 +915,6 @@ function iconLogin() {
             login_inMobile.style.display = "block";
         } else {
             icon.style.display = "none";
-            login_inMobile.style.display = "none";
         }
     }
 }
