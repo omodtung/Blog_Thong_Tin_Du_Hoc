@@ -66,7 +66,7 @@
 
 			<br /><br />
 			<div class="text-center text-light">
-				Copyright &copy; 2022 Su Pham Thuc Hanh High School. All rights reserved.
+				Copyright &copy; 2022 Tư Vấn Du Học. All rights reserved.
 			</div>
 
 		</div>
