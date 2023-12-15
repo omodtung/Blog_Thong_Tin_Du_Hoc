@@ -55,6 +55,8 @@ $sql = "INSERT INTO `complain`(`content`,  `mailheader`, `fname`,`status`,`topic
  // $sql2 = "INSERT INTO `avgscore` (`student_id`) VALUES (?)";
  $stmt = $conn->prepare($sql);
  $stmt->execute([$content, $mailheader, $name , $status,$subject]);
+
+ header("Location:../../LienHe/index.html");
  print json_encode(array('message' => 'Email successfully sent!', 'code' => 1));
  exit();
 

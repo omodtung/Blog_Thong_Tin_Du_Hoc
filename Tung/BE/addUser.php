@@ -27,6 +27,6 @@ include "../DB_connection.php";
  $stmt = $conn->prepare($sql);
  $stmt->execute([$fname, $lname, $email,$pass, $birthdate, $gender, $status]);
 
-
+ header("Location:../../Tung/FormDangKy/DangKi.html");
 
 ?>

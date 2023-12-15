@@ -20,7 +20,7 @@ function layThongTinPhiaUser($conn)
 
 $user = layThongTinPhiaUser($conn);
 
-print_r ($user);
+// print_r ($user);
 
 
 $tenDangNhap = $user[0];
@@ -207,7 +207,7 @@ window.addEventListener("load", function() {
     <div class="form-login">
         <img class="back-to-login" width="20px" src="./image/arrow.png" alt="">
         <img class="close-form" width="20px" src="./image/close.png" alt="">
-        <h3>Đăng Nhập</h3>
+        <h3>Chào User Quay Lại</h3>
         <form onsubmit="return handleSubmit()">
             <div class="login-userName">
                 <input disabled type="text" placeholder="Họ tên" value="">
@@ -293,11 +293,11 @@ window.addEventListener("load", function() {
                     <span>Mật khẩu lặp lại không đúng</span>
                 </div>
             </div> -->
-            <button type="submit">Oke</button>
+            <!-- <button type="submit">Oke</button>
             <div class="register" onclick="register(event)">
                 <span>Bạn chưa có tài khoản ?</span>
                 <a href="#">Đăng ký</a>
-            </div>
+            </div> -->
         <!-- </form> --> -->
 
     <!-- section body start -->
@@ -726,7 +726,7 @@ window.addEventListener("load", function() {
             </div>
         </div>
     </footer>
-    <script lang="Javascript" src="./Js/index.js"></script>
+   <script lang="Javascript" src="./Js/index.js"></script>
      <!-- <script src="../storage/datapost.js"></script> -->
     <!-- <script src="../storage/dataComent.js"></script> -->
     <!-- <script src="../storage/dataUser.js"></script>  -->
